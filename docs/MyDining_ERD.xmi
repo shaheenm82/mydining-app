@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMI verified="false" xmi.version="1.2" timestamp="2014-02-20T21:54:53" xmlns:UML="http://schema.omg.org/spec/UML/1.3">
+ <XMI.header>
+  <XMI.documentation>
+   <XMI.exporter>umbrello uml modeller http://uml.sf.net</XMI.exporter>
+   <XMI.exporterVersion>1.5.8</XMI.exporterVersion>
+   <XMI.exporterEncoding>UnicodeUTF8</XMI.exporterEncoding>
+  </XMI.documentation>
+  <XMI.metamodel xmi.version="1.3" href="UML.xml" xmi.name="UML"/>
+ </XMI.header>
+ <XMI.content>
+  <UML:Model isSpecification="false" isAbstract="false" isLeaf="false" xmi.id="m1" isRoot="false" name="UML Model">
+   <UML:Namespace.ownedElement>
+    <UML:Stereotype visibility="public" isSpecification="false" namespace="m1" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="folder" name="folder"/>
+    <UML:Stereotype visibility="public" isSpecification="false" namespace="m1" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="datatype" name="datatype"/>
+    <UML:Model stereotype="folder" visibility="public" isSpecification="false" namespace="m1" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="Logical View" name="Logical View">
+     <UML:Namespace.ownedElement>
+      <UML:Package stereotype="folder" visibility="public" isSpecification="false" namespace="Logical View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="Datatypes" name="Datatypes">
+       <UML:Namespace.ownedElement>
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="C5tR4pL6ethv" name="int"/>
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="F0HpACMfaTPW" name="char"/>
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="8LQJu8D7B6WG" name="bool"/>
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="vrKZj1TyzilA" name="float"/>
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="u7nSZCwfVNwQ" name="double"/>
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="T9VeF1u8rEfa" name="short"/>
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="E6YBoJJjO79x" name="long"/>
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="H6anTWBufgYs" name="unsigned int"/>
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="fR0Wde4pka1X" name="unsigned short"/>
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="rKGGPPBhTmSu" name="unsigned long"/>
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="GbowHNmumlPP" name="string"/>
+       </UML:Namespace.ownedElement>
+      </UML:Package>
+     </UML:Namespace.ownedElement>
+     <XMI.extension xmi.extender="umbrello">
+      <diagrams>
+       <diagram showopsig="1" linecolor="#ff0000" snapx="10" showattribassocs="1" snapy="10" linewidth="0" showattsig="1" isopen="0" showpackage="1" showpubliconly="1" showstereotype="1" name="class diagram" font="Sans Serif,9,-1,0,50,0,0,0,0,0" canvasheight="569" canvaswidth="1295" localid="-1" snapcsgrid="0" showgrid="0" showops="1" griddotcolor="#000000" backgroundcolor="#ffffff" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="VN7lwgwwDbjw" documentation="" showscope="1" snapgrid="0" showatts="1" type="1">
+        <widgets/>
+        <messages/>
+        <associations/>
+       </diagram>
+      </diagrams>
+     </XMI.extension>
+    </UML:Model>
+    <UML:Model stereotype="folder" visibility="public" isSpecification="false" namespace="m1" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="Use Case View" name="Use Case View">
+     <UML:Namespace.ownedElement/>
+    </UML:Model>
+    <UML:Model stereotype="folder" visibility="public" isSpecification="false" namespace="m1" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="Component View" name="Component View">
+     <UML:Namespace.ownedElement/>
+    </UML:Model>
+    <UML:Model stereotype="folder" visibility="public" isSpecification="false" namespace="m1" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="Deployment View" name="Deployment View">
+     <UML:Namespace.ownedElement/>
+    </UML:Model>
+    <UML:Model stereotype="folder" visibility="public" isSpecification="false" namespace="m1" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="Entity Relationship Model" name="Entity Relationship Model">
+     <UML:Namespace.ownedElement>
+      <UML:Entity visibility="public" isSpecification="false" namespace="Entity Relationship Model" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="ILdj55eLgSFv" name="Restaurant">
+       <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="ILdj55eLgSFv" allow_null="0" isAbstract="false" isLeaf="false" attributes="unsigned" auto_increment="1" isRoot="false" xmi.id="7IhlUyTsu3rl" type="E6YBoJJjO79x" dbindex_type="1100" initialValue="" name="restaurant_id"/>
+       <UML:EntityAttribute visibility="private" values="100" isSpecification="false" namespace="ILdj55eLgSFv" allow_null="0" isAbstract="false" isLeaf="false" attributes="" auto_increment="0" isRoot="false" xmi.id="ojpsHfzp9R44" type="GbowHNmumlPP" dbindex_type="1102" initialValue="" name="name"/>
+       <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="ILdj55eLgSFv" allow_null="0" isAbstract="false" isLeaf="false" attributes="" auto_increment="0" isRoot="false" xmi.id="FBXw8yzXBI5n" type="GbowHNmumlPP" dbindex_type="1100" initialValue="" name="cuisines"/>
+       <UML:UniqueConstraint visibility="public" isSpecification="false" namespace="ILdj55eLgSFv" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="EnENP9htWwFn" isPrimary="1" name="restaurant_pk">
+        <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="ILdj55eLgSFv" allow_null="0" isAbstract="false" isLeaf="false" attributes="unsigned" auto_increment="1" isRoot="false" xmi.id="7IhlUyTsu3rl" type="E6YBoJJjO79x" dbindex_type="1100" initialValue="" name="restaurant_id"/>
+       </UML:UniqueConstraint>
+      </UML:Entity>
+      <UML:Entity visibility="public" isSpecification="false" namespace="Entity Relationship Model" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="p2nbnCzCgCJi" name="Branch">
+       <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="p2nbnCzCgCJi" allow_null="0" isAbstract="false" isLeaf="false" attributes="unsigned" auto_increment="1" isRoot="false" xmi.id="2PhwSWfEFV4U" type="E6YBoJJjO79x" dbindex_type="1100" initialValue="" name="branch_id"/>
+       <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="p2nbnCzCgCJi" allow_null="0" isAbstract="false" isLeaf="false" attributes="" auto_increment="0" isRoot="false" xmi.id="A3KISMKcX6Vc" type="E6YBoJJjO79x" dbindex_type="1102" initialValue="" name="rest_id"/>
+       <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="p2nbnCzCgCJi" allow_null="0" isAbstract="false" isLeaf="false" attributes="" auto_increment="0" isRoot="false" xmi.id="9soVvjKx6zuY" type="GbowHNmumlPP" dbindex_type="1100" initialValue="" name="name"/>
+       <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="p2nbnCzCgCJi" allow_null="0" isAbstract="false" isLeaf="false" attributes="" auto_increment="0" isRoot="false" xmi.id="TXki2oBBpVTI" type="GbowHNmumlPP" dbindex_type="1102" initialValue="" name="province"/>
+       <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="p2nbnCzCgCJi" allow_null="0" isAbstract="false" isLeaf="false" attributes="" auto_increment="0" isRoot="false" xmi.id="rluMrNw0DiU9" type="GbowHNmumlPP" dbindex_type="1102" initialValue="" name="suburb"/>
+       <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="p2nbnCzCgCJi" allow_null="0" isAbstract="false" isLeaf="false" attributes="" auto_increment="0" isRoot="false" xmi.id="Sm6Wly5EWnuW" type="GbowHNmumlPP" dbindex_type="1100" initialValue="" name="address"/>
+       <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="p2nbnCzCgCJi" allow_null="0" isAbstract="false" isLeaf="false" attributes="" auto_increment="0" isRoot="false" xmi.id="c5hPY8hNtZik" type="GbowHNmumlPP" dbindex_type="1100" initialValue="" name="telephone_no"/>
+       <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="p2nbnCzCgCJi" allow_null="0" isAbstract="false" isLeaf="false" attributes="" auto_increment="0" isRoot="false" xmi.id="vej8NDFnxMJi" type="GbowHNmumlPP" dbindex_type="1100" initialValue="" name="location_lat"/>
+       <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="p2nbnCzCgCJi" allow_null="0" isAbstract="false" isLeaf="false" attributes="" auto_increment="0" isRoot="false" xmi.id="IMumAoJks09Q" type="GbowHNmumlPP" dbindex_type="1100" initialValue="" name="location_long"/>
+       <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="p2nbnCzCgCJi" allow_null="0" isAbstract="false" isLeaf="false" attributes="" auto_increment="0" isRoot="false" xmi.id="9pm2MUlH6SOT" type="8LQJu8D7B6WG" dbindex_type="1100" initialValue="false" name="halaal"/>
+       <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="p2nbnCzCgCJi" allow_null="0" isAbstract="false" isLeaf="false" attributes="" auto_increment="0" isRoot="false" xmi.id="ddEaxYGGsA02" type="8LQJu8D7B6WG" dbindex_type="1100" initialValue="false" name="kosher"/>
+       <UML:UniqueConstraint visibility="public" isSpecification="false" namespace="p2nbnCzCgCJi" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="ekRPXFZaDL5v" isPrimary="1" name="branch_pk">
+        <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="p2nbnCzCgCJi" allow_null="0" isAbstract="false" isLeaf="false" attributes="unsigned" auto_increment="1" isRoot="false" xmi.id="2PhwSWfEFV4U" type="E6YBoJJjO79x" dbindex_type="1100" initialValue="" name="branch_id"/>
+       </UML:UniqueConstraint>
+       <UML:ForeignKeyConstraint visibility="public" isSpecification="false" namespace="p2nbnCzCgCJi" isAbstract="false" isLeaf="false" referencedEntity="ILdj55eLgSFv" isRoot="false" xmi.id="c5JOBUtOG6jf" deleteAction="0" name="branch_restaurant_fk" updateAction="0"/>
+      </UML:Entity>
+      <UML:Entity visibility="public" isSpecification="false" namespace="Entity Relationship Model" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="Qybyqlu64Xq9" name="Menu">
+       <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="Qybyqlu64Xq9" allow_null="0" isAbstract="false" isLeaf="false" attributes="" auto_increment="1" isRoot="false" xmi.id="x23EDqUvwwV9" type="E6YBoJJjO79x" dbindex_type="1100" initialValue="" name="menu_id"/>
+       <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="Qybyqlu64Xq9" allow_null="0" isAbstract="false" isLeaf="false" attributes="" auto_increment="0" isRoot="false" xmi.id="O5JAOIEdRjXY" type="E6YBoJJjO79x" dbindex_type="1102" initialValue="" name="rest_id"/>
+       <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="Qybyqlu64Xq9" allow_null="0" isAbstract="false" isLeaf="false" attributes="" auto_increment="0" isRoot="false" xmi.id="gV5pl8cj8dxM" type="GbowHNmumlPP" dbindex_type="1102" initialValue="" name="category"/>
+       <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="Qybyqlu64Xq9" allow_null="0" isAbstract="false" isLeaf="false" attributes="" auto_increment="0" isRoot="false" xmi.id="UPFOJkVfnpoA" type="GbowHNmumlPP" dbindex_type="1100" initialValue="" name="description"/>
+       <UML:EntityAttribute visibility="private" values="4,2" isSpecification="false" namespace="Qybyqlu64Xq9" allow_null="0" isAbstract="false" isLeaf="false" attributes="" auto_increment="0" isRoot="false" xmi.id="50lUiJ2Om6DX" type="vrKZj1TyzilA" dbindex_type="1100" initialValue="0.00" name="cost"/>
+       <UML:UniqueConstraint visibility="public" isSpecification="false" namespace="Qybyqlu64Xq9" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="J21ygTIbQQTQ" isPrimary="1" name="menu_pk">
+        <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="Qybyqlu64Xq9" allow_null="0" isAbstract="false" isLeaf="false" attributes="" auto_increment="1" isRoot="false" xmi.id="x23EDqUvwwV9" type="E6YBoJJjO79x" dbindex_type="1100" initialValue="" name="menu_id"/>
+       </UML:UniqueConstraint>
+       <UML:ForeignKeyConstraint visibility="public" isSpecification="false" namespace="Qybyqlu64Xq9" isAbstract="false" isLeaf="false" referencedEntity="ILdj55eLgSFv" isRoot="false" xmi.id="2nDoCWyp6Nue" deleteAction="0" name="menu_restaurant_fk" updateAction="0"/>
+      </UML:Entity>
+      <UML:Entity visibility="public" isSpecification="false" namespace="Entity Relationship Model" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="wJkoKuDRjzT3" name="Cuisine">
+       <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="wJkoKuDRjzT3" allow_null="0" isAbstract="false" isLeaf="false" attributes="" auto_increment="1" isRoot="false" xmi.id="RCJXehzFIDpG" type="E6YBoJJjO79x" dbindex_type="1100" initialValue="" name="cuisine_id"/>
+       <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="wJkoKuDRjzT3" allow_null="0" isAbstract="false" isLeaf="false" attributes="" auto_increment="0" isRoot="false" xmi.id="j5UaFUaCmLy6" type="GbowHNmumlPP" dbindex_type="1100" initialValue="" name="name"/>
+      </UML:Entity>
+      <UML:Entity visibility="public" isSpecification="false" namespace="Entity Relationship Model" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="w0DV90Mccd6p" name="Ratings">
+       <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="w0DV90Mccd6p" allow_null="0" isAbstract="false" isLeaf="false" attributes="" auto_increment="1" isRoot="false" xmi.id="IsbDzLr1WPk3" type="E6YBoJJjO79x" dbindex_type="1100" initialValue="" name="rating_id"/>
+       <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="w0DV90Mccd6p" allow_null="0" isAbstract="false" isLeaf="false" attributes="" auto_increment="0" isRoot="false" xmi.id="x36tb1Ol0DeE" type="E6YBoJJjO79x" dbindex_type="1102" initialValue="" name="rest_id"/>
+       <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="w0DV90Mccd6p" allow_null="0" isAbstract="false" isLeaf="false" attributes="" auto_increment="0" isRoot="false" xmi.id="Eoa8A08WwEf1" type="C5tR4pL6ethv" dbindex_type="1102" initialValue="0" name="value"/>
+       <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="w0DV90Mccd6p" allow_null="1" isAbstract="false" isLeaf="false" attributes="" auto_increment="0" isRoot="false" xmi.id="LmahaMlCwnPh" type="GbowHNmumlPP" dbindex_type="1100" initialValue="" name="feedback"/>
+       <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="w0DV90Mccd6p" allow_null="1" isAbstract="false" isLeaf="false" attributes="" auto_increment="0" isRoot="false" xmi.id="0CSUuprEaeth" type="GbowHNmumlPP" dbindex_type="1100" initialValue="" name="rated_by"/>
+       <UML:UniqueConstraint visibility="public" isSpecification="false" namespace="w0DV90Mccd6p" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="vxiDpIT1517D" isPrimary="1" name="rating_pk">
+        <UML:EntityAttribute visibility="private" values="" isSpecification="false" namespace="w0DV90Mccd6p" allow_null="0" isAbstract="false" isLeaf="false" attributes="" auto_increment="1" isRoot="false" xmi.id="IsbDzLr1WPk3" type="E6YBoJJjO79x" dbindex_type="1100" initialValue="" name="rating_id"/>
+       </UML:UniqueConstraint>
+       <UML:ForeignKeyConstraint visibility="public" isSpecification="false" namespace="w0DV90Mccd6p" isAbstract="false" isLeaf="false" referencedEntity="ILdj55eLgSFv" isRoot="false" xmi.id="zEjvSNun7USh" deleteAction="0" name="rating_restaurant_fk" updateAction="0"/>
+      </UML:Entity>
+     </UML:Namespace.ownedElement>
+     <XMI.extension xmi.extender="umbrello">
+      <diagrams>
+       <diagram showopsig="1" linecolor="#ff0000" snapx="10" showattribassocs="1" snapy="10" linewidth="0" showattsig="1" isopen="1" showpackage="1" showpubliconly="1" showstereotype="1" name="MyDining_ERD" font="Sans Serif,9,-1,0,50,0,0,0,0,0" canvasheight="554" canvaswidth="2816" localid="-1" snapcsgrid="0" showgrid="0" showops="1" griddotcolor="#000000" backgroundcolor="#ffffff" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="PTF94EgvYu9y" documentation="" showscope="1" snapgrid="0" showatts="1" type="9">
+        <widgets>
+         <entitywidget width="130" showstereotype="1" x="349" usesdiagramusefillcolor="0" y="55" usesdiagramfillcolor="0" isinstance="0" fillcolor="#ffff00" height="84" linecolor="#ff0000" xmi.id="ILdj55eLgSFv" usefillcolor="1" linewidth="none" font="Sans Serif,9,-1,0,50,0,0,0,0,0"/>
+         <entitywidget width="130" showstereotype="1" x="569" usesdiagramusefillcolor="0" y="196" usesdiagramfillcolor="0" isinstance="0" fillcolor="#ffff00" height="252" linecolor="#ff0000" xmi.id="p2nbnCzCgCJi" usefillcolor="1" linewidth="none" font="Sans Serif,9,-1,5,50,0,0,0,0,0"/>
+         <entitywidget width="107" showstereotype="1" x="28" usesdiagramusefillcolor="0" y="50" usesdiagramfillcolor="0" isinstance="0" fillcolor="#ffff00" height="126" linecolor="#ff0000" xmi.id="Qybyqlu64Xq9" usefillcolor="1" linewidth="none" font="Sans Serif,9,-1,5,50,0,0,0,0,0"/>
+         <entitywidget width="95" showstereotype="1" x="937" usesdiagramusefillcolor="1" y="128" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="63" linecolor="none" xmi.id="wJkoKuDRjzT3" usefillcolor="1" linewidth="none" font="Sans Serif,9,-1,0,50,0,0,0,0,0"/>
+         <entitywidget width="94" showstereotype="1" x="26" usesdiagramusefillcolor="0" y="272" usesdiagramfillcolor="0" isinstance="0" fillcolor="#ffff00" height="126" linecolor="#ff0000" xmi.id="w0DV90Mccd6p" usefillcolor="1" linewidth="none" font="Sans Serif,9,-1,0,50,0,0,0,0,0"/>
+        </widgets>
+        <messages/>
+        <associations>
+         <assocwidget indexa="8" linecolor="none" indexb="1" usesdiagramfillcolor="0" widgetbid="p2nbnCzCgCJi" linewidth="none" usesdiagramusefillcolor="0" totalcounta="14" totalcountb="7" widgetaid="ILdj55eLgSFv" visibilityA="0" visibilityB="0" usefillcolor="0" fillcolor="#000000" changeabilityA="900" xmi.id="c5JOBUtOG6jf" changeabilityB="900" type="519">
+          <linepath>
+           <startpoint startx="479" starty="139"/>
+           <endpoint endx="569" endy="196"/>
+          </linepath>
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="798" showstereotype="1" y="140" text="branch_restaurant_fk" font="Sans Serif,9,-1,0,50,0,0,0,0,0" pretext="+" role="710" width="208" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="Lzb3vlFcFr5r" height="25"/>
+         </assocwidget>
+         <assocwidget indexa="9" linecolor="none" indexb="2" usesdiagramfillcolor="0" widgetbid="p2nbnCzCgCJi" linewidth="none" usesdiagramusefillcolor="0" totalcounta="14" totalcountb="7" widgetaid="ILdj55eLgSFv" visibilityA="0" visibilityB="0" usefillcolor="0" fillcolor="#000000" changeabilityA="900" xmi.id="c5JOBUtOG6jf" changeabilityB="900" type="519">
+          <linepath>
+           <startpoint startx="479" starty="139"/>
+           <endpoint endx="569" endy="196"/>
+          </linepath>
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="374" showstereotype="1" y="169" text="branch_restaurant_fk" font="Sans Serif,9,-1,0,50,0,0,0,0,0" pretext="+" role="710" width="208" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="GeZ2LX9muwx2" height="25"/>
+         </assocwidget>
+         <assocwidget indexa="1" linecolor="none" indexb="1" usesdiagramfillcolor="0" widgetbid="Qybyqlu64Xq9" linewidth="none" usesdiagramusefillcolor="0" totalcounta="10" totalcountb="10" widgetaid="ILdj55eLgSFv" visibilityA="0" visibilityB="0" usefillcolor="0" fillcolor="#000000" changeabilityA="900" xmi.id="2nDoCWyp6Nue" changeabilityB="900" type="519">
+          <linepath>
+           <startpoint startx="349" starty="129"/>
+           <endpoint endx="135" endy="129"/>
+          </linepath>
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="2614" showstereotype="1" y="131" text="menu_restaurant_fk" font="Sans Serif,9,-1,0,50,0,0,0,0,0" pretext="+" role="710" width="198" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="gaTqJJBcHmgA" height="25"/>
+         </assocwidget>
+         <assocwidget indexa="2" linecolor="none" indexb="2" usesdiagramfillcolor="0" widgetbid="Qybyqlu64Xq9" linewidth="none" usesdiagramusefillcolor="0" totalcounta="10" totalcountb="10" widgetaid="ILdj55eLgSFv" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="#000000" changeabilityA="900" xmi.id="2nDoCWyp6Nue" changeabilityB="900" type="519">
+          <linepath>
+           <startpoint startx="349" starty="129"/>
+           <endpoint endx="135" endy="129"/>
+          </linepath>
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="157" showstereotype="1" y="299" text="menu_restaurant_fk" font="Sans Serif,9,-1,0,50,0,0,0,0,0" pretext="+" role="710" width="198" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="Wvkjmqa1S93n" height="25"/>
+         </assocwidget>
+         <assocwidget indexa="3" linecolor="none" indexb="3" usesdiagramfillcolor="0" widgetbid="Qybyqlu64Xq9" linewidth="none" usesdiagramusefillcolor="0" totalcounta="10" totalcountb="10" widgetaid="ILdj55eLgSFv" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="#000000" changeabilityA="900" xmi.id="2nDoCWyp6Nue" changeabilityB="900" type="519">
+          <linepath>
+           <startpoint startx="349" starty="129"/>
+           <endpoint endx="135" endy="129"/>
+          </linepath>
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="149" showstereotype="1" y="261" text="menu_restaurant_fk" font="Sans Serif,9,-1,0,50,0,0,0,0,0" pretext="+" role="710" width="198" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="fCYZ6Vcm33bM" height="25"/>
+         </assocwidget>
+         <assocwidget indexa="4" linecolor="none" indexb="4" usesdiagramfillcolor="0" widgetbid="Qybyqlu64Xq9" linewidth="none" usesdiagramusefillcolor="0" totalcounta="10" totalcountb="10" widgetaid="ILdj55eLgSFv" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="#000000" changeabilityA="900" xmi.id="2nDoCWyp6Nue" changeabilityB="900" type="519">
+          <linepath>
+           <startpoint startx="349" starty="129"/>
+           <endpoint endx="135" endy="129"/>
+          </linepath>
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="164" showstereotype="1" y="224" text="menu_restaurant_fk" font="Sans Serif,9,-1,0,50,0,0,0,0,0" pretext="+" role="710" width="198" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="LmzcXfk1aVkK" height="25"/>
+         </assocwidget>
+         <assocwidget indexa="5" linecolor="none" indexb="5" usesdiagramfillcolor="0" widgetbid="Qybyqlu64Xq9" linewidth="none" usesdiagramusefillcolor="0" totalcounta="10" totalcountb="10" widgetaid="ILdj55eLgSFv" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="#000000" changeabilityA="900" xmi.id="2nDoCWyp6Nue" changeabilityB="900" type="519">
+          <linepath>
+           <startpoint startx="349" starty="129"/>
+           <endpoint endx="135" endy="129"/>
+          </linepath>
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="284" showstereotype="1" y="182" text="menu_restaurant_fk" font="Sans Serif,9,-1,0,50,0,0,0,0,0" pretext="+" role="710" width="198" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="JJLlQOW5Y4de" height="25"/>
+         </assocwidget>
+         <assocwidget indexa="10" linecolor="none" indexb="3" usesdiagramfillcolor="1" widgetbid="p2nbnCzCgCJi" linewidth="none" usesdiagramusefillcolor="1" totalcounta="14" totalcountb="7" widgetaid="ILdj55eLgSFv" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="none" changeabilityA="900" xmi.id="c5JOBUtOG6jf" changeabilityB="900" type="519">
+          <linepath>
+           <startpoint startx="479" starty="139"/>
+           <endpoint endx="569" endy="196"/>
+          </linepath>
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="374" showstereotype="1" y="169" text="branch_restaurant_fk" font="Sans Serif,9,-1,0,50,0,0,0,0,0" pretext="+" role="710" width="208" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="XDPaG0vZkuBF" height="25"/>
+         </assocwidget>
+         <assocwidget indexa="6" linecolor="none" indexb="6" usesdiagramfillcolor="0" widgetbid="Qybyqlu64Xq9" linewidth="none" usesdiagramusefillcolor="0" totalcounta="10" totalcountb="10" widgetaid="ILdj55eLgSFv" visibilityA="0" visibilityB="0" usefillcolor="0" fillcolor="#000000" changeabilityA="900" xmi.id="2nDoCWyp6Nue" changeabilityB="900" type="519">
+          <linepath>
+           <startpoint startx="349" starty="129"/>
+           <endpoint endx="135" endy="129"/>
+          </linepath>
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="137" showstereotype="1" y="131" text="menu_restaurant_fk" font="Sans Serif,9,-1,0,50,0,0,0,0,0" pretext="+" role="710" width="198" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="XuG5PzNiIjRg" height="25"/>
+         </assocwidget>
+         <assocwidget indexa="7" linecolor="none" indexb="7" usesdiagramfillcolor="0" widgetbid="Qybyqlu64Xq9" linewidth="none" usesdiagramusefillcolor="0" totalcounta="10" totalcountb="10" widgetaid="ILdj55eLgSFv" visibilityA="0" visibilityB="0" usefillcolor="0" fillcolor="#000000" changeabilityA="900" xmi.id="2nDoCWyp6Nue" changeabilityB="900" type="519">
+          <linepath>
+           <startpoint startx="349" starty="129"/>
+           <endpoint endx="135" endy="129"/>
+          </linepath>
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="153" showstereotype="1" y="96" text="menu_restaurant_fk" font="Sans Serif,9,-1,0,50,0,0,0,0,0" pretext="+" role="710" width="198" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="5vmc0PEVcd6q" height="25"/>
+         </assocwidget>
+         <assocwidget indexa="8" linecolor="none" indexb="8" usesdiagramfillcolor="0" widgetbid="Qybyqlu64Xq9" linewidth="none" usesdiagramusefillcolor="0" totalcounta="10" totalcountb="10" widgetaid="ILdj55eLgSFv" visibilityA="0" visibilityB="0" usefillcolor="0" fillcolor="#000000" changeabilityA="900" xmi.id="2nDoCWyp6Nue" changeabilityB="900" type="519">
+          <linepath>
+           <startpoint startx="349" starty="129"/>
+           <endpoint endx="135" endy="129"/>
+          </linepath>
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="137" showstereotype="1" y="131" text="menu_restaurant_fk" font="Sans Serif,9,-1,0,50,0,0,0,0,0" pretext="+" role="710" width="198" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="bzQMrZZOTqRq" height="25"/>
+         </assocwidget>
+         <assocwidget indexa="9" linecolor="none" indexb="9" usesdiagramfillcolor="0" widgetbid="Qybyqlu64Xq9" linewidth="none" usesdiagramusefillcolor="0" totalcounta="10" totalcountb="10" widgetaid="ILdj55eLgSFv" visibilityA="0" visibilityB="0" usefillcolor="0" fillcolor="#000000" changeabilityA="900" xmi.id="2nDoCWyp6Nue" changeabilityB="900" type="519">
+          <linepath>
+           <startpoint startx="349" starty="129"/>
+           <endpoint endx="135" endy="129"/>
+          </linepath>
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="137" showstereotype="1" y="131" text="menu_restaurant_fk" font="Sans Serif,9,-1,0,50,0,0,0,0,0" pretext="+" role="710" width="198" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="noY3VxjbtVDr" height="25"/>
+         </assocwidget>
+         <assocwidget indexa="11" linecolor="none" indexb="4" usesdiagramfillcolor="0" widgetbid="p2nbnCzCgCJi" linewidth="none" usesdiagramusefillcolor="0" totalcounta="14" totalcountb="7" widgetaid="ILdj55eLgSFv" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="#000000" changeabilityA="900" xmi.id="c5JOBUtOG6jf" changeabilityB="900" type="519">
+          <linepath>
+           <startpoint startx="479" starty="139"/>
+           <endpoint endx="569" endy="196"/>
+          </linepath>
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="374" showstereotype="1" y="169" text="branch_restaurant_fk" font="Sans Serif,9,-1,0,50,0,0,0,0,0" pretext="+" role="710" width="208" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="sPMS3QHcPfwG" height="25"/>
+         </assocwidget>
+         <assocwidget indexa="12" linecolor="none" indexb="5" usesdiagramfillcolor="0" widgetbid="p2nbnCzCgCJi" linewidth="none" usesdiagramusefillcolor="0" totalcounta="14" totalcountb="7" widgetaid="ILdj55eLgSFv" visibilityA="0" visibilityB="0" usefillcolor="0" fillcolor="#000000" changeabilityA="900" xmi.id="c5JOBUtOG6jf" changeabilityB="900" type="519">
+          <linepath>
+           <startpoint startx="479" starty="139"/>
+           <endpoint endx="569" endy="196"/>
+          </linepath>
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="374" showstereotype="1" y="169" text="branch_restaurant_fk" font="Sans Serif,9,-1,0,50,0,0,0,0,0" pretext="+" role="710" width="208" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="EWcgK1W7q38L" height="25"/>
+         </assocwidget>
+         <assocwidget indexa="13" linecolor="none" indexb="6" usesdiagramfillcolor="0" widgetbid="p2nbnCzCgCJi" linewidth="none" usesdiagramusefillcolor="0" totalcounta="14" totalcountb="7" widgetaid="ILdj55eLgSFv" visibilityA="0" visibilityB="0" usefillcolor="0" fillcolor="#000000" changeabilityA="900" xmi.id="c5JOBUtOG6jf" changeabilityB="900" type="519">
+          <linepath>
+           <startpoint startx="479" starty="139"/>
+           <endpoint endx="569" endy="196"/>
+          </linepath>
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="374" showstereotype="1" y="169" text="branch_restaurant_fk" font="Sans Serif,9,-1,0,50,0,0,0,0,0" pretext="+" role="710" width="208" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="0rurL5iBV3cW" height="25"/>
+         </assocwidget>
+         <assocwidget indexa="1" linecolor="none" indexb="1" usesdiagramfillcolor="0" widgetbid="w0DV90Mccd6p" linewidth="none" usesdiagramusefillcolor="0" totalcounta="14" totalcountb="8" widgetaid="ILdj55eLgSFv" visibilityA="0" visibilityB="0" usefillcolor="0" fillcolor="#000000" changeabilityA="900" xmi.id="zEjvSNun7USh" changeabilityB="900" type="519">
+          <linepath>
+           <startpoint startx="349" starty="139"/>
+           <endpoint endx="120" endy="272"/>
+          </linepath>
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="2782" showstereotype="1" y="312" text="rating_restaurant_fk" font="Sans Serif,9,-1,0,50,0,0,0,0,0" pretext="+" role="710" width="200" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="Tt8rY35kZgQr" height="25"/>
+         </assocwidget>
+         <assocwidget indexa="2" linecolor="none" indexb="2" usesdiagramfillcolor="0" widgetbid="w0DV90Mccd6p" linewidth="none" usesdiagramusefillcolor="0" totalcounta="14" totalcountb="8" widgetaid="ILdj55eLgSFv" visibilityA="0" visibilityB="0" usefillcolor="0" fillcolor="#000000" changeabilityA="900" xmi.id="zEjvSNun7USh" changeabilityB="900" type="519">
+          <linepath>
+           <startpoint startx="349" starty="139"/>
+           <endpoint endx="120" endy="272"/>
+          </linepath>
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="69" showstereotype="1" y="308" text="rating_restaurant_fk" font="Sans Serif,9,-1,0,50,0,0,0,0,0" pretext="+" role="710" width="200" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="hvwVy4rwvloE" height="25"/>
+         </assocwidget>
+         <assocwidget indexa="3" linecolor="none" indexb="3" usesdiagramfillcolor="1" widgetbid="w0DV90Mccd6p" linewidth="none" usesdiagramusefillcolor="1" totalcounta="14" totalcountb="8" widgetaid="ILdj55eLgSFv" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="none" changeabilityA="900" xmi.id="zEjvSNun7USh" changeabilityB="900" type="519">
+          <linepath>
+           <startpoint startx="349" starty="139"/>
+           <endpoint endx="120" endy="272"/>
+          </linepath>
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="137" showstereotype="1" y="245" text="rating_restaurant_fk" font="Sans Serif,9,-1,0,50,0,0,0,0,0" pretext="+" role="710" width="200" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="pUQKX2qztyoP" height="25"/>
+         </assocwidget>
+         <assocwidget indexa="4" linecolor="none" indexb="4" usesdiagramfillcolor="0" widgetbid="w0DV90Mccd6p" linewidth="none" usesdiagramusefillcolor="0" totalcounta="14" totalcountb="8" widgetaid="ILdj55eLgSFv" visibilityA="0" visibilityB="0" usefillcolor="0" fillcolor="#000000" changeabilityA="900" xmi.id="zEjvSNun7USh" changeabilityB="900" type="519">
+          <linepath>
+           <startpoint startx="349" starty="139"/>
+           <endpoint endx="120" endy="272"/>
+          </linepath>
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="137" showstereotype="1" y="245" text="rating_restaurant_fk" font="Sans Serif,9,-1,0,50,0,0,0,0,0" pretext="+" role="710" width="200" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="1t9YXYPFTLkP" height="25"/>
+         </assocwidget>
+         <assocwidget indexa="5" linecolor="none" indexb="5" usesdiagramfillcolor="0" widgetbid="w0DV90Mccd6p" linewidth="none" usesdiagramusefillcolor="0" totalcounta="14" totalcountb="8" widgetaid="ILdj55eLgSFv" visibilityA="0" visibilityB="0" usefillcolor="0" fillcolor="#000000" changeabilityA="900" xmi.id="zEjvSNun7USh" changeabilityB="900" type="519">
+          <linepath>
+           <startpoint startx="349" starty="139"/>
+           <endpoint endx="120" endy="272"/>
+          </linepath>
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="137" showstereotype="1" y="245" text="rating_restaurant_fk" font="Sans Serif,9,-1,0,50,0,0,0,0,0" pretext="+" role="710" width="200" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="NZLJJ7X8cvS7" height="25"/>
+         </assocwidget>
+         <assocwidget indexa="6" linecolor="none" indexb="6" usesdiagramfillcolor="0" widgetbid="w0DV90Mccd6p" linewidth="none" usesdiagramusefillcolor="0" totalcounta="14" totalcountb="8" widgetaid="ILdj55eLgSFv" visibilityA="0" visibilityB="0" usefillcolor="0" fillcolor="#000000" changeabilityA="900" xmi.id="zEjvSNun7USh" changeabilityB="900" type="519">
+          <linepath>
+           <startpoint startx="349" starty="139"/>
+           <endpoint endx="120" endy="272"/>
+          </linepath>
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="137" showstereotype="1" y="245" text="rating_restaurant_fk" font="Sans Serif,9,-1,0,50,0,0,0,0,0" pretext="+" role="710" width="200" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="xG6oEsDEmNkH" height="25"/>
+         </assocwidget>
+         <assocwidget indexa="7" linecolor="none" indexb="7" usesdiagramfillcolor="0" widgetbid="w0DV90Mccd6p" linewidth="none" usesdiagramusefillcolor="0" totalcounta="14" totalcountb="8" widgetaid="ILdj55eLgSFv" visibilityA="0" visibilityB="0" usefillcolor="0" fillcolor="#000000" changeabilityA="900" xmi.id="zEjvSNun7USh" changeabilityB="900" type="519">
+          <linepath>
+           <startpoint startx="349" starty="139"/>
+           <endpoint endx="120" endy="272"/>
+          </linepath>
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="137" showstereotype="1" y="245" text="rating_restaurant_fk" font="Sans Serif,9,-1,0,50,0,0,0,0,0" pretext="+" role="710" width="200" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="t8WMTFjpm485" height="25"/>
+         </assocwidget>
+        </associations>
+       </diagram>
+      </diagrams>
+     </XMI.extension>
+    </UML:Model>
+   </UML:Namespace.ownedElement>
+  </UML:Model>
+ </XMI.content>
+ <XMI.extensions xmi.extender="umbrello">
+  <docsettings viewid="PTF94EgvYu9y" uniqueid="U97jryQmqBQa" documentation=""/>
+  <listview>
+   <listitem open="1" type="800" id="Views">
+    <listitem open="1" type="821" id="Component View"/>
+    <listitem open="1" type="827" id="Deployment View"/>
+    <listitem open="1" type="836" id="Entity Relationship Model">
+     <listitem open="1" type="832" id="p2nbnCzCgCJi">
+      <listitem open="0" type="833" id="Sm6Wly5EWnuW"/>
+      <listitem open="0" type="833" id="2PhwSWfEFV4U"/>
+      <listitem open="0" type="841" id="ekRPXFZaDL5v"/>
+      <listitem open="0" type="842" id="c5JOBUtOG6jf"/>
+      <listitem open="0" type="833" id="9pm2MUlH6SOT"/>
+      <listitem open="0" type="833" id="ddEaxYGGsA02"/>
+      <listitem open="0" type="833" id="vej8NDFnxMJi"/>
+      <listitem open="0" type="833" id="IMumAoJks09Q"/>
+      <listitem open="0" type="833" id="9soVvjKx6zuY"/>
+      <listitem open="0" type="833" id="TXki2oBBpVTI"/>
+      <listitem open="0" type="833" id="A3KISMKcX6Vc"/>
+      <listitem open="0" type="833" id="rluMrNw0DiU9"/>
+      <listitem open="0" type="833" id="c5hPY8hNtZik"/>
+     </listitem>
+     <listitem open="1" type="832" id="wJkoKuDRjzT3">
+      <listitem open="0" type="833" id="RCJXehzFIDpG"/>
+      <listitem open="0" type="833" id="j5UaFUaCmLy6"/>
+     </listitem>
+     <listitem open="1" type="832" id="Qybyqlu64Xq9">
+      <listitem open="0" type="833" id="gV5pl8cj8dxM"/>
+      <listitem open="0" type="833" id="50lUiJ2Om6DX"/>
+      <listitem open="0" type="833" id="UPFOJkVfnpoA"/>
+      <listitem open="0" type="833" id="x23EDqUvwwV9"/>
+      <listitem open="0" type="841" id="J21ygTIbQQTQ"/>
+      <listitem open="0" type="842" id="2nDoCWyp6Nue"/>
+      <listitem open="0" type="833" id="O5JAOIEdRjXY"/>
+     </listitem>
+     <listitem open="0" type="834" id="PTF94EgvYu9y" label="MyDining_ERD"/>
+     <listitem open="1" type="832" id="w0DV90Mccd6p">
+      <listitem open="0" type="833" id="LmahaMlCwnPh"/>
+      <listitem open="0" type="833" id="0CSUuprEaeth"/>
+      <listitem open="0" type="833" id="IsbDzLr1WPk3"/>
+      <listitem open="0" type="841" id="vxiDpIT1517D"/>
+      <listitem open="0" type="842" id="zEjvSNun7USh"/>
+      <listitem open="0" type="833" id="x36tb1Ol0DeE"/>
+      <listitem open="0" type="833" id="Eoa8A08WwEf1"/>
+     </listitem>
+     <listitem open="1" type="832" id="ILdj55eLgSFv">
+      <listitem open="0" type="833" id="FBXw8yzXBI5n"/>
+      <listitem open="0" type="833" id="ojpsHfzp9R44"/>
+      <listitem open="0" type="833" id="7IhlUyTsu3rl"/>
+      <listitem open="0" type="841" id="EnENP9htWwFn"/>
+     </listitem>
+    </listitem>
+    <listitem open="1" type="801" id="Logical View">
+     <listitem open="0" type="807" id="VN7lwgwwDbjw" label="class diagram"/>
+     <listitem open="0" type="830" id="Datatypes">
+      <listitem open="1" type="829" id="8LQJu8D7B6WG"/>
+      <listitem open="1" type="829" id="F0HpACMfaTPW"/>
+      <listitem open="1" type="829" id="u7nSZCwfVNwQ"/>
+      <listitem open="1" type="829" id="vrKZj1TyzilA"/>
+      <listitem open="1" type="829" id="C5tR4pL6ethv"/>
+      <listitem open="1" type="829" id="E6YBoJJjO79x"/>
+      <listitem open="1" type="829" id="T9VeF1u8rEfa"/>
+      <listitem open="1" type="829" id="GbowHNmumlPP"/>
+      <listitem open="1" type="829" id="H6anTWBufgYs"/>
+      <listitem open="1" type="829" id="rKGGPPBhTmSu"/>
+      <listitem open="1" type="829" id="fR0Wde4pka1X"/>
+     </listitem>
+    </listitem>
+    <listitem open="1" type="802" id="Use Case View"/>
+   </listitem>
+  </listview>
+  <codegeneration>
+   <codegenerator language="C++"/>
+  </codegeneration>
+ </XMI.extensions>
+</XMI>

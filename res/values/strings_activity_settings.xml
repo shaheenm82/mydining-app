@@ -1,0 +1,21 @@
+<resources>
+
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <!-- Example settings for Data & Sync -->
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_title_halaal">Halaal</string>
+    <string name="pref_title_kosher">Kosher</string>
+    <string name="pref_title_vegetarian">Vegetarian</string>
+    <string name="pref_title_vegan">Vegan</string>
+    <string name="pref_header_dietary">Dietary Requirements</string>
+    <string name="pref_desc_dietary">Select your desired dietary requirements to filter by.</string>
+
+</resources>
