@@ -1,6 +1,7 @@
 package za.co.tbt.mydining;
 
-import za.co.tbt.adapter.EntryPagerAdapter;
+import za.co.tbt.mydining.adapter.EntryPagerAdapter;
+import za.co.tbt.mydining.db.MyDiningDbOpenHelper;
 import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.FragmentTransaction;
@@ -29,6 +30,8 @@ public class EntryActivity extends FragmentActivity implements
 	 */
 	//SectionsPagerAdapter mSectionsPagerAdapter;
 	EntryPagerAdapter mEntryPagerAdapter;
+	
+	MyDiningDbOpenHelper diningHelper;
 
 	/**
 	 * The {@link ViewPager} that will host the section contents.
@@ -40,19 +43,20 @@ public class EntryActivity extends FragmentActivity implements
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_entry);
 
+		//create database helper
+		diningHelper = new MyDiningDbOpenHelper(this);
+		diningHelper.createDatabase();		
+				
 		// Set up the action bar.
 		final ActionBar actionBar = getActionBar();
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
 		// Create the adapter that will return a fragment for each of the three
 		// primary sections of the app.
-		//mSectionsPagerAdapter = new SectionsPagerAdapter(
-		//		getSupportFragmentManager());
 		mEntryPagerAdapter = new EntryPagerAdapter(getSupportFragmentManager(), getApplicationContext());
 
 		// Set up the ViewPager with the sections adapter.
 		mViewPager = (ViewPager) findViewById(R.id.pager);
-		//mViewPager.setAdapter(mSectionsPagerAdapter);
 		mViewPager.setAdapter(mEntryPagerAdapter);
 
 		// When swiping between different sections, select the corresponding

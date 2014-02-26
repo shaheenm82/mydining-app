@@ -5,11 +5,11 @@
     android:orientation="vertical">
      
     <ListView
+        android:id="@+id/list_cuisines"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:divider="#fff"
-        android:entries="@array/list_cuisines"/>
+        android:divider="#fff"/>
      
  
 </RelativeLayout>

@@ -29,17 +29,22 @@ public final class R {
         public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
-        public static final int action_search=0x7f0a0003;
-        public static final int action_settings=0x7f0a0002;
+        public static final int action_search=0x7f0a0007;
+        public static final int action_settings=0x7f0a0006;
+        public static final int itemText=0x7f0a0002;
+        public static final int list_cuisines=0x7f0a0003;
+        public static final int list_restaurants=0x7f0a0005;
+        public static final int logo=0x7f0a0001;
         public static final int pager=0x7f0a0000;
-        public static final int section_label=0x7f0a0001;
+        public static final int section_label=0x7f0a0004;
     }
     public static final class layout {
         public static final int activity_entry=0x7f030000;
-        public static final int fragment_cuisine=0x7f030001;
-        public static final int fragment_entry_dummy=0x7f030002;
-        public static final int fragment_favourites=0x7f030003;
-        public static final int fragment_outlet=0x7f030004;
+        public static final int dblist_item=0x7f030001;
+        public static final int fragment_cuisine=0x7f030002;
+        public static final int fragment_entry_dummy=0x7f030003;
+        public static final int fragment_favourites=0x7f030004;
+        public static final int fragment_restaurant=0x7f030005;
     }
     public static final class menu {
         public static final int entry=0x7f090000;
