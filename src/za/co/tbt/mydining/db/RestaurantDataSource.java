@@ -47,13 +47,30 @@ public class RestaurantDataSource {
 	    // make sure to close the cursor
 	    cursor.close();
 	    return restaurants;
-	  }
+	}
+	
+	public List<DBItem> searchForRestaurants(String selection, String[] args) {
+	    List<DBItem> restaurants = new ArrayList<DBItem>();
 
-	  private Restaurant getRestaurant(Cursor cursor) {
+	    Cursor cursor = db.query(TABLE_NAME,
+	        allColumns, selection, args, null, null, null);
+
+	    cursor.moveToFirst();
+	    while (!cursor.isAfterLast()) {
+	      Restaurant rest = getRestaurant(cursor);
+	      restaurants.add(rest);
+	      cursor.moveToNext();
+	    }
+	    // make sure to close the cursor
+	    cursor.close();
+	    return restaurants;
+	}
+
+	private Restaurant getRestaurant(Cursor cursor) {
 		Restaurant restaurant = new Restaurant();
 		restaurant.setId(cursor.getLong(0));
 		restaurant.setName(cursor.getString(1));
 		restaurant.setCuisines(cursor.getString(2));
 	    return restaurant;
-	  }
+	}
 }

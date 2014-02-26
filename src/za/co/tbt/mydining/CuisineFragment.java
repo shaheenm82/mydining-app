@@ -28,11 +28,18 @@ public class CuisineFragment extends Fragment{
 		cuisineDataSource = new CuisineDataSource(getActivity());
 		cuisineDataSource.open();
 		
-		listAdapter = new DBListAdapter(getActivity(), cuisineDataSource.getAllCuisines());
+		listAdapter = new DBListAdapter(getActivity());
+		listAdapter.setItems(cuisineDataSource.getAllCuisines());
 		cuisineView.setAdapter(listAdapter);
 		
         return rootView;
     }
+	
+	public void filter(String filter){
+		String[] args = {"%" + filter + "%"};
+		
+		listAdapter.setItems(cuisineDataSource.searchForCuisines("name LIKE ?", args));		
+	}
 	
 	public CharSequence getTitle(){
 		return getString(R.string.title_cuisines);		

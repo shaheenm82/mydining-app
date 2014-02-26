@@ -1,4 +1,4 @@
-package za.co.tbt.view;
+package za.co.tbt.mydining.view;
 
 import za.co.tbt.mydining.R;
 import android.view.View;

@@ -5,7 +5,7 @@ import java.util.List;
 
 import za.co.tbt.mydining.R;
 import za.co.tbt.mydining.db.DBItem;
-import za.co.tbt.view.DBListViewHolder;
+import za.co.tbt.mydining.view.DBListViewHolder;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,14 +13,24 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
 public class DBListAdapter extends ArrayAdapter<DBItem> {
-	List<DBItem> items = new ArrayList<DBItem>();
+	List<DBItem> items = new ArrayList<DBItem>();	
 	Context context;
 	
-	public DBListAdapter(Context context, List<DBItem> items){
-		super(context, R.layout.dblist_item, items);
+	public DBListAdapter(Context context){
+		super(context, R.layout.dblist_item);
 		
-		this.items = items;
 		this.context = context;
+	}
+	
+	public List<DBItem> getItems() {
+		return items;
+	}
+
+	public void setItems(List<DBItem> items) {
+		clear();
+		this.items = items;
+		
+		addAll(items);		
 	}
 	
 	public View getView(int position, View convertView, ViewGroup parent){

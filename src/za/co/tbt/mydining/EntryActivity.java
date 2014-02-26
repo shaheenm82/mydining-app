@@ -1,6 +1,9 @@
 package za.co.tbt.mydining;
 
+import java.util.List;
+
 import za.co.tbt.mydining.adapter.EntryPagerAdapter;
+import za.co.tbt.mydining.db.DBItem;
 import za.co.tbt.mydining.db.MyDiningDbOpenHelper;
 import android.app.ActionBar;
 import android.app.AlertDialog;
@@ -15,10 +18,11 @@ import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.SearchView;
+import android.widget.SearchView.OnQueryTextListener;
 import android.widget.Toast;
 
 public class EntryActivity extends FragmentActivity implements
-		ActionBar.TabListener {
+		ActionBar.TabListener, OnQueryTextListener {
 
 	/**
 	 * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -96,6 +100,7 @@ public class EntryActivity extends FragmentActivity implements
 	            (SearchView) menu.findItem(R.id.action_search).getActionView();
 	    searchView.setSearchableInfo(
 	            searchManager.getSearchableInfo(getComponentName()));
+	    searchView.setOnQueryTextListener(this);
 	    
 		return true;
 	}
@@ -145,22 +150,48 @@ public class EntryActivity extends FragmentActivity implements
 	
 	private void performSearch(Intent intent){
 		if (Intent.ACTION_SEARCH.equals(intent.getAction())){
+			//List<DBItem> items;
+			int i = mViewPager.getCurrentItem();
 			String query = intent.getStringExtra(SearchManager.QUERY);
-			
-			//short message displayed and removed after a short while
-			Toast.makeText(this, query, Toast.LENGTH_SHORT).show();
-			
-			//alert message dialog
-		    AlertDialog ad = new AlertDialog.Builder(this).create();  
-		    ad.setCancelable(false); // This blocks the 'BACK' button  
-		    ad.setMessage(query);  
-		    ad.setButton("OK", new DialogInterface.OnClickListener() {  
-		        @Override  
-		        public void onClick(DialogInterface dialog, int which) {  
-		            dialog.dismiss();                      
-		        }  
-		    });  
-		    ad.show();  
+						
+			switch (i){
+			case 0:
+				((RestaurantFragment)mEntryPagerAdapter.getItem(i)).filter(query);
+				break;
+			case 1:
+				((CuisineFragment)mEntryPagerAdapter.getItem(i)).filter(query);
+				break;
+			default:
+				return;
+			}
 		}
+	}
+
+	@Override
+	public boolean onQueryTextChange(String newText) {
+		// TODO Auto-generated method stub
+		boolean retVal = true;
+		if (newText.length() == 0){
+			int i = mViewPager.getCurrentItem();
+						
+			switch (i){
+			case 0:
+				((RestaurantFragment)mEntryPagerAdapter.getItem(i)).filter("");
+				break;
+			case 1:
+				((CuisineFragment)mEntryPagerAdapter.getItem(i)).filter("");
+				break;				
+			default:
+				retVal = false;
+			}
+		}
+		
+		return retVal;
+	}
+
+	@Override
+	public boolean onQueryTextSubmit(String query) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }

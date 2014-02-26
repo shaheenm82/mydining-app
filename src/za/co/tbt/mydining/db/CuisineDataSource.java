@@ -47,13 +47,30 @@ public class CuisineDataSource {
 	    // make sure to close the cursor
 	    cursor.close();
 	    return cuisines;
-	  }
+	}
 
-	  private Cuisine getCuisine(Cursor cursor) {
+	public List<DBItem> searchForCuisines(String selection, String[] args) {
+	    List<DBItem> cuisines = new ArrayList<DBItem>();
+
+	    Cursor cursor = db.query(TABLE_NAME,
+	        allColumns, selection, args, null, null, null);
+
+	    cursor.moveToFirst();
+	    while (!cursor.isAfterLast()) {
+	      Cuisine cuisine = getCuisine(cursor);
+	      cuisines.add(cuisine);
+	      cursor.moveToNext();
+	    }
+	    // make sure to close the cursor
+	    cursor.close();
+	    return cuisines;
+	}
+	
+	private Cuisine getCuisine(Cursor cursor) {
 		Cuisine cuisine = new Cuisine();
 		cuisine.setId(cursor.getLong(0));
 		cuisine.setName(cursor.getString(1));
 		cuisine.setDescription(cursor.getString(2));
 	    return cuisine;
-	  }
+	}
 }
