@@ -57,6 +57,8 @@ public class RestaurantFragment extends Fragment implements OnItemSelectedListen
 		// TODO Auto-generated method stub
 		Restaurant restaurant = (Restaurant)restView.getItemAtPosition(position);
 		
+		
+		
 	}
 
 	@Override
