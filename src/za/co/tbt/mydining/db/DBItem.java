@@ -4,6 +4,11 @@ public class DBItem {
 	private long id;
 	private String name;
 	
+	public DBItem(String name) {
+		// TODO Auto-generated constructor stub
+		id = 0;
+		this.name = name;
+	}
 	public long getId() {
 		return id;
 	}

@@ -67,9 +67,9 @@ public class CuisineDataSource {
 	}
 	
 	private Cuisine getCuisine(Cursor cursor) {
-		Cuisine cuisine = new Cuisine();
+		Cuisine cuisine = new Cuisine(cursor.getString(1));
 		cuisine.setId(cursor.getLong(0));
-		cuisine.setName(cursor.getString(1));
+		//cuisine.setName(cursor.getString(1));
 		cuisine.setDescription(cursor.getString(2));
 	    return cuisine;
 	}

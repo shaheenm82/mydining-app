@@ -26,10 +26,10 @@ public class EntryPagerAdapter extends FragmentPagerAdapter {
 	
 	
 	/**
-	 * @param fm
+	 * @param fragment
 	 */
-	public EntryPagerAdapter(FragmentManager fm, Context context) {
-		super(fm);		
+	public EntryPagerAdapter(FragmentManager fragment, Context context) {
+		super(fragment);		
 		// TODO Auto-generated constructor stub
 		Bundle args;
 		Fragment f; 

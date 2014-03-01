@@ -150,43 +150,40 @@ public class EntryActivity extends FragmentActivity implements
 	
 	private void performSearch(Intent intent){
 		if (Intent.ACTION_SEARCH.equals(intent.getAction())){
-			//List<DBItem> items;
 			int i = mViewPager.getCurrentItem();
+			int returned = 0;
+			
 			String query = intent.getStringExtra(SearchManager.QUERY);
 						
 			switch (i){
 			case 0:
-				((RestaurantFragment)mEntryPagerAdapter.getItem(i)).filter(query);
+				returned = ((RestaurantFragment)mEntryPagerAdapter.getItem(i)).filter(query);
 				break;
 			case 1:
-				((CuisineFragment)mEntryPagerAdapter.getItem(i)).filter(query);
+				returned = ((CuisineFragment)mEntryPagerAdapter.getItem(i)).filter(query);
 				break;
 			default:
 				return;
 			}
-		}
+			
+			if (returned == 0){
+				Toast.makeText(getApplicationContext(), "No records found.", Toast.LENGTH_SHORT).show();
+			}
+		}			
 	}
 
 	@Override
 	public boolean onQueryTextChange(String newText) {
 		// TODO Auto-generated method stub
-		boolean retVal = true;
-		if (newText.length() == 0){
-			int i = mViewPager.getCurrentItem();
-						
-			switch (i){
-			case 0:
-				((RestaurantFragment)mEntryPagerAdapter.getItem(i)).filter("");
-				break;
-			case 1:
-				((CuisineFragment)mEntryPagerAdapter.getItem(i)).filter("");
-				break;				
-			default:
-				retVal = false;
-			}
-		}
+		//if (newText.length() == 0){
+			Intent intent = getIntent();
+			intent.setAction(Intent.ACTION_SEARCH);
+			intent.putExtra(SearchManager.QUERY, newText);
+			
+			performSearch(intent);						
+		//}				
 		
-		return retVal;
+		return true;
 	}
 
 	@Override

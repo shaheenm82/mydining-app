@@ -17,7 +17,7 @@ public class DBListAdapter extends ArrayAdapter<DBItem> {
 	Context context;
 	
 	public DBListAdapter(Context context){
-		super(context, R.layout.dblist_item);
+		super(context, R.layout.list_dbitem);
 		
 		this.context = context;
 	}
@@ -38,7 +38,7 @@ public class DBListAdapter extends ArrayAdapter<DBItem> {
 		
 		if (convertView == null){
 			LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			convertView = inflater.inflate(R.layout.dblist_item, null);
+			convertView = inflater.inflate(R.layout.list_dbitem, null);
 			
 			listViewHolder = new DBListViewHolder(convertView);
 			

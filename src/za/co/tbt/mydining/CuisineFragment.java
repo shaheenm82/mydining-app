@@ -1,7 +1,10 @@
 package za.co.tbt.mydining;
 
+import java.util.List;
+
 import za.co.tbt.mydining.adapter.DBListAdapter;
 import za.co.tbt.mydining.db.CuisineDataSource;
+import za.co.tbt.mydining.db.DBItem;
 import za.co.tbt.mydining.db.RestaurantDataSource;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -35,10 +38,14 @@ public class CuisineFragment extends Fragment{
         return rootView;
     }
 	
-	public void filter(String filter){
+	public int filter(String filter){
 		String[] args = {"%" + filter + "%"};
 		
-		listAdapter.setItems(cuisineDataSource.searchForCuisines("name LIKE ?", args));		
+		List<DBItem> items = cuisineDataSource.searchForCuisines("name LIKE ?", args); 
+		
+		listAdapter.setItems(items);
+		
+		return items.size();
 	}
 	
 	public CharSequence getTitle(){

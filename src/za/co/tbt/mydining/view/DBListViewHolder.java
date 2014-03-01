@@ -9,7 +9,7 @@ public class DBListViewHolder {
 	
 	public DBListViewHolder(View row) {
 		// TODO Auto-generated constructor stub
-		itemText = (TextView) row.findViewById(R.id.itemText);
+		itemText = (TextView) row.findViewById(R.id.text_item);
 	}
 
 	public void populateFrom(String r){

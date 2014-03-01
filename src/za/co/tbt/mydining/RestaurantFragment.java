@@ -1,21 +1,26 @@
 package za.co.tbt.mydining;
 
+import java.util.List;
+
 import za.co.tbt.mydining.adapter.DBListAdapter;
-import za.co.tbt.mydining.db.MyDiningDbOpenHelper;
+import za.co.tbt.mydining.db.DBItem;
 import za.co.tbt.mydining.db.Restaurant;
 import za.co.tbt.mydining.db.RestaurantDataSource;
-import android.content.Context;
-import android.database.Cursor;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Toast;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ListView;
 
-public class RestaurantFragment extends Fragment implements OnItemSelectedListener {
+public class RestaurantFragment extends Fragment implements OnItemClickListener {
+	public static final String RESTAURANT_NAME = "restaurant_name";
+	
 	private ListView restView = null;
 	private DBListAdapter listAdapter = null;
 	private RestaurantDataSource restDataSource = null;
@@ -29,7 +34,7 @@ public class RestaurantFragment extends Fragment implements OnItemSelectedListen
         
         restView = (ListView)rootView.findViewById(R.id.list_restaurants);
         
-        restView.setOnItemSelectedListener(this);
+        restView.setOnItemClickListener(this);
         
 		restDataSource = new RestaurantDataSource(getActivity());
 		restDataSource.open();
@@ -41,10 +46,14 @@ public class RestaurantFragment extends Fragment implements OnItemSelectedListen
         return rootView;
     }
 	
-	public void filter(String filter){
-		String[] args = {"%" + filter + "%"};
+	public int filter(String filter){
+		String[] args = {filter + "%"};
 		
-		listAdapter.setItems(restDataSource.searchForRestaurants("name LIKE ?", args));
+		List<DBItem> items = restDataSource.searchForRestaurants("name LIKE ?", args); 
+		
+		listAdapter.setItems(items);
+		
+		return items.size();
 	}
 	
 	public CharSequence getTitle(){
@@ -52,18 +61,12 @@ public class RestaurantFragment extends Fragment implements OnItemSelectedListen
 	}
 
 	@Override
-	public void onItemSelected(AdapterView<?> parent, View view, int position,
-			long id) {
+	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 		// TODO Auto-generated method stub
 		Restaurant restaurant = (Restaurant)restView.getItemAtPosition(position);
 		
-		
-		
-	}
-
-	@Override
-	public void onNothingSelected(AdapterView<?> parent) {
-		// TODO Auto-generated method stub
-		
+		Intent intent = new Intent(getActivity(), RestaurantDetailActivity.class);
+		intent.putExtra(RESTAURANT_NAME, restaurant.getName());
+		startActivity(intent);
 	}
 }
