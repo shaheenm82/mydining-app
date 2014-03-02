@@ -1,9 +1,16 @@
 package za.co.tbt.mydining.adapter;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 import za.co.tbt.mydining.R;
+import za.co.tbt.mydining.db.Branch;
 import za.co.tbt.mydining.db.Menu;
 import za.co.tbt.mydining.db.MenuCategory;
 import za.co.tbt.mydining.db.MenuItem;
+import za.co.tbt.mydining.view.BranchListViewHolder;
+import za.co.tbt.mydining.view.BranchProvinceListViewHolder;
 import za.co.tbt.mydining.view.MenuCategoryListViewHolder;
 import za.co.tbt.mydining.view.MenuItemListViewHolder;
 import android.content.Context;
@@ -11,22 +18,45 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
-import android.widget.ExpandableListView;
 
-public class MenuListAdapter extends BaseExpandableListAdapter{
+public class BranchListAdapter extends BaseExpandableListAdapter{
 	Context context;
-	Menu menu;
+	List<String> provinces;
+	HashMap<String, List<Branch>> branches;
 	
-	public MenuListAdapter(Context context, Menu menu){
+	public BranchListAdapter(Context context, List<Branch> pbranches){
 		//super(context, R.layout.list_dbitem);		
+		String province = "";
+		List<Branch> details;
+		
 		this.context = context;
-		this.menu = menu;
+		
+		details = new ArrayList<Branch>();
+		this.provinces = new ArrayList<String>();
+		this.branches = new HashMap<String, List<Branch>>();
+		
+		for (Branch branch : pbranches) {
+			if (! province.equals(branch.getProvince())){
+				if ( details.size() > 0 ){
+					this.branches.put(province, details);
+				}
+				
+				province = branch.getProvince();
+				
+				provinces.add(province);
+				details = new ArrayList<Branch>();								
+			}
+			
+			details.add(branch);
+		}
+		
+		this.branches.put(province, details);
 	}
 
 	@Override
 	public Object getChild(int groupPosition, int childPosition) {
 		// TODO Auto-generated method stub
-		return ((MenuCategory)menu.getCategories().get(groupPosition)).getDishes().get(childPosition);
+		return branches.get(provinces.get(groupPosition)).get(childPosition);
 	}
 
 	@Override
@@ -39,20 +69,20 @@ public class MenuListAdapter extends BaseExpandableListAdapter{
 	public View getChildView(int groupPosition, int childPosition,
 			boolean isLastChild, View convertView, ViewGroup parent) {
 		// TODO Auto-generated method stub				
-		MenuItemListViewHolder listviewHolder;
-		MenuItem mitem = (MenuItem)getChild(groupPosition, childPosition);
+		BranchListViewHolder listviewHolder;
+		Branch branch = (Branch)getChild(groupPosition, childPosition);
 		
 		if (convertView == null){
 			LayoutInflater inflater = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			convertView = inflater.inflate(R.layout.list_menuitem, null);
+			convertView = inflater.inflate(R.layout.list_branch, null);
 			
-			listviewHolder = new MenuItemListViewHolder(convertView);
+			listviewHolder = new BranchListViewHolder(convertView);
 			convertView.setTag(listviewHolder);
 		}else{
-			listviewHolder = (MenuItemListViewHolder) convertView.getTag();
+			listviewHolder = (BranchListViewHolder) convertView.getTag();
 		}
 		
-		listviewHolder.populateFrom(mitem);				
+		listviewHolder.populateFrom(branch);				
 		
 		return convertView;
 	}
@@ -60,19 +90,19 @@ public class MenuListAdapter extends BaseExpandableListAdapter{
 	@Override
 	public int getChildrenCount(int groupPosition) {
 		// TODO Auto-generated method stub
-		return ((MenuCategory)menu.getCategories().get(groupPosition)).getDishes().size();
+		return branches.get(provinces.get(groupPosition)).size();
 	}
 
 	@Override
 	public Object getGroup(int groupPosition) {
 		// TODO Auto-generated method stub
-		return menu.getCategories().get(groupPosition);
+		return provinces.get(groupPosition);
 	}
 
 	@Override
 	public int getGroupCount() {
 		// TODO Auto-generated method stub
-		return menu.getCategories().size();
+		return provinces.size();
 	}
 
 	@Override
@@ -85,21 +115,20 @@ public class MenuListAdapter extends BaseExpandableListAdapter{
 	public View getGroupView(int groupPosition, boolean isExpanded,
 			View convertView, ViewGroup parent) {
 		// TODO Auto-generated method stub
-		MenuCategoryListViewHolder listviewHolder;
-		MenuCategory mcat = (MenuCategory) getGroup(groupPosition);
+		BranchProvinceListViewHolder listviewHolder;
+		String province = (String) getGroup(groupPosition);
 		
 		if (convertView == null){
 			LayoutInflater inflater = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			convertView = inflater.inflate(R.layout.group_menucategory, null);
+			convertView = inflater.inflate(R.layout.group_branchprovince, null);
 			
-			listviewHolder = new MenuCategoryListViewHolder(convertView);			
+			listviewHolder = new BranchProvinceListViewHolder(convertView);
 			convertView.setTag(listviewHolder);
 		}else{
-			listviewHolder = (MenuCategoryListViewHolder) convertView.getTag();
+			listviewHolder = (BranchProvinceListViewHolder) convertView.getTag();
 		}
 		
-		((ExpandableListView) parent).expandGroup(groupPosition);
-		listviewHolder.populateFrom(mcat);
+		listviewHolder.populateFrom(province);
 		
 		return convertView;
 	}

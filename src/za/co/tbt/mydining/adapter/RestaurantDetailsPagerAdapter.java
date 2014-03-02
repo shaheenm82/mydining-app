@@ -31,12 +31,12 @@ public class RestaurantDetailsPagerAdapter extends FragmentPagerAdapter {
 		f = new MenuFragment();
 		((MenuFragment)f).setRestaurantMenu(restaurant.getRestaurant_menu());
 		args = new Bundle();
-		
 		fragmentItems.add(f);
 		args.putString(ARG_TITLE, context.getString(R.string.title_menus));
 		f.setArguments(args);
 		
 		f = new BranchFragment();
+		((BranchFragment)f).setRestaurantBranches(restaurant.getRestaurant_branches());
 		args = new Bundle();
 		fragmentItems.add(f);
 		args.putString(ARG_TITLE, context.getString(R.string.title_branches));

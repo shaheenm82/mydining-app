@@ -75,7 +75,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/text_veg"
+            android:id="@+id/text_vegetarian"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.05"
@@ -84,7 +84,7 @@
             android:textSize="14dp" />
 
         <TextView
-            android:id="@+id/text_health"
+            android:id="@+id/text_healthy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="14dp"

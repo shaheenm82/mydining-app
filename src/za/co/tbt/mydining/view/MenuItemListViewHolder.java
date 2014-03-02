@@ -20,8 +20,8 @@ public class MenuItemListViewHolder {
 		menuDescriptionText = (TextView) row.findViewById(R.id.text_description);
 		menuAdditionalText = (TextView) row.findViewById(R.id.text_additional);
 		menuSpecialText = (TextView) row.findViewById(R.id.text_special);
-		menuVegetarianText = (TextView) row.findViewById(R.id.text_veg);
-		menuHealthyText = (TextView) row.findViewById(R.id.text_health);
+		menuVegetarianText = (TextView) row.findViewById(R.id.text_vegetarian);
+		menuHealthyText = (TextView) row.findViewById(R.id.text_healthy);
 		menuCostText = (TextView) row.findViewById(R.id.text_cost);
 	}
 
@@ -29,7 +29,7 @@ public class MenuItemListViewHolder {
 		menuDishText.setText(mitem.getDish());
 		menuDescriptionText.setText(mitem.getDescription());
 		menuAdditionalText.setText(mitem.getAdditional());
-		menuCostText.setText(new Float(mitem.getCost()).toString());
+		menuCostText.setText(String.format("%.2f", mitem.getCost()));
 		if (mitem.isSpecial()){
 			menuSpecialText.setText("S");
 		}else{
