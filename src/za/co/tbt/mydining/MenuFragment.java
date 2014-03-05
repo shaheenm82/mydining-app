@@ -3,6 +3,7 @@ package za.co.tbt.mydining;
 import za.co.tbt.mydining.adapter.MenuListAdapter;
 import za.co.tbt.mydining.db.Menu;
 import za.co.tbt.mydining.db.RestaurantDataSource;
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -20,12 +21,24 @@ import android.widget.ExpandableListView;
  */
 public class MenuFragment extends Fragment {
 	//private ListView restView = null;
+	private RestaurantDataSupplier restDataSupplier = null;
+	private ExpandableListView menuView = null;
 	private MenuListAdapter menuAdapter = null;
 	//private RestaurantDataSource restDataSource = null;
 	private Menu restaurant_menu = null;	
 	
 	public void setRestaurantMenu(Menu menu){
 		this.restaurant_menu = menu;
+		
+		menuAdapter = new MenuListAdapter(getActivity(), restaurant_menu);
+		menuView.setAdapter(menuAdapter);		        
+	}
+	
+	@Override
+	public void onAttach(Activity activity) {
+		// TODO Auto-generated method stub
+		super.onAttach(activity);
+		restDataSupplier = (RestaurantDataSupplier) activity;
 	}
 	
 	@Override
@@ -33,15 +46,14 @@ public class MenuFragment extends Fragment {
 			Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_menu, container, false);
         
-        ExpandableListView menuView = (ExpandableListView)rootView.findViewById(R.id.expandable_menu);
-		        
-        RestaurantDataSource restaurantDataSource = new RestaurantDataSource(getActivity());
-		restaurantDataSource.open();
+        menuView = (ExpandableListView)rootView.findViewById(R.id.expandable_menu);
 		
-		menuAdapter = new MenuListAdapter(getActivity(), restaurant_menu);
+        restaurant_menu = restDataSupplier.requestRestaurantMenu();
+        
+        menuAdapter = new MenuListAdapter(getActivity(), restaurant_menu);
 		menuView.setAdapter(menuAdapter);
 		
-        return rootView;
+		return rootView;
 	}
 
 	public CharSequence getTitle(){

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import za.co.tbt.mydining.BranchFragment;
 import za.co.tbt.mydining.CuisineFragment;
 import za.co.tbt.mydining.FavouriteFragment;
-import za.co.tbt.mydining.MapFragment;
+import za.co.tbt.mydining.BranchMapFragment;
 import za.co.tbt.mydining.MenuFragment;
 import za.co.tbt.mydining.R;
 import za.co.tbt.mydining.RestaurantFragment;
@@ -29,20 +29,20 @@ public class RestaurantDetailsPagerAdapter extends FragmentPagerAdapter {
 		fragmentItems = new ArrayList<Fragment>();		
 		
 		f = new MenuFragment();
-		((MenuFragment)f).setRestaurantMenu(restaurant.getRestaurant_menu());
+		//((MenuFragment)f).setRestaurantMenu(restaurant.getRestaurant_menu());
 		args = new Bundle();
 		fragmentItems.add(f);
 		args.putString(ARG_TITLE, context.getString(R.string.title_menus));
 		f.setArguments(args);
 		
 		f = new BranchFragment();
-		((BranchFragment)f).setRestaurantBranches(restaurant.getRestaurant_branches());
+		//((BranchFragment)f).setRestaurantBranches(restaurant.getRestaurant_branches());
 		args = new Bundle();
 		fragmentItems.add(f);
 		args.putString(ARG_TITLE, context.getString(R.string.title_branches));
 		f.setArguments(args);
 		
-		f = new MapFragment();
+		f = new BranchMapFragment();
 		args = new Bundle();
 		fragmentItems.add(f);
 		args.putString(ARG_TITLE, context.getString(R.string.title_map));

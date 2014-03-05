@@ -60,12 +60,12 @@ public class RestaurantDataSource {
 	}
 	
 	public void open() throws SQLException {
-		dbHelper.openDataBase();
-	    db = dbHelper.getWritableDatabase();
+		//dbHelper.openDataBase();
+	    db = dbHelper.getOpenDatabase();
 	}
 
 	public void close() {
-		dbHelper.close();
+		//dbHelper.close();
 	}
 	
 	public List<DBItem> getAllRestaurants() {

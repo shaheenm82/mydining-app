@@ -11,20 +11,29 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.provider.OpenableColumns;
 import android.util.Log;
 
 public class MyDiningDbOpenHelper extends SQLiteOpenHelper {
 	private static final String DATABASE_PATH = "/data/data/za.co.tbt.mydining/databases/";
 	private static final String DATABASE_NAME = "dining.sqlite";
-	private static final int SCHEMA_VERSION = 1;
+	private static final int SCHEMA_VERSION = 2;
 	
-	public SQLiteDatabase dbSqlite;
+	private static SQLiteDatabase dbSqlite;
 	
 	private final Context context;
 	
 	public MyDiningDbOpenHelper(Context context){
 		super(context, DATABASE_NAME, null, SCHEMA_VERSION);
 		this.context = context;
+	}
+	
+	
+	public SQLiteDatabase getOpenDatabase(){
+		if (dbSqlite == null){
+			openDataBase();
+		}
+		return dbSqlite;	
 	}
 	
 	@Override
@@ -36,7 +45,9 @@ public class MyDiningDbOpenHelper extends SQLiteOpenHelper {
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		// TODO Auto-generated method stub
-
+		if ( oldVersion != SCHEMA_VERSION){
+			copyDBFromResource();
+		}
 	}
 	
 	public void createDatabase(){
@@ -99,7 +110,7 @@ public class MyDiningDbOpenHelper extends SQLiteOpenHelper {
 	
 	public void openDataBase() throws SQLException{
 		String dbPath = DATABASE_PATH + DATABASE_NAME;
-		dbSqlite = SQLiteDatabase.openDatabase(dbPath, null, SQLiteDatabase.OPEN_READWRITE);
+		dbSqlite = SQLiteDatabase.openDatabase(dbPath, null, SQLiteDatabase.OPEN_READWRITE);		
 	}
 	
 	public void closeDataBase(){

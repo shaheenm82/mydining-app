@@ -6,6 +6,7 @@ import za.co.tbt.mydining.adapter.BranchListAdapter;
 import za.co.tbt.mydining.db.Branch;
 import za.co.tbt.mydining.db.Menu;
 import za.co.tbt.mydining.db.RestaurantDataSource;
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -23,27 +24,37 @@ import android.widget.ListView;
  * 
  */
 public class BranchFragment extends Fragment {
+	private RestaurantDataSupplier restDataSupplier = null;
+	private ExpandableListView branchView = null;
 	private BranchListAdapter branchAdapter = null;
 	
 	private List<Branch> restaurant_branches = null;	
 	
 	public void setRestaurantBranches(List<Branch> branches){
 		this.restaurant_branches = branches;
+		
+		branchAdapter = new BranchListAdapter(getActivity(), restaurant_branches);
+		branchView.setAdapter(branchAdapter);
 	}
+	
+	@Override
+	public void onAttach(Activity activity) {
+		// TODO Auto-generated method stub
+		super.onAttach(activity);
+		restDataSupplier = (RestaurantDataSupplier) activity;
+	}
+	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_branch, container, false);
         
-        ExpandableListView branchView = (ExpandableListView)rootView.findViewById(R.id.expandable_branch);
+        branchView = (ExpandableListView)rootView.findViewById(R.id.expandable_branch);		
 		
+        restaurant_branches = restDataSupplier.requestRestaurantBranches();
         
-        RestaurantDataSource restaurantDataSource = new RestaurantDataSource(getActivity());
-		restaurantDataSource.open();
-		
-		branchAdapter = new BranchListAdapter(getActivity(), restaurant_branches);
+        branchAdapter = new BranchListAdapter(getActivity(), restaurant_branches);
 		branchView.setAdapter(branchAdapter);
-		
 		
         return rootView;
 	}

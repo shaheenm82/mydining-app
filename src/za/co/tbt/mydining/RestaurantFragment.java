@@ -4,6 +4,7 @@ import java.util.List;
 
 import za.co.tbt.mydining.adapter.DBListAdapter;
 import za.co.tbt.mydining.db.DBItem;
+import za.co.tbt.mydining.db.FavouriteDataSource;
 import za.co.tbt.mydining.db.Restaurant;
 import za.co.tbt.mydining.db.RestaurantDataSource;
 import android.content.Intent;
@@ -46,6 +47,14 @@ public class RestaurantFragment extends Fragment implements OnItemClickListener 
         return rootView;
     }
 	
+	@Override
+	public void onDestroyView() {
+		// TODO Auto-generated method stub
+		super.onDestroyView();
+		
+		restDataSource.close();
+	}
+	
 	public int filter(String filter){
 		String[] args = {filter + "%"};
 		
@@ -64,6 +73,11 @@ public class RestaurantFragment extends Fragment implements OnItemClickListener 
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 		// TODO Auto-generated method stub
 		Restaurant restaurant = (Restaurant)restView.getItemAtPosition(position);
+		
+		FavouriteDataSource favDataSource = new FavouriteDataSource(getActivity());
+		favDataSource.open();
+		favDataSource.addFavourite(restaurant);
+		favDataSource.close();
 		
 		Intent intent = new Intent(getActivity(), RestaurantDetailActivity.class);
 		intent.putExtra(RESTAURANT_NAME, restaurant.getName());

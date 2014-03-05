@@ -49,7 +49,8 @@ public class EntryActivity extends FragmentActivity implements
 
 		//create database helper
 		diningHelper = new MyDiningDbOpenHelper(this);
-		diningHelper.createDatabase();		
+		diningHelper.createDatabase();
+		diningHelper.openDataBase();
 				
 		// Set up the action bar.
 		final ActionBar actionBar = getActionBar();
@@ -105,6 +106,14 @@ public class EntryActivity extends FragmentActivity implements
 		return true;
 	}
 
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+		
+		diningHelper.closeDataBase();
+	}
+	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// TODO Auto-generated method stub

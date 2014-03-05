@@ -10,4 +10,11 @@
         android:layout_height="wrap_content"
         android:text="@string/text_map"
         android:divider="#fff"/>
+    <fragment 
+        android:id="@+id/map_branches"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+
+        />
 </LinearLayout>

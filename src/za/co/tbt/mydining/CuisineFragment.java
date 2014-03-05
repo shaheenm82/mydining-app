@@ -38,6 +38,13 @@ public class CuisineFragment extends Fragment{
         return rootView;
     }
 	
+	@Override
+	public void onDestroyView() {
+		// TODO Auto-generated method stub
+		super.onDestroyView();
+		cuisineDataSource.close();
+	}
+	
 	public int filter(String filter){
 		String[] args = {"%" + filter + "%"};
 		
