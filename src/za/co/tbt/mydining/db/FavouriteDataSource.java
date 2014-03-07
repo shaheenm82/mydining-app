@@ -8,6 +8,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.text.format.DateFormat;
+import android.util.Log;
 
 public class FavouriteDataSource {
 	public static final String TABLE_NAME = "favourites";
@@ -88,7 +90,7 @@ public class FavouriteDataSource {
 			favourite.setRestaurant((Restaurant)restaurants.get(0));			
 		}
 		favourite.setSelected(cursor.getInt(2));
-		favourite.setSelected_date(cursor.getLong(3));
+		favourite.setSelected_date(cursor.getString(3));
 		
 		restDataSource.close();
 		
@@ -101,18 +103,20 @@ public class FavouriteDataSource {
 		String[] args = {Long.valueOf(restaurant.getId()).toString()};
 		
 		favourites = searchForFavourites("rest_id = ?", args);
+				
+		Log.d("ssm","Favourites date " + DateFormat.format("yyyy-MM-dd", Calendar.getInstance()));
 		
 		if (favourites.size() == 0){
 			//Favourite does not exist
 			db.execSQL("INSERT INTO " + TABLE_NAME + " ( " + COLUMN_REST + ", " + COLUMN_SELECTED + ", " + COLUMN_SELECTED_DATE + " )"
-					+ " VALUES ( " + restaurant.getId() + ", 1, " + Calendar.getInstance().getTimeInMillis() + ")");
+					+ " VALUES ( " + restaurant.getId() + ", 1, '" + DateFormat.format("yyyy-MM-dd", Calendar.getInstance()) + "')");
 		}else{
 			//favourite exists
 			favourite = favourites.get(0);
 			
 			db.execSQL("UPDATE " + TABLE_NAME + " "
 					+ " SET " + COLUMN_SELECTED + " = " + (favourite.getSelected() + 1) + ", "
-					+ COLUMN_SELECTED_DATE + " = " + Calendar.getInstance().getTimeInMillis()
+					+ COLUMN_SELECTED_DATE + " = '" + DateFormat.format("yyyy-MM-dd", Calendar.getInstance()) + "'"
 					+ " WHERE " + COLUMN_ID + " = " + favourite.getId());		
 		}		
 	}

@@ -8,8 +8,17 @@
         android:id="@+id/list_restaurants"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:divider="#fff"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/text_copyright"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:gravity="center"
-        android:divider="#fff"/>
-     
- 
+        android:text="@string/copyright"
+        android:textSize="10sp" />
+
 </RelativeLayout>

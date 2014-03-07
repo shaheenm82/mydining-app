@@ -1,9 +1,12 @@
 package za.co.tbt.mydining.view;
 
+import java.util.Calendar;
+
 import za.co.tbt.mydining.R;
 import za.co.tbt.mydining.db.Favourite;
 import za.co.tbt.mydining.db.MenuItem;
 import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -22,6 +25,8 @@ public class FavouriteListViewHolder {
 	public void populateFrom(Favourite favourite){
 		favRestaurantText.setText(favourite.getRestaurant().getName());
 		favSelectedText.setText("Selected " + favourite.getSelected() + " times");
-		favLastText.setText("Last selected : " + DateFormat.format("E, d MMM yyyy", favourite.getSelected_date()));		
+		Log.d("ssm","viewing Favourites date " + favourite.getSelected_date());
+		
+		favLastText.setText("Last selected : " + favourite.getSelected_date());		
 	}
 }

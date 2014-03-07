@@ -30,7 +30,20 @@ public class RestaurantDataSource {
 			MENU_COLUMN_DISH, MENU_COLUMN_DESCRIPTION, MENU_COLUMN_ADDITIONAL, MENU_COLUMN_COST,
 			MENU_COLUMN_SPECIAL, MENU_COLUMN_VEG, MENU_COLUMN_HEALTH}; 
 	private String restMenuSelection = "rest_id = ?";
-	private String orderByMenuColumns = MENU_COLUMN_CATEGORY + ", " + MENU_COLUMN_COST;
+	private String orderByMenuCategory = " CASE category "
+			+ "WHEN 'Light Meals' THEN 0 "
+			+ "WHEN 'Regular Meals' THEN 1 "
+			+ "WHEN 'Combo Meals' THEN 2 "
+			+ "WHEN 'Family Meals' THEN 3 "
+			+ "WHEN 'Specialty Meals' THEN 4 "
+			+ "WHEN 'Kids Meals' THEN 5 "
+			+ "WHEN 'Salads' THEN 6 "
+			+ "WHEN 'Sides' THEN 7 "
+			+ "WHEN 'Extras' THEN 8 "
+			+ "WHEN 'Drinks' THEN 9 "
+			+ "WHEN 'Desserts' THEN 10 "
+			+ "END";
+	private String orderByMenuColumns = orderByMenuCategory + ", " + MENU_COLUMN_COST;
 	
 	public static final String BRANCH_TABLE_NAME = "branch";
 	public static final String BRANCH_COLUMN_ID = "_id";

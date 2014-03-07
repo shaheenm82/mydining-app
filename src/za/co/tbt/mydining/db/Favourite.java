@@ -1,10 +1,15 @@
 package za.co.tbt.mydining.db;
 
+import java.util.Calendar;
+
+import android.text.format.DateFormat;
+import android.util.Log;
+
 public class Favourite {
 	private long id;
 	private Restaurant restaurant;
 	private int selected;
-	private long selected_date;
+	private String selected_date;
 	
 	public long getId() {
 		return id;
@@ -25,11 +30,13 @@ public class Favourite {
 		this.selected = selected;
 	}
 	
-	public long getSelected_date() {
+	public String getSelected_date() {
 		return selected_date;
 	}
 	
-	public void setSelected_date(long selected_date) {
+	public void setSelected_date(String selected_date) {
+		Log.d("ssm","loading Favourites date " + selected_date);
+		
 		this.selected_date = selected_date;
 	}	
 }

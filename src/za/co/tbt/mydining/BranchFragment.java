@@ -4,16 +4,17 @@ import java.util.List;
 
 import za.co.tbt.mydining.adapter.BranchListAdapter;
 import za.co.tbt.mydining.db.Branch;
-import za.co.tbt.mydining.db.Menu;
-import za.co.tbt.mydining.db.RestaurantDataSource;
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
-import android.widget.ListView;
+import android.widget.TextView;
 
 /**
  * A simple {@link android.support.v4.app.Fragment} subclass. Activities that
@@ -23,7 +24,7 @@ import android.widget.ListView;
  * to create an instance of this fragment.
  * 
  */
-public class BranchFragment extends Fragment {
+public class BranchFragment extends Fragment{
 	private RestaurantDataSupplier restDataSupplier = null;
 	private ExpandableListView branchView = null;
 	private BranchListAdapter branchAdapter = null;
@@ -54,12 +55,12 @@ public class BranchFragment extends Fragment {
         restaurant_branches = restDataSupplier.requestRestaurantBranches();
         
         branchAdapter = new BranchListAdapter(getActivity(), restaurant_branches);
-		branchView.setAdapter(branchAdapter);
-		
+		branchView.setAdapter(branchAdapter);			
+        
         return rootView;
 	}
 
 	public CharSequence getTitle(){
 		return getString(R.string.title_menus);		
-	}
+	}	
 }

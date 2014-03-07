@@ -36,7 +36,7 @@ public class Branch extends DBItem {
 	}
 
 	public void setAddress(String address) {
-		this.address = address;
+		this.address = address.replaceAll(", ","\n");
 	}
 
 	public String getTelephone_no() {
