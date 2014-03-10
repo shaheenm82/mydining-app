@@ -104,7 +104,7 @@ public class FavouriteDataSource {
 		
 		favourites = searchForFavourites("rest_id = ?", args);
 				
-		Log.d("ssm","Favourites date " + DateFormat.format("yyyy-MM-dd", Calendar.getInstance()));
+		//Log.d("ssm","Favourites date " + DateFormat.format("yyyy-MM-dd", Calendar.getInstance()));
 		
 		if (favourites.size() == 0){
 			//Favourite does not exist

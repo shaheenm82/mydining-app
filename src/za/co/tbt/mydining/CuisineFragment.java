@@ -3,20 +3,23 @@ package za.co.tbt.mydining;
 import java.util.List;
 
 import za.co.tbt.mydining.adapter.DBListAdapter;
+import za.co.tbt.mydining.db.Cuisine;
 import za.co.tbt.mydining.db.CuisineDataSource;
 import za.co.tbt.mydining.db.DBItem;
-import za.co.tbt.mydining.db.RestaurantDataSource;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
-public class CuisineFragment extends Fragment{
+public class CuisineFragment extends Fragment implements OnItemClickListener{
 	private DBListAdapter listAdapter = null;
 	//private Context context;
 	
+	private ListView cuisineView = null;
 	CuisineDataSource cuisineDataSource = null;
 	
 	@Override
@@ -25,8 +28,9 @@ public class CuisineFragment extends Fragment{
  
         View rootView = inflater.inflate(R.layout.fragment_cuisine, container, false);
         
-        ListView cuisineView = (ListView)rootView.findViewById(R.id.list_cuisines);
+        cuisineView = (ListView)rootView.findViewById(R.id.list_cuisines);
 		
+        cuisineView.setOnItemClickListener(this);
         
 		cuisineDataSource = new CuisineDataSource(getActivity());
 		cuisineDataSource.open();
@@ -57,5 +61,17 @@ public class CuisineFragment extends Fragment{
 	
 	public CharSequence getTitle(){
 		return getString(R.string.title_cuisines);		
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+		// TODO Auto-generated method stub
+		Cuisine cuisine = (Cuisine)cuisineView.getItemAtPosition(position);
+		
+		EntryActivity entryActivity = ((EntryActivity)getActivity());
+		
+		((RestaurantFragment) entryActivity.mEntryPagerAdapter.getItem(0)).filterCuisines(cuisine.getName());
+		entryActivity.getActionBar().setSelectedNavigationItem(0);
+		
 	}
 }

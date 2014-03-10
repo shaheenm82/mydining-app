@@ -65,6 +65,16 @@ public class RestaurantFragment extends Fragment implements OnItemClickListener 
 		return items.size();
 	}
 	
+	public int filterCuisines(String filter){
+		String[] args = {"%" + filter + "%"};
+		
+		List<DBItem> items = restDataSource.searchForRestaurants("cuisines LIKE ?", args); 
+		
+		listAdapter.setItems(items);
+		
+		return items.size();
+	}
+	
 	public CharSequence getTitle(){
 		return getString(R.string.title_outlets);		
 	}

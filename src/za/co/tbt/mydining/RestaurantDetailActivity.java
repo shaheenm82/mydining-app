@@ -1,5 +1,6 @@
 package za.co.tbt.mydining;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import za.co.tbt.mydining.adapter.RestaurantDetailsPagerAdapter;
@@ -50,7 +51,7 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 	 */
 	ViewPager mViewPager;
 
-	LocationUpdateListener locUpdateListener;
+	List<LocationUpdateListener> locUpdateListeners;
 	LocationClient location_client;
 	Location location;
 
@@ -249,8 +250,10 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 		if (servicesConnected()){
 			location = location_client.getLastLocation();
 
-			if ( locUpdateListener != null ){
-				locUpdateListener.locationUpdated(location);							
+			if ( locUpdateListeners != null && locUpdateListeners.size() != 0){
+				for (LocationUpdateListener listener : locUpdateListeners) {
+					listener.locationUpdated(location);
+				}						
 			}
 		}
 	}
@@ -336,12 +339,18 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 	}	
 
 	@Override
-	public void setLocationUpdateListener(LocationUpdateListener lulistener) {
+	public void addLocationUpdateListener(LocationUpdateListener lulistener) {
 		// TODO Auto-generated method stub
-		locUpdateListener = lulistener;
+		if (locUpdateListeners == null){
+			locUpdateListeners = new ArrayList<LocationUpdateListener>();
+		}
+		
+		locUpdateListeners.add(lulistener);
 		
 		if(location != null){
-			locUpdateListener.locationUpdated(location);
+			for (LocationUpdateListener listener : locUpdateListeners) {
+				listener.locationUpdated(location);
+			}			
 		}
 	}
 }

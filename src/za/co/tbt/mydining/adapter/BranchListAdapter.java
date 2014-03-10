@@ -6,23 +6,25 @@ import java.util.List;
 
 import za.co.tbt.mydining.R;
 import za.co.tbt.mydining.db.Branch;
-import za.co.tbt.mydining.db.Menu;
-import za.co.tbt.mydining.db.MenuCategory;
-import za.co.tbt.mydining.db.MenuItem;
+import za.co.tbt.mydining.location.LocationProvider;
 import za.co.tbt.mydining.view.BranchListViewHolder;
 import za.co.tbt.mydining.view.BranchProvinceListViewHolder;
-import za.co.tbt.mydining.view.MenuCategoryListViewHolder;
-import za.co.tbt.mydining.view.MenuItemListViewHolder;
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.Button;
 
 public class BranchListAdapter extends BaseExpandableListAdapter{
 	Context context;
 	List<String> provinces;
 	HashMap<String, List<Branch>> branches;
+	private LocationProvider locProvider;
 	
 	public BranchListAdapter(Context context, List<Branch> pbranches){
 		//super(context, R.layout.list_dbitem);		
@@ -50,6 +52,8 @@ public class BranchListAdapter extends BaseExpandableListAdapter{
 			details.add(branch);
 		}
 		
+		locProvider = (LocationProvider)context;	
+		
 		this.branches.put(province, details);
 	}
 
@@ -75,13 +79,18 @@ public class BranchListAdapter extends BaseExpandableListAdapter{
 		if (convertView == null){
 			LayoutInflater inflater = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			convertView = inflater.inflate(R.layout.list_branch, null);
-			
+						
 			listviewHolder = new BranchListViewHolder(convertView);
+			
+			Button btnNavigate = (Button) convertView.findViewById(R.id.button_navigation);						
+			btnNavigate.setOnClickListener( listviewHolder);
+			
 			convertView.setTag(listviewHolder);
 		}else{
 			listviewHolder = (BranchListViewHolder) convertView.getTag();
 		}
 		
+		locProvider.addLocationUpdateListener(listviewHolder);		
 		listviewHolder.populateFrom(branch);				
 		
 		return convertView;

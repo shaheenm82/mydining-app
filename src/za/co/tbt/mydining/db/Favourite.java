@@ -35,7 +35,7 @@ public class Favourite {
 	}
 	
 	public void setSelected_date(String selected_date) {
-		Log.d("ssm","loading Favourites date " + selected_date);
+		//Log.d("ssm","loading Favourites date " + selected_date);
 		
 		this.selected_date = selected_date;
 	}	

@@ -219,8 +219,8 @@ public class RestaurantDataSource {
 			branch.setSuburb(cursor.getString(4));
 			branch.setAddress(cursor.getString(5));
 			branch.setTelephone_no(cursor.getString(6));
-			branch.setLatitude(cursor.getString(7));
-			branch.setLongitude(cursor.getString(8));
+			branch.setLatitude(cursor.getDouble(7));
+			branch.setLongitude(cursor.getDouble(8));
 			if (cursor.getInt(9) == 0){
 				branch.setHalaal(false);
 			}else{

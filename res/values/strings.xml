@@ -20,4 +20,6 @@
     <string name="copyright">All images, logos are copyright of their respective owners and/or brands.</string>
 
     <string name="text_cost_disclaimer">Prices displayed here are subject to change.  Please check with the restaurant when placing your order.</string>
+
+    <string name="button_navigate">Navigate To</string>
 </resources>

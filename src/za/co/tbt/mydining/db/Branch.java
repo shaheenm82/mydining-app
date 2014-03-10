@@ -5,8 +5,8 @@ public class Branch extends DBItem {
 	String suburb;
 	String address;
 	String telephone_no;
-	String latitude;
-	String longitude;
+	double latitude;
+	double longitude;
 	boolean halaal;
 	boolean kosher;
 	
@@ -47,19 +47,19 @@ public class Branch extends DBItem {
 		this.telephone_no = telephone_no;
 	}
 
-	public String getLatitude() {
+	public double getLatitude() {
 		return latitude;
 	}
 
-	public void setLatitude(String latitude) {
+	public void setLatitude(double latitude) {
 		this.latitude = latitude;
 	}
 
-	public String getLongitude() {
+	public double getLongitude() {
 		return longitude;
 	}
 
-	public void setLongitude(String longitude) {
+	public void setLongitude(double longitude) {
 		this.longitude = longitude;
 	}
 

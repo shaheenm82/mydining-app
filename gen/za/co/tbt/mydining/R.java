@@ -230,7 +230,7 @@ containing a value of this type.
         public static final int TableLayout1=0x7f060013;
         public static final int action_search=0x7f060029;
         public static final int action_settings=0x7f060028;
-        public static final int button_location=0x7f060017;
+        public static final int button_navigation=0x7f060017;
         public static final int expandable_branch=0x7f060006;
         public static final int expandable_menu=0x7f06000c;
         public static final int hybrid=0x7f060004;
@@ -318,6 +318,7 @@ containing a value of this type.
         [CHAR LIMIT=70] 
          */
         public static final int auth_client_using_bad_version_title=0x7f070014;
+        public static final int button_navigate=0x7f07002a;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -392,24 +393,24 @@ containing a value of this type.
         public static final int copyright=0x7f070028;
         public static final int hello_blank_fragment=0x7f070026;
         public static final int hello_world=0x7f070024;
-        public static final int pref_desc_dietary=0x7f070031;
-        public static final int pref_header_dietary=0x7f070030;
+        public static final int pref_desc_dietary=0x7f070032;
+        public static final int pref_header_dietary=0x7f070031;
         /**  Strings related to Settings 
  Example General settings 
          */
-        public static final int pref_header_general=0x7f07002b;
+        public static final int pref_header_general=0x7f07002c;
         /**  Example settings for Data & Sync 
  Example settings for Notifications 
          */
-        public static final int pref_title_halaal=0x7f07002c;
-        public static final int pref_title_kosher=0x7f07002d;
-        public static final int pref_title_vegan=0x7f07002f;
-        public static final int pref_title_vegetarian=0x7f07002e;
+        public static final int pref_title_halaal=0x7f07002d;
+        public static final int pref_title_kosher=0x7f07002e;
+        public static final int pref_title_vegan=0x7f070030;
+        public static final int pref_title_vegetarian=0x7f07002f;
         public static final int text_cost_disclaimer=0x7f070029;
         public static final int text_map=0x7f070027;
         public static final int title_activity_restaurant_detail=0x7f070025;
         public static final int title_activity_search=0x7f070023;
-        public static final int title_activity_settings=0x7f07002a;
+        public static final int title_activity_settings=0x7f07002b;
         public static final int title_branches=0x7f070020;
         public static final int title_cuisines=0x7f07001d;
         public static final int title_favourites=0x7f07001e;

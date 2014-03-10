@@ -1,5 +1,8 @@
 package za.co.tbt.mydining;
 
+import java.util.List;
+
+import za.co.tbt.mydining.db.Branch;
 import za.co.tbt.mydining.location.LocationProvider;
 import za.co.tbt.mydining.location.LocationUpdateListener;
 import za.co.tbt.mydining.location.LocationUtils;
@@ -16,6 +19,8 @@ import android.view.ViewGroup;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -38,12 +43,17 @@ public class BranchMapFragment extends Fragment implements LocationUpdateListene
 	
 	View rootView = null;
 	
+	private RestaurantDataSupplier restDataSupplier = null;
+	private List<Branch> restaurant_branches = null;	
+	
 	@Override
 	public void onAttach(Activity activity) {
 		// TODO Auto-generated method stub
 		super.onAttach(activity);
 		locProvider = (LocationProvider)activity;	
-		locProvider.setLocationUpdateListener(this);
+		locProvider.addLocationUpdateListener(this);
+		
+		restDataSupplier = (RestaurantDataSupplier) activity;
 	}
 	
 	@Override
@@ -60,7 +70,9 @@ public class BranchMapFragment extends Fragment implements LocationUpdateListene
 		} catch (InflateException e) {
 	        /* map is already there, just return view as it is */
 	    }
-				
+		
+	    restaurant_branches = restDataSupplier.requestRestaurantBranches();
+        
         return rootView;
 	}		
 		
@@ -74,7 +86,9 @@ public class BranchMapFragment extends Fragment implements LocationUpdateListene
 						
 		map.setMyLocationEnabled(true);
 		map_initialised = true;                
-						
+					
+		displayBranchesOnMap();
+		
 		if (location_available == true){
 			updateMapCamera();
 		}
@@ -89,7 +103,12 @@ public class BranchMapFragment extends Fragment implements LocationUpdateListene
 	}
 			
 	private void updateMapCamera(){
+		BitmapDescriptor bitmapDescriptor 
+		   = BitmapDescriptorFactory.defaultMarker(
+		     BitmapDescriptorFactory.HUE_ROSE);
+		
 		you = LocationUtils.getLatLng(getActivity(), location);
+		//LatLng me = new LatLng(you.latitude +0.1, you.longitude + 0.1);
 		
 		map.moveCamera(CameraUpdateFactory.newLatLngZoom(you,13));
         
@@ -97,6 +116,11 @@ public class BranchMapFragment extends Fragment implements LocationUpdateListene
                 .title("You")
                 .snippet("You are here")
                 .position(you));
+        
+        /*map.addMarker(new MarkerOptions()
+        .title("Me")
+        .snippet("I am are here")
+        .position(me));*/
     }
 	
 	public CharSequence getTitle(){
@@ -115,6 +139,20 @@ public class BranchMapFragment extends Fragment implements LocationUpdateListene
 		}
 	}
 	
-	
+	private void displayBranchesOnMap(){
+		if (restaurant_branches != null){
+			BitmapDescriptor bitmapDescriptor 
+			   = BitmapDescriptorFactory.defaultMarker(
+			     BitmapDescriptorFactory.HUE_BLUE);
+			
+			for (Branch branch : restaurant_branches) {
+				map.addMarker(new MarkerOptions()
+                	.title(branch.getName())
+                	.snippet(branch.getAddress())
+                	.position(new LatLng(branch.getLatitude(), branch.getLongitude()))
+                	.icon(bitmapDescriptor));
+			}
+		}
+	}
 
 }

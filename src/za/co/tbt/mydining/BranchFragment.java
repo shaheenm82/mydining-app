@@ -4,6 +4,7 @@ import java.util.List;
 
 import za.co.tbt.mydining.adapter.BranchListAdapter;
 import za.co.tbt.mydining.db.Branch;
+import za.co.tbt.mydining.location.LocationProvider;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
@@ -29,6 +30,7 @@ public class BranchFragment extends Fragment{
 	private ExpandableListView branchView = null;
 	private BranchListAdapter branchAdapter = null;
 	
+	
 	private List<Branch> restaurant_branches = null;	
 	
 	public void setRestaurantBranches(List<Branch> branches){
@@ -43,6 +45,7 @@ public class BranchFragment extends Fragment{
 		// TODO Auto-generated method stub
 		super.onAttach(activity);
 		restDataSupplier = (RestaurantDataSupplier) activity;
+		
 	}
 	
 	@Override
