@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
-    <Preference android:key="dietary_pref" android:summary="@string/pref_desc_dietary" android:title="@string/pref_header_dietary"/><CheckBoxPreference android:key="halaal_checkbox" android:title="@string/pref_title_halaal"/>
+    <PreferenceCategory android:title="@string/pref_header_dietary" android:summary="@string/pref_desc_dietary" android:key="dietary_pref"></PreferenceCategory>
+    <CheckBoxPreference android:key="halaal_checkbox" android:title="@string/pref_title_halaal"/>
     <CheckBoxPreference android:key="kosher_checkbox" android:title="@string/pref_title_kosher"/>
     <CheckBoxPreference android:key="vegetarian_checkbox" android:title="@string/pref_title_vegetarian"/>
     <CheckBoxPreference android:key="vegan_checkbox" android:title="@string/pref_title_vegan"/>
+    
     
     
 

@@ -108,6 +108,7 @@ public class SettingsActivity extends PreferenceActivity {
 		//fakeHeader.setTitle(R.string.pref_header_notifications);
 		//getPreferenceScreen().addPreference(fakeHeader);
 		//addPreferencesFromResource(R.xml.pref_notification);
+		addPreferencesFromResource(R.xml.pref_version);
 
 		// Add 'data and sync' preferences, and a corresponding header.
 		//fakeHeader = new PreferenceCategory(this);
