@@ -7,8 +7,10 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Locale;
 
-import za.co.tbt.mydining.service.DBStatusListener;
-import za.co.tbt.mydining.service.DBStatusService;
+import za.co.tbt.mydining.service.DBDownloadListener;
+import za.co.tbt.mydining.service.DBDownloadService;
+import za.co.tbt.mydining.service.DBVersionCheckListener;
+import za.co.tbt.mydining.service.DBVersionChecker;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -20,7 +22,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-public class MyDiningDbOpenHelper extends SQLiteOpenHelper implements DBStatusListener{
+public class MyDiningDbOpenHelper extends SQLiteOpenHelper {
 	private static final String DATABASE_PATH = "/data/data/za.co.tbt.mydining/databases/";
 	private static final String DATABASE_NAME = "dining.sqlite";
 	private static final int SCHEMA_VERSION = 2;
@@ -29,8 +31,6 @@ public class MyDiningDbOpenHelper extends SQLiteOpenHelper implements DBStatusLi
 	
 	private static SQLiteDatabase dbSqlite;	
 	private final Context context;
-	private ProgressDialog checkDBDialog;
-	
 	
 	public MyDiningDbOpenHelper(Context context){
 		super(context, DATABASE_NAME, null, SCHEMA_VERSION);
@@ -97,19 +97,27 @@ public class MyDiningDbOpenHelper extends SQLiteOpenHelper implements DBStatusLi
 		return db != null ? true : false;
 	}
 	
-	public void checkForDBUpdate(){
-		//String version = "";		
+	public void checkForDBUpdate(){		
 		SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
 		String db_version = sharedPref.getString(DB_VERSION_KEY, "");
 		
-		checkDBDialog = ProgressDialog.show(context, "Checking for Database Update", "",true);
-		DBStatusService dbStatusService = new DBStatusService(this);
-		dbStatusService.execute(db_version, DATABASE_PATH + DATABASE_NAME + ".tmp");		
+		DBVersionChecker dbVersionChecker = new DBVersionChecker((DBVersionCheckListener)context);
+		dbVersionChecker.execute(db_version);
 		
-		//return version;
 	}
 	
-	private void copyDBFromResource(String path){
+	public void downloadDB(){		
+		DBDownloadService dbDownloader = new DBDownloadService((DBDownloadListener)context);
+		dbDownloader.execute(DATABASE_PATH + DATABASE_NAME + ".tmp");
+		
+	}
+	
+	public boolean updateDBFromResource(){
+		return copyDBFromResource(DATABASE_PATH + DATABASE_NAME + ".tmp");
+	}
+	
+	public boolean copyDBFromResource(String path){
+		boolean success = false;
 		InputStream inputStream = null;
 		OutputStream outputStream = null;
 		
@@ -134,10 +142,12 @@ public class MyDiningDbOpenHelper extends SQLiteOpenHelper implements DBStatusLi
 			outputStream.close();
 			inputStream.close();
 			
-			//dbExist = true;
+			success = true;
 		} catch (IOException ioe){
 			throw new Error("Problem copying database from resource file");
 		}
+		
+		return success;
 	}
 	
 	public void openDataBase() throws SQLException{
@@ -150,26 +160,5 @@ public class MyDiningDbOpenHelper extends SQLiteOpenHelper implements DBStatusLi
 			dbSqlite.close();
 		}
 		super.close();		
-	}
-
-	@Override
-	public void databaseRetrieved(String version) {
-		// TODO Auto-generated method stub
-		if (version != null){
-			copyDBFromResource(DATABASE_PATH + DATABASE_NAME + ".tmp");
-			
-			SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
-			Editor prefEditor = sharedPref.edit();
-			
-			prefEditor.putString(DB_VERSION_KEY, version);
-			prefEditor.commit();
-		}
-		checkDBDialog.dismiss();
-	}
-
-	@Override
-	public void databaseStatusUpdated(String progress) {
-		// TODO Auto-generated method stub
-		checkDBDialog.setMessage(progress);
 	}	
 }

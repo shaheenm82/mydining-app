@@ -231,6 +231,7 @@ containing a value of this type.
         public static final int TableLayout1=0x7f060014;
         public static final int action_search=0x7f06002a;
         public static final int action_settings=0x7f060029;
+        public static final int action_version=0x7f06002b;
         public static final int button_navigation=0x7f060018;
         public static final int expandable_branch=0x7f060008;
         public static final int expandable_menu=0x7f06000e;
@@ -296,8 +297,9 @@ containing a value of this type.
         public static final int splash_screen=0x7f0b0002;
     }
     public static final class string {
-        public static final int action_search=0x7f070022;
+        public static final int action_search=0x7f07001c;
         public static final int action_settings=0x7f07001b;
+        public static final int action_version=0x7f07001d;
         public static final int app_name=0x7f07001a;
         /**   Title for notification shown when GooglePlayServices needs to be
         enabled for a application to work. [CHAR LIMIT=70] 
@@ -322,7 +324,7 @@ containing a value of this type.
         [CHAR LIMIT=70] 
          */
         public static final int auth_client_using_bad_version_title=0x7f070014;
-        public static final int button_navigate=0x7f07002a;
+        public static final int button_navigate=0x7f07002b;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -394,39 +396,39 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f070013;
-        public static final int copyright=0x7f070028;
-        public static final int hello_blank_fragment=0x7f070026;
-        public static final int hello_world=0x7f070024;
-        public static final int pref_app_version=0x7f07002d;
-        public static final int pref_app_version_value=0x7f07002e;
-        public static final int pref_db_version=0x7f07002c;
-        public static final int pref_db_version_value=0x7f07002f;
-        public static final int pref_desc_dietary=0x7f070038;
-        public static final int pref_header_about=0x7f07002b;
-        public static final int pref_header_dietary=0x7f070037;
+        public static final int copyright=0x7f070029;
+        public static final int hello_blank_fragment=0x7f070027;
+        public static final int hello_world=0x7f070025;
+        public static final int pref_app_version=0x7f07002e;
+        public static final int pref_app_version_value=0x7f07002f;
+        public static final int pref_db_version=0x7f07002d;
+        public static final int pref_db_version_value=0x7f070030;
+        public static final int pref_desc_dietary=0x7f070039;
+        public static final int pref_header_about=0x7f07002c;
+        public static final int pref_header_dietary=0x7f070038;
         /**  Strings related to Settings 
  Example General settings 
          */
-        public static final int pref_header_general=0x7f070032;
+        public static final int pref_header_general=0x7f070033;
         /**  Example settings for Data & Sync 
  Example settings for Notifications 
          */
-        public static final int pref_title_halaal=0x7f070033;
-        public static final int pref_title_kosher=0x7f070034;
-        public static final int pref_title_vegan=0x7f070036;
-        public static final int pref_title_vegetarian=0x7f070035;
-        public static final int text_cost_disclaimer=0x7f070029;
-        public static final int text_map=0x7f070027;
-        public static final int title_activity_restaurant_detail=0x7f070025;
-        public static final int title_activity_search=0x7f070023;
-        public static final int title_activity_settings=0x7f070031;
-        public static final int title_activity_splash_screen=0x7f070030;
-        public static final int title_branches=0x7f070020;
-        public static final int title_cuisines=0x7f07001d;
-        public static final int title_favourites=0x7f07001e;
-        public static final int title_map=0x7f070021;
-        public static final int title_menus=0x7f07001f;
-        public static final int title_outlets=0x7f07001c;
+        public static final int pref_title_halaal=0x7f070034;
+        public static final int pref_title_kosher=0x7f070035;
+        public static final int pref_title_vegan=0x7f070037;
+        public static final int pref_title_vegetarian=0x7f070036;
+        public static final int text_cost_disclaimer=0x7f07002a;
+        public static final int text_map=0x7f070028;
+        public static final int title_activity_restaurant_detail=0x7f070026;
+        public static final int title_activity_search=0x7f070024;
+        public static final int title_activity_settings=0x7f070032;
+        public static final int title_activity_splash_screen=0x7f070031;
+        public static final int title_branches=0x7f070022;
+        public static final int title_cuisines=0x7f07001f;
+        public static final int title_favourites=0x7f070020;
+        public static final int title_map=0x7f070023;
+        public static final int title_menus=0x7f070021;
+        public static final int title_outlets=0x7f07001e;
     }
     public static final class style {
         /** 

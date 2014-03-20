@@ -109,6 +109,7 @@ public class SettingsActivity extends PreferenceActivity {
 		//getPreferenceScreen().addPreference(fakeHeader);
 		//addPreferencesFromResource(R.xml.pref_notification);
 		addPreferencesFromResource(R.xml.pref_version);
+		bindPreferenceSummaryToValue(findPreference("db_version_pref"));
 
 		// Add 'data and sync' preferences, and a corresponding header.
 		//fakeHeader = new PreferenceCategory(this);

@@ -49,7 +49,6 @@ public class EntryActivity extends FragmentActivity implements
 
 		//create database helper
 		diningHelper = new MyDiningDbOpenHelper(this);
-		diningHelper.createDatabase();
 		diningHelper.openDataBase();
 				
 		// Set up the action bar.
@@ -121,6 +120,9 @@ public class EntryActivity extends FragmentActivity implements
 			case R.id.action_settings:
 				openSettings();
 				return true;
+			case R.id.action_version:
+				openCheckForUpdates();
+				return true;
 			default:
 				return super.onOptionsItemSelected(item);		
 		}		
@@ -154,6 +156,11 @@ public class EntryActivity extends FragmentActivity implements
 	
 	public void openSettings(){
 		Intent intent = new Intent(this, SettingsActivity.class);
+    	startActivity(intent);
+	}
+	
+	public void openCheckForUpdates(){
+		Intent intent = new Intent(this, SplashScreenActivity.class);
     	startActivity(intent);
 	}
 	
