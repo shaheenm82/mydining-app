@@ -6,6 +6,7 @@ import java.util.List;
 public class Restaurant extends DBItem{
 	private String cuisines;
 	private Menu restaurant_menu;
+	private String logo;
 	private List<Branch> restaurant_branches;
 	
 	public Restaurant(String name) {
@@ -46,5 +47,13 @@ public class Restaurant extends DBItem{
 	 */
 	public void setRestaurant_branches(List<Branch> restaurant_branches) {
 		this.restaurant_branches = restaurant_branches;
+	}
+
+	public String getLogo() {
+		return logo;
+	}
+
+	public void setLogo(String logo) {
+		this.logo = logo;
 	}	
 }

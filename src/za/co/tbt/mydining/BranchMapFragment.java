@@ -140,10 +140,23 @@ public class BranchMapFragment extends Fragment implements LocationUpdateListene
 	}
 	
 	private void displayBranchesOnMap(){
+		String logo;
+		String logo_id = "";
+		BitmapDescriptor bitmapDescriptor;
+		
+		logo = restDataSupplier.requestRestaurantDetails().getLogo();
+		
+		
 		if (restaurant_branches != null){
-			BitmapDescriptor bitmapDescriptor 
-			   = BitmapDescriptorFactory.defaultMarker(
-			     BitmapDescriptorFactory.HUE_BLUE);
+			if (logo != null){
+				logo_id = logo.substring(0,logo.length()-4);		
+				
+				bitmapDescriptor 
+				   = BitmapDescriptorFactory.fromResource(getResources().getIdentifier(logo_id, "drawable", getActivity().getPackageName()));
+			}else{
+				bitmapDescriptor 
+				= BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE);
+			}
 			
 			for (Branch branch : restaurant_branches) {
 				map.addMarker(new MarkerOptions()

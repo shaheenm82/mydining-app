@@ -44,6 +44,14 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int adUnitId=0x7f010002;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int buttonBarButtonStyle=0x7f010012;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int buttonBarStyle=0x7f010011;
         /** <p>Must be a floating point value, such as "<code>1.2</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -164,6 +172,7 @@ containing a value of this type.
         public static final int zOrderOnTop=0x7f010010;
     }
     public static final class color {
+        public static final int black_overlay=0x7f05000a;
         public static final int common_action_bar_splitter=0x7f050009;
         /**  Sign-in Button Colors 
          */
@@ -176,10 +185,13 @@ containing a value of this type.
         public static final int common_signin_btn_light_text_disabled=0x7f050006;
         public static final int common_signin_btn_light_text_focused=0x7f050007;
         public static final int common_signin_btn_light_text_pressed=0x7f050005;
-        public static final int common_signin_btn_text_dark=0x7f05000a;
-        public static final int common_signin_btn_text_light=0x7f05000b;
+        public static final int common_signin_btn_text_dark=0x7f05000b;
+        public static final int common_signin_btn_text_light=0x7f05000c;
     }
     public static final class dimen {
+        public static final int Heading1=0x7f090004;
+        public static final int Heading2=0x7f090006;
+        public static final int Notice=0x7f090005;
         /**  Default screen margins, per the Android Design guidelines. 
 
          Customize dimensions originally defined in res/values/dimens.xml (such as
@@ -223,52 +235,57 @@ containing a value of this type.
         public static final int ic_plusone_small_off_client=0x7f02001c;
         public static final int ic_plusone_standard_off_client=0x7f02001d;
         public static final int ic_plusone_tall_off_client=0x7f02001e;
+        public static final int ic_rest_debonairs=0x7f02001f;
+        public static final int ic_rest_fishaways=0x7f020020;
+        public static final int ic_rest_mochachos=0x7f020021;
+        public static final int ic_rest_nandos=0x7f020022;
+        public static final int ic_rest_steers=0x7f020023;
+        public static final int img_splash=0x7f020024;
     }
     public static final class id {
-        public static final int GridLayout1=0x7f06001e;
+        public static final int GridLayout1=0x7f06001d;
         public static final int LinearLayout1=0x7f060006;
-        public static final int RelativeLayout1=0x7f06000d;
-        public static final int TableLayout1=0x7f060014;
-        public static final int action_search=0x7f06002a;
-        public static final int action_settings=0x7f060029;
-        public static final int action_version=0x7f06002b;
-        public static final int button_navigation=0x7f060018;
-        public static final int expandable_branch=0x7f060008;
-        public static final int expandable_menu=0x7f06000e;
+        public static final int RelativeLayout1=0x7f06000c;
+        public static final int TableLayout1=0x7f060013;
+        public static final int action_search=0x7f060029;
+        public static final int action_settings=0x7f060028;
+        public static final int action_version=0x7f06002a;
+        public static final int button_navigation=0x7f060017;
+        public static final int expandable_branch=0x7f060007;
+        public static final int expandable_menu=0x7f06000d;
         public static final int hybrid=0x7f060004;
-        public static final int imageView1=0x7f060007;
-        public static final int list_cuisines=0x7f060009;
-        public static final int list_favourites=0x7f06000b;
-        public static final int list_restaurants=0x7f060010;
-        public static final int logo=0x7f06001c;
-        public static final int map_branches=0x7f06000c;
+        public static final int list_cuisines=0x7f060008;
+        public static final int list_favourites=0x7f06000a;
+        public static final int list_restaurants=0x7f06000f;
+        public static final int logo=0x7f06001b;
+        public static final int map_branches=0x7f06000b;
         public static final int none=0x7f060000;
         public static final int normal=0x7f060001;
         public static final int pager=0x7f060005;
         public static final int satellite=0x7f060002;
-        public static final int section_label=0x7f06000a;
+        public static final int section_label=0x7f060009;
         public static final int terrain=0x7f060003;
-        public static final int text_additional=0x7f060025;
-        public static final int text_branchProvince=0x7f060012;
-        public static final int text_branch_address=0x7f060017;
-        public static final int text_branch_halaal=0x7f06001a;
-        public static final int text_branch_kosher=0x7f06001b;
-        public static final int text_branch_name=0x7f060016;
-        public static final int text_branch_suburb=0x7f060015;
-        public static final int text_branch_tel=0x7f060019;
-        public static final int text_copyright=0x7f060011;
-        public static final int text_cost=0x7f060028;
-        public static final int text_cost_disclaimer=0x7f06000f;
-        public static final int text_description=0x7f060024;
-        public static final int text_dish=0x7f060022;
-        public static final int text_fav_last=0x7f060021;
-        public static final int text_fav_rest=0x7f06001f;
-        public static final int text_fav_selected=0x7f060020;
-        public static final int text_healthy=0x7f060027;
-        public static final int text_item=0x7f06001d;
-        public static final int text_menuCategory=0x7f060013;
-        public static final int text_special=0x7f060023;
-        public static final int text_vegetarian=0x7f060026;
+        public static final int text_additional=0x7f060024;
+        public static final int text_branchProvince=0x7f060011;
+        public static final int text_branch_address=0x7f060016;
+        public static final int text_branch_halaal=0x7f060019;
+        public static final int text_branch_kosher=0x7f06001a;
+        public static final int text_branch_name=0x7f060015;
+        public static final int text_branch_suburb=0x7f060014;
+        public static final int text_branch_tel=0x7f060018;
+        public static final int text_copyright=0x7f060010;
+        public static final int text_cost=0x7f060027;
+        public static final int text_cost_disclaimer=0x7f06000e;
+        public static final int text_description=0x7f060023;
+        public static final int text_dish=0x7f060021;
+        public static final int text_fav_last=0x7f060020;
+        public static final int text_fav_rest=0x7f06001e;
+        public static final int text_fav_selected=0x7f06001f;
+        public static final int text_healthy=0x7f060026;
+        public static final int text_item=0x7f06001c;
+        public static final int text_menuCategory=0x7f060012;
+        public static final int text_special=0x7f060022;
+        public static final int text_vegetarian=0x7f060025;
     }
     public static final class integer {
         public static final int google_play_services_version=0x7f080000;
@@ -397,31 +414,34 @@ containing a value of this type.
          */
         public static final int common_signin_button_text_long=0x7f070013;
         public static final int copyright=0x7f070029;
+        public static final int dummy_button=0x7f070033;
+        public static final int dummy_content=0x7f070034;
         public static final int hello_blank_fragment=0x7f070027;
         public static final int hello_world=0x7f070025;
         public static final int pref_app_version=0x7f07002e;
         public static final int pref_app_version_value=0x7f07002f;
         public static final int pref_db_version=0x7f07002d;
         public static final int pref_db_version_value=0x7f070030;
-        public static final int pref_desc_dietary=0x7f070039;
+        public static final int pref_desc_dietary=0x7f07003c;
         public static final int pref_header_about=0x7f07002c;
-        public static final int pref_header_dietary=0x7f070038;
+        public static final int pref_header_dietary=0x7f07003b;
         /**  Strings related to Settings 
  Example General settings 
          */
-        public static final int pref_header_general=0x7f070033;
+        public static final int pref_header_general=0x7f070036;
         /**  Example settings for Data & Sync 
  Example settings for Notifications 
          */
-        public static final int pref_title_halaal=0x7f070034;
-        public static final int pref_title_kosher=0x7f070035;
-        public static final int pref_title_vegan=0x7f070037;
-        public static final int pref_title_vegetarian=0x7f070036;
+        public static final int pref_title_halaal=0x7f070037;
+        public static final int pref_title_kosher=0x7f070038;
+        public static final int pref_title_vegan=0x7f07003a;
+        public static final int pref_title_vegetarian=0x7f070039;
         public static final int text_cost_disclaimer=0x7f07002a;
         public static final int text_map=0x7f070028;
         public static final int title_activity_restaurant_detail=0x7f070026;
         public static final int title_activity_search=0x7f070024;
-        public static final int title_activity_settings=0x7f070032;
+        public static final int title_activity_settings=0x7f070035;
+        public static final int title_activity_splash=0x7f070032;
         public static final int title_activity_splash_screen=0x7f070031;
         public static final int title_branches=0x7f070022;
         public static final int title_cuisines=0x7f07001f;
@@ -457,6 +477,10 @@ containing a value of this type.
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f0a0001;
+        public static final int ButtonBar=0x7f0a0003;
+        public static final int ButtonBarButton=0x7f0a0004;
+        public static final int FullscreenActionBarStyle=0x7f0a0005;
+        public static final int FullscreenTheme=0x7f0a0002;
     }
     public static final class xml {
         public static final int pref_dietary=0x7f040000;
@@ -539,6 +563,46 @@ containing a value of this type.
           @attr name za.co.tbt.mydining:adUnitId
         */
         public static final int AdsAttrs_adUnitId = 2;
+        /** 
+         Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels.
+    
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ButtonBarContainerTheme_buttonBarButtonStyle za.co.tbt.mydining:buttonBarButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ButtonBarContainerTheme_buttonBarStyle za.co.tbt.mydining:buttonBarStyle}</code></td><td></td></tr>
+           </table>
+           @see #ButtonBarContainerTheme_buttonBarButtonStyle
+           @see #ButtonBarContainerTheme_buttonBarStyle
+         */
+        public static final int[] ButtonBarContainerTheme = {
+            0x7f010011, 0x7f010012
+        };
+        /**
+          <p>This symbol is the offset where the {@link za.co.tbt.mydining.R.attr#buttonBarButtonStyle}
+          attribute's value can be found in the {@link #ButtonBarContainerTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name za.co.tbt.mydining:buttonBarButtonStyle
+        */
+        public static final int ButtonBarContainerTheme_buttonBarButtonStyle = 1;
+        /**
+          <p>This symbol is the offset where the {@link za.co.tbt.mydining.R.attr#buttonBarStyle}
+          attribute's value can be found in the {@link #ButtonBarContainerTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name za.co.tbt.mydining:buttonBarStyle
+        */
+        public static final int ButtonBarContainerTheme_buttonBarStyle = 0;
         /** Attributes that can be used with a MapAttrs.
            <p>Includes the following attributes:</p>
            <table>

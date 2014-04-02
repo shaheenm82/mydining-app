@@ -2,7 +2,6 @@ package za.co.tbt.mydining;
 
 import za.co.tbt.mydining.db.MyDiningDbOpenHelper;
 import za.co.tbt.mydining.service.DBDownloadListener;
-import za.co.tbt.mydining.service.DBDownloadService;
 import za.co.tbt.mydining.service.DBVersionCheckListener;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -12,6 +11,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
@@ -22,6 +22,9 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
 	private MyDiningDbOpenHelper diningHelper;
 	
 	String server_version;
+	
+	// Splash screen timer
+    private static int SPLASH_TIME_OUT = 1000;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -120,11 +123,25 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
 	}
 
 	private void enterApplication(){
-		Intent intent = new Intent(this, EntryActivity.class);
-		startActivity(intent);
-		
 		checkDBDialog.dismiss();
 		
-		finish();
+		new Handler().postDelayed(new Runnable() {
+			 
+            /*
+             * Showing splash screen with a timer. This will be useful when you
+             * want to show case your app logo / company
+             */
+ 
+            @Override
+            public void run() {
+                // This method will be executed once the timer is over
+                // Start your app main activity
+            	Intent intent = new Intent(SplashScreenActivity.this, EntryActivity.class);
+        		startActivity(intent);
+ 
+                // close this activity
+                finish();
+            }
+        }, SPLASH_TIME_OUT);
 	}
 }

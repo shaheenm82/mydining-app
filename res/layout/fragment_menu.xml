@@ -10,7 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" >
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="48dp" >
+
     </ExpandableListView>
 
     <TextView
@@ -21,6 +23,7 @@
         android:layout_alignParentLeft="true"
         android:gravity="center"
         android:text="@string/text_cost_disclaimer"
-        android:textSize="10sp" />
+        android:textSize="@dimen/Notice"
+        android:textStyle="bold" />
 
 </RelativeLayout>

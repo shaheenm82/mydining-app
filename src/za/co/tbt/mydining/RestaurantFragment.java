@@ -2,7 +2,7 @@ package za.co.tbt.mydining;
 
 import java.util.List;
 
-import za.co.tbt.mydining.adapter.DBListAdapter;
+import za.co.tbt.mydining.adapter.RestaurantListAdapter;
 import za.co.tbt.mydining.db.DBItem;
 import za.co.tbt.mydining.db.FavouriteDataSource;
 import za.co.tbt.mydining.db.Restaurant;
@@ -15,15 +15,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Toast;
-import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ListView;
 
 public class RestaurantFragment extends Fragment implements OnItemClickListener {
 	public static final String RESTAURANT_NAME = "restaurant_name";
 	
 	private ListView restView = null;
-	private DBListAdapter listAdapter = null;
+	private RestaurantListAdapter listAdapter = null;
 	private RestaurantDataSource restDataSource = null;
 	
 	
@@ -40,7 +38,7 @@ public class RestaurantFragment extends Fragment implements OnItemClickListener 
 		restDataSource = new RestaurantDataSource(getActivity());
 		restDataSource.open();
 		
-		listAdapter = new DBListAdapter(getActivity());
+		listAdapter = new RestaurantListAdapter(getActivity());
 		listAdapter.setItems(restDataSource.getAllRestaurants());
 		restView.setAdapter(listAdapter);		
 		
@@ -58,7 +56,7 @@ public class RestaurantFragment extends Fragment implements OnItemClickListener 
 	public int filter(String filter){
 		String[] args = {filter + "%"};
 		
-		List<DBItem> items = restDataSource.searchForRestaurants("name LIKE ?", args); 
+		List<Restaurant> items = restDataSource.searchForRestaurants("name LIKE ?", args); 
 		
 		listAdapter.setItems(items);
 		
@@ -68,7 +66,7 @@ public class RestaurantFragment extends Fragment implements OnItemClickListener 
 	public int filterCuisines(String filter){
 		String[] args = {"%" + filter + "%"};
 		
-		List<DBItem> items = restDataSource.searchForRestaurants("cuisines LIKE ?", args); 
+		List<Restaurant> items = restDataSource.searchForRestaurants("cuisines LIKE ?", args); 
 		
 		listAdapter.setItems(items);
 		

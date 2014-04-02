@@ -7,13 +7,15 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 public class RestaurantDataSource {
 	public static final String REST_TABLE_NAME = "restaurant";
 	public static final String REST_COLUMN_ID = "_id";
 	public static final String REST_COLUMN_NAME = "name";
 	public static final String REST_COLUMN_CUISINES = "cuisines";
-	private String allRestColumns[] = {REST_COLUMN_ID, REST_COLUMN_NAME, REST_COLUMN_CUISINES}; 
+	public static final String REST_COLUMN_LOGOS = "logo";
+	private String allRestColumns[] = {REST_COLUMN_ID, REST_COLUMN_NAME, REST_COLUMN_CUISINES, REST_COLUMN_LOGOS}; 
 	
 	public static final String MENU_TABLE_NAME = "menu";
 	public static final String MENU_COLUMN_ID = "_id";
@@ -81,8 +83,8 @@ public class RestaurantDataSource {
 		//dbHelper.close();
 	}
 	
-	public List<DBItem> getAllRestaurants() {
-	    List<DBItem> restaurants = new ArrayList<DBItem>();
+	public List<Restaurant> getAllRestaurants() {
+	    List<Restaurant> restaurants = new ArrayList<Restaurant>();
 
 	    Cursor cursor = db.query(REST_TABLE_NAME,
 	        allRestColumns, null, null, null, null, null);
@@ -90,6 +92,7 @@ public class RestaurantDataSource {
 	    cursor.moveToFirst();
 	    while (!cursor.isAfterLast()) {
 	      Restaurant rest = getRestaurant(cursor);
+	      Log.d("ssm","getAll: " + rest.getName() + ", " + rest.getLogo());
 	      restaurants.add(rest);
 	      cursor.moveToNext();
 	    }
@@ -98,8 +101,8 @@ public class RestaurantDataSource {
 	    return restaurants;
 	}
 	
-	public List<DBItem> searchForRestaurants(String selection, String[] args) {
-	    List<DBItem> restaurants = new ArrayList<DBItem>();
+	public List<Restaurant> searchForRestaurants(String selection, String[] args) {
+	    List<Restaurant> restaurants = new ArrayList<Restaurant>();
 
 	    Cursor cursor = db.query(REST_TABLE_NAME,
 	        allRestColumns, selection, args, null, null, null);
@@ -116,7 +119,7 @@ public class RestaurantDataSource {
 	}
 	
 	public Restaurant loadRestaurantDetails(String restaurant_name){
-		List<DBItem> restaurants;
+		List<Restaurant> restaurants;
 		Restaurant restaurant;
 		
 		String[] args = {restaurant_name};
@@ -142,6 +145,10 @@ public class RestaurantDataSource {
 		restaurant.setId(cursor.getLong(0));
 		//restaurant.setName(cursor.getString(1));
 		restaurant.setCuisines(cursor.getString(2));
+		if (!cursor.isNull(3)){
+			restaurant.setLogo(cursor.getString(3));
+		}
+		
 	    return restaurant;
 	}
 	

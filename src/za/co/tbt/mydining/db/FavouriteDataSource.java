@@ -74,7 +74,7 @@ public class FavouriteDataSource {
 	
 	private Favourite getFavourite(Cursor cursor) {
 		RestaurantDataSource restDataSource;
-		List<DBItem> restaurants;
+		List<Restaurant> restaurants;
 		Favourite favourite = new Favourite();
 		
 		restDataSource = new RestaurantDataSource(context);

@@ -9,6 +9,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:layout_marginBottom="32dp"
         android:divider="#fff"
         android:gravity="center" />
 
@@ -19,6 +20,7 @@
         android:layout_alignParentBottom="true"
         android:gravity="center"
         android:text="@string/copyright"
-        android:textSize="10sp" />
+        android:textSize="@dimen/Notice"
+        android:textStyle="bold" />
 
 </RelativeLayout>
