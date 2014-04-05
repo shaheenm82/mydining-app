@@ -3,6 +3,7 @@ package za.co.tbt.mydining.view;
 import za.co.tbt.mydining.R;
 import za.co.tbt.mydining.db.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MenuItemListViewHolder {
@@ -10,8 +11,8 @@ public class MenuItemListViewHolder {
 	public TextView menuDescriptionText = null;
 	public TextView menuAdditionalText = null;
 	public TextView menuSpecialText = null;
-	public TextView menuVegetarianText = null;
-	public TextView menuHealthyText = null;
+	public ImageView menuVegetarianImage = null;
+	public ImageView menuHealthyImage = null;
 	public TextView menuCostText = null;
 	
 	public MenuItemListViewHolder(View row) {
@@ -20,8 +21,8 @@ public class MenuItemListViewHolder {
 		menuDescriptionText = (TextView) row.findViewById(R.id.text_description);
 		menuAdditionalText = (TextView) row.findViewById(R.id.text_additional);
 		menuSpecialText = (TextView) row.findViewById(R.id.text_special);
-		menuVegetarianText = (TextView) row.findViewById(R.id.text_vegetarian);
-		menuHealthyText = (TextView) row.findViewById(R.id.text_healthy);
+		menuVegetarianImage = (ImageView) row.findViewById(R.id.image_vegetarian);
+		menuHealthyImage = (ImageView) row.findViewById(R.id.image_healthy);
 		menuCostText = (TextView) row.findViewById(R.id.text_cost);
 	}
 
@@ -29,7 +30,7 @@ public class MenuItemListViewHolder {
 		menuDishText.setText(mitem.getDish());
 		menuDescriptionText.setText(mitem.getDescription());
 		menuAdditionalText.setText(mitem.getAdditional());
-		menuCostText.setText(String.format("%.2f", mitem.getCost()));
+		menuCostText.setText(String.format("R %.2f", mitem.getCost()));
 		if (mitem.isSpecial()){
 			menuSpecialText.setText("S");
 		}else{
@@ -37,15 +38,15 @@ public class MenuItemListViewHolder {
 		}
 		
 		if (mitem.isVegetarian()){
-			menuVegetarianText.setText("V");
+			menuVegetarianImage.setImageResource(R.drawable.ic_vegetarian);
 		}else{
-			menuVegetarianText.setText("");
+			menuVegetarianImage.setImageResource(android.R.color.transparent);
 		}
 		
 		if (mitem.isHealthy()){
-			menuHealthyText.setText("H");
+			menuHealthyImage.setImageResource(R.drawable.ic_healthy);
 		}else{
-			menuHealthyText.setText("");
+			menuHealthyImage.setImageResource(android.R.color.transparent);
 		}
 	}
 }

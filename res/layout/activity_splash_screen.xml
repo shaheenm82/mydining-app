@@ -1,6 +1,6 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/LinearLayout1"
+    android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/img_splash"
@@ -11,4 +11,38 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".SplashScreenActivity" >
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/text_app_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        android:background="@color/black_overlay"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Lets Get Take-Out"
+        android:textColor="@color/pink"
+        android:textSize="@dimen/Heading0"
+        android:textStyle="bold|italic"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/text_sync_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="75dp"
+        android:background="@color/black_background"
+        android:padding="@dimen/list_menuitem"
+        android:scrollHorizontally="true"
+        android:shadowColor="@color/common_signin_btn_light_text_disabled"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="@dimen/status_small" />
+
+</RelativeLayout>

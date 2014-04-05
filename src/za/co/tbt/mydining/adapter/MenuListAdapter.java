@@ -98,7 +98,7 @@ public class MenuListAdapter extends BaseExpandableListAdapter{
 			listviewHolder = (MenuCategoryListViewHolder) convertView.getTag();
 		}
 		
-		((ExpandableListView) parent).expandGroup(groupPosition);
+		//((ExpandableListView) parent).expandGroup(groupPosition);
 		listviewHolder.populateFrom(mcat);
 		
 		return convertView;

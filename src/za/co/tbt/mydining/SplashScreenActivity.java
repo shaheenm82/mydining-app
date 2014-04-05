@@ -14,10 +14,13 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.widget.ExpandableListView;
+import android.widget.TextView;
 
 public class SplashScreenActivity extends Activity implements DBVersionCheckListener, 
 	DialogInterface.OnClickListener, DBDownloadListener{
 	private ProgressDialog checkDBDialog;
+	private TextView textStatus;
 	
 	private MyDiningDbOpenHelper diningHelper;
 	
@@ -31,6 +34,7 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_splash_screen);
 		
+		textStatus = (TextView) findViewById(R.id.text_sync_status);
 		//create database helper
 		/*SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
 		Editor prefEditor = sharedPref.edit();
@@ -46,11 +50,14 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
 	@Override
 	public void databaseStatusUpdated(String progress) {
 		// TODO Auto-generated method stub
-		if ( checkDBDialog == null ){
+		/*if ( checkDBDialog == null && server_version != null){
 			checkDBDialog = ProgressDialog.show(this, "", "",true);
 		}
 		Log.d("ssm", progress);
-		checkDBDialog.setMessage(progress);
+		if ( checkDBDialog == null){
+			checkDBDialog.setMessage(progress);
+		}*/
+		textStatus.setText(progress  + "...");
 	}
 
 	@Override
@@ -58,8 +65,8 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
 		// TODO Auto-generated method stub
 		server_version = version;
 		
-		checkDBDialog.dismiss();
-		checkDBDialog = null;
+		//checkDBDialog.dismiss();
+		//checkDBDialog = null;
 		
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		
@@ -72,8 +79,6 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
 	@Override
 	public void databaseUpToDate() {
 		// TODO Auto-generated method stub
-		
-		
 		enterApplication();
 	}
 	
@@ -95,11 +100,12 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
 	@Override
 	public void databaseDownloadStatusUpdated(String progress) {
 		// TODO Auto-generated method stub
-		if ( checkDBDialog == null ){
+		/*if ( checkDBDialog == null ){
 			checkDBDialog = ProgressDialog.show(this, "", "",true);
 		}
 		Log.d("ssm", progress);
-		checkDBDialog.setMessage(progress);
+		checkDBDialog.setMessage(progress);*/
+		textStatus.setText(progress);
 	}
 
 	@Override
@@ -123,7 +129,7 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
 	}
 
 	private void enterApplication(){
-		checkDBDialog.dismiss();
+		//checkDBDialog.dismiss();
 		
 		new Handler().postDelayed(new Runnable() {
 			 

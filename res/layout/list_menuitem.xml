@@ -74,23 +74,18 @@
             android:textSize="12sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/text_vegetarian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.05"
-            android:gravity="right"
-            android:text="V"
-            android:textSize="14dp" />
+        <ImageView
+            android:id="@+id/image_vegetarian"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_vegetarian" />
 
-        <TextView
-            android:id="@+id/text_healthy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="14dp"
-            android:layout_weight="0.05"
-            android:gravity="right"
-            android:text="H" />
+        <ImageView
+            android:id="@+id/image_healthy"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_healthy" />
 
         <TextView
             android:id="@+id/text_cost"
