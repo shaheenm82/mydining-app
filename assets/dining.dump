@@ -1,0 +1,289 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE android_metadata ("locale" TEXT default 'en_US');
+INSERT INTO "android_metadata" VALUES('en_US');
+CREATE TABLE restaurant (
+_id integer primary key,
+name text,
+cuisines text, logo text);
+INSERT INTO "restaurant" VALUES(1,'Nandos','Portuguese Flame Grilled Chicken','ic_rest_nandos.png');
+INSERT INTO "restaurant" VALUES(2,'Mochachos','Mexican Chicken','ic_rest_mochachos.png');
+INSERT INTO "restaurant" VALUES(3,'Steers','Flame Grilled Beef Chicken Burgers Fast Food','ic_rest_steers.png');
+INSERT INTO "restaurant" VALUES(4,'Debonairs','Pizza','ic_rest_debonairs.png');
+INSERT INTO "restaurant" VALUES(5,'Fish Aways','Fish Chips Seafood','ic_rest_fishaways.png');
+CREATE TABLE branch (
+_id integer primary key,
+rest_id integer,
+name text,
+province text,
+suburb text,
+address text,
+telephone_no text,
+location_lat text,
+location_long text,
+halaal integer default 0,
+kosher integer default 0,
+foreign key (rest_id) references restaurant(_id)
+);
+INSERT INTO "branch" VALUES(1,1,'Airport Domestic','Gauteng','OR Tambo International Airport','OR Tambo Domestic Terminal, 2nd level','27113903532','-26.134394','28.23189',0,0);
+INSERT INTO "branch" VALUES(2,1,'Alberton','Gauteng','Alberton','Cnr Ring Rd West and Voortrekker Street, New Red Ruth','27118695615','-26.261163','28.119413',0,0);
+INSERT INTO "branch" VALUES(3,1,'Alberton CBD','Gauteng','Alberton','Shop U167, Alberton City, Voortrekker Road','27119074377','-26.271737','28.12214',0,0);
+INSERT INTO "branch" VALUES(4,1,'Arcadia','Gauteng','Arcadia','Cnr Beautrix and Vermeulen Street, Arcadia','27123230938','-25.743936','28.203645',0,0);
+INSERT INTO "branch" VALUES(5,1,'Atlas Road','Gauteng','Beyerspark','Westwood Village, Cnr Philips and Atlas Road','27118947314','-26.185095','28.280835',0,0);
+INSERT INTO "branch" VALUES(6,1,'Atteridgeville','Gauteng','Atteridgeville','Shop E5, Attlyn Shopping Centre, Khosa Street','27123735931','-25.77026','28.088928',0,0);
+INSERT INTO "branch" VALUES(7,1,'Banbury Cross','Gauteng','Northwold','Shop A, Banbury Cross Village, Cnr Malibongwe and Olievenhout Avenue','27117949774','-26.06191','27.954989',0,0);
+INSERT INTO "branch" VALUES(8,1,'Bedfordview','Gauteng','Bedfordview','Shop 33, Village View Centre, Cnr Van Buuren Road and Kloof','27114552145','-26.183083','28.135491',0,0);
+INSERT INTO "branch" VALUES(9,1,'Benmore','Gauteng','Benmore','Shop 3, Benmore Shopping Centre, Cnr Benmore Road and Grayston Drive','27118841951','-26.100533','28.049971',0,0);
+INSERT INTO "branch" VALUES(10,1,'Birchleigh North','Gauteng','Birchleigh North','Shop 19, Birchleigh North Shopping Centre, Cnr Mooifontein Street and Strydom Street','27113915330','-26.05087','28.230802',0,0);
+INSERT INTO "branch" VALUES(11,1,'Blackheath','Gauteng','Blackheath','Blackheath Pavilion, Cnr Beyers Naude and Pendoring','27116782284','-26.12901','27.969044',0,0);
+INSERT INTO "branch" VALUES(12,1,'Boksburg','Gauteng','Boksburg','384 Trichardt Road','27118923560','-26.194983','28.253852',0,0);
+INSERT INTO "branch" VALUES(13,1,'Boskruin','Gauteng','Boskruin','Summerfield Shopping Centre, Cnr Cowie Road and Baleta Ave','27117913654','-26.08528','27.946867',0,0);
+INSERT INTO "branch" VALUES(14,1,'Boulders','Gauteng','Midrand','Old Pretoria Road','27113129255','-25.996296','28.127487',0,0);
+INSERT INTO "branch" VALUES(15,1,'Braamfontein','Gauteng','Braamfontein','Shop 1 North City House, Cnr Melle Street and Jorrisen Street','27113398871','-26.192913','28.035918',0,0);
+INSERT INTO "branch" VALUES(16,1,'Brackenhurst','Gauteng','Brackenhurst','Bracken Garden Shop Centre, Cnr Delphinium and Hennie Alberts Street','27119004562','-26.32773','28.098515',0,0);
+INSERT INTO "branch" VALUES(17,1,'Brooklyn','Gauteng','Brooklyn','Shop 11, Brooklyn Design Square, Cnr Middle and Veale Street','27123464931','-25.77117','28.23292',0,0);
+INSERT INTO "branch" VALUES(18,1,'Bruma','Gauteng','Bruma','The Paddock, Cnr Ernest Openheimer and Marcia Street','27116228749','-26.179675','28.10934',0,0);
+INSERT INTO "branch" VALUES(19,1,'Carlton Centre','Gauteng','Marshalltown','Shop 224, Carlton Centre','27113311000','-26.206017','28.046387',0,0);
+INSERT INTO "branch" VALUES(20,1,'Carnival Mall','Gauteng','Dalpark','Shop 62, Mall@Carnival, Cnr Airport and Heidelberg','27119154169','-26.251912','28.318214',0,0);
+INSERT INTO "branch" VALUES(21,1,'Centurion','Gauteng','Centurion','Cnr Lenchen Street South and Embankment Road','27126632419','-25.858915','28.19099',0,0);
+INSERT INTO "branch" VALUES(22,1,'Chilli Lane','Gauteng','Paulshof','Shop 41B, Chilli Lane Shopping Centre, Cnr Rivonia and Leeukop','27112438846','-26.030159','28.060711',0,0);
+INSERT INTO "branch" VALUES(23,1,'Columbine Square','Gauteng','Jhb South','Shop 7, Columbine Square, 82 Swartgoud Street','27114330700','-26.271848','28.029394',0,0);
+INSERT INTO "branch" VALUES(24,1,'Corlett Drive','Gauteng','Winston Ridge','Shop F1, Melrose Crossing, Cnr Corlett Drive and Delta Road','27114402182','-26.129518','28.068008',0,0);
+INSERT INTO "branch" VALUES(25,1,'Craighall','Gauteng','Craighall','Cnr Hillcrest Ave and Conrad Drive','27117815390','-26.114433','28.018634',0,0);
+INSERT INTO "branch" VALUES(26,1,'Cresta','Gauteng','Cresta','Shop U37B, Cresta Shopping Centre, Cnr Beyers Naude Drive and Weltevreden Road','27114783177','-26.133074','27.975823',0,0);
+INSERT INTO "branch" VALUES(27,1,'Croydon','Gauteng','Croydon','17 Brabazon Road','27113923000','-26.134577','28.19656',0,0);
+INSERT INTO "branch" VALUES(28,1,'Douglasdale','Gauteng','Douglasdale','Douglasdale Village Shopping Centre, Cnr Douglas Drive and Leslie Avenue','27114624856','-26.040334','27.994424',0,0);
+INSERT INTO "branch" VALUES(29,1,'Eagles Landing','Gauteng','Eagle Canyon','Shop 16, Eagles Landing Shopping Centre, Cnr Christiaan de Wet and Scott Avenue','27117947930','-26.096024','27.927791',0,0);
+INSERT INTO "branch" VALUES(30,1,'East Rand Mall','Gauteng','Boksburg','East Rand Mall, Cnr Rietfontein and Bental Avenue','27118265776','-26.18134','28.238209',0,0);
+INSERT INTO "branch" VALUES(31,1,'East Gate','Gauteng','Bedfordview','Shop L65, Eastgate Shopping Centre, Cnr Nicol and Bradford Road','27116152383','-26.178712','28.117102',0,0);
+INSERT INTO "branch" VALUES(32,1,'Eco Boulevard','Gauteng','Centurion','270 Witch-Hazel Street, Eco Boulevard Phase 2','27126613951','-25.876205','28.176658',0,0);
+INSERT INTO "branch" VALUES(33,1,'Edenmeadows','Gauteng','Modderfontein','Shop 34, Edenmeadows Shopping Centre, Cnr Van Riebeek Ave and Modderfontein Road','27114528520','-26.121983','28.138469',0,0);
+INSERT INTO "branch" VALUES(34,1,'Eldorado Park','Gauteng','Eldorado Park','Shop 20/21, Shoprite Centre, Circle Avenue','27113423984','-26.291741','27.906634',0,0);
+INSERT INTO "branch" VALUES(35,1,'Eldoraigne','Gauteng','Eldoraigne','Shop 50, Eldoraigne Village, Cnr Martha and Frederick','27126545594','-25.841448','28.160909',0,0);
+INSERT INTO "branch" VALUES(36,1,'Elspark','Gauteng','Elspark','Shop 15, Kingfisher Square, Cnr Heidelberg Road and Kingfisher Ave','27118931144','-26.268911','28.225904',0,0);
+INSERT INTO "branch" VALUES(37,1,'Emperors Palace','Gauteng','Jet Park','Emperors Palace, Jones Road','27113976477','-26.156382','28.226632',0,0);
+INSERT INTO "branch" VALUES(38,1,'Eden Glen','Gauteng','Edenglen','60 Terrace Road','27116095234','-26.125487','28.165705',0,0);
+CREATE TABLE rating (
+_id integer primary key,
+rest_id integer,
+value integer,
+rater text,
+feedback text,
+foreign key (rest_id) references restaurant(_id)
+);
+CREATE TABLE cuisine (
+_id integer primary key,
+name text,
+description text);
+INSERT INTO "cuisine" VALUES(1,'Mexican',NULL);
+INSERT INTO "cuisine" VALUES(2,'Portuguese',NULL);
+INSERT INTO "cuisine" VALUES(3,'Italian',NULL);
+INSERT INTO "cuisine" VALUES(4,'French',NULL);
+INSERT INTO "cuisine" VALUES(5,'Indian',NULL);
+INSERT INTO "cuisine" VALUES(6,'Fusion',NULL);
+INSERT INTO "cuisine" VALUES(7,'Pizza',NULL);
+INSERT INTO "cuisine" VALUES(8,'Pasta',NULL);
+INSERT INTO "cuisine" VALUES(9,'Curry',NULL);
+INSERT INTO "cuisine" VALUES(10,'Chicken',NULL);
+INSERT INTO "cuisine" VALUES(11,'Beef',NULL);
+INSERT INTO "cuisine" VALUES(12,'Burgers',NULL);
+INSERT INTO "cuisine" VALUES(13,'Fast Food',NULL);
+INSERT INTO "cuisine" VALUES(14,'Seafood',NULL);
+INSERT INTO "cuisine" VALUES(15,'Sushi',NULL);
+CREATE TABLE menu (
+_id integer primary key,
+rest_id integer,
+category text,
+dish text,
+description text,
+cost real, vegetarian integer default 0, special integer default 0, additional text, healthy integer default 0,
+foreign key (rest_id) references restaurant(_id)
+);
+INSERT INTO "menu" VALUES(1,1,'Regular Meals','1/4 Chicken',NULL,28.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(2,1,'Regular Meals','1/4 Chicken, Regular Chips and a Roll',NULL,38.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(3,1,'Regular Meals','1/4 Chicken Meal','1/4 Chicken, any regular Side & a 330ml soft drink',49.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(4,1,'Regular Meals','1/4 Chicken, Saucy Rice','Regular spice rice & tomato relish',32.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(5,1,'Regular Meals','1/2 Chicken',NULL,52.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(6,1,'Regular Meals','1/2 Chicken with a side','1/2 Chicken with any regular side',62.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(7,1,'Regular Meals','3 Full Wings & Chips','Original or PERI-crusted',34.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(8,1,'Regular Meals','5 Full Wings with a side','Original or PERI-crusted wings with any regular side',58.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(9,1,'Regular Meals','Chicken Strips & Spicy Rice',NULL,39.9,0,0,'Add Feta R8.00',0);
+INSERT INTO "menu" VALUES(10,1,'Regular Meals','Chicken Strips, Veg & Spicy Rice',NULL,40.9,0,0,NULL,1);
+INSERT INTO "menu" VALUES(11,1,'Regular Meals','Vitality Meal','Seasonal Chicken breast, flame grilled mielie & regular Portuguese salad',49.9,0,0,NULL,1);
+INSERT INTO "menu" VALUES(12,1,'Family Meals','Full Chicken',NULL,98.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(13,1,'Family Meals','Full Chicken & 4 Rolls',NULL,115.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(14,1,'Family Meals','Festive Meal','Full Chicken, jumbo chips & 4 rolls',144.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(15,1,'Family Meals','Family Pack','1/2 Chicken, 2 burgers, jumbo chips & 2 rolls',147.9,1,0,NULL,0);
+INSERT INTO "menu" VALUES(16,1,'Family Meals','Full Pack','Full Chicken, jumbo chips, large Portuguese salad & 4 rolls',169.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(17,1,'Sides','Chips',NULL,16.9,0,0,'Regular',0);
+INSERT INTO "menu" VALUES(18,1,'Sides','Wedges',NULL,16.9,0,0,'Regular',0);
+INSERT INTO "menu" VALUES(19,1,'Sides','PERI-PERI Chips',NULL,16.9,0,0,'Regular',0);
+INSERT INTO "menu" VALUES(20,1,'Sides','PERI-PERI Wedges',NULL,16.9,0,0,'Regular',0);
+INSERT INTO "menu" VALUES(21,1,'Sides','Spicy Rice',NULL,16.9,0,0,'Regular',0);
+INSERT INTO "menu" VALUES(22,1,'Sides','Coleslaw',NULL,16.9,0,0,'Regular',0);
+INSERT INTO "menu" VALUES(23,1,'Sides','PERI Spinach',NULL,16.9,0,0,'Regular',0);
+INSERT INTO "menu" VALUES(24,1,'Sides','Roasted Veg',NULL,16.9,0,0,'Regular',0);
+INSERT INTO "menu" VALUES(25,1,'Sides','Chips',NULL,23.9,0,0,'Large',0);
+INSERT INTO "menu" VALUES(26,1,'Sides','Wedges',NULL,23.9,0,0,'Large',0);
+INSERT INTO "menu" VALUES(27,1,'Sides','PERI-PERI Chips',NULL,23.9,0,0,'Large',0);
+INSERT INTO "menu" VALUES(28,1,'Sides','PERI-PERI Wedges',NULL,23.9,0,0,'Large',0);
+INSERT INTO "menu" VALUES(29,1,'Sides','Spicy Rice',NULL,23.9,0,0,'Large',0);
+INSERT INTO "menu" VALUES(30,1,'Sides','Coleslaw',NULL,23.9,0,0,'Large',0);
+INSERT INTO "menu" VALUES(31,1,'Sides','PERI Spinach',NULL,23.9,0,0,'Large',0);
+INSERT INTO "menu" VALUES(32,1,'Sides','Roasted Veg',NULL,23.9,0,0,'Large',0);
+INSERT INTO "menu" VALUES(33,1,'Sides','Chips',NULL,28.9,0,0,'Jumbo',0);
+INSERT INTO "menu" VALUES(34,1,'Sides','Wedges',NULL,28.9,0,0,'Jumbo',0);
+INSERT INTO "menu" VALUES(35,1,'Sides','PERI-PERI Chips',NULL,28.9,0,0,'Jumbo',0);
+INSERT INTO "menu" VALUES(36,1,'Sides','PERI-PERI Wedges',NULL,28.9,0,0,'Jumbo',0);
+INSERT INTO "menu" VALUES(37,1,'Sides','Spicy Rice',NULL,28.9,0,0,'Jumbo',0);
+INSERT INTO "menu" VALUES(38,1,'Sides','Coleslaw',NULL,28.9,0,0,'Jumbo',0);
+INSERT INTO "menu" VALUES(39,1,'Sides','PERI Spinach',NULL,28.9,0,0,'Jumbo',0);
+INSERT INTO "menu" VALUES(40,1,'Sides','Roasted Veg',NULL,28.9,0,0,'Jumbo',0);
+INSERT INTO "menu" VALUES(41,1,'Light Meals','Chicken Burger','Chicken breast fillet',29.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(42,1,'Light Meals','Chicken Pita','Chicken strips',34.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(43,1,'Light Meals','Chicken Wrap','Chicken strips',34.9,0,0,'Add Cheddar Cheese or Pine R6.00',0);
+INSERT INTO "menu" VALUES(44,1,'Light Meals','Veggie Burger','New and improved patty',29.9,1,0,NULL,0);
+INSERT INTO "menu" VALUES(45,1,'Light Meals','Veggie Pita',NULL,34.9,1,0,NULL,0);
+INSERT INTO "menu" VALUES(46,1,'Light Meals','Veggie Wrap',NULL,34.9,1,0,NULL,0);
+INSERT INTO "menu" VALUES(47,1,'Combo Meals','Chicken Burger & any regular side','Chicken breast fillet',44.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(48,1,'Combo Meals','Chicken Pita & any regular side','Chicken strips',49.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(49,1,'Combo Meals','Chicken Wrap & any regular side','Chicken strips',49.9,0,0,'Add Cheddar Cheese or Pine R6.00',0);
+INSERT INTO "menu" VALUES(50,1,'Combo Meals','Veggie Burger','New and improved patty',44.9,1,0,NULL,0);
+INSERT INTO "menu" VALUES(51,1,'Combo Meals','Veggie Pita',NULL,49.9,1,0,NULL,0);
+INSERT INTO "menu" VALUES(52,1,'Combo Meals','Veggie Wrap',NULL,49.9,1,0,NULL,0);
+INSERT INTO "menu" VALUES(53,1,'Specialty Meals','Liver or Giblets','Starter Portion & a roll',24.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(54,1,'Specialty Meals','Liver or Giblets','Full Portion & a roll',39.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(55,1,'Specialty Meals','Liver or Giblets','Full Portion, a roll & a regular side',49.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(56,1,'Extras','Fresh Portuguese Roll','Served with a mini butter',4.6,0,0,NULL,0);
+INSERT INTO "menu" VALUES(57,1,'Extras','Flame Grilled Mielie','Seasonal',12.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(58,1,'Extras','Cheddar Cheese or Pine',NULL,6.0,0,0,NULL,0);
+INSERT INTO "menu" VALUES(59,1,'Extras','Feta',NULL,8.0,0,0,NULL,0);
+INSERT INTO "menu" VALUES(60,1,'Extras','Creamy or Perinaise Dip',NULL,9.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(61,1,'Kids Meals','Nandinos Chicken Burger','with kids chips or wedges & 250ml Liqui-Fruit',33.9,0,0,'+ a Toy with every meal',0);
+INSERT INTO "menu" VALUES(62,1,'Kids Meals','2 Drumsticks','with kids chips or wedges & 250ml Liqui-Fruit',33.9,0,0,'+ a Toy with every meal',0);
+INSERT INTO "menu" VALUES(63,1,'Salads','Portuguese Salad','Ripe Tomato wedges and cucumber slices with peppers, onion rings, and Nando''s PERI-olives in a bed of crisp lettuce',24.9,1,0,'Regular',0);
+INSERT INTO "menu" VALUES(64,1,'Salads','Portuguese Salad','Ripe Tomato wedges and cucumber slices with peppers, onion rings, and Nando''s PERI-olives in a bed of crisp lettuce',29.9,1,0,'Large',0);
+INSERT INTO "menu" VALUES(65,1,'Salads','Grilled Chicken Salad','Regular Portuguese Salad with grilled chicken strips',39.9,0,0,'Add Feta R8.00',0);
+INSERT INTO "menu" VALUES(66,1,'Desserts','Strawberry or Lemon Cheesecake',NULL,18.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(67,1,'Desserts','Duo of Choc Mousse',NULL,18.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(68,1,'Desserts','Ice Cream','Magnum, Cornetto and other Ola variants available at selected restaurants only',18.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(69,1,'Desserts','Hot Sticky Toffee Pudding',NULL,18.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(70,1,'Desserts','Hot Chocolate Pudding',NULL,18.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(71,1,'Drinks','330ml Soft Drink',NULL,12.5,0,0,NULL,0);
+INSERT INTO "menu" VALUES(72,1,'Drinks','500ml Soft Drink',NULL,14.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(73,1,'Drinks','2l Soft Drink',NULL,25.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(74,1,'Drinks','Water','Still or Sparkling',13.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(75,1,'Drinks','Appletiser or Grapetiser',NULL,14.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(76,1,'Drinks','500ml Ice Tea',NULL,14.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(77,1,'Drinks','Powerade',NULL,15.5,0,0,NULL,0);
+INSERT INTO "menu" VALUES(78,1,'Drinks','330ml Liqui-Fruit or Minute Maid',NULL,14.5,0,0,NULL,0);
+INSERT INTO "menu" VALUES(79,1,'Drinks','275ml Liqui-Fruit Sparkling',NULL,12.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(80,2,'Light Meals','Toasted Mexican Chicken Mayo','A toasted chicken breast sandwich with crisp lettuce, tomato & mayo or peri-mayo',25.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(81,2,'Light Meals','Mexican Livers & Bun','',25.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(82,2,'Light Meals','4 Full BBQ Wings','',29.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(83,2,'Light Meals','Chicken Strips, Chips & Dip','Fried chicken breast strips battered with our secret blend of herbs and spices',38.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(84,2,'Light Meals','Mexican Chicken Pieces & Rice','Tender pieces of chicken breast, sauteed in our secret spices & served on Mexican rice',24.9,0,0,NULL,1);
+INSERT INTO "menu" VALUES(85,2,'Regular Meals','1/4 Chicken','Our famous butterflied chicken is flame grilled & spiced to perfection with your choice of all "Zee flavours"',25.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(86,2,'Regular Meals','1/2 Chicken','Our famous butterflied chicken is flame grilled & spiced to perfection with your choice of all "Zee flavours"',47.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(87,2,'Regular Meals','Full Chicken','Our famous butterflied chicken is flame grilled & spiced to perfection with your choice of all "Zee flavours"',92.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(88,2,'Regular Meals','Chicken Burger','',28.9,0,0,'Single',1);
+INSERT INTO "menu" VALUES(89,2,'Regular Meals','Chicken Burger','',41.9,0,0,'Double',1);
+INSERT INTO "menu" VALUES(90,2,'Regular Meals','Chicken Cheese Burger','',32.9,0,0,'Single',0);
+INSERT INTO "menu" VALUES(91,2,'Regular Meals','Chicken Cheese Burger','',45.9,0,0,'Double',0);
+INSERT INTO "menu" VALUES(92,2,'Regular Meals','Chicken Pine Burger','',32.9,0,0,'Single',1);
+INSERT INTO "menu" VALUES(93,2,'Regular Meals','Chicken Pine Burger','',45.9,0,0,'Double',1);
+INSERT INTO "menu" VALUES(94,2,'Regular Meals','Chicken Cheese Pine Burger','',36.9,0,0,'Single',0);
+INSERT INTO "menu" VALUES(95,2,'Regular Meals','Chicken Cheese Pine Burger','',49.9,0,0,'Double',0);
+INSERT INTO "menu" VALUES(96,2,'Regular Meals','Gourmet Chicken Burger','Topped with feta cheese & sliced Jalapeno',38.9,0,0,'Single',0);
+INSERT INTO "menu" VALUES(97,2,'Regular Meals','Gourmet Chicken Burger','Topped with feta cheese & sliced Jalapeno',51.9,0,0,'Double',0);
+INSERT INTO "menu" VALUES(98,2,'Regular Meals','Jalapeno Cheese Burger','Topped with cheddar cheese & sliced Jalapeno',38.9,0,0,'Single',0);
+INSERT INTO "menu" VALUES(99,2,'Regular Meals','Jalapeno Cheese Burger','Topped with cheddar cheese & sliced Jalapeno',51.9,0,0,'Double',0);
+INSERT INTO "menu" VALUES(100,2,'Regular Meals','Vegee Burger','Vegetarian Burger',28.9,1,0,'Single',0);
+INSERT INTO "menu" VALUES(101,2,'Regular Meals','Vegee Burger','Vegetarian Burger',43.9,1,0,'Double',0);
+INSERT INTO "menu" VALUES(102,2,'Regular Meals','Beef Burger','',37.9,0,0,'Single',0);
+INSERT INTO "menu" VALUES(103,2,'Regular Meals','Beef Cheese Burger','',41.9,0,0,'Single',0);
+INSERT INTO "menu" VALUES(104,2,'Regular Meals','Beef Pine Burger','',41.9,0,0,'Single',0);
+INSERT INTO "menu" VALUES(105,2,'Regular Meals','Beef Cheese Pine Burger','',45.9,0,0,'Single',0);
+INSERT INTO "menu" VALUES(106,2,'Regular Meals','Gourmet Beef Burger','Topped with feta cheese, quacamole, & sliced Jalapeno',46.9,0,0,'Single',0);
+INSERT INTO "menu" VALUES(107,2,'Regular Meals','Beef Jalapeno Cheese Burger','Topped with cheddar cheese & sliced Jalapeno',46.9,0,0,'Single',0);
+INSERT INTO "menu" VALUES(108,2,'Regular Meals','Chicken Schwarma','',39.9,0,0,NULL,1);
+INSERT INTO "menu" VALUES(109,2,'Regular Meals','Rump Steak Schwarma','',49.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(110,2,'Combo Meals','Chicken Burger, Chips & 330ml Coke',NULL,52.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(111,2,'Combo Meals','1/4 Chicken, Chips & 330ml Coke',NULL,46.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(112,2,'Combo Meals','1/2 Chicken, Chips & 500ml Coke',NULL,68.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(113,2,'Combo Meals','Chicken Schwarma, Chips & 500ml Coke',NULL,61.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(114,2,'Combo Meals','Chicken Burrito, Chips & 330ml Coke',NULL,59.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(115,2,'Combo Meals','4 Full BBQ Wings & Chips',NULL,37.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(116,2,'Combo Meals','8 Full BBQ Wings & Beeger Chips',NULL,69.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(117,2,'Combo Meals','1/4 Chicken, Chips & Bun',NULL,34.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(118,2,'Combo Meals','1/4 Chicken, Pap & Mexican Sauce',NULL,32.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(119,2,'Combo Meals','1/4 Skinless Chicken, Rice & Salad',NULL,48.9,0,0,NULL,1);
+INSERT INTO "menu" VALUES(120,2,'Combo Meals','1/2 Skinless Chicken, Rice & Salad',NULL,66.9,0,0,NULL,1);
+INSERT INTO "menu" VALUES(121,2,'Combo Meals','2 Chicken Fillet Combo','Two flame grilled chicken breast fillets served with your choice of rice, chips or a fresh garden salad',39.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(122,2,'Combo Meals','Amigo Combo','1/2 Chicken, beeger chips, 2 Bunz & 1l Coke',89.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(123,2,'Family Meals','Family Feast','A Full Chicken, served with the beegest portion of chips or wedges, 4 fresh bunz & a 2l Coke',159.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(124,2,'Family Meals','Family Fiesta','A Full Chicken, served with the beegest portion of chips or wedges, beegest coleslaw or garden salad & 4 fresh bunz',154.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(125,2,'Family Meals','Family Variety','1/2 Chicken, two chicken burgers & beegest chips or wedges',129.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(126,2,'Family Meals','Family Treat','2 Full Chickens, two beegest chips or wedges, 8 Bunz, beegest coleslaw or garden salad & a 2l Coke',299.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(127,2,'Specialty Meals','Chicken Burrito','Sauteed onion & green pepper topped with cheddar cheese & guacamole wrapped in a soft flour tortilla',36.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(128,2,'Specialty Meals','Rump Steak Burrito','Sauteed onion & green pepper topped with cheddar cheese & guacamole wrapped in a soft flour tortilla',42.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(129,2,'Specialty Meals','Refried Beans Burrito','Sauteed onion & green pepper topped with cheddar cheese & guacamole wrapped in a soft flour tortilla',27.9,1,0,NULL,0);
+INSERT INTO "menu" VALUES(130,2,'Specialty Meals','Refried Beans & Rice Burrito','Sauteed onion & green pepper topped with cheddar cheese & guacamole wrapped in a soft flour tortilla',29.9,1,0,NULL,0);
+INSERT INTO "menu" VALUES(131,2,'Specialty Meals','Classic Nachos','Crispy Tortilla chips covered in salsa & melted cheddar cheese with a dollop of sour cream, guacamole and slice Jalapeno chillies',42.9,1,0,NULL,0);
+INSERT INTO "menu" VALUES(132,2,'Specialty Meals','Chicken Nachos','Crispy Tortilla chips covered in salsa & melted cheddar cheese with a dollop of sour cream, guacamole and slice Jalapeno chillies',49.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(133,2,'Specialty Meals','Rump Steak Nachos','Crispy Tortilla chips covered in salsa & melted cheddar cheese with a dollop of sour cream, guacamole and slice Jalapeno chillies',59.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(134,2,'Specialty Meals','Refried Beans Nachos','Crispy Tortilla chips covered in salsa & melted cheddar cheese with a dollop of sour cream, guacamole and slice Jalapeno chillies',44.9,1,0,NULL,0);
+INSERT INTO "menu" VALUES(135,2,'Specialty Meals','Chicken Quesadilla','2 Tortillas sandwiched and toasted with your choice of filling, sauteed onion, green pepper & cheddar',53.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(136,2,'Specialty Meals','Rump Steak Quesadilla','2 Tortillas sandwiched and toasted with your choice of filling, sauteed onion, green pepper & cheddar',65.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(137,2,'Specialty Meals','Refried Beans Quesadilla','2 Tortillas sandwiched and toasted with your choice of filling, sauteed onion, green pepper & cheddar',42.9,1,0,NULL,0);
+INSERT INTO "menu" VALUES(138,2,'Specialty Meals','Chicken Enchilada','A soft flour tortilla wrapped around your choice of filling, sauteed onion, green pepper, topped with salsa & melted cheddar. Served with sourcream & guacamole',51.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(139,2,'Specialty Meals','Rump Steak Enchilada','A soft flour tortilla wrapped around your choice of filling, sauteed onion, green pepper, topped with salsa & melted cheddar. Served with sourcream & guacamole',59.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(140,2,'Specialty Meals','Refried Beans Enchilada','A soft flour tortilla wrapped around your choice of filling, sauteed onion, green pepper, topped with salsa & melted cheddar. Served with sourcream & guacamole',42.9,1,0,NULL,0);
+INSERT INTO "menu" VALUES(141,2,'Specialty Meals','Chicken Chimichanga','A tortilla filled with shredded chicken breast or rump steak strips, salsa, cheddar cheese, & deep fried to perfection. Served with sourcream & guacamole',36.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(142,2,'Specialty Meals','Rump Steak Chimichanga','A tortilla filled with shredded chicken breast or rump steak strips, salsa, cheddar cheese, & deep fried to perfection. Served with sourcream & guacamole',39.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(143,2,'Specialty Meals','Chicken Fajita','2 soft flour tortillas in which to wrap your choice of filling, sauteed onion & green pepper, accompanied with Mexican rice and salad(diced lettuce, onion & tomato), grated cheddar cheese, sourcream, salsa & guacamole',75.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(144,2,'Specialty Meals','Rump Steak Fajita','2 soft flour tortillas in which to wrap your choice of filling, sauteed onion & green pepper, accompanied with Mexican rice and salad(diced lettuce, onion & tomato), grated cheddar cheese, sourcream, salsa & guacamole',85.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(145,2,'Specialty Meals','Refried Beans Fajita','2 soft flour tortillas in which to wrap your choice of filling, sauteed onion & green pepper, accompanied with Mexican rice and salad(diced lettuce, onion & tomato), grated cheddar cheese, sourcream, salsa & guacamole',66.9,1,0,NULL,0);
+INSERT INTO "menu" VALUES(146,2,'Kids Meals','Jose','Mini Chicken fillet Burger with a portion of chips & fruit juice',34.9,0,0,'+ Free Toy',0);
+INSERT INTO "menu" VALUES(147,2,'Kids Meals','Pedro','Mini Beef Burger with a portion of chips & fruit juice',34.9,0,0,'+ Free Toy',0);
+INSERT INTO "menu" VALUES(148,2,'Kids Meals','Speedy','4 battered chicken breast strips with a portion of chips & fruit juice',34.9,0,0,'+ Free Toy',0);
+INSERT INTO "menu" VALUES(149,2,'Salads','Grilled Chicken Salad',NULL,28.9,0,0,'Beeg',1);
+INSERT INTO "menu" VALUES(150,2,'Salads','Grilled Chicken Salad',NULL,46.9,0,0,'Beegest',1);
+INSERT INTO "menu" VALUES(151,2,'Salads','Greek Salad',NULL,20.9,1,0,'Beeg',0);
+INSERT INTO "menu" VALUES(152,2,'Salads','Greek Salad',NULL,32.9,1,0,'Beegest',0);
+INSERT INTO "menu" VALUES(153,2,'Salads','Garden Salad',NULL,15.9,1,0,'Beeg',1);
+INSERT INTO "menu" VALUES(154,2,'Salads','Garden Salad',NULL,22.9,1,0,'Beegest',1);
+INSERT INTO "menu" VALUES(155,2,'Salads','Coleslaw',NULL,15.9,1,0,'Beeg',0);
+INSERT INTO "menu" VALUES(156,2,'Salads','Coleslaw',NULL,22.9,1,0,'Beegest',0);
+INSERT INTO "menu" VALUES(157,2,'Sides','Chips',NULL,15.9,0,0,'Beeg',0);
+INSERT INTO "menu" VALUES(158,2,'Sides','Chips',NULL,22.9,0,0,'Beeger',0);
+INSERT INTO "menu" VALUES(159,2,'Sides','Chips',NULL,27.9,0,0,'Beegest',0);
+INSERT INTO "menu" VALUES(160,2,'Sides','Potato Wedges',NULL,15.9,0,0,'Beeg',0);
+INSERT INTO "menu" VALUES(161,2,'Sides','Potato Wedges',NULL,22.9,0,0,'Beeger',0);
+INSERT INTO "menu" VALUES(162,2,'Sides','Potato Wedges',NULL,27.9,0,0,'Beegest',0);
+INSERT INTO "menu" VALUES(163,2,'Sides','Mexican Rice',NULL,15.9,0,0,'Beeg',0);
+INSERT INTO "menu" VALUES(164,2,'Sides','Mexican Rice',NULL,22.9,0,0,'Beeger',0);
+INSERT INTO "menu" VALUES(165,2,'Sides','Mexican Rice',NULL,27.9,0,0,'Beegest',0);
+INSERT INTO "menu" VALUES(166,2,'Sides','Pap & Mexican Sauce',NULL,12.9,0,0,'Beeg',0);
+INSERT INTO "menu" VALUES(167,2,'Sides','Pap & Mexican Sauce',NULL,15.9,0,0,'Beeger',0);
+INSERT INTO "menu" VALUES(168,2,'Sides','Pap & Mexican Sauce',NULL,19.9,0,0,'Beegest',0);
+INSERT INTO "menu" VALUES(169,2,'Sides','Bun',NULL,3.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(170,2,'Sides','Mochachos Sauces',NULL,21.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(171,2,'Sides','Dipz','Salsa, Guacamole, Peri-Mayo or Sweet Chilli',4.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(172,2,'Desserts','Hot Sticky Pudding',NULL,17.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(173,2,'Desserts','Chocolate Brownie',NULL,17.9,0,0,NULL,0);
+INSERT INTO "menu" VALUES(174,2,'Desserts','Chocolate Mousse',NULL,17.9,0,0,NULL,0);
+CREATE TABLE favourites (
+_id integer primary key,
+rest_id integer,
+selected integer,
+selected_date text,
+foreign key (rest_id) references restaurant(_id)
+);
+CREATE INDEX branch_rest_idx on branch (rest_id);
+CREATE INDEX branch_region_idx on branch (province,suburb);
+CREATE INDEX rating_value_idx on rating (value);
+CREATE INDEX rating_rest_idx on rating (rest_id);
+CREATE INDEX menu_rest_idx on menu (rest_id);
+CREATE INDEX menu_category_idx on menu (category);
+COMMIT;
