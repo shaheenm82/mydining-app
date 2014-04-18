@@ -4,5 +4,35 @@
     <color name="black_background">#000000</color>
     <color name="white">#ffffff</color>
     <color name="pink">#ff4444</color>
+    <color name="red_menu">#CD0000</color>
+    <color name="green_menu">#008B00</color>
+    <color name="yellow_menu">#EEEE00</color>
+    <color name="green_menu20">#33008B00</color>
+    <color name="green_menu40">#66008B00</color>
+    <color name="green_menu60">#99008B00</color>
+    <color name="green_menu80">#CC008B00</color>
+    <color name="red_menu20">#33CD0000</color>
+    <color name="red_menu40">#66CD0000</color>
+    <color name="red_menu60">#99CD0000</color>
+    <color name="red_menu80">#CCCD0000</color>
+    <color name="yellow_menu20">#33EEEE00</color>
+    <color name="yellow_menu40">#66EEEE00</color>
+    <color name="yellow_menu60">#99EEEE00</color>
+    <color name="yellow_menu80">#CCEEEE00</color>
+    <color name="aqua_menu">#458B74</color>
+    <color name="aqua_menu80">#CC458B74</color>
+    <color name="aqua_menu60">#99458B74</color>
+    <color name="aqua_menu40">#66458B74</color>
+    <color name="aqua_menu20">#33458B74</color>
+    <color name="slate_menu">#708090</color>
+    <color name="slate_menu80">#CC708090</color>
+    <color name="slate_menu60">#99708090</color>
+    <color name="slate_menu40">#66708090</color>
+    <color name="slate_menu20">#33708090</color>
+    <color name="orange_menu">#EE7600</color>
+    <color name="orange_menu80">#CCEE7600</color>
+    <color name="orange_menu60">#99EE7600</color>
+    <color name="orange_menu40">#66EE7600</color>
+    <color name="orange_menu20">#33EE7600</color>
 
 </resources>

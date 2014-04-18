@@ -3,10 +3,12 @@ package za.co.tbt.mydining.db;
 public class MenuItem extends DBItem{
 	String description;
 	String additional;
+	String portion;
 	float cost;
 	boolean vegetarian;
 	boolean special;
 	boolean healthy;
+	String halaal;
 	
 	public MenuItem() {
 		// TODO Auto-generated constructor stub
@@ -14,10 +16,12 @@ public class MenuItem extends DBItem{
 		
 		description = "";
 		additional = "";
+		portion = "";
 		cost = 0;
 		vegetarian = false;
 		special = false;
 		healthy = false;
+		halaal = "R";
 	}
 	
 	public String getDish() {
@@ -74,5 +78,21 @@ public class MenuItem extends DBItem{
 	
 	public void setHealthy(boolean healthy) {
 		this.healthy = healthy;
+	}
+
+	public String getPortion() {
+		return portion;
+	}
+
+	public void setPortion(String portion) {
+		this.portion = portion;
+	}
+
+	public String getHalaal() {
+		return halaal;
+	}
+
+	public void setHalaal(String halaal) {
+		this.halaal = halaal;
 	}
 }

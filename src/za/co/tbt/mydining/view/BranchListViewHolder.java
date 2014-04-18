@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class BranchListViewHolder implements OnClickListener, LocationUpdateListener{
@@ -20,8 +21,8 @@ public class BranchListViewHolder implements OnClickListener, LocationUpdateList
 	public TextView branchNameText = null;
 	public TextView branchAddressText = null;
 	public TextView branchTelephoneText = null;
-	public TextView branchHalaalText = null;
-	public TextView branchKosherText = null;
+	public ImageView branchHalaalImage = null;
+	public ImageView branchKosherImage = null;
 	
 	public BranchListViewHolder(View row) {
 		// TODO Auto-generated constructor stub
@@ -29,8 +30,8 @@ public class BranchListViewHolder implements OnClickListener, LocationUpdateList
 		branchNameText = (TextView) row.findViewById(R.id.text_branch_name);
 		branchAddressText = (TextView) row.findViewById(R.id.text_branch_address);
 		branchTelephoneText = (TextView) row.findViewById(R.id.text_branch_tel);
-		branchHalaalText = (TextView) row.findViewById(R.id.text_branch_halaal);
-		branchKosherText = (TextView) row.findViewById(R.id.text_branch_kosher);
+		branchHalaalImage = (ImageView) row.findViewById(R.id.image_branch_halaal);
+		branchKosherImage = (ImageView) row.findViewById(R.id.image_branch_kosher);
 	}
 
 	public void populateFrom(Branch branch){
@@ -41,15 +42,15 @@ public class BranchListViewHolder implements OnClickListener, LocationUpdateList
 		branchAddressText.setText(branch.getAddress());
 		branchTelephoneText.setText(branch.getTelephone_no());
 		if (branch.isHalaal()){
-			branchHalaalText.setText("H");
+			branchHalaalImage.setImageResource(R.drawable.ic_halaal);
 		}else{
-			branchHalaalText.setText("");
+			branchHalaalImage.setImageResource(android.R.color.transparent);
 		}
 		
 		if (branch.isKosher()){
-			branchKosherText.setText("K");
+			branchKosherImage.setImageResource(R.drawable.ic_kosher);
 		}else{
-			branchKosherText.setText("");
+			branchKosherImage.setImageResource(android.R.color.transparent);
 		}				
 	}
 	

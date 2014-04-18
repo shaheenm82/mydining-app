@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/aqua_menu80"
     android:orientation="horizontal" >
 
     <ImageView
@@ -16,7 +17,9 @@
         android:layout_height="48dp"
         android:gravity="left|center_vertical"
         android:paddingLeft="@dimen/list_menuitem"
-        android:textSize="@dimen/Heading1"
+        android:text="Item"
+        android:textColor="@color/red_menu80"
+        android:textSize="@dimen/Heading0"
         android:textStyle="bold" />
 
 </LinearLayout>

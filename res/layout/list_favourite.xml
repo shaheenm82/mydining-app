@@ -4,6 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
     android:layout_margin="@dimen/list_menuitem"
+    android:background="@color/slate_menu20"
     android:columnCount="5"
     android:orientation="horizontal"
     android:padding="@dimen/list_gridpadding" >
@@ -16,8 +17,10 @@
         android:layout_column="0"
         android:layout_gravity="left"
         android:layout_row="0"
+        android:background="@color/orange_menu20"
         android:text="Dish"
-        android:textSize="14dp"
+        android:textColor="@color/aqua_menu"
+        android:textSize="@dimen/Heading1"
         android:textStyle="bold" />
 
     <TextView
@@ -28,7 +31,8 @@
         android:layout_row="0"
         android:gravity="right"
         android:text="selected x times"
-        android:textSize="12dp" />
+        android:textColor="@color/red_menu80"
+        android:textSize="@dimen/Heading4" />
 
     <TextView
         android:id="@+id/text_fav_last"
@@ -36,8 +40,11 @@
         android:layout_column="0"
         android:layout_gravity="left"
         android:layout_row="1"
+        android:background="@color/orange_menu20"
         android:text="last selected"
-        android:textSize="12dp" />
+        android:textColor="@color/green_menu"
+        android:textSize="@dimen/Heading3"
+        android:textStyle="bold" />
 
     <Space android:layout_gravity="fill_horizontal" />
 

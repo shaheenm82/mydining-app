@@ -10,9 +10,10 @@ public class MenuItemListViewHolder {
 	public TextView menuDishText = null;
 	public TextView menuDescriptionText = null;
 	public TextView menuAdditionalText = null;
-	public TextView menuSpecialText = null;
+	public ImageView menuSpecialImage = null;
 	public ImageView menuVegetarianImage = null;
 	public ImageView menuHealthyImage = null;
+	public ImageView menuHalaalImage = null;
 	public TextView menuCostText = null;
 	
 	public MenuItemListViewHolder(View row) {
@@ -20,9 +21,10 @@ public class MenuItemListViewHolder {
 		menuDishText = (TextView) row.findViewById(R.id.text_dish);
 		menuDescriptionText = (TextView) row.findViewById(R.id.text_description);
 		menuAdditionalText = (TextView) row.findViewById(R.id.text_additional);
-		menuSpecialText = (TextView) row.findViewById(R.id.text_special);
+		menuSpecialImage = (ImageView) row.findViewById(R.id.image_special);
 		menuVegetarianImage = (ImageView) row.findViewById(R.id.image_vegetarian);
 		menuHealthyImage = (ImageView) row.findViewById(R.id.image_healthy);
+		menuHalaalImage = (ImageView) row.findViewById(R.id.image_halaal);
 		menuCostText = (TextView) row.findViewById(R.id.text_cost);
 	}
 
@@ -32,9 +34,9 @@ public class MenuItemListViewHolder {
 		menuAdditionalText.setText(mitem.getAdditional());
 		menuCostText.setText(String.format("R %.2f", mitem.getCost()));
 		if (mitem.isSpecial()){
-			menuSpecialText.setText("S");
+			menuSpecialImage.setImageResource(R.drawable.ic_special);
 		}else{
-			menuSpecialText.setText("");
+			menuSpecialImage.setImageResource(android.R.color.transparent);
 		}
 		
 		if (mitem.isVegetarian()){
@@ -47,6 +49,12 @@ public class MenuItemListViewHolder {
 			menuHealthyImage.setImageResource(R.drawable.ic_healthy);
 		}else{
 			menuHealthyImage.setImageResource(android.R.color.transparent);
+		}
+		
+		if (mitem.getHalaal().equals("Y")){
+			menuHalaalImage.setImageResource(R.drawable.ic_halaal);
+		}else{
+			menuHalaalImage.setImageResource(android.R.color.transparent);
 		}
 	}
 }

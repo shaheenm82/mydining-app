@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/LinearLayout1"
+    android:id="@+id/LinearLayout_Dish"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/aqua_menu80"
     android:orientation="vertical" >
 
     <TextView
@@ -10,7 +11,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
-        android:textSize="16dp"
-        />
+        android:text="Province"
+        android:textColor="@color/red_menu80"
+        android:textSize="@dimen/Heading0"
+        android:textStyle="bold" />
 
 </LinearLayout>

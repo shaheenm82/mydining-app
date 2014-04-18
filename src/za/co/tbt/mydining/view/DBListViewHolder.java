@@ -19,6 +19,6 @@ public class DBListViewHolder {
 	public void populateFrom(String r){
 		itemText.setText(r);
 		 
-		logo.setImageResource(R.drawable.ic_cuisine_hat);		
+		logo.setImageResource(R.drawable.ic_cuisine);		
 	}
 }

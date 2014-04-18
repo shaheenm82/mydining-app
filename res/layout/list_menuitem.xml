@@ -4,6 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
     android:layout_margin="@dimen/list_menuitem"
+    android:background="@color/slate_menu20"
     android:padding="@dimen/list_gridpadding" >
 
     <Space
@@ -12,33 +13,36 @@
         android:layout_gravity="fill_vertical" />
 
     <LinearLayout
-        android:id="@+id/LinearLayout1"
+        android:id="@+id/LinearLayout_Dish"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:background="@color/orange_menu20" >
 
         <TextView
             android:id="@+id/text_dish"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
             android:layout_weight="0.1"
             android:text="Dish"
-            android:textSize="14dp"
+            android:textColor="@color/aqua_menu"
+            android:textSize="@dimen/Heading2"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/text_special"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.9"
-            android:gravity="right"
-            android:text="S" />
+        <ImageView
+            android:id="@+id/image_special"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_special" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/LinearLayout1"
+        android:id="@+id/LinearLayout_Desc"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:background="@color/orange_menu20" >
 
         <Space
             android:layout_width="wrap_content"
@@ -49,9 +53,11 @@
             android:id="@+id/text_description"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
             android:layout_weight="0.8"
             android:text="Description"
-            android:textSize="12dp" />
+            android:textColor="@color/green_menu60"
+            android:textSize="@dimen/Heading3" />
 
     </LinearLayout>
 
@@ -60,41 +66,53 @@
         android:layout_height="wrap_content" />
 
     <LinearLayout
-        android:id="@+id/LinearLayout1"
+        android:id="@+id/LinearLayout_Add"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:background="@color/orange_menu20"
         android:orientation="horizontal" >
 
         <TextView
             android:id="@+id/text_additional"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
             android:layout_weight="2.8"
+            android:maxLines="5"
             android:text="Additional"
-            android:textSize="12sp"
-            android:textStyle="bold" />
+            android:textColor="@color/green_menu60"
+            android:textSize="@dimen/Heading4"
+            android:textStyle="bold|italic" />
 
         <ImageView
             android:id="@+id/image_vegetarian"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:scaleType="fitXY"
             android:src="@drawable/ic_vegetarian" />
 
         <ImageView
             android:id="@+id/image_healthy"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:src="@drawable/ic_healthy" />
+
+        <ImageView
+            android:id="@+id/image_halaal"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_halaal" />
 
         <TextView
             android:id="@+id/text_cost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
+            android:layout_gravity="right|bottom"
             android:layout_weight="0.2"
             android:gravity="right"
             android:text="Cost"
+            android:textColor="@color/red_menu"
             android:textSize="16dp"
             android:textStyle="bold" />
 

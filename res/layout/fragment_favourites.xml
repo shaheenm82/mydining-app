@@ -8,8 +8,8 @@
         android:id="@+id/list_favourites"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:divider="#fff"/>
-     
+        android:background="@color/slate_menu20"
+        android:divider="#fff"
+        android:gravity="center" />
  
 </RelativeLayout>

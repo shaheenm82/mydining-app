@@ -20,19 +20,21 @@ public class RestaurantDataSource {
 	public static final String MENU_TABLE_NAME = "menu";
 	public static final String MENU_COLUMN_ID = "_id";
 	public static final String MENU_COLUMN_REST_ID = "rest_id";
-	public static final String MENU_COLUMN_CATEGORY = "category";
 	public static final String MENU_COLUMN_DISH = "dish";
 	public static final String MENU_COLUMN_DESCRIPTION = "description";
 	public static final String MENU_COLUMN_ADDITIONAL = "additional";
+	public static final String MENU_COLUMN_PORTION = "portion_size";
 	public static final String MENU_COLUMN_COST = "cost";
 	public static final String MENU_COLUMN_SPECIAL = "special";
 	public static final String MENU_COLUMN_VEG = "vegetarian";
 	public static final String MENU_COLUMN_HEALTH = "healthy";
-	private String allMenuColumns[] = {MENU_COLUMN_ID, MENU_COLUMN_REST_ID, MENU_COLUMN_CATEGORY,
-			MENU_COLUMN_DISH, MENU_COLUMN_DESCRIPTION, MENU_COLUMN_ADDITIONAL, MENU_COLUMN_COST,
-			MENU_COLUMN_SPECIAL, MENU_COLUMN_VEG, MENU_COLUMN_HEALTH}; 
-	private String restMenuSelection = "rest_id = ?";
-	private String orderByMenuCategory = " CASE category "
+	public static final String MENU_COLUMN_HALAAL = "halaal";
+	
+	private String allMenuColumns[] = {MENU_COLUMN_ID, MENU_COLUMN_DISH, 
+			MENU_COLUMN_DESCRIPTION, MENU_COLUMN_ADDITIONAL, MENU_COLUMN_PORTION, MENU_COLUMN_COST,
+			MENU_COLUMN_SPECIAL, MENU_COLUMN_VEG, MENU_COLUMN_HEALTH, MENU_COLUMN_HALAAL}; 
+	private String restMenuSelection = "rest_id = ? AND category = ?";
+	/*private String orderByMenuCategory = " CASE category "
 			+ "WHEN 'Light Meals' THEN 0 "
 			+ "WHEN 'Regular Meals' THEN 1 "
 			+ "WHEN 'Combo Meals' THEN 2 "
@@ -44,8 +46,9 @@ public class RestaurantDataSource {
 			+ "WHEN 'Extras' THEN 8 "
 			+ "WHEN 'Drinks' THEN 9 "
 			+ "WHEN 'Desserts' THEN 10 "
-			+ "END";
-	private String orderByMenuColumns = orderByMenuCategory + ", " + MENU_COLUMN_COST;
+			+ "END";*/
+	
+	private String orderByMenuColumns = MENU_COLUMN_COST;
 	
 	public static final String BRANCH_TABLE_NAME = "branch";
 	public static final String BRANCH_COLUMN_ID = "_id";
@@ -64,7 +67,6 @@ public class RestaurantDataSource {
 			BRANCH_COLUMN_LATITUDE, BRANCH_COLUMN_LONGITUDE, BRANCH_COLUMN_HALAAL, BRANCH_COLUMN_KOSHER}; 
 	private String restBranchSelection = "rest_id = ?";
 	private String orderByBranchColumns = BRANCH_COLUMN_PROVINCE + ", " + BRANCH_COLUMN_SUBURB;
-	
 	
 	SQLiteDatabase db;
 	MyDiningDbOpenHelper dbHelper;
@@ -156,53 +158,78 @@ public class RestaurantDataSource {
 		Menu menu = null;
 		MenuCategory mcat = null;
 		MenuItem mitem = null;
+		String[] rest_selection = new String[2];
+		Cursor cursorItems;
 		
-		String category = "";
-		String[] rest_selection = {new Long(id).toString()};
-		
-		Cursor cursor = db.query(MENU_TABLE_NAME,
-		        allMenuColumns, restMenuSelection, rest_selection, null, null, orderByMenuColumns);
 		menu = new Menu();
 		
-		cursor.moveToFirst();
-		while (!cursor.isAfterLast()) {
-			if (!category.equals(cursor.getString(2))){
-				category = cursor.getString(2);
-				mcat = new MenuCategory(category);
+		String getMenuCategories = "select * from menu_category "
+				+ "inner join menu "
+				+ "on menu_category._id = menu.category "
+				+ "inner join master_category "
+				+ "on master_category._id = menu_category.master_category "
+				+ "where rest_id = " + id 
+				+ " group by master_category, category "
+				+ "order by master_category.rank";							
+		
+		Cursor cursorCategories = db.rawQuery(getMenuCategories, null);
+		
+		cursorCategories.moveToFirst();
+		while (!cursorCategories.isAfterLast()) {
+			mcat = new MenuCategory(cursorCategories.getString(2));
+			mcat.setId(cursorCategories.getLong(0));
+			mcat.setDescription(cursorCategories.getString(3));
+			mcat.setAdditional(cursorCategories.getString(4));
+			
+			menu.addMenuCategory(mcat);
+			
+			rest_selection[0] = Long.valueOf(id).toString();
+			rest_selection[1] = Long.valueOf(mcat.getId()).toString();
+			
+			cursorItems = db.query(MENU_TABLE_NAME,
+			        allMenuColumns, restMenuSelection, rest_selection, null, null, orderByMenuColumns);
+			
+			cursorItems.moveToFirst();
+			while (!cursorItems.isAfterLast()) {
+				mitem = new MenuItem();
+				mitem.setId(cursorItems.getLong(0));
+				mitem.setDish(cursorItems.getString(1));
+				mitem.setDescription(cursorItems.getString(2));
+				mitem.setAdditional(cursorItems.getString(3));
+				mitem.setPortion(cursorItems.getString(4));
+				mitem.setCost(cursorItems.getFloat(5));
 				
-				menu.addMenuCategory(mcat);							
+				if (cursorItems.getInt(6) == 0){
+					mitem.setSpecial(false);
+				}else{
+					mitem.setSpecial(true);
+				}
+				
+				if (cursorItems.getInt(7) == 0){
+					mitem.setVegetarian(false);
+				}else{
+					mitem.setVegetarian(true);
+				}
+				
+				if (cursorItems.getInt(8) == 0){
+					mitem.setHealthy(false);
+				}else{
+					mitem.setHealthy(true);
+				}
+				
+				mitem.setHalaal(cursorItems.getString(9));
+				
+				mcat.addMenuItem(mitem);
+				
+				cursorItems.moveToNext();
 			}
+			// make sure to close the cursor
+			cursorItems.close();
 			
-			mitem = new MenuItem();
-			mitem.setId(cursor.getLong(0));
-			mitem.setDish(cursor.getString(3));
-			mitem.setDescription(cursor.getString(4));
-			mitem.setAdditional(cursor.getString(5));
-			mitem.setCost(cursor.getFloat(6));
-			if (cursor.getInt(7) == 0){
-				mitem.setSpecial(false);
-			}else{
-				mitem.setSpecial(true);
-			}
-			
-			if (cursor.getInt(8) == 0){
-				mitem.setVegetarian(false);
-			}else{
-				mitem.setVegetarian(true);
-			}
-			
-			if (cursor.getInt(9) == 0){
-				mitem.setHealthy(false);
-			}else{
-				mitem.setHealthy(true);
-			}
-			
-			mcat.addMenuItem(mitem);
-			
-			cursor.moveToNext();
+			cursorCategories.moveToNext();
 		}
-		// make sure to close the cursor
-		cursor.close();
+		
+		cursorCategories.close();
 		    
 		return menu;
 	}

@@ -11,5 +11,16 @@
     <dimen name="status">14sp</dimen>
     <dimen name="status_small">10sp</dimen>
     <dimen name="Heading0">30sp</dimen>
+    <dimen name="Heading3">16sp</dimen>
+    <dimen name="Heading4">12sp</dimen>
+    <dimen name="list_indent1">10sp</dimen>
+    <dimen name="list_indent2">15sp</dimen>
+    <dimen name="list_indent3">20sp</dimen>
+    <dimen name="list_indent4">25sp</dimen>
+    <dimen name="list_collapsableIndent0">20sp</dimen>
+    <dimen name="list_collapsableIndent1">25sp</dimen>
+    <dimen name="list_collapsableIndent2">30sp</dimen>
+    <dimen name="list_collapsableIndent3">35sp</dimen>
+    <dimen name="list_collapsableIndent4">40sp</dimen>
 
 </resources>

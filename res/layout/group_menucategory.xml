@@ -8,8 +8,32 @@
         android:id="@+id/text_menuCategory"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
+        android:background="@color/aqua_menu80"
+        android:paddingLeft="@dimen/list_collapsableIndent0"
+        android:text="Category"
+        android:textColor="@color/red_menu80"
         android:textSize="@dimen/Heading1"
         android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_menuCategoryDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green_menu20"
+        android:paddingLeft="@dimen/list_collapsableIndent2"
+        android:text="Description"
+        android:textColor="@color/orange_menu80"
+        android:textSize="@dimen/Heading3" />
+
+    <TextView
+        android:id="@+id/text_menuCategoryAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green_menu20"
+        android:paddingLeft="@dimen/list_collapsableIndent4"
+        android:text="Additional"
+        android:textColor="@color/orange_menu"
+        android:textSize="@dimen/Heading4"
+        android:textStyle="bold|italic" />
 
 </LinearLayout>

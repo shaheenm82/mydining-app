@@ -4,39 +4,47 @@
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
     android:layout_margin="@dimen/list_menuitem"
+    android:background="@color/slate_menu20"
     android:padding="@dimen/list_gridpadding" >
 
     <LinearLayout
-        android:id="@+id/LinearLayout1"
+        android:id="@+id/LinearLayout_Dish"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:background="@color/orange_menu20" >
 
         <TextView
             android:id="@+id/text_branch_suburb"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Suburb"
-            android:textSize="14sp"
+            android:textColor="@color/aqua_menu"
+            android:textSize="@dimen/Heading2"
             android:textStyle="bold" />
+
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/LinearLayout1"
+        android:id="@+id/LinearLayout_Dish"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:background="@color/orange_menu20" >
 
         <TextView
             android:id="@+id/text_branch_name"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Name"
-            android:textSize="14sp" />
+            android:textColor="@color/green_menu60"
+            android:textSize="@dimen/Heading3" />
+
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/LinearLayout1"
+        android:id="@+id/LinearLayout_Dish"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:background="@color/orange_menu20"
         android:orientation="horizontal" >
 
         <TextView
@@ -45,8 +53,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:maxLines="4"
             android:singleLine="false"
-            android:maxLines="4" >
+            android:text="Address"
+            android:textColor="@color/green_menu60"
+            android:textSize="@dimen/Heading3" >
+
         </TextView>
 
         <Button
@@ -54,46 +66,47 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
+            android:background="@drawable/border_button"
             android:minHeight="10dip"
             android:minWidth="20dip"
+            android:padding="3dp"
             android:text="@string/button_navigate"
-            android:textSize="10sp" />
+            android:textColor="@color/red_menu80"
+            android:textSize="@dimen/Heading4"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/LinearLayout1"
+        android:id="@+id/LinearLayout_Dish"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:background="@color/orange_menu20" >
 
         <TextView
             android:id="@+id/text_branch_tel"
-            android:autoLink="phone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:autoLink="phone"
             android:ems="10"
-        />
+            android:text="Telephone"
+            android:textColor="@color/red_menu"
+            android:textColorLink="@color/orange_menu"
+            android:textSize="@dimen/Heading3"
+            android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/text_branch_halaal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.001"
-            android:gravity="right"
-            android:padding="@dimen/list_gridpadding"
-            android:text="H"
-            android:textSize="14dp" />
+        <ImageView
+            android:id="@+id/image_branch_halaal"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_halaal" />
 
-        <TextView
-            android:id="@+id/text_branch_kosher"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="14dp"
-            android:layout_weight="0.001"
-            android:gravity="right"
-            android:padding="@dimen/list_gridpadding"
-            android:text="K" />
+        <ImageView
+            android:id="@+id/image_branch_kosher"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_kosher" />
     </LinearLayout>
 
 </TableLayout>

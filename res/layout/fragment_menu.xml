@@ -5,25 +5,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <ExpandableListView
-        android:id="@+id/expandable_menu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="48dp" >
-
-    </ExpandableListView>
-
     <TextView
         android:id="@+id/text_cost_disclaimer"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
+        android:background="@color/slate_menu20"
         android:gravity="center"
         android:text="@string/text_cost_disclaimer"
+        android:textColor="@color/red_menu80"
         android:textSize="@dimen/Notice"
         android:textStyle="bold" />
+
+    <ExpandableListView
+        android:id="@+id/expandable_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/text_cost_disclaimer"
+        android:background="@color/aqua_menu20" >
+
+    </ExpandableListView>
 
 </RelativeLayout>
