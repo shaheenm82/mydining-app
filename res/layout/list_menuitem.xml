@@ -15,8 +15,7 @@
     <LinearLayout
         android:id="@+id/LinearLayout_Dish"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/orange_menu20" >
+        android:layout_height="wrap_content" >
 
         <TextView
             android:id="@+id/text_dish"
@@ -41,8 +40,7 @@
     <LinearLayout
         android:id="@+id/LinearLayout_Desc"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/orange_menu20" >
+        android:layout_height="wrap_content" >
 
         <Space
             android:layout_width="wrap_content"
@@ -69,7 +67,6 @@
         android:id="@+id/LinearLayout_Add"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@color/orange_menu20"
         android:orientation="horizontal" >
 
         <TextView

@@ -284,18 +284,19 @@ containing a value of this type.
         public static final int ic_healthy=0x7f02001e;
         public static final int ic_kosher=0x7f02001f;
         public static final int ic_launcher=0x7f020020;
-        public static final int ic_plusone_medium_off_client=0x7f020021;
-        public static final int ic_plusone_small_off_client=0x7f020022;
-        public static final int ic_plusone_standard_off_client=0x7f020023;
-        public static final int ic_plusone_tall_off_client=0x7f020024;
-        public static final int ic_rest_debonairs=0x7f020025;
-        public static final int ic_rest_fishaways=0x7f020026;
-        public static final int ic_rest_mochachos=0x7f020027;
-        public static final int ic_rest_nandos=0x7f020028;
-        public static final int ic_rest_steers=0x7f020029;
-        public static final int ic_special=0x7f02002a;
-        public static final int ic_vegetarian=0x7f02002b;
-        public static final int img_splash=0x7f02002c;
+        public static final int ic_menu_app=0x7f020021;
+        public static final int ic_plusone_medium_off_client=0x7f020022;
+        public static final int ic_plusone_small_off_client=0x7f020023;
+        public static final int ic_plusone_standard_off_client=0x7f020024;
+        public static final int ic_plusone_tall_off_client=0x7f020025;
+        public static final int ic_rest_debonairs=0x7f020026;
+        public static final int ic_rest_fishaways=0x7f020027;
+        public static final int ic_rest_mochachos=0x7f020028;
+        public static final int ic_rest_nandos=0x7f020029;
+        public static final int ic_rest_steers=0x7f02002a;
+        public static final int ic_special=0x7f02002b;
+        public static final int ic_vegetarian=0x7f02002c;
+        public static final int splash_320=0x7f02002d;
     }
     public static final class id {
         public static final int GridLayout1=0x7f060020;
