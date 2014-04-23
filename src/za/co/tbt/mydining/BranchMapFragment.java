@@ -4,6 +4,7 @@ import java.util.List;
 
 import za.co.tbt.mydining.db.Branch;
 import za.co.tbt.mydining.location.LocationProvider;
+import za.co.tbt.mydining.location.LocationService;
 import za.co.tbt.mydining.location.LocationUpdateListener;
 import za.co.tbt.mydining.location.LocationUtils;
 import android.app.Activity;
@@ -33,7 +34,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
  * 
  */
 public class BranchMapFragment extends Fragment implements LocationUpdateListener{
-	private LocationProvider locProvider;
+	//private LocationProvider locProvider;
 	private Location location = null;
 	private GoogleMap map = null;
 	private LatLng you = null;
@@ -50,8 +51,8 @@ public class BranchMapFragment extends Fragment implements LocationUpdateListene
 	public void onAttach(Activity activity) {
 		// TODO Auto-generated method stub
 		super.onAttach(activity);
-		locProvider = (LocationProvider)activity;	
-		locProvider.addLocationUpdateListener(this);
+		//locProvider = (LocationProvider)activity;	
+		LocationService.getInstance(activity).addLocationUpdateListener(this);
 		
 		restDataSupplier = (RestaurantDataSupplier) activity;
 	}
@@ -116,11 +117,6 @@ public class BranchMapFragment extends Fragment implements LocationUpdateListene
                 .title("You")
                 .snippet("You are here")
                 .position(you));
-        
-        /*map.addMarker(new MarkerOptions()
-        .title("Me")
-        .snippet("I am are here")
-        .position(me));*/
     }
 	
 	public CharSequence getTitle(){

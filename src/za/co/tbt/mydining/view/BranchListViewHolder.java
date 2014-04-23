@@ -74,10 +74,6 @@ public class BranchListViewHolder implements OnClickListener, LocationUpdateList
 			intent.setComponent(new ComponentName("com.google.android.apps.maps", 
 			    "com.google.android.maps.MapsActivity"));
 			v.getContext().startActivity(intent);
-			
-			/*Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("google.navigation:q=" +branch.getLatitude() + "," + branch.getLongitude()));
-	        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-	        v.getContext().startActivity(intent);*/
 	}
 
 	@Override

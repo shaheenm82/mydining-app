@@ -5,6 +5,7 @@ import java.util.List;
 import za.co.tbt.mydining.adapter.EntryPagerAdapter;
 import za.co.tbt.mydining.db.DBItem;
 import za.co.tbt.mydining.db.MyDiningDbOpenHelper;
+import za.co.tbt.mydining.location.LocationService;
 import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.FragmentTransaction;
@@ -34,7 +35,7 @@ public class EntryActivity extends FragmentActivity implements
 	 */
 	//SectionsPagerAdapter mSectionsPagerAdapter;
 	EntryPagerAdapter mEntryPagerAdapter;
-	
+	LocationService locationService;
 	MyDiningDbOpenHelper diningHelper;
 
 	/**
@@ -51,6 +52,8 @@ public class EntryActivity extends FragmentActivity implements
 		diningHelper = new MyDiningDbOpenHelper(this);
 		diningHelper.openDataBase();
 				
+		locationService = LocationService.getInstance(getApplicationContext());
+		
 		// Set up the action bar.
 		final ActionBar actionBar = getActionBar();
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
@@ -103,6 +106,21 @@ public class EntryActivity extends FragmentActivity implements
 	    searchView.setOnQueryTextListener(this);
 	    
 		return true;
+	}
+
+	
+	@Override
+	protected void onStart() {
+		// TODO Auto-generated method stub
+		super.onStart();
+		locationService.start();
+	}
+
+	@Override
+	protected void onStop() {
+		// TODO Auto-generated method stub
+		super.onStop();
+		locationService.stop();
 	}
 
 	@Override
@@ -205,6 +223,12 @@ public class EntryActivity extends FragmentActivity implements
 	@Override
 	public boolean onQueryTextSubmit(String query) {
 		// TODO Auto-generated method stub
-		return false;
+		Intent intent = getIntent();
+		intent.setAction(Intent.ACTION_SEARCH);
+		intent.putExtra(SearchManager.QUERY, query);
+		
+		performSearch(intent);
+		
+		return true;
 	}
 }

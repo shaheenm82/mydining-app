@@ -1,39 +1,27 @@
 package za.co.tbt.mydining;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import za.co.tbt.mydining.adapter.RestaurantDetailsPagerAdapter;
 import za.co.tbt.mydining.db.Branch;
 import za.co.tbt.mydining.db.Restaurant;
 import za.co.tbt.mydining.db.RestaurantDataSource;
-import za.co.tbt.mydining.location.LocationProvider;
-import za.co.tbt.mydining.location.LocationUpdateListener;
-import za.co.tbt.mydining.location.LocationUtils;
+import za.co.tbt.mydining.location.LocationService;
 import android.app.ActionBar;
-import android.app.Activity;
-import android.app.Dialog;
-import android.app.DialogFragment;
 import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.content.IntentSender;
-import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
-
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesClient;
-import com.google.android.gms.common.GooglePlayServicesUtil;
-import com.google.android.gms.location.LocationClient;
 
 public class RestaurantDetailActivity extends FragmentActivity implements
-		ActionBar.TabListener, GooglePlayServicesClient.ConnectionCallbacks,
-        GooglePlayServicesClient.OnConnectionFailedListener, RestaurantDataSupplier, LocationProvider {
+		ActionBar.TabListener, //GooglePlayServicesClient.ConnectionCallbacks,
+        //GooglePlayServicesClient.OnConnectionFailedListener, 
+		RestaurantDataSupplier//, LocationProvider 
+		{
 
 	/**
 	 * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -52,9 +40,10 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 	 */
 	ViewPager mViewPager;
 
-	List<LocationUpdateListener> locUpdateListeners;
-	LocationClient location_client;
-	Location location;
+	//List<LocationUpdateListener> locUpdateListeners;
+	//LocationClient location_client;
+	//Location location;
+	LocationService locationService;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +53,8 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_restaurant_detail);
 
+		locationService = LocationService.getInstance(getApplicationContext());
+		
 		// Get the message from the intent
 	    Intent intent = getIntent();
 	    String rest_name = intent.getStringExtra(RestaurantFragment.RESTAURANT_NAME);
@@ -115,14 +106,15 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 					.setTabListener(this));
 		}
 		
-		location_client = new LocationClient(this, this, this);		
+		//location_client = new LocationClient(this, this, this);		
 	}
 	
 	@Override
 	protected void onStart() {
 		// TODO Auto-generated method stub		
-		location_client.connect();
+		//location_client.connect();
 		super.onStart();
+		locationService.start();
 	}
 	
 	@Override
@@ -143,7 +135,7 @@ public class RestaurantDetailActivity extends FragmentActivity implements
      * start an Activity that handles Google Play services problems. The result of this
      * call returns here, to onActivityResult.
      */
-    @Override
+    /*@Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
 
         // Choose what to do based on the request code
@@ -164,13 +156,14 @@ public class RestaurantDetailActivity extends FragmentActivity implements
             	showErrorDialog(resultCode);
                break;
         }
-    }
+    }*/
     
 	@Override
 	protected void onStop() {
 		// TODO Auto-generated method stub
-		location_client.disconnect();
-		super.onStop();		
+		//location_client.disconnect();
+		super.onStop();	
+		locationService.stop();
 	}
 	
 	@Override
@@ -185,7 +178,7 @@ public class RestaurantDetailActivity extends FragmentActivity implements
      *
      * @return true if Google Play services is available, otherwise false
      */
-    private boolean servicesConnected() {
+    /*private boolean servicesConnected() {
 
         // Check that Google Play services is available
         int resultCode =
@@ -207,7 +200,7 @@ public class RestaurantDetailActivity extends FragmentActivity implements
             }
             return false;
         }
-    }
+    }*/
     
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -238,7 +231,7 @@ public class RestaurantDetailActivity extends FragmentActivity implements
      * Called by Location Services if the attempt to
      * Location Services fails.
      */
-    @Override
+    /*@Override
     public void onConnectionFailed(ConnectionResult connectionResult) {
     	Toast.makeText(getApplicationContext(), "Map onConnectionFailed", Toast.LENGTH_SHORT).show();
         /*
@@ -247,7 +240,7 @@ public class RestaurantDetailActivity extends FragmentActivity implements
          * start a Google Play services activity that can resolve
          * error.
          */
-        if (connectionResult.hasResolution()) {
+        /*if (connectionResult.hasResolution()) {
             try {
                 // Start an Activity that tries to resolve the error
                 connectionResult.startResolutionForResult(
@@ -257,7 +250,7 @@ public class RestaurantDetailActivity extends FragmentActivity implements
                 * Thrown if Google Play services canceled the original
                 * PendingIntent
                 */
-            } catch (IntentSender.SendIntentException e) {
+            /*} catch (IntentSender.SendIntentException e) {
                 // Log the error
                 e.printStackTrace();
             }
@@ -265,9 +258,9 @@ public class RestaurantDetailActivity extends FragmentActivity implements
             // If no resolution is available, display a dialog to the user with the error.
             showErrorDialog(connectionResult.getErrorCode());
         }
-    }
+    }*/
 
-	@Override
+	/*@Override
 	public void onConnected(Bundle connectionHint) {
 		// TODO Auto-generated method stub
 		if (servicesConnected()){
@@ -284,7 +277,7 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 	@Override
 	public void onDisconnected() {
 		// TODO Auto-generated method stub		
-	}
+	}*/
 	
 	/**
      * Show a dialog returned by Google Play services for the
@@ -292,7 +285,7 @@ public class RestaurantDetailActivity extends FragmentActivity implements
      *
      * @param errorCode An error code returned from onConnectionFailed
      */
-    private void showErrorDialog(int errorCode) {
+    /*private void showErrorDialog(int errorCode) {
 
         // Get the error dialog from Google Play services
         Dialog errorDialog = GooglePlayServicesUtil.getErrorDialog(
@@ -312,13 +305,13 @@ public class RestaurantDetailActivity extends FragmentActivity implements
             // Show the error dialog in the DialogFragment
             errorFragment.show(getFragmentManager(), "");
         }
-    }
+    }*/
     
     /**
      * Define a DialogFragment to display the error dialog generated in
      * showErrorDialog.
      */
-    public static class ErrorDialogFragment extends DialogFragment {
+    /*public static class ErrorDialogFragment extends DialogFragment {
 
         // Global field to contain the error dialog
         private Dialog mDialog;
@@ -326,30 +319,30 @@ public class RestaurantDetailActivity extends FragmentActivity implements
         /**
          * Default constructor. Sets the dialog field to null
          */
-        public ErrorDialogFragment() {
+        /*public ErrorDialogFragment() {
             super();
             mDialog = null;
-        }
+        }*/
 
         /**
          * Set the dialog to display
          *
          * @param dialog An error dialog
          */
-        public void setDialog(Dialog dialog) {
+        /*public void setDialog(Dialog dialog) {
             mDialog = dialog;
-        }
+        }*/
 
         /*
          * This method must return a Dialog to the DialogFragment.
          */
-        @Override
+        /*@Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             return mDialog;
         }
-    }
+    }*/
 
-	@Override
+	//@Override
 	public za.co.tbt.mydining.db.Menu requestRestaurantMenu() {
 		// TODO Auto-generated method stub
 		return restaurant.getRestaurant_menu();
@@ -361,7 +354,7 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 		return restaurant.getRestaurant_branches();
 	}	
 
-	@Override
+	/*@Override
 	public void addLocationUpdateListener(LocationUpdateListener lulistener) {
 		// TODO Auto-generated method stub
 		if (locUpdateListeners == null){
@@ -375,7 +368,7 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 				listener.locationUpdated(location);
 			}			
 		}
-	}
+	}*/
 
 	@Override
 	public Restaurant requestRestaurantDetails() {

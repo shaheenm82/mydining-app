@@ -7,6 +7,7 @@ import java.util.List;
 import za.co.tbt.mydining.R;
 import za.co.tbt.mydining.db.Branch;
 import za.co.tbt.mydining.location.LocationProvider;
+import za.co.tbt.mydining.location.LocationService;
 import za.co.tbt.mydining.view.BranchListViewHolder;
 import za.co.tbt.mydining.view.BranchProvinceListViewHolder;
 import android.content.ComponentName;
@@ -24,7 +25,7 @@ public class BranchListAdapter extends BaseExpandableListAdapter{
 	Context context;
 	List<String> provinces;
 	HashMap<String, List<Branch>> branches;
-	private LocationProvider locProvider;
+	//private LocationProvider locProvider;
 	
 	public BranchListAdapter(Context context, List<Branch> pbranches){
 		//super(context, R.layout.list_dbitem);		
@@ -52,7 +53,7 @@ public class BranchListAdapter extends BaseExpandableListAdapter{
 			details.add(branch);
 		}
 		
-		locProvider = (LocationProvider)context;	
+		//locProvider = (LocationProvider)context;	
 		
 		this.branches.put(province, details);
 	}
@@ -90,7 +91,7 @@ public class BranchListAdapter extends BaseExpandableListAdapter{
 			listviewHolder = (BranchListViewHolder) convertView.getTag();
 		}
 		
-		locProvider.addLocationUpdateListener(listviewHolder);		
+		LocationService.getInstance(context).addLocationUpdateListener(listviewHolder);		
 		listviewHolder.populateFrom(branch);				
 		
 		return convertView;

@@ -19,6 +19,7 @@ import android.widget.ListView;
 
 public class RestaurantFragment extends Fragment implements OnItemClickListener {
 	public static final String RESTAURANT_NAME = "restaurant_name";
+	public static final String LOCATION_SERVICE = "location_service";
 	
 	private ListView restView = null;
 	private RestaurantListAdapter listAdapter = null;
