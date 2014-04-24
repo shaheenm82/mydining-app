@@ -6,7 +6,7 @@
     <string name="action_search">Search</string>
     <string name="action_version">Updates</string>
     <string name="title_outlets">Outlets</string>
-    <string name="title_cuisines">Cuisine</string>
+    <string name="title_nearby">Near By</string><string name="title_cuisines">Cuisine</string>
     <string name="title_favourites">Favourites</string>
     <string name="title_menus">Menu</string>
     <string name="title_branches">Branches</string>
@@ -28,5 +28,9 @@
     <string name="title_activity_splash">SplashActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_nearby_pref">Restaurant Search Radius</string>
+    <string name="pref_nearby">Distance from current location</string>
+    <string name="pref_nearby_rest">Search for Restaurants within Radius</string>
+    
 
 </resources>

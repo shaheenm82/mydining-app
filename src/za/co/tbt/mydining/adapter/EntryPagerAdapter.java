@@ -8,6 +8,7 @@ import java.util.Locale;
 
 import za.co.tbt.mydining.CuisineFragment;
 import za.co.tbt.mydining.FavouriteFragment;
+import za.co.tbt.mydining.NearByFragment;
 import za.co.tbt.mydining.RestaurantFragment;
 import za.co.tbt.mydining.R;
 import android.content.Context;
@@ -41,6 +42,12 @@ public class EntryPagerAdapter extends FragmentPagerAdapter {
 		
 		fragmentItems.add(f);
 		args.putString(ARG_TITLE, context.getString(R.string.title_outlets));
+		f.setArguments(args);
+		
+		f = new NearByFragment();
+		args = new Bundle();
+		fragmentItems.add(f);
+		args.putString(ARG_TITLE, context.getString(R.string.title_nearby));
 		f.setArguments(args);
 		
 		f = new CuisineFragment();

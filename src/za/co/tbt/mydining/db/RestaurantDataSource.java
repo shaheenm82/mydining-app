@@ -62,9 +62,10 @@ public class RestaurantDataSource {
 	public static final String BRANCH_COLUMN_LONGITUDE = "location_long";
 	public static final String BRANCH_COLUMN_HALAAL = "halaal";
 	public static final String BRANCH_COLUMN_KOSHER = "kosher";
-	private String allBranchColumns[] = {BRANCH_COLUMN_ID, BRANCH_COLUMN_REST_ID, BRANCH_COLUMN_NAME,
+	public static final String BRANCH_COLUMN_DISTANCE = "distance";
+	public static final String allBranchColumns[] = {BRANCH_COLUMN_ID, BRANCH_COLUMN_REST_ID, BRANCH_COLUMN_NAME,
 			BRANCH_COLUMN_PROVINCE, BRANCH_COLUMN_SUBURB, BRANCH_COLUMN_ADDRESS, BRANCH_COLUMN_TELEPHONE_NO,
-			BRANCH_COLUMN_LATITUDE, BRANCH_COLUMN_LONGITUDE, BRANCH_COLUMN_HALAAL, BRANCH_COLUMN_KOSHER}; 
+			BRANCH_COLUMN_LATITUDE, BRANCH_COLUMN_LONGITUDE, BRANCH_COLUMN_HALAAL, BRANCH_COLUMN_KOSHER, BRANCH_COLUMN_DISTANCE}; 
 	private String restBranchSelection = "rest_id = ?";
 	private String orderByBranchColumns = BRANCH_COLUMN_PROVINCE + ", " + BRANCH_COLUMN_SUBURB;
 	
@@ -266,6 +267,8 @@ public class RestaurantDataSource {
 			}else{
 				branch.setKosher(true);
 			}
+			
+			branch.setDistance(cursor.getFloat(11));
 			
 			branches.add(branch);
 			

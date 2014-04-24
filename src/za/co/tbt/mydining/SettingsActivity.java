@@ -8,6 +8,7 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
@@ -16,7 +17,9 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.preference.RingtonePreference;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.MenuItem;
+import android.widget.Toast;
 import android.support.v4.app.NavUtils;
 
 import java.util.List;
@@ -102,6 +105,14 @@ public class SettingsActivity extends PreferenceActivity {
 		//dietaryHeader.setTitle(R.string.pref_header_dietary);
 		//getPreferenceScreen().addPreference(dietaryHeader);
 		addPreferencesFromResource(R.xml.pref_dietary);
+		bindPreferenceSummaryToValue(findPreference("halaal_pref"));
+		bindPreferenceSummaryToValue(findPreference("kosher_pref"));
+		bindPreferenceSummaryToValue(findPreference("vegetarian_pref"));
+		bindPreferenceSummaryToValue(findPreference("vegan_pref"));
+		
+		addPreferencesFromResource(R.xml.pref_nearby);
+		bindPreferenceSummaryToValue(findPreference("nearby_rest_pref"));
+		
 
 		// Add 'notifications' preferences, and a corresponding header.
 		//PreferenceCategory fakeHeader = new PreferenceCategory(this);
@@ -173,7 +184,7 @@ public class SettingsActivity extends PreferenceActivity {
 
 			if (preference instanceof ListPreference) {
 				// For list preferences, look up the correct display value in
-				// the preference's 'entries' list.
+				// the preference's 'entries' list.				
 				ListPreference listPreference = (ListPreference) preference;
 				int index = listPreference.findIndexOfValue(stringValue);
 
@@ -182,6 +193,8 @@ public class SettingsActivity extends PreferenceActivity {
 						.setSummary(index >= 0 ? listPreference.getEntries()[index]
 								: null);
 
+			} else if (preference instanceof CheckBoxPreference){
+				//Dont display anything in the Summary
 			} else if (preference instanceof RingtonePreference) {
 				// For ringtone preferences, look up the correct display value
 				// using RingtoneManager.

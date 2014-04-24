@@ -8,6 +8,10 @@
 package za.co.tbt.mydining;
 
 public final class R {
+    public static final class array {
+        public static final int list_nearby=0x7f090000;
+        public static final int list_nearby_values=0x7f090001;
+    }
     public static final class attr {
         /** 
     The size of the ad. It must be one of BANNER, FULL_BANNER, LEADERBOARD,
@@ -222,33 +226,33 @@ containing a value of this type.
         public static final int yellow_menu80=0x7f05001c;
     }
     public static final class dimen {
-        public static final int Heading0=0x7f090009;
-        public static final int Heading1=0x7f090004;
-        public static final int Heading2=0x7f090006;
-        public static final int Heading3=0x7f09000a;
-        public static final int Heading4=0x7f09000b;
-        public static final int Notice=0x7f090005;
+        public static final int Heading0=0x7f0a0009;
+        public static final int Heading1=0x7f0a0004;
+        public static final int Heading2=0x7f0a0006;
+        public static final int Heading3=0x7f0a000a;
+        public static final int Heading4=0x7f0a000b;
+        public static final int Notice=0x7f0a0005;
         /**  Default screen margins, per the Android Design guidelines. 
 
          Customize dimensions originally defined in res/values/dimens.xml (such as
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f090000;
-        public static final int activity_vertical_margin=0x7f090001;
-        public static final int list_collapsableIndent0=0x7f090010;
-        public static final int list_collapsableIndent1=0x7f090011;
-        public static final int list_collapsableIndent2=0x7f090012;
-        public static final int list_collapsableIndent3=0x7f090013;
-        public static final int list_collapsableIndent4=0x7f090014;
-        public static final int list_gridpadding=0x7f090003;
-        public static final int list_indent1=0x7f09000c;
-        public static final int list_indent2=0x7f09000d;
-        public static final int list_indent3=0x7f09000e;
-        public static final int list_indent4=0x7f09000f;
-        public static final int list_menuitem=0x7f090002;
-        public static final int status=0x7f090007;
-        public static final int status_small=0x7f090008;
+        public static final int activity_horizontal_margin=0x7f0a0000;
+        public static final int activity_vertical_margin=0x7f0a0001;
+        public static final int list_collapsableIndent0=0x7f0a0010;
+        public static final int list_collapsableIndent1=0x7f0a0011;
+        public static final int list_collapsableIndent2=0x7f0a0012;
+        public static final int list_collapsableIndent3=0x7f0a0013;
+        public static final int list_collapsableIndent4=0x7f0a0014;
+        public static final int list_gridpadding=0x7f0a0003;
+        public static final int list_indent1=0x7f0a000c;
+        public static final int list_indent2=0x7f0a000d;
+        public static final int list_indent3=0x7f0a000e;
+        public static final int list_indent4=0x7f0a000f;
+        public static final int list_menuitem=0x7f0a0002;
+        public static final int status=0x7f0a0007;
+        public static final int status_small=0x7f0a0008;
     }
     public static final class drawable {
         public static final int border_button=0x7f020000;
@@ -362,18 +366,19 @@ containing a value of this type.
         public static final int fragment_favourites=0x7f030006;
         public static final int fragment_map=0x7f030007;
         public static final int fragment_menu=0x7f030008;
-        public static final int fragment_restaurant=0x7f030009;
-        public static final int group_branchprovince=0x7f03000a;
-        public static final int group_menucategory=0x7f03000b;
-        public static final int list_branch=0x7f03000c;
-        public static final int list_dbitem=0x7f03000d;
-        public static final int list_favourite=0x7f03000e;
-        public static final int list_menuitem=0x7f03000f;
+        public static final int fragment_near_by=0x7f030009;
+        public static final int fragment_restaurant=0x7f03000a;
+        public static final int group_branchprovince=0x7f03000b;
+        public static final int group_menucategory=0x7f03000c;
+        public static final int list_branch=0x7f03000d;
+        public static final int list_dbitem=0x7f03000e;
+        public static final int list_favourite=0x7f03000f;
+        public static final int list_menuitem=0x7f030010;
     }
     public static final class menu {
-        public static final int entry=0x7f0b0000;
-        public static final int restaurant_detail=0x7f0b0001;
-        public static final int splash_screen=0x7f0b0002;
+        public static final int entry=0x7f0c0000;
+        public static final int restaurant_detail=0x7f0c0001;
+        public static final int splash_screen=0x7f0c0002;
     }
     public static final class string {
         public static final int action_search=0x7f07001c;
@@ -403,7 +408,7 @@ containing a value of this type.
         [CHAR LIMIT=70] 
          */
         public static final int auth_client_using_bad_version_title=0x7f070014;
-        public static final int button_navigate=0x7f07002b;
+        public static final int button_navigate=0x7f07002c;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -475,41 +480,45 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f070013;
-        public static final int copyright=0x7f070029;
-        public static final int dummy_button=0x7f070033;
-        public static final int dummy_content=0x7f070034;
-        public static final int hello_blank_fragment=0x7f070027;
-        public static final int hello_world=0x7f070025;
-        public static final int pref_app_version=0x7f07002e;
-        public static final int pref_app_version_value=0x7f07002f;
-        public static final int pref_db_version=0x7f07002d;
-        public static final int pref_db_version_value=0x7f070030;
-        public static final int pref_desc_dietary=0x7f07003c;
-        public static final int pref_header_about=0x7f07002c;
-        public static final int pref_header_dietary=0x7f07003b;
+        public static final int copyright=0x7f07002a;
+        public static final int dummy_button=0x7f070034;
+        public static final int dummy_content=0x7f070035;
+        public static final int hello_blank_fragment=0x7f070028;
+        public static final int hello_world=0x7f070026;
+        public static final int pref_app_version=0x7f07002f;
+        public static final int pref_app_version_value=0x7f070030;
+        public static final int pref_db_version=0x7f07002e;
+        public static final int pref_db_version_value=0x7f070031;
+        public static final int pref_desc_dietary=0x7f070040;
+        public static final int pref_header_about=0x7f07002d;
+        public static final int pref_header_dietary=0x7f07003f;
         /**  Strings related to Settings 
  Example General settings 
          */
-        public static final int pref_header_general=0x7f070036;
+        public static final int pref_header_general=0x7f07003a;
+        public static final int pref_nearby=0x7f070037;
+        public static final int pref_nearby_rest=0x7f070038;
         /**  Example settings for Data & Sync 
  Example settings for Notifications 
          */
-        public static final int pref_title_halaal=0x7f070037;
-        public static final int pref_title_kosher=0x7f070038;
-        public static final int pref_title_vegan=0x7f07003a;
-        public static final int pref_title_vegetarian=0x7f070039;
-        public static final int text_cost_disclaimer=0x7f07002a;
-        public static final int text_map=0x7f070028;
-        public static final int title_activity_restaurant_detail=0x7f070026;
-        public static final int title_activity_search=0x7f070024;
-        public static final int title_activity_settings=0x7f070035;
-        public static final int title_activity_splash=0x7f070032;
-        public static final int title_activity_splash_screen=0x7f070031;
-        public static final int title_branches=0x7f070022;
-        public static final int title_cuisines=0x7f07001f;
-        public static final int title_favourites=0x7f070020;
-        public static final int title_map=0x7f070023;
-        public static final int title_menus=0x7f070021;
+        public static final int pref_title_halaal=0x7f07003b;
+        public static final int pref_title_kosher=0x7f07003c;
+        public static final int pref_title_vegan=0x7f07003e;
+        public static final int pref_title_vegetarian=0x7f07003d;
+        public static final int text_cost_disclaimer=0x7f07002b;
+        public static final int text_map=0x7f070029;
+        public static final int title_activity_restaurant_detail=0x7f070027;
+        public static final int title_activity_search=0x7f070025;
+        public static final int title_activity_settings=0x7f070039;
+        public static final int title_activity_splash=0x7f070033;
+        public static final int title_activity_splash_screen=0x7f070032;
+        public static final int title_branches=0x7f070023;
+        public static final int title_cuisines=0x7f070020;
+        public static final int title_favourites=0x7f070021;
+        public static final int title_map=0x7f070024;
+        public static final int title_menus=0x7f070022;
+        public static final int title_nearby=0x7f07001f;
+        public static final int title_nearby_pref=0x7f070036;
         public static final int title_outlets=0x7f07001e;
     }
     public static final class style {
@@ -534,20 +543,21 @@ containing a value of this type.
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f0a0000;
+        public static final int AppBaseTheme=0x7f0b0000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f0a0001;
-        public static final int ButtonBar=0x7f0a0003;
-        public static final int ButtonBarButton=0x7f0a0004;
-        public static final int FullscreenActionBarStyle=0x7f0a0005;
-        public static final int FullscreenTheme=0x7f0a0002;
+        public static final int AppTheme=0x7f0b0001;
+        public static final int ButtonBar=0x7f0b0003;
+        public static final int ButtonBarButton=0x7f0b0004;
+        public static final int FullscreenActionBarStyle=0x7f0b0005;
+        public static final int FullscreenTheme=0x7f0b0002;
     }
     public static final class xml {
         public static final int pref_dietary=0x7f040000;
-        public static final int pref_version=0x7f040001;
-        public static final int searchable=0x7f040002;
+        public static final int pref_nearby=0x7f040001;
+        public static final int pref_version=0x7f040002;
+        public static final int searchable=0x7f040003;
     }
     public static final class styleable {
         /** Attributes that can be used with a AdsAttrs.

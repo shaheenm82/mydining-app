@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="@string/title_nearby_pref">
+    <ListPreference android:entries="@array/list_nearby" 
+        android:entryValues="@array/list_nearby_values" 
+        android:title="@string/pref_nearby_rest" android:key="nearby_rest_pref" android:defaultValue="10000"/>
+    
+
+</PreferenceScreen>

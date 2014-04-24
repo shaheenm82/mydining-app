@@ -35,6 +35,10 @@ public class Restaurant extends DBItem{
 		this.restaurant_menu = restaurant_menu;
 	}
 
+	public void addBranch(Branch branch){
+		restaurant_branches.add(branch);
+	}
+	
 	/**
 	 * @return the restaurant_branches
 	 */

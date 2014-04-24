@@ -9,7 +9,8 @@ public class Branch extends DBItem {
 	double longitude;
 	boolean halaal;
 	boolean kosher;
-	
+	float distance;
+
 	public Branch(String name) {
 		// TODO Auto-generated constructor stub
 		super(name);		
@@ -79,5 +80,11 @@ public class Branch extends DBItem {
 		this.kosher = kosher;
 	}
 	
-	
+	public float getDistance() {
+		return distance;
+	}
+
+	public void setDistance(float distance) {
+		this.distance = distance;
+	}
 }

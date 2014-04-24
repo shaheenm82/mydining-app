@@ -3,6 +3,7 @@ package za.co.tbt.mydining.location;
 import java.util.ArrayList;
 import java.util.List;
 
+import za.co.tbt.mydining.db.NearbyRestaurantDataSource;
 import android.content.Context;
 import android.location.Location;
 import android.os.Bundle;
@@ -129,6 +130,9 @@ GooglePlayServicesClient.OnConnectionFailedListener{
 					listener.locationUpdated(location);
 				}						
 			}
+			
+			NearbyRestaurantDataSource nearbyDataSource = new NearbyRestaurantDataSource(context);
+			nearbyDataSource.updateNearbyDistances(location);
 		}
 	}
 
