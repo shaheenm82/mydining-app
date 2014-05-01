@@ -191,7 +191,7 @@ public class EntryActivity extends FragmentActivity implements
 						
 			switch (i){
 			case 0:
-				returned = ((RestaurantFragment)mEntryPagerAdapter.getItem(i)).filter(query);
+				returned = ((RestaurantFragment)mEntryPagerAdapter.getItem(i)).filterName(query);
 				break;
 			case 1:
 				returned = ((CuisineFragment)mEntryPagerAdapter.getItem(i)).filter(query);

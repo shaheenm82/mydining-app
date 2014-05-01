@@ -105,10 +105,10 @@ public class SettingsActivity extends PreferenceActivity {
 		//dietaryHeader.setTitle(R.string.pref_header_dietary);
 		//getPreferenceScreen().addPreference(dietaryHeader);
 		addPreferencesFromResource(R.xml.pref_dietary);
-		bindPreferenceSummaryToValue(findPreference("halaal_pref"));
-		bindPreferenceSummaryToValue(findPreference("kosher_pref"));
-		bindPreferenceSummaryToValue(findPreference("vegetarian_pref"));
-		bindPreferenceSummaryToValue(findPreference("vegan_pref"));
+		//bindPreferenceSummaryToValue(findPreference("halaal_pref"));
+		//bindPreferenceSummaryToValue(findPreference("kosher_pref"));
+		//bindPreferenceSummaryToValue(findPreference("vegetarian_pref"));
+		//bindPreferenceSummaryToValue(findPreference("vegan_pref"));
 		
 		addPreferencesFromResource(R.xml.pref_nearby);
 		bindPreferenceSummaryToValue(findPreference("nearby_rest_pref"));

@@ -67,6 +67,8 @@ public class MyDiningDbOpenHelper extends SQLiteOpenHelper {
 			
 			//now copy our new database
 			copyDBFromResource(null);
+			DBVersionCheckListener dbVersionCheckListener = ((DBVersionCheckListener)context);
+			dbVersionCheckListener.databaseUpToDate();
 		}else{						
 			checkForDBUpdate();
 			//dbExist = false;

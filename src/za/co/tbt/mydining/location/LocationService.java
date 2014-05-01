@@ -132,6 +132,7 @@ GooglePlayServicesClient.OnConnectionFailedListener{
 			}
 			
 			NearbyRestaurantDataSource nearbyDataSource = new NearbyRestaurantDataSource(context);
+			nearbyDataSource.open();
 			nearbyDataSource.updateNearbyDistances(location);
 		}
 	}

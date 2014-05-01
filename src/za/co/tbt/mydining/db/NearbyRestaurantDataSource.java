@@ -75,6 +75,7 @@ public class NearbyRestaurantDataSource {
 		Branch branch;
 		
 		RestaurantDataSource restDataSource = new RestaurantDataSource(context);
+		restDataSource.open();
 		restaurants = new ArrayList<Restaurant>();
 		
 		SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);

@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.preference.PreferenceManager;
 import android.util.Log;
 
 public class RestaurantDataSource {
@@ -69,11 +71,19 @@ public class RestaurantDataSource {
 	private String restBranchSelection = "rest_id = ?";
 	private String orderByBranchColumns = BRANCH_COLUMN_PROVINCE + ", " + BRANCH_COLUMN_SUBURB;
 	
+	public static final String REST_DISTANCE_KEY = "nearby_rest_pref";
+	public static final String HALAAL_KEY = "halaal_pref";
+	public static final String KOSHER_KEY = "kosher_pref";
+	public static final String VEGETARIAN_KEY = "vegetarian_pref";
+	public static final String VEGAN_KEY = "vegan_pref";
+	
+	Context context;
 	SQLiteDatabase db;
 	MyDiningDbOpenHelper dbHelper;
 	
 	public RestaurantDataSource(Context context) {
 		// TODO Auto-generated constructor stub
+		this.context = context;
 		dbHelper = new MyDiningDbOpenHelper(context);
 	}
 	
@@ -95,7 +105,6 @@ public class RestaurantDataSource {
 	    cursor.moveToFirst();
 	    while (!cursor.isAfterLast()) {
 	      Restaurant rest = getRestaurant(cursor);
-	      Log.d("ssm","getAll: " + rest.getName() + ", " + rest.getLogo());
 	      restaurants.add(rest);
 	      cursor.moveToNext();
 	    }
@@ -139,6 +148,7 @@ public class RestaurantDataSource {
 		restaurant.setRestaurant_branches(getRestaurantBranches(restaurant.getId()));
 		
 		return restaurant;
+		
 	}
 	
 	private Restaurant getRestaurant(Cursor cursor) {
@@ -238,11 +248,33 @@ public class RestaurantDataSource {
 	private List<Branch> getRestaurantBranches(long id){
 		List<Branch> branches;
 		Branch branch = null;
+		boolean halaal = false;
+		boolean kosher = false;
+		String distance_value;
+		ArrayList<String> rest_selection = new ArrayList<String>();
 		
-		String[] rest_selection = {new Long(id).toString()};
+		rest_selection.add(Long.valueOf(id).toString());
+		
+		SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
+		
+		distance_value = sharedPref.getString(REST_DISTANCE_KEY, "10000");
+		restBranchSelection += " AND distance <= ?";
+		rest_selection.add(distance_value);
+		
+		halaal = sharedPref.getBoolean(HALAAL_KEY, false);
+		if (halaal){
+			restBranchSelection += " AND halaal = ?";
+			rest_selection.add("1");
+		}
+		
+		kosher = sharedPref.getBoolean(KOSHER_KEY, false);
+		if (kosher){
+			restBranchSelection += " AND kosher = ?";
+			rest_selection.add("1");
+		}
 		
 		Cursor cursor = db.query(BRANCH_TABLE_NAME,
-		        allBranchColumns, restBranchSelection, rest_selection, null, null, orderByBranchColumns);
+		        allBranchColumns, restBranchSelection, rest_selection.toArray(new String[rest_selection.size()]), null, null, orderByBranchColumns);
 		branches = new ArrayList<Branch>();
 		
 		cursor.moveToFirst();
