@@ -1,7 +1,10 @@
 package za.co.tbt.mydining;
 
+import java.util.List;
+
 import za.co.tbt.mydining.adapter.MenuListAdapter;
 import za.co.tbt.mydining.db.Menu;
+import za.co.tbt.mydining.db.Restaurant;
 import za.co.tbt.mydining.db.RestaurantDataSource;
 import android.app.Activity;
 import android.os.Bundle;
@@ -26,6 +29,8 @@ public class MenuFragment extends Fragment {
 	private MenuListAdapter menuAdapter = null;
 	//private RestaurantDataSource restDataSource = null;
 	private Menu restaurant_menu = null;	
+	
+	private String filter;
 	
 	public void setRestaurantMenu(Menu menu){
 		this.restaurant_menu = menu;
@@ -56,6 +61,22 @@ public class MenuFragment extends Fragment {
 		return rootView;
 	}
 
+	public int filterMenu(String filter){
+		//this.filterType = "name";
+		RestaurantDataSource restDataSource;
+		
+		this.filter = filter + "%";
+		
+		restDataSource = new RestaurantDataSource(getActivity());
+    	restDataSource.open();
+		
+		restaurant_menu = restDataSource.getRestaurantMenu(restDataSupplier.requestRestaurantDetails().getId(), filter); 
+		
+		menuAdapter.setMenu(restaurant_menu);
+		
+		return restaurant_menu.getCategories().size();
+	}
+	
 	public CharSequence getTitle(){
 		return getString(R.string.title_menus);		
 	}

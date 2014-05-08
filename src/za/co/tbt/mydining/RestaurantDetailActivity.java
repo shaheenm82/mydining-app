@@ -9,18 +9,22 @@ import za.co.tbt.mydining.db.RestaurantDataSource;
 import za.co.tbt.mydining.location.LocationService;
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.SearchView;
+import android.widget.Toast;
+import android.widget.SearchView.OnQueryTextListener;
 
 public class RestaurantDetailActivity extends FragmentActivity implements
-		ActionBar.TabListener, //GooglePlayServicesClient.ConnectionCallbacks,
-        //GooglePlayServicesClient.OnConnectionFailedListener, 
-		RestaurantDataSupplier//, LocationProvider 
+		ActionBar.TabListener, RestaurantDataSupplier, OnQueryTextListener
 		{
 
 	/**
@@ -40,9 +44,6 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 	 */
 	ViewPager mViewPager;
 
-	//List<LocationUpdateListener> locUpdateListeners;
-	//LocationClient location_client;
-	//Location location;
 	LocationService locationService;
 
 	@Override
@@ -58,10 +59,23 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 		// Get the message from the intent
 	    Intent intent = getIntent();
 	    String rest_name = intent.getStringExtra(RestaurantFragment.RESTAURANT_NAME);
+	    
+	    long branch_id = intent.getLongExtra(NearByFragment.RESTAURANT_BRANCH, 0);
+	    
 	    restDataSource = new RestaurantDataSource(this);
-	    restDataSource.open();
-	    restaurant = restDataSource.loadRestaurantDetails(rest_name);
-
+    	restDataSource.open();
+    	
+    	//Log.d("ssm", "branch_id = " + branch_id);
+    	
+	    if (branch_id > 0 ){
+	    	Log.d("ssm", "rest_name = " + rest_name + " branch_id = " + branch_id);
+	    	restaurant = restDataSource.loadRestaurantDetails(rest_name, branch_id);
+	    	
+	    	Log.d("ssm", "rest name = " + restaurant.getName() + " branch = " + restaurant.getRestaurant_branches().get(0).getName());
+	    }else{
+	    	restaurant = restDataSource.loadRestaurantDetails(rest_name);
+	    }
+	    
 	    // Set up the action bar.
 		final ActionBar actionBar = getActionBar();
 		actionBar.setTitle(rest_name);
@@ -123,40 +137,19 @@ public class RestaurantDetailActivity extends FragmentActivity implements
         case android.R.id.home:
             NavUtils.navigateUpFromSameTask(this);
             return true;
+        case R.id.action_show_all:
+        	onQueryTextChange("");
+			return true;
+        case R.id.action_settings:
+			openSettings();
+			return true;
+		case R.id.action_version:
+			openCheckForUpdates();
+			return true;
         default:
             return super.onOptionsItemSelected(item);
         }
     }
-	
-	/*
-     * Handle results returned to this Activity by other Activities started with
-     * startActivityForResult(). In particular, the method onConnectionFailed() in
-     * LocationUpdateRemover and LocationUpdateRequester may call startResolutionForResult() to
-     * start an Activity that handles Google Play services problems. The result of this
-     * call returns here, to onActivityResult.
-     */
-    /*@Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
-
-        // Choose what to do based on the request code
-        switch (requestCode) {
-            // If the request code matches the code sent in onConnectionFailed
-            case LocationUtils.CONNECTION_FAILURE_RESOLUTION_REQUEST :
-                switch (resultCode) {
-                    // If Google Play services resolved the problem
-                    case Activity.RESULT_OK:                                          
-                    break;
-                    // If any other result was returned by Google Play services
-                    default:     
-                    	showErrorDialog(resultCode);
-                    break;
-                }
-            // If any other request code was received
-            default:               
-            	showErrorDialog(resultCode);
-               break;
-        }
-    }*/
     
 	@Override
 	protected void onStop() {
@@ -172,43 +165,24 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 		super.onDestroy();
 		restDataSource.close();
 	}
-
-    /**
-     * Verify that Google Play services is available before making a request.
-     *
-     * @return true if Google Play services is available, otherwise false
-     */
-    /*private boolean servicesConnected() {
-
-        // Check that Google Play services is available
-        int resultCode =
-                GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
-
-        // If Google Play services is available
-        if (ConnectionResult.SUCCESS == resultCode) {
-            // Continue
-        	showErrorDialog(resultCode);
-            return true;
-        // Google Play services was not available for some reason
-        } else {
-            // Display an error dialog
-            Dialog dialog = GooglePlayServicesUtil.getErrorDialog(resultCode, this, 0);
-            if (dialog != null) {
-                ErrorDialogFragment errorFragment = new ErrorDialogFragment();
-                errorFragment.setDialog(dialog);
-                errorFragment.show(getFragmentManager(), "");
-            }
-            return false;
-        }
-    }*/
     
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.restaurant_detail, menu);
+		
+		 // Associate searchable configuration with the SearchView
+	    SearchManager searchManager =
+	           (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+	    SearchView searchView =
+	            (SearchView) menu.findItem(R.id.action_search).getActionView();
+	    searchView.setSearchableInfo(
+	            searchManager.getSearchableInfo(getComponentName()));
+	    searchView.setOnQueryTextListener(this);
+	    
 		return true;
 	}
-
+	
 	@Override
 	public void onTabSelected(ActionBar.Tab tab,
 			FragmentTransaction fragmentTransaction) {
@@ -227,121 +201,6 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 			FragmentTransaction fragmentTransaction) {
 	}
 
-    /*
-     * Called by Location Services if the attempt to
-     * Location Services fails.
-     */
-    /*@Override
-    public void onConnectionFailed(ConnectionResult connectionResult) {
-    	Toast.makeText(getApplicationContext(), "Map onConnectionFailed", Toast.LENGTH_SHORT).show();
-        /*
-         * Google Play services can resolve some errors it detects.
-         * If the error has a resolution, try sending an Intent to
-         * start a Google Play services activity that can resolve
-         * error.
-         */
-        /*if (connectionResult.hasResolution()) {
-            try {
-                // Start an Activity that tries to resolve the error
-                connectionResult.startResolutionForResult(
-                        this,
-                        LocationUtils.CONNECTION_FAILURE_RESOLUTION_REQUEST);
-                /*
-                * Thrown if Google Play services canceled the original
-                * PendingIntent
-                */
-            /*} catch (IntentSender.SendIntentException e) {
-                // Log the error
-                e.printStackTrace();
-            }
-        } else {
-            // If no resolution is available, display a dialog to the user with the error.
-            showErrorDialog(connectionResult.getErrorCode());
-        }
-    }*/
-
-	/*@Override
-	public void onConnected(Bundle connectionHint) {
-		// TODO Auto-generated method stub
-		if (servicesConnected()){
-			location = location_client.getLastLocation();
-
-			if ( locUpdateListeners != null && locUpdateListeners.size() != 0){
-				for (LocationUpdateListener listener : locUpdateListeners) {
-					listener.locationUpdated(location);
-				}						
-			}
-		}
-	}
-
-	@Override
-	public void onDisconnected() {
-		// TODO Auto-generated method stub		
-	}*/
-	
-	/**
-     * Show a dialog returned by Google Play services for the
-     * connection error code
-     *
-     * @param errorCode An error code returned from onConnectionFailed
-     */
-    /*private void showErrorDialog(int errorCode) {
-
-        // Get the error dialog from Google Play services
-        Dialog errorDialog = GooglePlayServicesUtil.getErrorDialog(
-            errorCode,
-            this,
-            LocationUtils.CONNECTION_FAILURE_RESOLUTION_REQUEST);
-
-        // If Google Play services can provide an error dialog
-        if (errorDialog != null) {
-
-            // Create a new DialogFragment in which to show the error dialog
-            ErrorDialogFragment errorFragment = new ErrorDialogFragment();
-
-            // Set the dialog in the DialogFragment
-            errorFragment.setDialog(errorDialog);
-
-            // Show the error dialog in the DialogFragment
-            errorFragment.show(getFragmentManager(), "");
-        }
-    }*/
-    
-    /**
-     * Define a DialogFragment to display the error dialog generated in
-     * showErrorDialog.
-     */
-    /*public static class ErrorDialogFragment extends DialogFragment {
-
-        // Global field to contain the error dialog
-        private Dialog mDialog;
-
-        /**
-         * Default constructor. Sets the dialog field to null
-         */
-        /*public ErrorDialogFragment() {
-            super();
-            mDialog = null;
-        }*/
-
-        /**
-         * Set the dialog to display
-         *
-         * @param dialog An error dialog
-         */
-        /*public void setDialog(Dialog dialog) {
-            mDialog = dialog;
-        }*/
-
-        /*
-         * This method must return a Dialog to the DialogFragment.
-         */
-        /*@Override
-        public Dialog onCreateDialog(Bundle savedInstanceState) {
-            return mDialog;
-        }
-    }*/
-
 	//@Override
 	public za.co.tbt.mydining.db.Menu requestRestaurantMenu() {
 		// TODO Auto-generated method stub
@@ -354,25 +213,71 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 		return restaurant.getRestaurant_branches();
 	}	
 
-	/*@Override
-	public void addLocationUpdateListener(LocationUpdateListener lulistener) {
-		// TODO Auto-generated method stub
-		if (locUpdateListeners == null){
-			locUpdateListeners = new ArrayList<LocationUpdateListener>();
-		}
-		
-		locUpdateListeners.add(lulistener);
-		
-		if(location != null){
-			for (LocationUpdateListener listener : locUpdateListeners) {
-				listener.locationUpdated(location);
-			}			
-		}
-	}*/
-
 	@Override
 	public Restaurant requestRestaurantDetails() {
 		// TODO Auto-generated method stub
 		return restaurant;
+	}
+
+	private void performSearch(Intent intent){
+		if (Intent.ACTION_SEARCH.equals(intent.getAction())){
+			int i = mViewPager.getCurrentItem();
+			int returned = 0;
+			
+			String query = intent.getStringExtra(SearchManager.QUERY);
+						
+			switch (i){
+			case 0:
+				returned = ((MenuFragment)mSectionsPagerAdapter.getItem(i)).filterMenu(query);
+				break;
+			case 1:
+				returned = ((BranchFragment)mSectionsPagerAdapter.getItem(i)).filterBranch(query);
+				break;
+			default:
+				return;
+			}
+			
+			if (returned == 0){
+				Toast.makeText(getApplicationContext(), "No records found.", Toast.LENGTH_SHORT).show();
+			}
+		}			
+	}
+	
+	@Override
+	public boolean onQueryTextSubmit(String query) {
+		// TODO Auto-generated method stub
+		Intent intent = getIntent();
+		intent.setAction(Intent.ACTION_SEARCH);
+		intent.putExtra(SearchManager.QUERY, query);
+		
+		performSearch(intent);
+		
+		return true;
+	}
+
+	@Override
+	public boolean onQueryTextChange(String newText) {
+		// TODO Auto-generated method stub
+		//if (newText.length() == 0){
+			Intent intent = getIntent();
+			intent.setAction(Intent.ACTION_SEARCH);
+			intent.putExtra(SearchManager.QUERY, newText);
+			
+			performSearch(intent);
+			
+			return true;
+		//}else{
+		//	return false;
+		//}
+	}
+	
+	public void openSettings(){
+		Intent intent = new Intent(this, SettingsActivity.class);
+    	startActivity(intent);
+	}
+	
+	public void openCheckForUpdates(){
+		Intent intent = new Intent(this, SplashScreenActivity.class);
+    	startActivity(intent);
 	}
 }

@@ -31,6 +31,7 @@
     <string name="title_nearby_pref">Restaurant Search Radius</string>
     <string name="pref_nearby">Distance from current location</string>
     <string name="pref_nearby_rest">Search for Restaurants within Radius</string>
+    <string name="action_show_all">Show All</string>
     
 
 </resources>

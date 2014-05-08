@@ -193,7 +193,7 @@ public class EntryActivity extends FragmentActivity implements
 			case 0:
 				returned = ((RestaurantFragment)mEntryPagerAdapter.getItem(i)).filterName(query);
 				break;
-			case 1:
+			case 2:
 				returned = ((CuisineFragment)mEntryPagerAdapter.getItem(i)).filter(query);
 				break;
 			default:

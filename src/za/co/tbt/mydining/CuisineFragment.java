@@ -69,9 +69,8 @@ public class CuisineFragment extends Fragment implements OnItemClickListener{
 		Cuisine cuisine = (Cuisine)cuisineView.getItemAtPosition(position);
 		
 		EntryActivity entryActivity = ((EntryActivity)getActivity());
-		
-		((RestaurantFragment) entryActivity.mEntryPagerAdapter.getItem(0)).filterCuisines(cuisine.getName());
+				
 		entryActivity.getActionBar().setSelectedNavigationItem(0);
-		
+		((RestaurantFragment) entryActivity.mEntryPagerAdapter.getItem(0)).filterCuisines(cuisine.getName());
 	}
 }

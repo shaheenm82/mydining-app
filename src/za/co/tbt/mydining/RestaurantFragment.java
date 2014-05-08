@@ -1,5 +1,6 @@
 package za.co.tbt.mydining;
 
+import java.util.Iterator;
 import java.util.List;
 
 import za.co.tbt.mydining.adapter.RestaurantListAdapter;
@@ -13,6 +14,7 @@ import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,20 +22,15 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
-public class RestaurantFragment extends Fragment implements OnItemClickListener, OnSharedPreferenceChangeListener {
+public class RestaurantFragment extends Fragment implements OnItemClickListener{
 	public static final String RESTAURANT_NAME = "restaurant_name";
 	public static final String LOCATION_SERVICE = "location_service";
-	private String filterType;
+	//private String filterType;
 	private String filter;
 	
 	private ListView restView = null;
 	private RestaurantListAdapter listAdapter = null;
 	private RestaurantDataSource restDataSource = null;
-	
-	public static final String HALAAL_KEY = "halaal_pref";
-	public static final String KOSHER_KEY = "kosher_pref";
-	public static final String VEGETARIAN_KEY = "vegetarian_pref";
-	public static final String VEGAN_KEY = "vegan_pref";
 	
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -52,9 +49,6 @@ public class RestaurantFragment extends Fragment implements OnItemClickListener,
 		listAdapter.setItems(restDataSource.getAllRestaurants());
 		restView.setAdapter(listAdapter);
 		
-		SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
-		sharedPref.registerOnSharedPreferenceChangeListener(this);
-		
         return rootView;
     }
 	
@@ -67,7 +61,7 @@ public class RestaurantFragment extends Fragment implements OnItemClickListener,
 	}
 	
 	public int filterName(String filter){
-		this.filterType = "name";
+		//this.filterType = "name";
 		this.filter = filter + "%";
 		String[] args = {this.filter};
 		
@@ -79,7 +73,7 @@ public class RestaurantFragment extends Fragment implements OnItemClickListener,
 	}
 	
 	public int filterCuisines(String filter){
-		this.filterType = "cuisine";
+		//this.filterType = "cuisine";
 		this.filter = "%" + filter + "%";
 		
 		String[] args = {this.filter};
@@ -108,18 +102,5 @@ public class RestaurantFragment extends Fragment implements OnItemClickListener,
 		Intent intent = new Intent(getActivity(), RestaurantDetailActivity.class);
 		intent.putExtra(RESTAURANT_NAME, restaurant.getName());
 		startActivity(intent);
-	}
-
-	@Override
-	public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,
-			String key) {
-		if (key.equals(HALAAL_KEY) || key.equals(KOSHER_KEY) 
-				|| key.equals(VEGETARIAN_KEY) || key.equals(VEGAN_KEY)){
-			if (filterType == null || filterType.equals("name")){
-				filterName(filter);
-			}else if (filterType.equals("cuisine")){
-				filterCuisines(filter);
-			}
-		}
 	}
 }

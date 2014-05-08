@@ -8,6 +8,7 @@ import za.co.tbt.mydining.db.DBItem;
 import za.co.tbt.mydining.db.Restaurant;
 import za.co.tbt.mydining.view.RestaurantListViewHolder;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +30,7 @@ public class RestaurantListAdapter extends ArrayAdapter<Restaurant> {
 
 	public void setItems(List<Restaurant> items) {
 		clear();
+		
 		this.items = items;
 		
 		addAll(items);		

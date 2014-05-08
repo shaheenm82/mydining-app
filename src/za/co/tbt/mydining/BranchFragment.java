@@ -4,6 +4,7 @@ import java.util.List;
 
 import za.co.tbt.mydining.adapter.BranchListAdapter;
 import za.co.tbt.mydining.db.Branch;
+import za.co.tbt.mydining.db.RestaurantDataSource;
 import za.co.tbt.mydining.location.LocationProvider;
 import android.app.Activity;
 import android.content.Intent;
@@ -31,7 +32,9 @@ public class BranchFragment extends Fragment{
 	private BranchListAdapter branchAdapter = null;
 	
 	
-	private List<Branch> restaurant_branches = null;	
+	private List<Branch> restaurant_branches = null;
+	
+	private String filter;
 	
 	public void setRestaurantBranches(List<Branch> branches){
 		this.restaurant_branches = branches;
@@ -63,6 +66,22 @@ public class BranchFragment extends Fragment{
         return rootView;
 	}
 
+	public int filterBranch(String filter){
+		//this.filterType = "name";
+		List<Branch> branches;
+		RestaurantDataSource restDataSource;
+		
+		this.filter = "%" + filter + "%";
+		
+		restDataSource = new RestaurantDataSource(getActivity());
+    	restDataSource.open();
+		
+    	branches = restDataSource.getRestaurantBranches(restDataSupplier.requestRestaurantDetails().getId(), this.filter);
+		branchAdapter.setBranches(branches);
+		
+		return branches.size();
+	}
+	
 	public CharSequence getTitle(){
 		return getString(R.string.title_menus);		
 	}	

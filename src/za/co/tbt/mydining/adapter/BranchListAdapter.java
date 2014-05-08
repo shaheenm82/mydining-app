@@ -6,6 +6,7 @@ import java.util.List;
 
 import za.co.tbt.mydining.R;
 import za.co.tbt.mydining.db.Branch;
+import za.co.tbt.mydining.db.Menu;
 import za.co.tbt.mydining.location.LocationProvider;
 import za.co.tbt.mydining.location.LocationService;
 import za.co.tbt.mydining.view.BranchListViewHolder;
@@ -29,16 +30,20 @@ public class BranchListAdapter extends BaseExpandableListAdapter{
 	
 	public BranchListAdapter(Context context, List<Branch> pbranches){
 		//super(context, R.layout.list_dbitem);		
+		this.context = context;
+		
+		setBranches(pbranches);
+	}
+
+	public void setBranches(List<Branch> branches) {
 		String province = "";
 		List<Branch> details;
-		
-		this.context = context;
 		
 		details = new ArrayList<Branch>();
 		this.provinces = new ArrayList<String>();
 		this.branches = new HashMap<String, List<Branch>>();
 		
-		for (Branch branch : pbranches) {
+		for (Branch branch : branches) {
 			if (! province.equals(branch.getProvince())){
 				if ( details.size() > 0 ){
 					this.branches.put(province, details);
@@ -53,11 +58,15 @@ public class BranchListAdapter extends BaseExpandableListAdapter{
 			details.add(branch);
 		}
 		
-		//locProvider = (LocationProvider)context;	
-		
 		this.branches.put(province, details);
+		
+		notifyDataSetInvalidated();
+		
+		/*for (int i = 0; i < getGroupCount(); i++) {
+			getGroupView(1, false, null, null);			
+		}*/
 	}
-
+	
 	@Override
 	public Object getChild(int groupPosition, int childPosition) {
 		// TODO Auto-generated method stub

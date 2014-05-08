@@ -1,17 +1,23 @@
 package za.co.tbt.mydining;
 
+import java.util.ArrayList;
 import java.util.prefs.PreferenceChangeEvent;
 import java.util.prefs.PreferenceChangeListener;
 
 import za.co.tbt.mydining.adapter.NearByListAdapter;
 import za.co.tbt.mydining.adapter.RestaurantListAdapter;
+import za.co.tbt.mydining.db.Branch;
+import za.co.tbt.mydining.db.FavouriteDataSource;
 import za.co.tbt.mydining.db.NearbyRestaurantDataSource;
+import za.co.tbt.mydining.db.Restaurant;
 import za.co.tbt.mydining.db.RestaurantDataSource;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +39,8 @@ public class NearByFragment extends Fragment implements OnItemClickListener, OnS
 	private NearByListAdapter listAdapter = null;
 	private NearbyRestaurantDataSource nearbyDataSource = null;
 	
+	public static final String RESTAURANT_NAME = "restaurant_name";
+	public static final String RESTAURANT_BRANCH = "restaurant_branch";
 	public static final String REST_DISTANCE_KEY = "nearby_rest_pref";
 	
 		@Override
@@ -70,6 +78,20 @@ public class NearByFragment extends Fragment implements OnItemClickListener, OnS
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {
 		// TODO Auto-generated method stub
+		Restaurant restaurant = (Restaurant) nearbyView.getItemAtPosition(position);
+		long branch = ((ArrayList<Branch>)restaurant.getRestaurant_branches()).get(0).getId();
+				
+		FavouriteDataSource favDataSource = new FavouriteDataSource(getActivity());
+		favDataSource.open();
+		favDataSource.addFavourite(restaurant);
+		favDataSource.close();
+				
+		Log.d("ssm", "selected branch = " + branch);
+		
+		Intent intent = new Intent(getActivity(), RestaurantDetailActivity.class);
+		intent.putExtra(RESTAURANT_NAME, restaurant.getName());
+		intent.putExtra(RESTAURANT_BRANCH, branch);
+		startActivity(intent);
 			
 	}
 

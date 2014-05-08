@@ -1,12 +1,17 @@
 package za.co.tbt.mydining.adapter;
 
+import java.util.List;
+
 import za.co.tbt.mydining.R;
+import za.co.tbt.mydining.db.DBItem;
 import za.co.tbt.mydining.db.Menu;
 import za.co.tbt.mydining.db.MenuCategory;
 import za.co.tbt.mydining.db.MenuItem;
+import za.co.tbt.mydining.db.Restaurant;
 import za.co.tbt.mydining.view.MenuCategoryListViewHolder;
 import za.co.tbt.mydining.view.MenuItemListViewHolder;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +28,12 @@ public class MenuListAdapter extends BaseExpandableListAdapter{
 		this.menu = menu;
 	}
 
+	public void setMenu(Menu menu) {
+		this.menu = menu;
+		
+		notifyDataSetInvalidated();			
+	}
+	
 	@Override
 	public Object getChild(int groupPosition, int childPosition) {
 		// TODO Auto-generated method stub
@@ -87,7 +98,7 @@ public class MenuListAdapter extends BaseExpandableListAdapter{
 		// TODO Auto-generated method stub
 		MenuCategoryListViewHolder listviewHolder;
 		MenuCategory mcat = (MenuCategory) getGroup(groupPosition);
-		
+			
 		if (convertView == null){
 			LayoutInflater inflater = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			convertView = inflater.inflate(R.layout.group_menucategory, null);
@@ -97,8 +108,7 @@ public class MenuListAdapter extends BaseExpandableListAdapter{
 		}else{
 			listviewHolder = (MenuCategoryListViewHolder) convertView.getTag();
 		}
-		
-		//((ExpandableListView) parent).expandGroup(groupPosition);
+			
 		listviewHolder.populateFrom(mcat);
 		
 		return convertView;

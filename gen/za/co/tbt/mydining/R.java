@@ -281,26 +281,27 @@ containing a value of this type.
         public static final int common_signin_btn_text_pressed_dark=0x7f020017;
         public static final int common_signin_btn_text_pressed_light=0x7f020018;
         public static final int ic_action_search=0x7f020019;
-        public static final int ic_app=0x7f02001a;
-        public static final int ic_cuisine=0x7f02001b;
-        public static final int ic_cuisine_hat=0x7f02001c;
-        public static final int ic_halaal=0x7f02001d;
-        public static final int ic_healthy=0x7f02001e;
-        public static final int ic_kosher=0x7f02001f;
-        public static final int ic_launcher=0x7f020020;
-        public static final int ic_menu_app=0x7f020021;
-        public static final int ic_plusone_medium_off_client=0x7f020022;
-        public static final int ic_plusone_small_off_client=0x7f020023;
-        public static final int ic_plusone_standard_off_client=0x7f020024;
-        public static final int ic_plusone_tall_off_client=0x7f020025;
-        public static final int ic_rest_debonairs=0x7f020026;
-        public static final int ic_rest_fishaways=0x7f020027;
-        public static final int ic_rest_mochachos=0x7f020028;
-        public static final int ic_rest_nandos=0x7f020029;
-        public static final int ic_rest_steers=0x7f02002a;
-        public static final int ic_special=0x7f02002b;
-        public static final int ic_vegetarian=0x7f02002c;
-        public static final int splash_320=0x7f02002d;
+        public static final int ic_action_select_all=0x7f02001a;
+        public static final int ic_app=0x7f02001b;
+        public static final int ic_cuisine=0x7f02001c;
+        public static final int ic_cuisine_hat=0x7f02001d;
+        public static final int ic_halaal=0x7f02001e;
+        public static final int ic_healthy=0x7f02001f;
+        public static final int ic_kosher=0x7f020020;
+        public static final int ic_launcher=0x7f020021;
+        public static final int ic_menu_app=0x7f020022;
+        public static final int ic_plusone_medium_off_client=0x7f020023;
+        public static final int ic_plusone_small_off_client=0x7f020024;
+        public static final int ic_plusone_standard_off_client=0x7f020025;
+        public static final int ic_plusone_tall_off_client=0x7f020026;
+        public static final int ic_rest_debonairs=0x7f020027;
+        public static final int ic_rest_fishaways=0x7f020028;
+        public static final int ic_rest_mochachos=0x7f020029;
+        public static final int ic_rest_nandos=0x7f02002a;
+        public static final int ic_rest_steers=0x7f02002b;
+        public static final int ic_special=0x7f02002c;
+        public static final int ic_vegetarian=0x7f02002d;
+        public static final int splash_320=0x7f02002e;
     }
     public static final class id {
         public static final int GridLayout1=0x7f060022;
@@ -310,8 +311,9 @@ containing a value of this type.
         public static final int LinearLayout_Dish=0x7f060013;
         public static final int RelativeLayout1=0x7f060006;
         public static final int TableLayout1=0x7f060018;
-        public static final int action_search=0x7f060035;
-        public static final int action_settings=0x7f060034;
+        public static final int action_search=0x7f060034;
+        public static final int action_settings=0x7f060035;
+        public static final int action_show_all=0x7f060037;
         public static final int action_version=0x7f060036;
         public static final int button_navigation=0x7f06001c;
         public static final int expandable_branch=0x7f060009;
@@ -390,6 +392,7 @@ containing a value of this type.
     public static final class string {
         public static final int action_search=0x7f07001d;
         public static final int action_settings=0x7f07001c;
+        public static final int action_show_all=0x7f07003a;
         public static final int action_version=0x7f07001e;
         public static final int app_name=0x7f07001b;
         /**   Title for notification shown when GooglePlayServices needs to be
@@ -499,27 +502,27 @@ containing a value of this type.
         public static final int pref_app_version_value=0x7f070031;
         public static final int pref_db_version=0x7f07002f;
         public static final int pref_db_version_value=0x7f070032;
-        public static final int pref_desc_dietary=0x7f070041;
+        public static final int pref_desc_dietary=0x7f070042;
         public static final int pref_header_about=0x7f07002e;
-        public static final int pref_header_dietary=0x7f070040;
+        public static final int pref_header_dietary=0x7f070041;
         /**  Strings related to Settings 
  Example General settings 
          */
-        public static final int pref_header_general=0x7f07003b;
+        public static final int pref_header_general=0x7f07003c;
         public static final int pref_nearby=0x7f070038;
         public static final int pref_nearby_rest=0x7f070039;
         /**  Example settings for Data & Sync 
  Example settings for Notifications 
          */
-        public static final int pref_title_halaal=0x7f07003c;
-        public static final int pref_title_kosher=0x7f07003d;
-        public static final int pref_title_vegan=0x7f07003f;
-        public static final int pref_title_vegetarian=0x7f07003e;
+        public static final int pref_title_halaal=0x7f07003d;
+        public static final int pref_title_kosher=0x7f07003e;
+        public static final int pref_title_vegan=0x7f070040;
+        public static final int pref_title_vegetarian=0x7f07003f;
         public static final int text_cost_disclaimer=0x7f07002c;
         public static final int text_map=0x7f07002a;
         public static final int title_activity_restaurant_detail=0x7f070028;
         public static final int title_activity_search=0x7f070026;
-        public static final int title_activity_settings=0x7f07003a;
+        public static final int title_activity_settings=0x7f07003b;
         public static final int title_activity_splash=0x7f070034;
         public static final int title_activity_splash_screen=0x7f070033;
         public static final int title_branches=0x7f070024;
