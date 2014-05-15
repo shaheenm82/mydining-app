@@ -11,7 +11,7 @@ import org.apache.commons.net.ftp.FTPReply;
 import android.os.AsyncTask;
 
 public class DBVersionChecker extends AsyncTask<String, String, Boolean> {
-	private static final String DB_PATH = "www/";
+	private static final String DB_PATH = "";
 	private static final String DB_VERSION_FILE = "version.txt";
 	
 	String server_version;
@@ -38,12 +38,12 @@ public class DBVersionChecker extends AsyncTask<String, String, Boolean> {
 		try {
 			publishProgress("Connecting to Server");
 			ftpClient.setConnectTimeout(5000);
-			ftpClient.connect("mozart.homenet.org");
+			ftpClient.connect("shaheen.co.za");
 		    if (FTPReply.isPositiveCompletion(ftpClient.getReplyCode())){
 		    	publishProgress("Connected to Server");
 		    	
 		    	ftpClient.enterLocalPassiveMode();
-			    ftpClient.login("pi", "raspberry");
+			    ftpClient.login("anonymous@shaheen.co.za", "");
 			    
 			    if (FTPReply.isPositiveCompletion(ftpClient.getReplyCode())){
 			    	publishProgress("Checking for Database Updates");					

@@ -128,7 +128,9 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 		// TODO Auto-generated method stub		
 		//location_client.connect();
 		super.onStart();
-		locationService.start();
+		if (!locationService.servicesConnected()){
+			locationService.start();
+		}
 	}
 	
 	@Override
@@ -202,6 +204,7 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 	}
 
 	//@Override
+	@Override
 	public za.co.tbt.mydining.db.Menu requestRestaurantMenu() {
 		// TODO Auto-generated method stub
 		return restaurant.getRestaurant_menu();

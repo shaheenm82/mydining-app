@@ -1,10 +1,7 @@
 package za.co.tbt.mydining;
 
-import java.util.List;
-
 import za.co.tbt.mydining.adapter.MenuListAdapter;
 import za.co.tbt.mydining.db.Menu;
-import za.co.tbt.mydining.db.Restaurant;
 import za.co.tbt.mydining.db.RestaurantDataSource;
 import android.app.Activity;
 import android.os.Bundle;

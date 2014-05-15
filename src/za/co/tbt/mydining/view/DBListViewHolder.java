@@ -1,7 +1,6 @@
 package za.co.tbt.mydining.view;
 
 import za.co.tbt.mydining.R;
-import android.content.Context;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;

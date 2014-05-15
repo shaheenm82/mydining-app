@@ -1,10 +1,9 @@
 package za.co.tbt.mydining;
 
-import za.co.tbt.mydining.adapter.DBListAdapter;
 import za.co.tbt.mydining.adapter.FavouriteListAdapter;
+import za.co.tbt.mydining.db.Favourite;
 import za.co.tbt.mydining.db.FavouriteDataSource;
 import za.co.tbt.mydining.db.Restaurant;
-import za.co.tbt.mydining.db.RestaurantDataSource;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -54,7 +53,7 @@ public class FavouriteFragment extends Fragment implements OnItemClickListener {
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 		// TODO Auto-generated method stub
-		Restaurant restaurant = (Restaurant)favView.getItemAtPosition(position);
+		Restaurant restaurant = ((Favourite)favView.getItemAtPosition(position)).getRestaurant();
 		
 		Intent intent = new Intent(getActivity(), RestaurantDetailActivity.class);
 		intent.putExtra(RestaurantFragment.RESTAURANT_NAME, restaurant.getName());

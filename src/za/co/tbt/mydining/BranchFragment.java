@@ -5,18 +5,13 @@ import java.util.List;
 import za.co.tbt.mydining.adapter.BranchListAdapter;
 import za.co.tbt.mydining.db.Branch;
 import za.co.tbt.mydining.db.RestaurantDataSource;
-import za.co.tbt.mydining.location.LocationProvider;
 import android.app.Activity;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
-import android.widget.TextView;
 
 /**
  * A simple {@link android.support.v4.app.Fragment} subclass. Activities that

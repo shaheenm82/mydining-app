@@ -1,22 +1,16 @@
 package za.co.tbt.mydining.adapter;
 
-import java.util.List;
-
 import za.co.tbt.mydining.R;
-import za.co.tbt.mydining.db.DBItem;
 import za.co.tbt.mydining.db.Menu;
 import za.co.tbt.mydining.db.MenuCategory;
 import za.co.tbt.mydining.db.MenuItem;
-import za.co.tbt.mydining.db.Restaurant;
 import za.co.tbt.mydining.view.MenuCategoryListViewHolder;
 import za.co.tbt.mydining.view.MenuItemListViewHolder;
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
-import android.widget.ExpandableListView;
 
 public class MenuListAdapter extends BaseExpandableListAdapter{
 	Context context;

@@ -34,5 +34,11 @@
     <color name="orange_menu60">#99EE7600</color>
     <color name="orange_menu40">#66EE7600</color>
     <color name="orange_menu20">#33EE7600</color>
+    <color name="red_base">#bf0404</color>
+    <color name="pink_accent">#dd2d38</color>
+    <color name="green_accent">#6e8c03</color>
+    <color name="beige_background">#d9c39a</color>
+    <color name="white_background">#ffffff</color>
+    <color name="beige_background_light">#f1fbf5</color>
 
 </resources>

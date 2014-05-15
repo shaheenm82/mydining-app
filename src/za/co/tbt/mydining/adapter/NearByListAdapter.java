@@ -4,10 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import za.co.tbt.mydining.R;
-import za.co.tbt.mydining.db.DBItem;
 import za.co.tbt.mydining.db.Restaurant;
 import za.co.tbt.mydining.view.NearByListViewHolder;
-import za.co.tbt.mydining.view.RestaurantListViewHolder;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,6 +33,7 @@ public class NearByListAdapter extends ArrayAdapter<Restaurant> {
 		addAll(items);		
 	}
 	
+	@Override
 	public View getView(int position, View convertView, ViewGroup parent){
 		NearByListViewHolder listViewHolder;
 		

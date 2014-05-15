@@ -33,6 +33,7 @@ public class DBListAdapter extends ArrayAdapter<DBItem> {
 		addAll(items);		
 	}
 	
+	@Override
 	public View getView(int position, View convertView, ViewGroup parent){
 		DBListViewHolder listViewHolder;
 		

@@ -4,11 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import za.co.tbt.mydining.R;
-import za.co.tbt.mydining.db.DBItem;
 import za.co.tbt.mydining.db.Restaurant;
 import za.co.tbt.mydining.view.RestaurantListViewHolder;
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +34,7 @@ public class RestaurantListAdapter extends ArrayAdapter<Restaurant> {
 		addAll(items);		
 	}
 	
+	@Override
 	public View getView(int position, View convertView, ViewGroup parent){
 		RestaurantListViewHolder listViewHolder;
 		

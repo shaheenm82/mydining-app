@@ -20,6 +20,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Restaurant"
+            android:textColor="@color/red_base"
             android:textSize="@dimen/Heading0" />
 
     </LinearLayout>
@@ -34,6 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Branch"
+            android:textColor="@color/green_accent"
             android:textSize="@dimen/Heading2" />
 
     </LinearLayout>
@@ -48,6 +50,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="distance"
+            android:textColor="@color/pink_accent"
             android:textSize="@dimen/Heading3" />
 
     </LinearLayout>

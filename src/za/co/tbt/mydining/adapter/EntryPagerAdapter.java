@@ -4,8 +4,6 @@
 package za.co.tbt.mydining.adapter;
 
 import java.util.ArrayList;
-import java.util.Locale;
-
 import za.co.tbt.mydining.CuisineFragment;
 import za.co.tbt.mydining.FavouriteFragment;
 import za.co.tbt.mydining.NearByFragment;

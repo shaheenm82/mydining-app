@@ -3,12 +3,9 @@ package za.co.tbt.mydining.adapter;
 import java.util.ArrayList;
 
 import za.co.tbt.mydining.BranchFragment;
-import za.co.tbt.mydining.CuisineFragment;
-import za.co.tbt.mydining.FavouriteFragment;
 import za.co.tbt.mydining.BranchMapFragment;
 import za.co.tbt.mydining.MenuFragment;
 import za.co.tbt.mydining.R;
-import za.co.tbt.mydining.RestaurantFragment;
 import za.co.tbt.mydining.db.Restaurant;
 import android.content.Context;
 import android.os.Bundle;

@@ -1,16 +1,11 @@
 package za.co.tbt.mydining;
 
 import java.util.ArrayList;
-import java.util.prefs.PreferenceChangeEvent;
-import java.util.prefs.PreferenceChangeListener;
-
 import za.co.tbt.mydining.adapter.NearByListAdapter;
-import za.co.tbt.mydining.adapter.RestaurantListAdapter;
 import za.co.tbt.mydining.db.Branch;
 import za.co.tbt.mydining.db.FavouriteDataSource;
 import za.co.tbt.mydining.db.NearbyRestaurantDataSource;
 import za.co.tbt.mydining.db.Restaurant;
-import za.co.tbt.mydining.db.RestaurantDataSource;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
@@ -24,7 +19,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Toast;
 
 /**
  * A simple {@link android.support.v4.app.Fragment} subclass. Activities that

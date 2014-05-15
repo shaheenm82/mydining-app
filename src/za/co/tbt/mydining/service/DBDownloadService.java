@@ -1,22 +1,18 @@
 package za.co.tbt.mydining.service;
 
 import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.OutputStream;
 
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPReply;
 
 import android.os.AsyncTask;
-import android.util.Log;
 
 public class DBDownloadService extends AsyncTask<String, String, Boolean> {
 	
-	private static final String DB_PATH = "www/";
+	private static final String DB_PATH = "";
 	private static final String DB_FILE = "dining.sqlite";
 	
 	DBDownloadListener dbDownloadListener;
@@ -38,13 +34,13 @@ public class DBDownloadService extends AsyncTask<String, String, Boolean> {
 		//download and check version file
 		try {
 			ftpClient.setConnectTimeout(5000);
-			ftpClient.connect("mozart.homenet.org");
+			ftpClient.connect("shaheen.co.za");
 		    
 			if (FTPReply.isPositiveCompletion(ftpClient.getReplyCode())){
 		    	publishProgress("Connected to Server");
 		    	
 		    	ftpClient.enterLocalPassiveMode();
-			    ftpClient.login("pi", "raspberry");
+			    ftpClient.login("anonymous@shaheen.co.za", "");
 			    if (FTPReply.isPositiveCompletion(ftpClient.getReplyCode())){
 			    	publishProgress("Retrieving Database");
 				        

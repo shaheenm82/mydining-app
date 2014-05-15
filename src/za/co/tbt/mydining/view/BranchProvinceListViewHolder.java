@@ -1,7 +1,6 @@
 package za.co.tbt.mydining.view;
 
 import za.co.tbt.mydining.R;
-import za.co.tbt.mydining.db.MenuCategory;
 import android.view.View;
 import android.widget.TextView;
 

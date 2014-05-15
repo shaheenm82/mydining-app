@@ -9,7 +9,6 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.text.format.DateFormat;
-import android.util.Log;
 
 public class FavouriteDataSource {
 	public static final String TABLE_NAME = "favourites";
@@ -54,6 +53,13 @@ public class FavouriteDataSource {
 	    cursor.close();
 	    return favourites;
 	}
+	
+	public void insertAllFavourites(List<Favourite> favourites) {	    
+	    for (Favourite favourite : favourites) {
+	    	db.execSQL("INSERT INTO " + TABLE_NAME + " ( " + COLUMN_REST + ", " + COLUMN_SELECTED + ", " + COLUMN_SELECTED_DATE + " )"
+					+ " VALUES ( " + favourite.getRestaurant().getId() + "," + favourite.getSelected() + ", '" + favourite.getSelected_date() + "')");
+		}	    
+	}
 
 	public List<Favourite> searchForFavourites(String selection, String[] args) {
 	    List<Favourite> favourites = new ArrayList<Favourite>();
@@ -87,7 +93,7 @@ public class FavouriteDataSource {
 		if (restaurants.size() == 0){
 			favourite.setRestaurant(null);			
 		}else{
-			favourite.setRestaurant((Restaurant)restaurants.get(0));			
+			favourite.setRestaurant(restaurants.get(0));			
 		}
 		favourite.setSelected(cursor.getInt(2));
 		favourite.setSelected_date(cursor.getString(3));

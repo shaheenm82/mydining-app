@@ -1,10 +1,5 @@
 package za.co.tbt.mydining.db;
 
-import java.util.Calendar;
-
-import android.text.format.DateFormat;
-import android.util.Log;
-
 public class Favourite {
 	private long id;
 	private Restaurant restaurant;

@@ -3,7 +3,7 @@
     android:id="@+id/LinearLayout_Dish"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/aqua_menu80"
+    android:background="@color/green_accent"
     android:orientation="vertical" >
 
     <TextView
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
         android:text="Province"
-        android:textColor="@color/red_menu80"
+        android:textColor="@color/red_base"
         android:textSize="@dimen/Heading0"
         android:textStyle="bold" />
 

@@ -11,7 +11,9 @@
     <ListView
         android:id="@+id/list_nearby_restaurants"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:background="@color/white_background" >
+
     </ListView>
 
 </LinearLayout>

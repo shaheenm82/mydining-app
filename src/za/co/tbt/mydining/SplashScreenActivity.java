@@ -1,6 +1,8 @@
 package za.co.tbt.mydining;
 
 import za.co.tbt.mydining.db.MyDiningDbOpenHelper;
+import za.co.tbt.mydining.location.LocationService;
+import za.co.tbt.mydining.location.LocationUpdateListener;
 import za.co.tbt.mydining.service.DBDownloadListener;
 import za.co.tbt.mydining.service.DBVersionCheckListener;
 import android.app.Activity;
@@ -10,24 +12,24 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.location.Location;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
-import android.util.Log;
-import android.widget.ExpandableListView;
 import android.widget.TextView;
 
 public class SplashScreenActivity extends Activity implements DBVersionCheckListener, 
-	DialogInterface.OnClickListener, DBDownloadListener{
+	DialogInterface.OnClickListener, DBDownloadListener, LocationUpdateListener{
 	private ProgressDialog checkDBDialog;
 	private TextView textStatus;
 	
 	private MyDiningDbOpenHelper diningHelper;
+	private LocationService locationService;
 	
 	String server_version;
 	
 	// Splash screen timer
-    private static int SPLASH_TIME_OUT = 1000;
+    private static int SPLASH_TIME_OUT = 0;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -130,7 +132,17 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
 
 	private void enterApplication(){
 		//checkDBDialog.dismiss();
+		LocationService locationService = LocationService.getInstance(getApplicationContext());
 		
+		locationService.addLocationUpdateListener(this);
+		locationService.start();
+		
+		
+	}
+
+	@Override
+	public void locationUpdated(Location location) {
+		// TODO Auto-generated method stub
 		new Handler().postDelayed(new Runnable() {
 			 
             /*

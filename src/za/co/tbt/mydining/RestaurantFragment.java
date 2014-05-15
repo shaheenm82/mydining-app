@@ -1,20 +1,14 @@
 package za.co.tbt.mydining;
 
-import java.util.Iterator;
 import java.util.List;
 
 import za.co.tbt.mydining.adapter.RestaurantListAdapter;
-import za.co.tbt.mydining.db.DBItem;
 import za.co.tbt.mydining.db.FavouriteDataSource;
 import za.co.tbt.mydining.db.Restaurant;
 import za.co.tbt.mydining.db.RestaurantDataSource;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

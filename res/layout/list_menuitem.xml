@@ -4,7 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
     android:layout_margin="@dimen/list_menuitem"
-    android:background="@color/slate_menu20"
+    android:background="@color/white_background"
     android:padding="@dimen/list_gridpadding" >
 
     <Space
@@ -24,7 +24,7 @@
             android:layout_gravity="bottom|left"
             android:layout_weight="0.1"
             android:text="Dish"
-            android:textColor="@color/aqua_menu"
+            android:textColor="@color/red_base"
             android:textSize="@dimen/Heading2"
             android:textStyle="bold" />
 
@@ -54,7 +54,7 @@
             android:layout_gravity="bottom|left"
             android:layout_weight="0.8"
             android:text="Description"
-            android:textColor="@color/green_menu60"
+            android:textColor="@color/green_accent"
             android:textSize="@dimen/Heading3" />
 
     </LinearLayout>
@@ -77,7 +77,7 @@
             android:layout_weight="2.8"
             android:maxLines="5"
             android:text="Additional"
-            android:textColor="@color/green_menu60"
+            android:textColor="@color/green_accent"
             android:textSize="@dimen/Heading4"
             android:textStyle="bold|italic" />
 
@@ -109,7 +109,7 @@
             android:layout_weight="0.2"
             android:gravity="right"
             android:text="Cost"
-            android:textColor="@color/red_menu"
+            android:textColor="@color/pink_accent"
             android:textSize="16dp"
             android:textStyle="bold" />
 

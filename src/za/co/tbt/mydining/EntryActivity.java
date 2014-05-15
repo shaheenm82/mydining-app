@@ -1,17 +1,12 @@
 package za.co.tbt.mydining;
 
-import java.util.List;
-
 import za.co.tbt.mydining.adapter.EntryPagerAdapter;
-import za.co.tbt.mydining.db.DBItem;
 import za.co.tbt.mydining.db.MyDiningDbOpenHelper;
 import za.co.tbt.mydining.location.LocationService;
 import android.app.ActionBar;
-import android.app.AlertDialog;
 import android.app.FragmentTransaction;
 import android.app.SearchManager;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -113,7 +108,9 @@ public class EntryActivity extends FragmentActivity implements
 	protected void onStart() {
 		// TODO Auto-generated method stub
 		super.onStart();
-		locationService.start();
+		if (!locationService.servicesConnected()){
+			locationService.start();
+		}
 	}
 
 	@Override

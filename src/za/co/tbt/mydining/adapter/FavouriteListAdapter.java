@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import za.co.tbt.mydining.R;
-import za.co.tbt.mydining.db.DBItem;
 import za.co.tbt.mydining.db.Favourite;
-import za.co.tbt.mydining.view.DBListViewHolder;
 import za.co.tbt.mydining.view.FavouriteListViewHolder;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -35,6 +33,7 @@ public class FavouriteListAdapter extends ArrayAdapter<Favourite> {
 		addAll(favourites);		
 	}
 	
+	@Override
 	public View getView(int position, View convertView, ViewGroup parent){
 		FavouriteListViewHolder listViewHolder;
 		

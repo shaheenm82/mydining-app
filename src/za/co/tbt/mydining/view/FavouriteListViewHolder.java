@@ -1,11 +1,7 @@
 package za.co.tbt.mydining.view;
 
-import java.util.Calendar;
-
 import za.co.tbt.mydining.R;
 import za.co.tbt.mydining.db.Favourite;
-import za.co.tbt.mydining.db.MenuItem;
-import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;

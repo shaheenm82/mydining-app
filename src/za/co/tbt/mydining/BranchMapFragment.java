@@ -3,7 +3,6 @@ package za.co.tbt.mydining;
 import java.util.List;
 
 import za.co.tbt.mydining.db.Branch;
-import za.co.tbt.mydining.location.LocationProvider;
 import za.co.tbt.mydining.location.LocationService;
 import za.co.tbt.mydining.location.LocationUpdateListener;
 import za.co.tbt.mydining.location.LocationUtils;
@@ -11,7 +10,6 @@ import android.app.Activity;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.InflateException;
 import android.view.LayoutInflater;
 import android.view.View;

@@ -49,7 +49,7 @@ GooglePlayServicesClient.OnConnectionFailedListener{
      *
      * @return true if Google Play services is available, otherwise false
      */
-    private boolean servicesConnected() {
+    public boolean servicesConnected() {
 
         // Check that Google Play services is available
         int resultCode =
@@ -124,16 +124,16 @@ GooglePlayServicesClient.OnConnectionFailedListener{
 		// TODO Auto-generated method stub
 		if (servicesConnected()){
 			location = location_client.getLastLocation();
-
+					
+			NearbyRestaurantDataSource nearbyDataSource = new NearbyRestaurantDataSource(context);
+			nearbyDataSource.open();
+			nearbyDataSource.updateNearbyDistances(location);
+			
 			if ( locUpdateListeners != null && locUpdateListeners.size() != 0){
 				for (LocationUpdateListener listener : locUpdateListeners) {
 					listener.locationUpdated(location);
 				}						
 			}
-			
-			NearbyRestaurantDataSource nearbyDataSource = new NearbyRestaurantDataSource(context);
-			nearbyDataSource.open();
-			nearbyDataSource.updateNearbyDistances(location);
 		}
 	}
 

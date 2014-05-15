@@ -5,16 +5,15 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.List;
 import java.util.Locale;
 
 import za.co.tbt.mydining.service.DBDownloadListener;
 import za.co.tbt.mydining.service.DBDownloadService;
 import za.co.tbt.mydining.service.DBVersionCheckListener;
 import za.co.tbt.mydining.service.DBVersionChecker;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
@@ -123,8 +122,15 @@ public class MyDiningDbOpenHelper extends SQLiteOpenHelper {
 		InputStream inputStream = null;
 		OutputStream outputStream = null;
 		
+		//Copy favourites to memory so that they can be re-inserted later
+		FavouriteDataSource favDataSource = new FavouriteDataSource(context);
+		favDataSource.open();
+		List<Favourite> favourites = favDataSource.getAllFavourites();
+		favDataSource.close();
+		
 		String databasePath = DATABASE_PATH + DATABASE_NAME;
 		try {
+			closeDataBase();
 			if (path == null){
 				inputStream = context.getAssets().open(DATABASE_NAME);
 			}else{
@@ -149,17 +155,23 @@ public class MyDiningDbOpenHelper extends SQLiteOpenHelper {
 			throw new Error("Problem copying database from resource file");
 		}
 		
+		
+		openDataBase();
+		favDataSource.open();
+		favDataSource.insertAllFavourites(favourites);
+		
 		return success;
 	}
 	
 	public void openDataBase() throws SQLException{
 		String dbPath = DATABASE_PATH + DATABASE_NAME;
-		dbSqlite = SQLiteDatabase.openDatabase(dbPath, null, SQLiteDatabase.OPEN_READWRITE);		
+		dbSqlite = SQLiteDatabase.openDatabase(dbPath, null, SQLiteDatabase.OPEN_READWRITE);	
 	}
 	
 	public void closeDataBase(){
 		if (dbSqlite != null){
 			dbSqlite.close();
+			dbSqlite = null;			
 		}
 		super.close();		
 	}	

@@ -18,7 +18,6 @@ package za.co.tbt.mydining.location;
 
 import com.google.android.gms.maps.model.LatLng;
 
-import za.co.tbt.mydining.R;
 import android.content.Context;
 import android.location.Location;
 

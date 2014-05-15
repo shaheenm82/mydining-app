@@ -144,7 +144,7 @@ public class RestaurantDataSource {
 			return null;
 		}
 		
-		restaurant = (Restaurant)restaurants.get(0);
+		restaurant = restaurants.get(0);
 		
 		restaurant.setRestaurant_menu(getRestaurantMenu(restaurant.getId()));
 		restaurant.setRestaurant_branches(getRestaurantBranches(restaurant.getId()));
@@ -165,7 +165,7 @@ public class RestaurantDataSource {
 			return null;
 		}
 		
-		restaurant = (Restaurant)restaurants.get(0);
+		restaurant = restaurants.get(0);
 		
 		restaurant.setRestaurant_menu(getRestaurantMenu(restaurant.getId()));
 		restaurant.addBranch(getBranch(branch_id));

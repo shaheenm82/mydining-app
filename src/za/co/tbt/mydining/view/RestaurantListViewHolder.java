@@ -3,7 +3,6 @@ package za.co.tbt.mydining.view;
 import za.co.tbt.mydining.R;
 import za.co.tbt.mydining.db.Restaurant;
 import android.content.Context;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;

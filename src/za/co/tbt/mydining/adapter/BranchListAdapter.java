@@ -6,18 +6,12 @@ import java.util.List;
 
 import za.co.tbt.mydining.R;
 import za.co.tbt.mydining.db.Branch;
-import za.co.tbt.mydining.db.Menu;
-import za.co.tbt.mydining.location.LocationProvider;
 import za.co.tbt.mydining.location.LocationService;
 import za.co.tbt.mydining.view.BranchListViewHolder;
 import za.co.tbt.mydining.view.BranchProvinceListViewHolder;
-import android.content.ComponentName;
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.Button;
