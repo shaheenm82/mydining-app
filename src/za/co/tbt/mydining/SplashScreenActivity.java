@@ -29,7 +29,7 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
 	String server_version;
 	
 	// Splash screen timer
-    private static int SPLASH_TIME_OUT = 0;
+    private static int SPLASH_TIME_OUT = 1000;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -132,17 +132,18 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
 
 	private void enterApplication(){
 		//checkDBDialog.dismiss();
-		LocationService locationService = LocationService.getInstance(getApplicationContext());
+		//LocationService 
+		locationService = LocationService.getInstance(getApplicationContext());
 		
 		locationService.addLocationUpdateListener(this);
-		locationService.start();
-		
-		
+		locationService.start();				
 	}
 
 	@Override
 	public void locationUpdated(Location location) {
 		// TODO Auto-generated method stub
+		locationService.stop();
+		
 		new Handler().postDelayed(new Runnable() {
 			 
             /*

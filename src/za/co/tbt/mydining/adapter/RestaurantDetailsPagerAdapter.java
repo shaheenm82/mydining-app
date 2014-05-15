@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.util.Log;
 
 public class RestaurantDetailsPagerAdapter extends FragmentPagerAdapter {
 	public static final String ARG_TITLE = "title";
@@ -48,7 +49,7 @@ public class RestaurantDetailsPagerAdapter extends FragmentPagerAdapter {
 
 	@Override
 	public Fragment getItem(int index) {
-		// TODO Auto-generated method stub		
+		// TODO Auto-generated method stub
 		return fragmentItems.get(index);
 	}
 

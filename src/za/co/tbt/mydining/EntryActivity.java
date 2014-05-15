@@ -45,7 +45,8 @@ public class EntryActivity extends FragmentActivity implements
 
 		//create database helper
 		diningHelper = new MyDiningDbOpenHelper(this);
-		diningHelper.openDataBase();
+		diningHelper.getOpenDatabase();
+		//diningHelper.openDataBase();
 				
 		locationService = LocationService.getInstance(getApplicationContext());
 		
@@ -117,7 +118,7 @@ public class EntryActivity extends FragmentActivity implements
 	protected void onStop() {
 		// TODO Auto-generated method stub
 		super.onStop();
-		locationService.stop();
+		//locationService.stop();
 	}
 
 	@Override

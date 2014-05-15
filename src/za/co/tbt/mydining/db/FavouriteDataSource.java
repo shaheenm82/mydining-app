@@ -34,7 +34,7 @@ public class FavouriteDataSource {
 	}
 
 	public void close() {
-		//dbHelper.close();
+		dbHelper.close();
 	}
 	
 	public List<Favourite> getAllFavourites() {

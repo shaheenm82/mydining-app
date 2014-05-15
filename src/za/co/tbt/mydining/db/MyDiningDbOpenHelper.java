@@ -130,7 +130,7 @@ public class MyDiningDbOpenHelper extends SQLiteOpenHelper {
 		
 		String databasePath = DATABASE_PATH + DATABASE_NAME;
 		try {
-			closeDataBase();
+			//closeDataBase();
 			if (path == null){
 				inputStream = context.getAssets().open(DATABASE_NAME);
 			}else{
@@ -156,7 +156,7 @@ public class MyDiningDbOpenHelper extends SQLiteOpenHelper {
 		}
 		
 		
-		openDataBase();
+		//openDataBase();
 		favDataSource.open();
 		favDataSource.insertAllFavourites(favourites);
 		

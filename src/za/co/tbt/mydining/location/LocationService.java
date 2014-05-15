@@ -43,6 +43,7 @@ GooglePlayServicesClient.OnConnectionFailedListener{
 	
 	public void stop(){
 		location_client.disconnect();
+		instance = null;
 	}
 	/**
      * Verify that Google Play services is available before making a request.

@@ -44,7 +44,7 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 	 */
 	ViewPager mViewPager;
 
-	LocationService locationService;
+	//LocationService locationService;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +54,7 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_restaurant_detail);
 
-		locationService = LocationService.getInstance(getApplicationContext());
+		//locationService = LocationService.getInstance(getApplicationContext());
 		
 		// Get the message from the intent
 	    Intent intent = getIntent();
@@ -128,9 +128,9 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 		// TODO Auto-generated method stub		
 		//location_client.connect();
 		super.onStart();
-		if (!locationService.servicesConnected()){
-			locationService.start();
-		}
+		//if (!locationService.servicesConnected()){
+		//	locationService.start();
+		//}
 	}
 	
 	@Override
@@ -158,7 +158,7 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 		// TODO Auto-generated method stub
 		//location_client.disconnect();
 		super.onStop();	
-		locationService.stop();
+		//locationService.stop();
 	}
 	
 	@Override
