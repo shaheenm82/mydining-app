@@ -2,7 +2,7 @@ package za.co.tbt.mydining;
 
 import za.co.tbt.mydining.adapter.EntryPagerAdapter;
 import za.co.tbt.mydining.db.MyDiningDbOpenHelper;
-import za.co.tbt.mydining.location.LocationService;
+import za.co.tbt.mydining.location.LocationService2;
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
 import android.app.SearchManager;
@@ -30,7 +30,7 @@ public class EntryActivity extends FragmentActivity implements
 	 */
 	//SectionsPagerAdapter mSectionsPagerAdapter;
 	EntryPagerAdapter mEntryPagerAdapter;
-	LocationService locationService;
+	//LocationService locationService;
 	MyDiningDbOpenHelper diningHelper;
 
 	/**
@@ -48,7 +48,7 @@ public class EntryActivity extends FragmentActivity implements
 		diningHelper.getOpenDatabase();
 		//diningHelper.openDataBase();
 				
-		locationService = LocationService.getInstance(getApplicationContext());
+		//locationService = LocationService.getInstance(getApplicationContext());
 		
 		// Set up the action bar.
 		final ActionBar actionBar = getActionBar();
@@ -109,9 +109,9 @@ public class EntryActivity extends FragmentActivity implements
 	protected void onStart() {
 		// TODO Auto-generated method stub
 		super.onStart();
-		if (!locationService.servicesConnected()){
-			locationService.start();
-		}
+		//if (!locationService.servicesConnected()){
+			//locationService.start();
+		//}
 	}
 
 	@Override

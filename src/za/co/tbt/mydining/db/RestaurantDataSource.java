@@ -212,7 +212,7 @@ public class RestaurantDataSource {
 				//+ " group by master_category, category "
 				+ "order by master_category.rank, menu_category._id";		
 		
-		Log.d("ssm", getMenuCategories);
+		//Log.d("ssm", getMenuCategories);
 		
 		Cursor cursorCategories = db.rawQuery(getMenuCategories, null);
 		
@@ -404,7 +404,7 @@ public class RestaurantDataSource {
 			branch_selection.add("1");
 		}
 		
-		Log.d("ssm", restBranchSelection + " " + branch_selection.toString());
+		//Log.d("ssm", restBranchSelection + " " + branch_selection.toString());
 		
 		Cursor cursor = db.query(BRANCH_TABLE_NAME,
 		        allBranchColumns, restBranchSelection, branch_selection.toArray(new String[branch_selection.size()]), null, null, orderByBranchColumns);

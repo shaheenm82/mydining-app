@@ -3,13 +3,20 @@ package za.co.tbt.mydining;
 import java.util.List;
 
 import za.co.tbt.mydining.db.Branch;
+import za.co.tbt.mydining.location.LocationClientBinder;
 import za.co.tbt.mydining.location.LocationService;
 import za.co.tbt.mydining.location.LocationUpdateListener;
 import za.co.tbt.mydining.location.LocationUtils;
 import android.app.Activity;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.ServiceConnection;
 import android.location.Location;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.InflateException;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,8 +44,11 @@ public class BranchMapFragment extends Fragment implements LocationUpdateListene
 	private GoogleMap map = null;
 	private LatLng you = null;
 	
+	//LocationService2 locationService;
 	private boolean map_initialised;
 	private boolean location_available;
+	LocationClientBinder clientBinder;
+	boolean mBound = false;
 	
 	View rootView = null;
 	
@@ -50,7 +60,12 @@ public class BranchMapFragment extends Fragment implements LocationUpdateListene
 		// TODO Auto-generated method stub
 		super.onAttach(activity);
 		//locProvider = (LocationProvider)activity;	
-		LocationService.getInstance(activity).addLocationUpdateListener(this);
+		//locationService = LocationService2.getInstance(activity);
+				
+		//locationService.addLocationUpdateListener(this);
+		
+		Intent intent = new Intent(activity, LocationService.class);
+		getActivity().bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
 		
 		restDataSupplier = (RestaurantDataSupplier) activity;
 	}
@@ -75,6 +90,24 @@ public class BranchMapFragment extends Fragment implements LocationUpdateListene
         return rootView;
 	}		
 		
+	
+	@Override
+	public void onStart() {
+		// TODO Auto-generated method stub
+		super.onStart();
+		
+		//if (!locationService.servicesConnected()){
+		//	locationService.start();
+		//}
+		
+		//this.location = locationService.getLocation();
+		
+		//if (location != null){
+		//	location_available = true;
+		//}
+		
+	}
+
 	@Override
 	public void onResume() {
 		// TODO Auto-generated method stub
@@ -98,9 +131,18 @@ public class BranchMapFragment extends Fragment implements LocationUpdateListene
 		// TODO Auto-generated method stub
 		map_initialised = false;
 		location_available = false;
+		//locationService.stop();
 		super.onStop();
 	}
 			
+	
+	@Override
+	public void onDestroy() {
+		// TODO Auto-generated method stub
+		getActivity().unbindService(mConnection);
+		super.onDestroy();
+	}
+
 	private void updateMapCamera(){
 		BitmapDescriptor bitmapDescriptor 
 		   = BitmapDescriptorFactory.defaultMarker(
@@ -162,4 +204,22 @@ public class BranchMapFragment extends Fragment implements LocationUpdateListene
 		}
 	}
 
+	/** Defines callbacks for service binding, passed to bindService() */
+    private ServiceConnection mConnection = new ServiceConnection() {
+
+        @Override
+        public void onServiceConnected(ComponentName className,
+                IBinder service) {
+        	Log.d("ssm", "onServicesConnected");
+            // We've bound to LocalService, cast the IBinder and get LocalService instance
+            clientBinder = (LocationClientBinder) service;
+            clientBinder.addLocationUpdateListener(BranchMapFragment.this);
+            mBound = true;
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName arg0) {
+            mBound = false;
+        }
+    };
 }

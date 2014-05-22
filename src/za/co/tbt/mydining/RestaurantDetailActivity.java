@@ -6,7 +6,7 @@ import za.co.tbt.mydining.adapter.RestaurantDetailsPagerAdapter;
 import za.co.tbt.mydining.db.Branch;
 import za.co.tbt.mydining.db.Restaurant;
 import za.co.tbt.mydining.db.RestaurantDataSource;
-import za.co.tbt.mydining.location.LocationService;
+import za.co.tbt.mydining.location.LocationService2;
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
 import android.app.SearchManager;

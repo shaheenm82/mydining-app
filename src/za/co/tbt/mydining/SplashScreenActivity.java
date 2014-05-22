@@ -1,6 +1,8 @@
 package za.co.tbt.mydining;
 
 import za.co.tbt.mydining.db.MyDiningDbOpenHelper;
+import za.co.tbt.mydining.db.NearbyRestaurantDataSource;
+import za.co.tbt.mydining.location.LocationClientBinder;
 import za.co.tbt.mydining.location.LocationService;
 import za.co.tbt.mydining.location.LocationUpdateListener;
 import za.co.tbt.mydining.service.DBDownloadListener;
@@ -8,13 +10,16 @@ import za.co.tbt.mydining.service.DBVersionCheckListener;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.IBinder;
 import android.preference.PreferenceManager;
 import android.widget.TextView;
 
@@ -24,12 +29,15 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
 	private TextView textStatus;
 	
 	private MyDiningDbOpenHelper diningHelper;
-	private LocationService locationService;
+	//private LocationService2 locationService;
+	//LocationService locationService;
+	LocationClientBinder clientBinder;
+	boolean mBound = false;
 	
 	String server_version;
 	
 	// Splash screen timer
-    private static int SPLASH_TIME_OUT = 1000;
+    private static int SPLASH_TIME_OUT = 0;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +55,19 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
 		diningHelper = new MyDiningDbOpenHelper(this);
 		diningHelper.createDatabase();
 		//diningHelper.openDataBase();
+		
+		Intent intent = new Intent(this, LocationService.class);
+		bindService(intent, mConnection, BIND_AUTO_CREATE);
 	}
+
+	
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		unbindService(mConnection);
+		super.onDestroy();
+	}
+
 
 	@Override
 	public void databaseStatusUpdated(String progress) {
@@ -81,7 +101,7 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
 	@Override
 	public void databaseUpToDate() {
 		// TODO Auto-generated method stub
-		enterApplication();
+		//enterApplication();
 	}
 	
 	@Override
@@ -94,7 +114,7 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
 			break;
 		case DialogInterface.BUTTON_NEGATIVE:
 			//show EntryActivity
-			enterApplication();
+			//enterApplication();
 			break;
 		}
 	}
@@ -122,7 +142,7 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
 			prefEditor.putString("db_version_pref", server_version);
 			prefEditor.apply();
 		
-			enterApplication();
+			//enterApplication();
 			}else{
 				checkDBDialog.setMessage("Error Updating DB");
 				finish();
@@ -133,16 +153,20 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
 	private void enterApplication(){
 		//checkDBDialog.dismiss();
 		//LocationService 
-		locationService = LocationService.getInstance(getApplicationContext());
+		//locationService = LocationService2.getInstance(getApplicationContext());
 		
-		locationService.addLocationUpdateListener(this);
-		locationService.start();				
+		//locationService.addLocationUpdateListener(this);
+		//locationService.start();	
+		
 	}
 
 	@Override
 	public void locationUpdated(Location location) {
 		// TODO Auto-generated method stub
-		locationService.stop();
+		//locationService.stop();
+		NearbyRestaurantDataSource nearbyDataSource = new NearbyRestaurantDataSource(this);
+		nearbyDataSource.open();
+		nearbyDataSource.updateNearbyDistances(location);
 		
 		new Handler().postDelayed(new Runnable() {
 			 
@@ -163,4 +187,23 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
             }
         }, SPLASH_TIME_OUT);
 	}
+	
+	/** Defines callbacks for service binding, passed to bindService() */
+    private ServiceConnection mConnection = new ServiceConnection() {
+
+        @Override
+        public void onServiceConnected(ComponentName className,
+                IBinder service) {
+            // We've bound to LocalService, cast the IBinder and get LocalService instance
+            clientBinder = (LocationClientBinder) service;
+            clientBinder.addLocationUpdateListener(SplashScreenActivity.this);
+            mBound = true;
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName arg0) {
+            mBound = false;
+        }
+    };
+
 }

@@ -6,7 +6,7 @@ import java.util.List;
 
 import za.co.tbt.mydining.R;
 import za.co.tbt.mydining.db.Branch;
-import za.co.tbt.mydining.location.LocationService;
+import za.co.tbt.mydining.location.LocationService2;
 import za.co.tbt.mydining.view.BranchListViewHolder;
 import za.co.tbt.mydining.view.BranchProvinceListViewHolder;
 import android.content.Context;
@@ -94,7 +94,7 @@ public class BranchListAdapter extends BaseExpandableListAdapter{
 			listviewHolder = (BranchListViewHolder) convertView.getTag();
 		}
 		
-		LocationService.getInstance(context).addLocationUpdateListener(listviewHolder);		
+		LocationService2.getInstance(context).addLocationUpdateListener(listviewHolder);		
 		listviewHolder.populateFrom(branch);				
 		
 		return convertView;

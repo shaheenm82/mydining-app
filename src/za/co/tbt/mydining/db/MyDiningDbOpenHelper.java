@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -53,7 +54,7 @@ public class MyDiningDbOpenHelper extends SQLiteOpenHelper {
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		// TODO Auto-generated method stub
-		copyDBFromResource(null);		
+		copyDBFromResource("copy");		
 	}
 	
 	public void createDatabase(){
@@ -86,8 +87,9 @@ public class MyDiningDbOpenHelper extends SQLiteOpenHelper {
 			db = SQLiteDatabase.openDatabase(databasePath, null, SQLiteDatabase.OPEN_READWRITE);
 			db.setLocale(Locale.getDefault());
 			db.setLockingEnabled(true);
-			db.setVersion(SCHEMA_VERSION);
-		}catch (SQLiteException sqle){
+			db.setVersion(SCHEMA_VERSION);					
+		}catch (Exception e){
+		//catch (SQLiteException sqle){
 			Log.e("SQLHelper", "Database not found");
 		}
 		
@@ -122,16 +124,20 @@ public class MyDiningDbOpenHelper extends SQLiteOpenHelper {
 		InputStream inputStream = null;
 		OutputStream outputStream = null;
 		
-		//Copy favourites to memory so that they can be re-inserted later
 		FavouriteDataSource favDataSource = new FavouriteDataSource(context);
-		favDataSource.open();
-		List<Favourite> favourites = favDataSource.getAllFavourites();
-		favDataSource.close();
+		List<Favourite> favourites = new ArrayList<Favourite>();
+		
+		if (path != null){
+			//Copy favourites to memory so that they can be re-inserted later
+			favDataSource.open();
+			favourites = favDataSource.getAllFavourites();
+			favDataSource.close();
+		}
 		
 		String databasePath = DATABASE_PATH + DATABASE_NAME;
 		try {
 			//closeDataBase();
-			if (path == null){
+			if (path == null || path.equals("copy")){
 				inputStream = context.getAssets().open(DATABASE_NAME);
 			}else{
 				inputStream = new FileInputStream(path);
@@ -155,10 +161,11 @@ public class MyDiningDbOpenHelper extends SQLiteOpenHelper {
 			throw new Error("Problem copying database from resource file");
 		}
 		
-		
-		//openDataBase();
-		favDataSource.open();
-		favDataSource.insertAllFavourites(favourites);
+		if (favourites.size() > 0){
+			//openDataBase();
+			favDataSource.open();
+			favDataSource.insertAllFavourites(favourites);
+		}
 		
 		return success;
 	}
