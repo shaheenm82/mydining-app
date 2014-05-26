@@ -1,5 +1,7 @@
 package za.co.tbt.mydining.view;
 
+import java.text.DecimalFormat;
+
 import za.co.tbt.mydining.R;
 import za.co.tbt.mydining.db.Branch;
 import za.co.tbt.mydining.location.LocationUpdateListener;
@@ -36,8 +38,9 @@ public class BranchListViewHolder implements OnClickListener, LocationUpdateList
 
 	public void populateFrom(Branch branch){
 		this.branch = branch;
+		DecimalFormat df = new DecimalFormat("#0.0 km");
 		
-		branchSuburbText.setText(branch.getSuburb());
+		branchSuburbText.setText(branch.getSuburb() + " (" + df.format(branch.getDistance()/1000) + ")");
 		branchNameText.setText(branch.getName());
 		branchAddressText.setText(branch.getAddress());
 		branchTelephoneText.setText(branch.getTelephone_no());

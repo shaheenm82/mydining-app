@@ -9,7 +9,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="@color/white_background"
-        android:divider="#fff"
+        android:divider="@color/red_base"
+        android:dividerHeight="1dp"
         android:gravity="center" />
  
 </RelativeLayout>

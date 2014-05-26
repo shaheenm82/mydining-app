@@ -23,7 +23,7 @@
     <string name="pref_db_version">DB Version</string>
     <string name="pref_app_version">App Version</string>
     <string name="pref_app_version_value">v 0.1a</string>
-    <string name="pref_db_version_value">v 0.1.3</string>
+    <string name="pref_db_version_value">v 0.2.1</string>
     <string name="title_activity_splash_screen">SplashScreenActivity</string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="dummy_button">Dummy Button</string>
@@ -32,6 +32,7 @@
     <string name="pref_nearby">Distance from current location</string>
     <string name="pref_nearby_rest">Search for Restaurants within Radius</string>
     <string name="action_show_all">Show All</string>
+    <string name="no_branch_records">There are no branches matching your filter settings.  Adjust your filter in the Settings page.</string>
     
 
 </resources>

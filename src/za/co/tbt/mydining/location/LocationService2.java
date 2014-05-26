@@ -6,6 +6,8 @@ import java.util.List;
 import za.co.tbt.mydining.db.NearbyRestaurantDataSource;
 import android.content.Context;
 import android.location.Location;
+import android.location.LocationListener;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -18,34 +20,42 @@ public class LocationService2 implements GooglePlayServicesClient.ConnectionCall
 GooglePlayServicesClient.OnConnectionFailedListener{
 	Context context;
 	
-	List<LocationUpdateListener> locUpdateListeners;
+	List<LocationListener> locUpdateListeners;
 	LocationClient location_client;
 	Location location;
 	
-	private static LocationService2 instance = null;
+	//private static LocationService2 instance = null;
 	
-	protected LocationService2(Context context) {
+	public LocationService2(Context context) {
 		// Exists only to defeat instantiation.
 		this.context = context;
 		
 		location_client = new LocationClient(context, this, this);
 		
-		locUpdateListeners = new ArrayList<LocationUpdateListener>();
+		locUpdateListeners = new ArrayList<LocationListener>();
 	}
 	
-	public static LocationService2 getInstance(Context context) {
+	/*public static LocationService2 getInstance(Context context) {
 	      if(instance == null) {
 	         instance = new LocationService2(context.getApplicationContext());
 	      }
 	      return instance;
-	}
+	}*/
 
 	public void start(){
 		location_client.connect();
+		for (LocationListener listener : locUpdateListeners) {
+			listener.onProviderEnabled("LocationService2");
+			//listener.locationUpdated(location);
+		}
 	}
 	
 	public void stop(){
 		location_client.disconnect();
+		for (LocationListener listener : locUpdateListeners) {
+			listener.onProviderDisabled("LocationService2");
+			//listener.locationUpdated(location);
+		}
 		//instance = null;
 	}
 	/**
@@ -77,13 +87,14 @@ GooglePlayServicesClient.OnConnectionFailedListener{
         }
     }
     
-    public void addLocationUpdateListener(LocationUpdateListener lulistener) {
+    public void addLocationUpdateListener(LocationListener lulistener) {
 		// TODO Auto-generated method stub
 		locUpdateListeners.add(lulistener);
 		
 		if(location!=null){
-			for (LocationUpdateListener listener : locUpdateListeners) {
-				listener.locationUpdated(location);
+			for (LocationListener listener : locUpdateListeners) {
+				listener.onLocationChanged(location);
+				//listener.locationUpdated(location);
 			}			
 		}
 	}
@@ -129,8 +140,9 @@ GooglePlayServicesClient.OnConnectionFailedListener{
 			nearbyDataSource.open();
 			nearbyDataSource.updateNearbyDistances(location);
 			
-			for (LocationUpdateListener listener : locUpdateListeners) {
-				listener.locationUpdated(location);
+			for (LocationListener listener : locUpdateListeners) {
+				listener.onLocationChanged(location);
+				//listener.locationUpdated(location);
 			}						
 			
 		}
@@ -149,5 +161,4 @@ GooglePlayServicesClient.OnConnectionFailedListener{
 	public void setLocation(Location location) {
 		this.location = location;
 	}	
-	
 }

@@ -8,6 +8,8 @@ import java.io.OutputStream;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPReply;
 
+import android.app.Activity;
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 
 public class DBDownloadService extends AsyncTask<String, String, Boolean> {
@@ -15,10 +17,13 @@ public class DBDownloadService extends AsyncTask<String, String, Boolean> {
 	private static final String DB_PATH = "";
 	private static final String DB_FILE = "dining.sqlite";
 	
+	ProgressDialog downloadDB;
 	DBDownloadListener dbDownloadListener;
 	
 	public DBDownloadService(DBDownloadListener dbdownloadlistener) {
 		// TODO Auto-generated constructor stub
+		//downloadDB = ProgressDialog.show((Activity) dbdownloadlistener, "", "", true);
+		
 		dbDownloadListener = dbdownloadlistener;
 	}
 	
@@ -33,7 +38,7 @@ public class DBDownloadService extends AsyncTask<String, String, Boolean> {
 		
 		//download and check version file
 		try {
-			ftpClient.setConnectTimeout(5000);
+			ftpClient.setConnectTimeout(2500);
 			ftpClient.connect("shaheen.co.za");
 		    
 			if (FTPReply.isPositiveCompletion(ftpClient.getReplyCode())){
@@ -83,6 +88,7 @@ public class DBDownloadService extends AsyncTask<String, String, Boolean> {
 			publishProgress("Failed to retrieve Database");			
 		}
 		dbDownloadListener.databaseRetrieved(result);
+		//downloadDB.dismiss();
 	}
 
 }

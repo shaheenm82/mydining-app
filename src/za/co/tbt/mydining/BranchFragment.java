@@ -8,11 +8,11 @@ import za.co.tbt.mydining.db.RestaurantDataSource;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
+import android.widget.TextView;
 
 /**
  * A simple {@link android.support.v4.app.Fragment} subclass. Activities that
@@ -56,8 +56,15 @@ public class BranchFragment extends Fragment{
 		
         restaurant_branches = restDataSupplier.requestRestaurantBranches();
         
-        branchAdapter = new BranchListAdapter(getActivity(), restaurant_branches);
-		branchView.setAdapter(branchAdapter);			
+        TextView notice = (TextView) rootView.findViewById(R.id.text_branch_notification);
+        if (restaurant_branches.size() == 0){
+			notice.setVisibility(View.VISIBLE);
+		}else{
+			setRestaurantBranches(restaurant_branches);
+			notice.setVisibility(View.INVISIBLE);
+		}        
+        //branchAdapter = new BranchListAdapter(getActivity(), restaurant_branches);
+		//branchView.setAdapter(branchAdapter);			
         
         return rootView;
 	}

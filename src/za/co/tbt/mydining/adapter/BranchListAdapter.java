@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class BranchListAdapter extends BaseExpandableListAdapter{
 	Context context;
@@ -94,7 +95,7 @@ public class BranchListAdapter extends BaseExpandableListAdapter{
 			listviewHolder = (BranchListViewHolder) convertView.getTag();
 		}
 		
-		LocationService2.getInstance(context).addLocationUpdateListener(listviewHolder);		
+		//LocationService2.getInstance(context).addLocationUpdateListener(listviewHolder);		
 		listviewHolder.populateFrom(branch);				
 		
 		return convertView;

@@ -23,10 +23,10 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 
 public class MyDiningDbOpenHelper extends SQLiteOpenHelper {
-	private static final String DATABASE_PATH = "/data/data/za.co.tbt.mydining/databases/";
-	private static final String DATABASE_NAME = "dining.sqlite";
+	public static final String DATABASE_PATH = "/data/data/za.co.tbt.mydining/databases/";
+	public static final String DATABASE_NAME = "dining.sqlite";
 	private static final int SCHEMA_VERSION = 2;
-	private static final String DB_VERSION_KEY = "db_version_pref";
+	//private static final String DB_VERSION_KEY = "db_version_pref";
 	private static boolean dbExist;
 	
 	private static SQLiteDatabase dbSqlite;	
@@ -40,6 +40,7 @@ public class MyDiningDbOpenHelper extends SQLiteOpenHelper {
 	
 	public SQLiteDatabase getOpenDatabase(){
 		if (dbSqlite == null){
+			createDatabase();
 			openDataBase();
 		}
 		return dbSqlite;	
@@ -67,12 +68,12 @@ public class MyDiningDbOpenHelper extends SQLiteOpenHelper {
 			
 			//now copy our new database
 			copyDBFromResource(null);
-			DBVersionCheckListener dbVersionCheckListener = ((DBVersionCheckListener)context);
-			dbVersionCheckListener.databaseUpToDate();
-		}else{						
+			//DBVersionCheckListener dbVersionCheckListener = ((DBVersionCheckListener)context);
+			//dbVersionCheckListener.databaseUpToDate();
+		}/*else{						
 			checkForDBUpdate();
 			//dbExist = false;
-		}
+		}*/
 	}
 	
 	/*public boolean isDBAvailable(){
@@ -100,14 +101,14 @@ public class MyDiningDbOpenHelper extends SQLiteOpenHelper {
 		return db != null ? true : false;
 	}
 	
-	public void checkForDBUpdate(){		
+	/*public void checkForDBUpdate(){		
 		SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
 		String db_version = sharedPref.getString(DB_VERSION_KEY, "");
 		
 		DBVersionChecker dbVersionChecker = new DBVersionChecker((DBVersionCheckListener)context);
 		dbVersionChecker.execute(db_version);
 		
-	}
+	}*/
 	
 	public void downloadDB(){		
 		DBDownloadService dbDownloader = new DBDownloadService((DBDownloadListener)context);

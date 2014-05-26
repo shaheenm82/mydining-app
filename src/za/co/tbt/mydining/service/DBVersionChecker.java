@@ -8,6 +8,8 @@ import java.io.InputStreamReader;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPReply;
 
+import android.app.Activity;
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 
 public class DBVersionChecker extends AsyncTask<String, String, Boolean> {
@@ -15,11 +17,17 @@ public class DBVersionChecker extends AsyncTask<String, String, Boolean> {
 	private static final String DB_VERSION_FILE = "version.txt";
 	
 	String server_version;
+	//ProgressDialog checkVersion;
 	
 	DBVersionCheckListener dbStatusListener;
 	
 	public DBVersionChecker(DBVersionCheckListener dbstatuslistener) {
 		// TODO Auto-generated constructor stub
+		//checkVersion = new ProgressDialog((Activity) dbstatuslistener);
+		//checkVersion.setCancelable(false);
+		//checkVersion.setMessage("Loading");
+		//checkVersion.show();
+				//ProgressDialog.show((Activity) dbstatuslistener, "Loading...", "",true);
 		dbStatusListener = dbstatuslistener;
 	}
 	
@@ -37,7 +45,7 @@ public class DBVersionChecker extends AsyncTask<String, String, Boolean> {
 		//download and check version file
 		try {
 			publishProgress("Connecting to Server");
-			ftpClient.setConnectTimeout(5000);
+			ftpClient.setConnectTimeout(2500);
 			ftpClient.connect("shaheen.co.za");
 		    if (FTPReply.isPositiveCompletion(ftpClient.getReplyCode())){
 		    	publishProgress("Connected to Server");
@@ -89,5 +97,6 @@ public class DBVersionChecker extends AsyncTask<String, String, Boolean> {
 			publishProgress("Database Up To Date");
 			dbStatusListener.databaseUpToDate();
 		}
+		//checkVersion.dismiss();
 	}
 }

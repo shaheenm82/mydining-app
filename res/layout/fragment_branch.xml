@@ -3,14 +3,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-     
+    
+    <TextView
+        android:id="@+id/text_branch_notification"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/beige_background"
+        android:padding="@dimen/list_gridpadding"
+        android:text="@string/no_branch_records"
+        android:textColor="@color/red_base"
+        android:textSize="@dimen/Notice" />
+    
     <ExpandableListView
         android:id="@+id/expandable_branch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@id/text_branch_notification"
+        android:layout_alignParentTop="true"
         android:background="@color/white_background" >
 
-    </ExpandableListView>>
-     
- 
+    </ExpandableListView>
 </RelativeLayout>

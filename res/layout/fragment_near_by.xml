@@ -12,7 +12,9 @@
         android:id="@+id/list_nearby_restaurants"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white_background" >
+        android:background="@color/white_background"
+        android:divider="@color/red_base"
+        android:dividerHeight="1dp" >
 
     </ListView>
 

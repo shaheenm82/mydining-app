@@ -1,31 +1,31 @@
 package za.co.tbt.mydining.location;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import za.co.tbt.mydining.db.NearbyRestaurantDataSource;
+import za.co.tbt.mydining.db.NearbyRestaurantUpdater;
+import android.app.Service;
+import android.content.Intent;
+import android.location.Location;
+import android.os.Bundle;
+import android.os.IBinder;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.location.LocationClient;
 
-import android.app.Service;
-import android.content.Intent;
-import android.location.Location;
-import android.os.Bundle;
-import android.os.IBinder;
-import android.util.Log;
-
 public class LocationService extends Service implements GooglePlayServicesClient.ConnectionCallbacks,
 GooglePlayServicesClient.OnConnectionFailedListener{
+	
+	
+	public LocationService() {
+	}
+
 	//List<LocationUpdateListener> locUpdateListeners;
 	LocationClient location_client;
 	Location location;
 	LocationClientBinder clientBinder;
 	
-	public LocationService() {
-	}
+	//public LocationService() {
+	//}
 
 	
 	@Override
@@ -35,6 +35,8 @@ GooglePlayServicesClient.OnConnectionFailedListener{
 		
 		location_client = new LocationClient(this, this, this);
 	
+		location_client.connect();
+
 		clientBinder = new LocationClientBinder();
 		//locUpdateListeners = new ArrayList<LocationUpdateListener>();
 	}
@@ -51,8 +53,7 @@ GooglePlayServicesClient.OnConnectionFailedListener{
 	@Override
 	public IBinder onBind(Intent intent) {
 		// TODO Auto-generated method stub
-		Log.d("ssm", "connecting location client");
-		location_client.connect();
+		//Log.d("ssm", "connecting location client");
 		
 		return clientBinder;
 	}
@@ -108,16 +109,23 @@ GooglePlayServicesClient.OnConnectionFailedListener{
 
 	@Override
 	public void onConnected(Bundle connectionHint) {
-		Log.d("ssm", "onConnected");
+		//Log.d("ssm", "onConnected");
 		if (servicesConnected()){
 			
 			location = location_client.getLastLocation();							
+			
+			/*NearbyRestaurantDataSource nearbyDataSource = new NearbyRestaurantDataSource(this);
+			nearbyDataSource.open();
+			nearbyDataSource.updateNearbyDistances(location);*/
+			
+			NearbyRestaurantUpdater nrupdater = new NearbyRestaurantUpdater(this);
+			nrupdater.execute(location);
 			
 			/*for (LocationUpdateListener listener : locUpdateListeners) {
 				listener.locationUpdated(location);
 			}*/
 			
-			Log.d("ssm", "setting location");
+		//	Log.d("ssm", "setting location");
 			clientBinder.setLocation(location);
 		}
 	}

@@ -39,6 +39,7 @@
         android:scrollHorizontally="true"
         android:text="TextView"
         android:textColor="@color/white"
-        android:textSize="@dimen/status_small" />
+        android:textSize="@dimen/status_small"
+        android:visibility="gone" />
 
 </RelativeLayout>

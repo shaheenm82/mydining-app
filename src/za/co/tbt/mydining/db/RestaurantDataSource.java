@@ -18,6 +18,7 @@ public class RestaurantDataSource {
 	public static final String REST_COLUMN_CUISINES = "cuisines";
 	public static final String REST_COLUMN_LOGOS = "logo";
 	private String allRestColumns[] = {REST_COLUMN_ID, REST_COLUMN_NAME, REST_COLUMN_CUISINES, REST_COLUMN_LOGOS}; 
+	private String orderByRestaurantColumns = REST_COLUMN_NAME;
 	
 	public static final String MENU_TABLE_NAME = "menu";
 	public static final String MENU_COLUMN_ID = "_id";
@@ -102,7 +103,7 @@ public class RestaurantDataSource {
 	    List<Restaurant> restaurants = new ArrayList<Restaurant>();
 
 	    Cursor cursor = db.query(REST_TABLE_NAME,
-	        allRestColumns, null, null, null, null, null);
+	        allRestColumns, null, null, null, null, orderByRestaurantColumns);
 
 	    cursor.moveToFirst();
 	    while (!cursor.isAfterLast()) {
@@ -119,7 +120,7 @@ public class RestaurantDataSource {
 	    List<Restaurant> restaurants = new ArrayList<Restaurant>();
 
 	    Cursor cursor = db.query(REST_TABLE_NAME,
-	        allRestColumns, selection, args, null, null, null);
+	        allRestColumns, selection, args, null, null, orderByRestaurantColumns);
 
 	    cursor.moveToFirst();
 	    while (!cursor.isAfterLast()) {
@@ -194,6 +195,8 @@ public class RestaurantDataSource {
 	
 	public Menu getRestaurantMenu(long id, String dish){
 		Menu menu = null;
+		boolean halaal = false;
+		boolean kosher = false;
 		long category_id = -1;
 		MenuCategory mcat = null;
 		MenuItem mitem = null;
@@ -201,6 +204,7 @@ public class RestaurantDataSource {
 		Cursor cursorItems;
 		
 		menu = new Menu();
+		SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
 		
 		String getMenuCategories = "select * from menu_category "
 				+ "inner join menu "
@@ -208,10 +212,16 @@ public class RestaurantDataSource {
 				+ "inner join master_category "
 				+ "on master_category._id = menu_category.master_category "
 				+ "where rest_id = " + id 
-				+ " and dish like '%" + dish + "%' "
+				+ " and dish like '%" + dish + "%' ";
 				//+ " group by master_category, category "
-				+ "order by master_category.rank, menu_category._id";		
+						
 		
+		halaal = sharedPref.getBoolean(HALAAL_KEY, false);
+		if (halaal){
+			getMenuCategories += " and halaal != 'N' ";
+		}
+		
+		getMenuCategories += " order by master_category.rank, menu_category._id";
 		//Log.d("ssm", getMenuCategories);
 		
 		Cursor cursorCategories = db.rawQuery(getMenuCategories, null);
