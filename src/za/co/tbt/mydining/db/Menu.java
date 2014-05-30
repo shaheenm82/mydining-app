@@ -7,7 +7,6 @@ public class Menu {
 	List<DBItem> categories;
 
 	public Menu() {
-		// TODO Auto-generated constructor stub
 		categories = new ArrayList<DBItem>();
 	}
 	

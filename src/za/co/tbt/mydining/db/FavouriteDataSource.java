@@ -24,13 +24,11 @@ public class FavouriteDataSource {
 	Context context;
 	
 	public FavouriteDataSource(Context context) {
-		// TODO Auto-generated constructor stub
 		dbHelper = new MyDiningDbOpenHelper(context);
 	}
 	
 	public void open() throws SQLException {
-		//dbHelper.openDataBase();
-	    db = dbHelper.getOpenDatabase();
+		db = dbHelper.getOpenDatabase();
 	}
 
 	public void close() {
@@ -110,8 +108,6 @@ public class FavouriteDataSource {
 		
 		favourites = searchForFavourites("rest_id = ?", args);
 				
-		//Log.d("ssm","Favourites date " + DateFormat.format("yyyy-MM-dd", Calendar.getInstance()));
-		
 		if (favourites.size() == 0){
 			//Favourite does not exist
 			db.execSQL("INSERT INTO " + TABLE_NAME + " ( " + COLUMN_REST + ", " + COLUMN_SELECTED + ", " + COLUMN_SELECTED_DATE + " )"

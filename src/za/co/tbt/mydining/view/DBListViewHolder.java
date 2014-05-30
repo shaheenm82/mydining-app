@@ -10,7 +10,6 @@ public class DBListViewHolder {
 	private ImageView logo;
 	
 	public DBListViewHolder(View row) {
-		// TODO Auto-generated constructor stub
 		itemText = (TextView) row.findViewById(R.id.text_item);
 		logo = (ImageView) row.findViewById(R.id.logo);
 	}

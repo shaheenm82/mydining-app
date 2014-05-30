@@ -18,7 +18,6 @@ public class NearByListViewHolder {
 	public TextView distanceText = null;
 	
 	public NearByListViewHolder(Context context, View row) {
-		// TODO Auto-generated constructor stub
 		this.context = context;
 		restaurantText = (TextView) row.findViewById(R.id.text_restaurant);
 		restaurantLogo = (ImageView) row.findViewById(R.id.image_rest_logo);

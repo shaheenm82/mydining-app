@@ -11,7 +11,6 @@ public class MenuItem extends DBItem{
 	String halaal;
 	
 	public MenuItem() {
-		// TODO Auto-generated constructor stub
 		super("");
 		
 		description = "";

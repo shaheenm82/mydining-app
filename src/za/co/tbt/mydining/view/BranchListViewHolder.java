@@ -27,7 +27,6 @@ public class BranchListViewHolder implements OnClickListener, LocationUpdateList
 	public ImageView branchKosherImage = null;
 	
 	public BranchListViewHolder(View row) {
-		// TODO Auto-generated constructor stub
 		branchSuburbText = (TextView) row.findViewById(R.id.text_branch_suburb);
 		branchNameText = (TextView) row.findViewById(R.id.text_branch_name);
 		branchAddressText = (TextView) row.findViewById(R.id.text_branch_address);
@@ -63,14 +62,11 @@ public class BranchListViewHolder implements OnClickListener, LocationUpdateList
 
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		String saddr = "";
 		
 		if (location != null){
 			saddr = "&saddr=" + location.getLatitude() + "," + location.getLongitude();
 		}
-		
-		Log.d("ssm", "https://maps.google.com/maps?" + saddr + "&daddr=" + branch.getLatitude() + "," + branch.getLongitude() + "&mode=driving");
 		
 		Intent intent = new Intent(Intent.ACTION_VIEW, 
 			    Uri.parse("https://maps.google.com/maps?" + saddr + "&daddr=" + branch.getLatitude() + "," + branch.getLongitude() + "&mode=driving"));
@@ -81,7 +77,6 @@ public class BranchListViewHolder implements OnClickListener, LocationUpdateList
 
 	@Override
 	public void locationUpdated(Location location) {
-		// TODO Auto-generated method stub
 		this.location = location;
 	}
 }

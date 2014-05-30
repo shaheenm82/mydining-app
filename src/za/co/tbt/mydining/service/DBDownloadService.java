@@ -21,15 +21,11 @@ public class DBDownloadService extends AsyncTask<String, String, Boolean> {
 	DBDownloadListener dbDownloadListener;
 	
 	public DBDownloadService(DBDownloadListener dbdownloadlistener) {
-		// TODO Auto-generated constructor stub
-		//downloadDB = ProgressDialog.show((Activity) dbdownloadlistener, "", "", true);
-		
 		dbDownloadListener = dbdownloadlistener;
 	}
 	
 	@Override
 	protected Boolean doInBackground(String...params) {
-		// TODO Auto-generated method stub
 		boolean success = false;
 		
 		FTPClient ftpClient = new FTPClient();
@@ -72,14 +68,12 @@ public class DBDownloadService extends AsyncTask<String, String, Boolean> {
 	
 	@Override
 	protected void onProgressUpdate(String... values) {
-		// TODO Auto-generated method stub
 		super.onProgressUpdate(values);
 		dbDownloadListener.databaseDownloadStatusUpdated(values[0]);
 	}
 	
 	@Override
 	protected void onPostExecute(Boolean result) {
-		// TODO Auto-generated method stub
 		super.onPostExecute(result);
 		if (result == true){
 			publishProgress("Loading new Database");
@@ -88,7 +82,6 @@ public class DBDownloadService extends AsyncTask<String, String, Boolean> {
 			publishProgress("Failed to retrieve Database");			
 		}
 		dbDownloadListener.databaseRetrieved(result);
-		//downloadDB.dismiss();
 	}
 
 }

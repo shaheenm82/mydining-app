@@ -17,7 +17,6 @@ public class MenuListAdapter extends BaseExpandableListAdapter{
 	Menu menu;
 	
 	public MenuListAdapter(Context context, Menu menu){
-		//super(context, R.layout.list_dbitem);		
 		this.context = context;
 		this.menu = menu;
 	}
@@ -30,20 +29,17 @@ public class MenuListAdapter extends BaseExpandableListAdapter{
 	
 	@Override
 	public Object getChild(int groupPosition, int childPosition) {
-		// TODO Auto-generated method stub
 		return ((MenuCategory)menu.getCategories().get(groupPosition)).getDishes().get(childPosition);
 	}
 
 	@Override
 	public long getChildId(int groupPosition, int childPosition) {
-		// TODO Auto-generated method stub
 		return (groupPosition * 1000) + childPosition;
 	}
 
 	@Override
 	public View getChildView(int groupPosition, int childPosition,
 			boolean isLastChild, View convertView, ViewGroup parent) {
-		// TODO Auto-generated method stub				
 		MenuItemListViewHolder listviewHolder;
 		MenuItem mitem = (MenuItem)getChild(groupPosition, childPosition);
 		
@@ -64,32 +60,27 @@ public class MenuListAdapter extends BaseExpandableListAdapter{
 
 	@Override
 	public int getChildrenCount(int groupPosition) {
-		// TODO Auto-generated method stub
 		return ((MenuCategory)menu.getCategories().get(groupPosition)).getDishes().size();
 	}
 
 	@Override
 	public Object getGroup(int groupPosition) {
-		// TODO Auto-generated method stub
 		return menu.getCategories().get(groupPosition);
 	}
 
 	@Override
 	public int getGroupCount() {
-		// TODO Auto-generated method stub
 		return menu.getCategories().size();
 	}
 
 	@Override
 	public long getGroupId(int groupPosition) {
-		// TODO Auto-generated method stub
 		return (groupPosition * 1000);
 	}
 
 	@Override
 	public View getGroupView(int groupPosition, boolean isExpanded,
 			View convertView, ViewGroup parent) {
-		// TODO Auto-generated method stub
 		MenuCategoryListViewHolder listviewHolder;
 		MenuCategory mcat = (MenuCategory) getGroup(groupPosition);
 			
@@ -110,13 +101,11 @@ public class MenuListAdapter extends BaseExpandableListAdapter{
 
 	@Override
 	public boolean hasStableIds() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean isChildSelectable(int groupPosition, int childPosition) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 	

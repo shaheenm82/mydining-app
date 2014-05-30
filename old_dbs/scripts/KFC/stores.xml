@@ -1,0 +1,4264 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<stores>
+  
+  <store>
+    <name>Acornhoek</name>
+    <city>Acornhoek</city>
+    <storeId>11053</storeId>
+  </store>
+  
+  <store>
+    <name>Acropolis centre</name>
+    <city>Phoenix</city>
+    <storeId>11002</storeId>
+  </store>
+  
+  <store>
+    <name>Adderley street</name>
+    <city>Cape Town</city>
+    <storeId>10865</storeId>
+  </store>
+  
+  <store>
+    <name>Akasia</name>
+    <city>Pretoria</city>
+    <storeId>10900</storeId>
+  </store>
+  
+  <store>
+    <name>Albany road</name>
+    <city>Port Elizabeth</city>
+    <storeId>10658</storeId>
+  </store>
+  
+  <store>
+    <name>Alberton</name>
+    <city>Alberton</city>
+    <storeId>10721</storeId>
+  </store>
+  
+  <store>
+    <name>Alexandra</name>
+    <city>Alexandra</city>
+    <storeId>11027</storeId>
+  </store>
+  
+  <store>
+    <name>Alexandra 2</name>
+    <city>Soweto</city>
+    <storeId>11171</storeId>
+  </store>
+  
+  <store>
+    <name>Alice street</name>
+    <city>Durban</city>
+    <storeId>10915</storeId>
+  </store>
+  
+  <store>
+    <name>Aliwal north</name>
+    <city>Aliwal North</city>
+    <storeId>10949</storeId>
+  </store>
+  
+  <store>
+    <name>Amalinda</name>
+    <city>East London</city>
+    <storeId>10992</storeId>
+  </store>
+  
+  <store>
+    <name>Amanzimtoti</name>
+    <city>Amanzimtoti</city>
+    <storeId>10747</storeId>
+  </store>
+  
+  <store>
+    <name>Arcadia</name>
+    <city>Pretoria</city>
+    <storeId>11175</storeId>
+  </store>
+  
+  <store>
+    <name>Armadale</name>
+    <city>Johannesburg</city>
+    <storeId>160082</storeId>
+  </store>
+  
+  <store>
+    <name>Athlone</name>
+    <city>Athlone</city>
+    <storeId>10847</storeId>
+  </store>
+  
+  <store>
+    <name>Atlantis</name>
+    <city>Atlantis</city>
+    <storeId>10953</storeId>
+  </store>
+  
+  <store>
+    <name>Atterbury</name>
+    <city>Pretoria</city>
+    <storeId>11270</storeId>
+  </store>
+  
+  <store>
+    <name>Atteridgeville</name>
+    <city>Pretoria</city>
+    <storeId>11048</storeId>
+  </store>
+  
+  <store>
+    <name>Bakers mall edenvale</name>
+    <city>Edenvale</city>
+    <storeId>11250</storeId>
+  </store>
+  
+  <store>
+    <name>Ballito</name>
+    <city>Ballito</city>
+    <storeId>10917</storeId>
+  </store>
+  
+  <store>
+    <name>Banbury crossing northriding</name>
+    <city>Randburg</city>
+    <storeId>10699</storeId>
+  </store>
+  
+  <store>
+    <name>Barberton</name>
+    <city>Barberton</city>
+    <storeId>11028</storeId>
+  </store>
+  
+  <store>
+    <name>Batho plaza</name>
+    <city>Shoshanguve</city>
+    <storeId>11214</storeId>
+  </store>
+  
+  <store>
+    <name>Bayside</name>
+    <city>Cape Town</city>
+    <storeId>10920</storeId>
+  </store>
+  
+  <store>
+    <name>Beach - streetrand 2</name>
+    <city>Strand</city>
+    <storeId>10927</storeId>
+  </store>
+  
+  <store>
+    <name>Beacon bay</name>
+    <city>Eastern Cape</city>
+    <storeId>11106</storeId>
+  </store>
+  
+  <store>
+    <name>Beatrice street</name>
+    <city>Durban</city>
+    <storeId>11026</storeId>
+  </store>
+  
+  <store>
+    <name>Beaufort west</name>
+    <city>Beaufort West</city>
+    <storeId>10916</storeId>
+  </store>
+  
+  <store>
+    <name>Bedford centre</name>
+    <city>Bedfordview</city>
+    <storeId>10989</storeId>
+  </store>
+  
+  <store>
+    <name>Bedworth park</name>
+    <city>Sharpville</city>
+    <storeId>11243</storeId>
+  </store>
+  
+  <store>
+    <name>Bela bela / warmbaths</name>
+    <city>Bela Bela</city>
+    <storeId>10807</storeId>
+  </store>
+  
+  <store>
+    <name>Belhar</name>
+    <city>Bellville</city>
+    <storeId>10967</storeId>
+  </store>
+  
+  <store>
+    <name>Belle ombre plaza</name>
+    <city>Pretoria</city>
+    <storeId>10999</storeId>
+  </store>
+  
+  <store>
+    <name>Bellville</name>
+    <city>Bellville</city>
+    <storeId>10851</storeId>
+  </store>
+  
+  <store>
+    <name>Bellville eazy</name>
+    <city>Bellville</city>
+    <storeId>10957</storeId>
+  </store>
+  
+  <store>
+    <name>Ben fleur</name>
+    <city>Klerksdorp</city>
+    <storeId>200045</storeId>
+  </store>
+  
+  <store>
+    <name>Benoni cbd</name>
+    <city>Benoni</city>
+    <storeId>11033</storeId>
+  </store>
+  
+  <store>
+    <name>Berea centre</name>
+    <city>Durban</city>
+    <storeId>11077</storeId>
+  </store>
+  
+  <store>
+    <name>Berea city</name>
+    <city>Pretoria</city>
+    <storeId>10914</storeId>
+  </store>
+  
+  <store>
+    <name>Berea road</name>
+    <city>Durban</city>
+    <storeId>10749</storeId>
+  </store>
+  
+  <store>
+    <name>Berea station</name>
+    <city>Durban</city>
+    <storeId>10751</storeId>
+  </store>
+  
+  <store>
+    <name>Bergbron</name>
+    <city>Johannesburg</city>
+    <storeId>10905</storeId>
+  </store>
+  
+  <store>
+    <name>Bergville</name>
+    <city>Bergville</city>
+    <storeId>11055</storeId>
+  </store>
+  
+  <store>
+    <name>Bertrams</name>
+    <city>Betrams</city>
+    <storeId>11230</storeId>
+  </store>
+  
+  <store>
+    <name>Bethal</name>
+    <city>Bethal</city>
+    <storeId>10674</storeId>
+  </store>
+  
+  <store>
+    <name>Bethlehem</name>
+    <city>Bethlehem</city>
+    <storeId>10844</storeId>
+  </store>
+  
+  <store>
+    <name>Bethlehem metropolitan life centre</name>
+    <city>Bethlehem</city>
+    <storeId>10836</storeId>
+  </store>
+  
+  <store>
+    <name>Beyers park north rand road</name>
+    <city>Boksburg</city>
+    <storeId>11037</storeId>
+  </store>
+  
+  <store>
+    <name>Birch acres mall, tembisa</name>
+    <city>Tembisa</city>
+    <storeId>11247</storeId>
+  </store>
+  
+  <store>
+    <name>Birchleigh</name>
+    <city>Kempton Park</city>
+    <storeId>10689</storeId>
+  </store>
+  
+  <store>
+    <name>Bizana</name>
+    <city>Bizana</city>
+    <storeId>10948</storeId>
+  </store>
+  
+  <store>
+    <name>Blackheath</name>
+    <city>Johannesburg</city>
+    <storeId>11056</storeId>
+  </store>
+  
+  <store>
+    <name>Bloed street</name>
+    <city>Pretoria</city>
+    <storeId>10990</storeId>
+  </store>
+  
+  <store>
+    <name>Bloemfontein c/o zastron &amp; markgraaff</name>
+    <city>Bloemfontein</city>
+    <storeId>10839</storeId>
+  </store>
+  
+  <store>
+    <name>Bloemfontein curie avenue</name>
+    <city>Bloemfontein</city>
+    <storeId>10835</storeId>
+  </store>
+  
+  <store>
+    <name>Bloemfontein harvey road</name>
+    <city>Bloemfontein</city>
+    <storeId>11095</storeId>
+  </store>
+  
+  <store>
+    <name>Bloemfontein president hofman square</name>
+    <city>Bloemfontein</city>
+    <storeId>10837</storeId>
+  </store>
+  
+  <store>
+    <name>Bloubergstrand</name>
+    <city>Bloubergstrand</city>
+    <storeId>10870</storeId>
+  </store>
+  
+  <store>
+    <name>Bluedowns</name>
+    <city>Blue Downs</city>
+    <storeId>11017</storeId>
+  </store>
+  
+  <store>
+    <name>Blue route mall</name>
+    <city>Tokai</city>
+    <storeId>11113</storeId>
+  </store>
+  
+  <store>
+    <name>Bluff</name>
+    <city>Durban</city>
+    <storeId>10773</storeId>
+  </store>
+  
+  <store>
+    <name>Bluff shopping centre</name>
+    <city>Durban</city>
+    <storeId>11057</storeId>
+  </store>
+  
+  <store>
+    <name>Boardwalk pe</name>
+    <city>Port Elizabeth</city>
+    <storeId>10653</storeId>
+  </store>
+  
+  <store>
+    <name>Boardwalk port elizabeth</name>
+    <city>Port Elizabeth</city>
+    <storeId>12042</storeId>
+  </store>
+  
+  <store>
+    <name>Boksburg</name>
+    <city>Boksburg</city>
+    <storeId>10687</storeId>
+  </store>
+  
+  <store>
+    <name>Boksburg jansen park</name>
+    <city>Boksburg</city>
+    <storeId>10701</storeId>
+  </store>
+  
+  <store>
+    <name>Boskruin</name>
+    <city>Boskruin</city>
+    <storeId>160087</storeId>
+  </store>
+  
+  <store>
+    <name>Bothasig</name>
+    <city>Bothasig</city>
+    <storeId>10874</storeId>
+  </store>
+  
+  <store>
+    <name>Bothaville</name>
+    <city>Bothaville</city>
+    <storeId>150052</storeId>
+  </store>
+  
+  <store>
+    <name>Botshabelo</name>
+    <city>Botshabelo</city>
+    <storeId>11004</storeId>
+  </store>
+  
+  <store>
+    <name>Boulevard mall, george</name>
+    <city>George</city>
+    <storeId>11281</storeId>
+  </store>
+  
+  <store>
+    <name>Braamfontein</name>
+    <city>Johannesburg</city>
+    <storeId>10982</storeId>
+  </store>
+  
+  <store>
+    <name>Brackenfell</name>
+    <city>Brackenfell</city>
+    <storeId>10864</storeId>
+  </store>
+  
+  <store>
+    <name>Brackenhurst</name>
+    <city>Johannesburg</city>
+    <storeId>10712</storeId>
+  </store>
+  
+  <store>
+    <name>Brakpan</name>
+    <city>Johannesburg</city>
+    <storeId>10710</storeId>
+  </store>
+  
+  <store>
+    <name>Bramley (kew)</name>
+    <city>Johannesburg</city>
+    <storeId>11309</storeId>
+  </store>
+  
+  <store>
+    <name>Bree street</name>
+    <city>Johannesburg</city>
+    <storeId>11046</storeId>
+  </store>
+  
+  <store>
+    <name>Bridge city</name>
+    <city>KwaMashu</city>
+    <storeId>11221</storeId>
+  </store>
+  
+  <store>
+    <name>Brits 1</name>
+    <city>Brits</city>
+    <storeId>10822</storeId>
+  </store>
+  
+  <store>
+    <name>Brits 3</name>
+    <city>Brits</city>
+    <storeId>11227</storeId>
+  </store>
+  
+  <store>
+    <name>Brits 4</name>
+    <city>Brits</city>
+    <storeId>160083</storeId>
+  </store>
+  
+  <store>
+    <name>Brits eazy</name>
+    <city>Brits</city>
+    <storeId>10964</storeId>
+  </store>
+  
+  <store>
+    <name>Broadacres</name>
+    <city>Fourways</city>
+    <storeId>10986</storeId>
+  </store>
+  
+  <store>
+    <name>Broadway</name>
+    <city>Durban</city>
+    <storeId>11206</storeId>
+  </store>
+  
+  <store>
+    <name>Bronkhorspruit</name>
+    <city>Bronkhorspruit</city>
+    <storeId>10947</storeId>
+  </store>
+  
+  <store>
+    <name>Bryanston</name>
+    <city>Sandton</city>
+    <storeId>11316</storeId>
+  </store>
+  
+  <store>
+    <name>Burgersfort</name>
+    <city>Burgersfort</city>
+    <storeId>10892</storeId>
+  </store>
+  
+  <store>
+    <name>Bushbuckridge</name>
+    <city>Bushbuckridge</city>
+    <storeId>11116</storeId>
+  </store>
+  
+  <store>
+    <name>Butha buhle</name>
+    <city>Butha Buthe</city>
+    <storeId>11286</storeId>
+  </store>
+  
+  <store>
+    <name>Butterworth</name>
+    <city>Butterworth</city>
+    <storeId>10650</storeId>
+  </store>
+  
+  <store>
+    <name>Camperdown</name>
+    <city>Camperdown</city>
+    <storeId>11090</storeId>
+  </store>
+  
+  <store>
+    <name>Cape gate lifestyle shopping centre</name>
+    <city>Vredekloof</city>
+    <storeId>10737</storeId>
+  </store>
+  
+  <store>
+    <name>Cape gate mall</name>
+    <city>Brackenfell</city>
+    <storeId>11007</storeId>
+  </store>
+  
+  <store>
+    <name>Cape Road, Greenacres</name>
+    <city>Port Elizabeth</city>
+    <storeId>11199</storeId>
+  </store>
+  
+  <store>
+    <name>Cape town cbd golden acre</name>
+    <city>Cape Town</city>
+    <storeId>10908</storeId>
+  </store>
+  
+  <store>
+    <name>Cape town international airport</name>
+    <city>Cape Town</city>
+    <storeId>11219</storeId>
+  </store>
+  
+  <store>
+    <name>Cape town international airport departures</name>
+    <city>Cape Town</city>
+    <storeId>11220</storeId>
+  </store>
+  
+  <store>
+    <name>Cape town station</name>
+    <city>Cape Town</city>
+    <storeId>11263</storeId>
+  </store>
+  
+  <store>
+    <name>Capital centre eazy</name>
+    <city>Pietermaritzburg</city>
+    <storeId>10971</storeId>
+  </store>
+  
+  <store>
+    <name>Capricorn</name>
+    <city>Capricorn</city>
+    <storeId>11212</storeId>
+  </store>
+  
+  <store>
+    <name>Carlton centre</name>
+    <city>Johannesburg</city>
+    <storeId>11016</storeId>
+  </store>
+  
+  <store>
+    <name>Carltonville</name>
+    <city>Carltonville</city>
+    <storeId>10834</storeId>
+  </store>
+  
+  <store>
+    <name>Carnival city</name>
+    <city>Brakpan</city>
+    <storeId>10937</storeId>
+  </store>
+  
+  <store>
+    <name>Centre forum</name>
+    <city>Pretoria</city>
+    <storeId>11184</storeId>
+  </store>
+  
+  <store>
+    <name>Centurion</name>
+    <city>Centurion</city>
+    <storeId>10913</storeId>
+  </store>
+  
+  <store>
+    <name>Century city</name>
+    <city>Cape Town</city>
+    <storeId>10945</storeId>
+  </store>
+  
+  <store>
+    <name>Ceres</name>
+    <city>Ceres</city>
+    <storeId>10902</storeId>
+  </store>
+  
+  <store>
+    <name>Charlesville</name>
+    <city>Charlesville</city>
+    <storeId>11165</storeId>
+  </store>
+  
+  <store>
+    <name>Chatsworth bayview</name>
+    <city>Chatsworth</city>
+    <storeId>10759</storeId>
+  </store>
+  
+  <store>
+    <name>Chatsworth centre</name>
+    <city>Chatsworth</city>
+    <storeId>11154</storeId>
+  </store>
+  
+  <store>
+    <name>Chatsworth joyhurst street</name>
+    <city>Chatsworth</city>
+    <storeId>10769</storeId>
+  </store>
+  
+  <store>
+    <name>Chris hani crossing, vosloorus</name>
+    <city>Vosloorus</city>
+    <storeId>11245</storeId>
+  </store>
+  
+  <store>
+    <name>Circus triangle umtata 3</name>
+    <city>Umtata</city>
+    <storeId>10930</storeId>
+  </store>
+  
+  <store>
+    <name>Clairwood</name>
+    <city>Clairwood</city>
+    <storeId>10748</storeId>
+  </store>
+  
+  <store>
+    <name>Claremont</name>
+    <city>Cape Town</city>
+    <storeId>10880</storeId>
+  </store>
+  
+  <store>
+    <name>Claremont cbd</name>
+    <city>Cape Town</city>
+    <storeId>10868</storeId>
+  </store>
+  
+  <store>
+    <name>Clearwater mall</name>
+    <city>Strubensvalley</city>
+    <storeId>11255</storeId>
+  </store>
+  
+  <store>
+    <name>Cleary park</name>
+    <city>Bethelsdorp</city>
+    <storeId>200051</storeId>
+  </store>
+  
+  <store>
+    <name>Comfimvaba</name>
+    <city>Comfimvaba</city>
+    <storeId>11248</storeId>
+  </store>
+  
+  <store>
+    <name>Commercial road pe</name>
+    <city>Port Elizabeth</city>
+    <storeId>10663</storeId>
+  </store>
+  
+  <store>
+    <name>Commercial road pietermaritzburg</name>
+    <city>Pietermaritzburg</city>
+    <storeId>10777</storeId>
+  </store>
+  
+  <store>
+    <name>Commercial road port elizabeth</name>
+    <city>Port Elizabeth</city>
+    <storeId>12046</storeId>
+  </store>
+  
+  <store>
+    <name>Corner henshall &amp; bester streets nelspruit</name>
+    <city>Nelspruit</city>
+    <storeId>11262</storeId>
+  </store>
+  
+  <store>
+    <name>Cosmo city</name>
+    <city>Randburg</city>
+    <storeId>11253</storeId>
+  </store>
+  
+  <store>
+    <name>Cradock</name>
+    <city>Cradock</city>
+    <storeId>11137</storeId>
+  </store>
+  
+  <store>
+    <name>Craighall - jan smuts</name>
+    <city>Craighall Park</city>
+    <storeId>11256</storeId>
+  </store>
+  
+  <store>
+    <name>Cresta mall</name>
+    <city>Randburg</city>
+    <storeId>10960</storeId>
+  </store>
+  
+  <store>
+    <name>Dalpark</name>
+    <city>Brakpan</city>
+    <storeId>11021</storeId>
+  </store>
+  
+  <store>
+    <name>Damdoryn</name>
+    <city>Hartbeespoort</city>
+    <storeId>11132</storeId>
+  </store>
+  
+  <store>
+    <name>Davenport square</name>
+    <city>Glenwood</city>
+    <storeId>11209</storeId>
+  </store>
+  
+  <store>
+    <name>Daveyton</name>
+    <city>Johannesburg</city>
+    <storeId>11062</storeId>
+  </store>
+  
+  <store>
+    <name>Delmas</name>
+    <city>Delmas</city>
+    <storeId>11085</storeId>
+  </store>
+  
+  <store>
+    <name>Diepkloof</name>
+    <city>Soweto</city>
+    <storeId>12035</storeId>
+  </store>
+  
+  <store>
+    <name>Diepkloof</name>
+    <city>Soweto</city>
+    <storeId>10718</storeId>
+  </store>
+  
+  <store>
+    <name>Diepkloof 2</name>
+    <city>Soweto</city>
+    <storeId>12048</storeId>
+  </store>
+  
+  <store>
+    <name>Diepsloot mall</name>
+    <city>Diepsloot</city>
+    <storeId>11099</storeId>
+  </store>
+  
+  <store>
+    <name>Dobsonville</name>
+    <city>Soweto</city>
+    <storeId>11061</storeId>
+  </store>
+  
+  <store>
+    <name>Douglasdale</name>
+    <city>Johannesburg</city>
+    <storeId>11152</storeId>
+  </store>
+  
+  <store>
+    <name>Dube, nini mall</name>
+    <city>Soweto</city>
+    <storeId>11229</storeId>
+  </store>
+  
+  <store>
+    <name>Duiwelskloof</name>
+    <city>Duiwelskloof</city>
+    <storeId>10818</storeId>
+  </store>
+  
+  <store>
+    <name>Dundee karel landman street ii</name>
+    <city>Dundee</city>
+    <storeId>11097</storeId>
+  </store>
+  
+  <store>
+    <name>Dundee victoria street</name>
+    <city>Dundee</city>
+    <storeId>10779</storeId>
+  </store>
+  
+  <store>
+    <name>Durban cbd broad street i</name>
+    <city>Durban</city>
+    <storeId>10755</storeId>
+  </store>
+  
+  <store>
+    <name>Durban grey street</name>
+    <city>Durban</city>
+    <storeId>10742</storeId>
+  </store>
+  
+  <store>
+    <name>Durban north arcadia centre ii</name>
+    <city>Durban</city>
+    <storeId>10741</storeId>
+  </store>
+  
+  <store>
+    <name>Durban russel street</name>
+    <city>Durban</city>
+    <storeId>10799</storeId>
+  </store>
+  
+  <store>
+    <name>Durban west street</name>
+    <city>Durban</city>
+    <storeId>10784</storeId>
+  </store>
+  
+  <store>
+    <name>Eastern cape market street</name>
+    <city>Eastern Cape</city>
+    <storeId>10651</storeId>
+  </store>
+  
+  <store>
+    <name>Eastgate</name>
+    <city>Johannesburg</city>
+    <storeId>10702</storeId>
+  </store>
+  
+  <store>
+    <name>East lynne</name>
+    <city>Pretoria</city>
+    <storeId>11177</storeId>
+  </store>
+  
+  <store>
+    <name>East rand mall</name>
+    <city>Boksburg</city>
+    <storeId>10903</storeId>
+  </store>
+  
+  <store>
+    <name>Edenvale</name>
+    <city>Johannesburg</city>
+    <storeId>10720</storeId>
+  </store>
+  
+  <store>
+    <name>Eerste rivier</name>
+    <city>Eerste Rivier</city>
+    <storeId>10848</storeId>
+  </store>
+  
+  <store>
+    <name>Elardus park</name>
+    <city>Pretoria</city>
+    <storeId>11178</storeId>
+  </store>
+  
+  <store>
+    <name>Elim</name>
+    <city>Elim</city>
+    <storeId>11073</storeId>
+  </store>
+  
+  <store>
+    <name>Ellis park</name>
+    <city>Johannesburg</city>
+    <storeId>11216</storeId>
+  </store>
+  
+  <store>
+    <name>El ridge</name>
+    <city>Boksburg</city>
+    <storeId>150040</storeId>
+  </store>
+  
+  <store>
+    <name>Elsies river i</name>
+    <city>Elsies River</city>
+    <storeId>10910</storeId>
+  </store>
+  
+  <store>
+    <name>Elsies river ii</name>
+    <city>Elsies River</city>
+    <storeId>10924</storeId>
+  </store>
+  
+  <store>
+    <name>Elukwatini</name>
+    <city>Elukwatini</city>
+    <storeId>11280</storeId>
+  </store>
+  
+  <store>
+    <name>Embalenhle, mpumalanga</name>
+    <city>Embalenhle</city>
+    <storeId>11235</storeId>
+  </store>
+  
+  <store>
+    <name>Emmarentia</name>
+    <city>Emmarentia</city>
+    <storeId>11244</storeId>
+  </store>
+  
+  <store>
+    <name>Empangeni iii - maxwell street</name>
+    <city>Empangeni</city>
+    <storeId>11126</storeId>
+  </store>
+  
+  <store>
+    <name>Empangeni ii - town</name>
+    <city>Empangeni</city>
+    <storeId>10768</storeId>
+  </store>
+  
+  <store>
+    <name>Empangeni i - rail</name>
+    <city>Empangeni</city>
+    <storeId>10756</storeId>
+  </store>
+  
+  <store>
+    <name>Engcobo</name>
+    <city>Engcobo</city>
+    <storeId>10652</storeId>
+  </store>
+  
+  <store>
+    <name>Epsom downs</name>
+    <city>Sandton</city>
+    <storeId>160001</storeId>
+  </store>
+  
+  <store>
+    <name>Epson downs</name>
+    <city>Sandton</city>
+    <storeId>11103</storeId>
+  </store>
+  
+  <store>
+    <name>Ermelo i</name>
+    <city>Ermelo</city>
+    <storeId>10666</storeId>
+  </store>
+  
+  <store>
+    <name>Ermelo ii</name>
+    <city>Ermelo</city>
+    <storeId>11076</storeId>
+  </store>
+  
+  <store>
+    <name>Escourt</name>
+    <city>Escourt</city>
+    <storeId>10752</storeId>
+  </store>
+  
+  <store>
+    <name>Eshowe</name>
+    <city>Eshowe</city>
+    <storeId>10796</storeId>
+  </store>
+  
+  <store>
+    <name>Eshowe ii</name>
+    <city>Eshowe</city>
+    <storeId>11202</storeId>
+  </store>
+  
+  <store>
+    <name>Esikawini</name>
+    <city>Esikawini</city>
+    <storeId>10996</storeId>
+  </store>
+  
+  <store>
+    <name>Evaton</name>
+    <city>Evaton</city>
+    <storeId>11234</storeId>
+  </store>
+  
+  <store>
+    <name>Ezakheni</name>
+    <city>Ezakheni</city>
+    <storeId>150041</storeId>
+  </store>
+  
+  <store>
+    <name>Ezulwini</name>
+    <city>Ezulwini</city>
+    <storeId>11307</storeId>
+  </store>
+  
+  <store>
+    <name>Farrarmere</name>
+    <city>Benoni</city>
+    <storeId>10685</storeId>
+  </store>
+  
+  <store>
+    <name>Ficksburg</name>
+    <city>Ficksburg</city>
+    <storeId>10845</storeId>
+  </store>
+  
+  <store>
+    <name>Field street</name>
+    <city>Durban</city>
+    <storeId>10895</storeId>
+  </store>
+  
+  <store>
+    <name>Fish hoek</name>
+    <city>Fish Hoek</city>
+    <storeId>10884</storeId>
+  </store>
+  
+  <store>
+    <name>Fksa546</name>
+    <city>Bloemfontein</city>
+    <storeId>11271</storeId>
+  </store>
+  
+  <store>
+    <name>Flagstaff easy</name>
+    <city>Flagstaff</city>
+    <storeId>11001</storeId>
+  </store>
+  
+  <store>
+    <name>Florentia</name>
+    <city>Alberton</city>
+    <storeId>11043</storeId>
+  </store>
+  
+  <store>
+    <name>Florida</name>
+    <city>Roodepoort</city>
+    <storeId>10693</storeId>
+  </store>
+  
+  <store>
+    <name>Fochville</name>
+    <city>Fochville</city>
+    <storeId>11164</storeId>
+  </store>
+  
+  <store>
+    <name>Fordsburg</name>
+    <city>Johannesburg</city>
+    <storeId>10708</storeId>
+  </store>
+  
+  <store>
+    <name>Fort beaufort</name>
+    <city>Fort Beaufort</city>
+    <storeId>150042</storeId>
+  </store>
+  
+  <store>
+    <name>Forte beaufort</name>
+    <city>Forte Beaufort</city>
+    <storeId>11282</storeId>
+  </store>
+  
+  <store>
+    <name>Fourways crossing</name>
+    <city>Sandton</city>
+    <storeId>10929</storeId>
+  </store>
+  
+  <store>
+    <name>Francis town</name>
+    <city>Francis Town</city>
+    <storeId>10642</storeId>
+  </store>
+  
+  <store>
+    <name>Francois road</name>
+    <city>Durban</city>
+    <storeId>10889</storeId>
+  </store>
+  
+  <store>
+    <name>Frates road</name>
+    <city>Pretoria</city>
+    <storeId>10727</storeId>
+  </store>
+  
+  <store>
+    <name>Gaborone main mall ii</name>
+    <city>Gaborone</city>
+    <storeId>10641</storeId>
+  </store>
+  
+  <store>
+    <name>Gaborone west iii</name>
+    <city>Gaborone</city>
+    <storeId>10640</storeId>
+  </store>
+  
+  <store>
+    <name>Galaxy</name>
+    <city>Pietermaritzburg</city>
+    <storeId>11146</storeId>
+  </store>
+  
+  <store>
+    <name>Galleria mall</name>
+    <city>Amamzintoti</city>
+    <storeId>11222</storeId>
+  </store>
+  
+  <store>
+    <name>Game city gaborone</name>
+    <city>Gaborone</city>
+    <storeId>10643</storeId>
+  </store>
+  
+  <store>
+    <name>Gandhi square</name>
+    <city>Johannesburg</city>
+    <storeId>11142</storeId>
+  </store>
+  
+  <store>
+    <name>Garankuwa</name>
+    <city>Garankuwa</city>
+    <storeId>10888</storeId>
+  </store>
+  
+  <store>
+    <name>Garden route mall</name>
+    <city>George</city>
+    <storeId>11025</storeId>
+  </store>
+  
+  <store>
+    <name>Gardens</name>
+    <city>Cape Town</city>
+    <storeId>10855</storeId>
+  </store>
+  
+  <store>
+    <name>Gatemax</name>
+    <city>Umhlanga</city>
+    <storeId>11279</storeId>
+  </store>
+  
+  <store>
+    <name>Gateway</name>
+    <city>Pretoria</city>
+    <storeId>11179</storeId>
+  </store>
+  
+  <store>
+    <name>Gateway mall</name>
+    <city>Durban</city>
+    <storeId>11011</storeId>
+  </store>
+  
+  <store>
+    <name>Gelvandale pe</name>
+    <city>Port Elizabeth</city>
+    <storeId>10918</storeId>
+  </store>
+  
+  <store>
+    <name>Gelvandale port elizabeth</name>
+    <city>Port Elizabeth</city>
+    <storeId>12050</storeId>
+  </store>
+  
+  <store>
+    <name>George</name>
+    <city>George</city>
+    <storeId>10869</storeId>
+  </store>
+  
+  <store>
+    <name>Germiston</name>
+    <city>Germiston</city>
+    <storeId>10680</storeId>
+  </store>
+  
+  <store>
+    <name>Germiston ii</name>
+    <city>Germiston</city>
+    <storeId>11237</storeId>
+  </store>
+  
+  <store>
+    <name>Gift acres</name>
+    <city>Pretoria</city>
+    <storeId>11008</storeId>
+  </store>
+  
+  <store>
+    <name>Gillespie street</name>
+    <city>Durban</city>
+    <storeId>11038</storeId>
+  </store>
+  
+  <store>
+    <name>Gingindlovu</name>
+    <city>Gingindlovu</city>
+    <storeId>200052</storeId>
+  </store>
+  
+  <store>
+    <name>Giyani</name>
+    <city>Giyani</city>
+    <storeId>10803</storeId>
+  </store>
+  
+  <store>
+    <name>Giyani 2</name>
+    <city>Giyani</city>
+    <storeId>12052</storeId>
+  </store>
+  
+  <store>
+    <name>Glen marais</name>
+    <city>Kempton Park</city>
+    <storeId>11261</storeId>
+  </store>
+  
+  <store>
+    <name>Goldfields mall</name>
+    <city>Welkom</city>
+    <storeId>11259</storeId>
+  </store>
+  
+  <store>
+    <name>Gold reef city casino</name>
+    <city>Gold Reef City</city>
+    <storeId>11074</storeId>
+  </store>
+  
+  <store>
+    <name>Gonubie</name>
+    <city>Eastern Cape</city>
+    <storeId>11114</storeId>
+  </store>
+  
+  <store>
+    <name>Goodwood</name>
+    <city>Cape Town</city>
+    <storeId>10883</storeId>
+  </store>
+  
+  <store>
+    <name>Graaff-reinet</name>
+    <city>Graaff-Reinet</city>
+    <storeId>10998</storeId>
+  </store>
+  
+  <store>
+    <name>Grabouw</name>
+    <city>Grabouw</city>
+    <storeId>10931</storeId>
+  </store>
+  
+  <store>
+    <name>Grahams town ii - shoprite mall</name>
+    <city>Grahams Town</city>
+    <storeId>11100</storeId>
+  </store>
+  
+  <store>
+    <name>Grandwest</name>
+    <city>Thornton</city>
+    <storeId>10950</storeId>
+  </store>
+  
+  <store>
+    <name>Grassy park</name>
+    <city>Grassy Park</city>
+    <storeId>10859</storeId>
+  </store>
+  
+  <store>
+    <name>Grayston drive</name>
+    <city>Johannesburg</city>
+    <storeId>10922</storeId>
+  </store>
+  
+  <store>
+    <name>Greenfields</name>
+    <city>Eastern Cape</city>
+    <storeId>11014</storeId>
+  </store>
+  
+  <store>
+    <name>Greenpoint</name>
+    <city>Cape Town</city>
+    <storeId>11149</storeId>
+  </store>
+  
+  <store>
+    <name>Greenstone</name>
+    <city>Edenvale</city>
+    <storeId>11138</storeId>
+  </store>
+  
+  <store>
+    <name>Grey owl village</name>
+    <city>Centurion</city>
+    <storeId>11252</storeId>
+  </store>
+  
+  <store>
+    <name>Greytown</name>
+    <city>Greytown</city>
+    <storeId>10790</storeId>
+  </store>
+  
+  <store>
+    <name>Groblersdal</name>
+    <city>Groblersdal</city>
+    <storeId>10673</storeId>
+  </store>
+  
+  <store>
+    <name>Gugulethu</name>
+    <city>Gugulethu</city>
+    <storeId>11217</storeId>
+  </store>
+  
+  <store>
+    <name>Hammanskraal kudube</name>
+    <city>Pretoria</city>
+    <storeId>10832</storeId>
+  </store>
+  
+  <store>
+    <name>Hans strydom ferndale</name>
+    <city>Randburg</city>
+    <storeId>10938</storeId>
+  </store>
+  
+  <store>
+    <name>Harding</name>
+    <city>Harding</city>
+    <storeId>10780</storeId>
+  </store>
+  
+  <store>
+    <name>Harrismith</name>
+    <city>Harrismith</city>
+    <storeId>10841</storeId>
+  </store>
+  
+  <store>
+    <name>Hartbeespoort sediba mall</name>
+    <city>Hartbeespoort</city>
+    <storeId>11009</storeId>
+  </store>
+  
+  <store>
+    <name>Hatfield</name>
+    <city>Pretoria</city>
+    <storeId>11201</storeId>
+  </store>
+  
+  <store>
+    <name>Hazeldean square</name>
+    <city>Pretoria</city>
+    <storeId>11091</storeId>
+  </store>
+  
+  <store>
+    <name>Hazyview</name>
+    <city>Hazyview</city>
+    <storeId>10668</storeId>
+  </store>
+  
+  <store>
+    <name>Heidelberg</name>
+    <city>Heidelberg</city>
+    <storeId>10909</storeId>
+  </store>
+  
+  <store>
+    <name>Heiderand</name>
+    <city>Mossel Bay</city>
+    <storeId>11086</storeId>
+  </store>
+  
+  <store>
+    <name>Hemingways mall</name>
+    <city>Vincent</city>
+    <storeId>11225</storeId>
+  </store>
+  
+  <store>
+    <name>Hercules</name>
+    <city>Pretoria</city>
+    <storeId>11180</storeId>
+  </store>
+  
+  <store>
+    <name>Hermanus</name>
+    <city>Hermanus</city>
+    <storeId>10887</storeId>
+  </store>
+  
+  <store>
+    <name>Hermanus 2</name>
+    <city>Sandbaai</city>
+    <storeId>11251</storeId>
+  </store>
+  
+  <store>
+    <name>Heugh road</name>
+    <city>Port Elizabeth</city>
+    <storeId>10941</storeId>
+  </store>
+  
+  <store>
+    <name>Hibberdene</name>
+    <city>Hibberdene</city>
+    <storeId>11012</storeId>
+  </store>
+  
+  <store>
+    <name>Hillbrow ii - highpoint</name>
+    <city>Johannesburg</city>
+    <storeId>10703</storeId>
+  </store>
+  
+  <store>
+    <name>Hillbrow kotze street</name>
+    <city>Hillbrow</city>
+    <storeId>11050</storeId>
+  </store>
+  
+  <store>
+    <name>Hillcrest</name>
+    <city>Pinetown</city>
+    <storeId>10731</storeId>
+  </store>
+  
+  <store>
+    <name>Hill street pinetown</name>
+    <city>Pinetown</city>
+    <storeId>10901</storeId>
+  </store>
+  
+  <store>
+    <name>Hlabisa</name>
+    <city>Hlabisa</city>
+    <storeId>11063</storeId>
+  </store>
+  
+  <store>
+    <name>Hluhluwe</name>
+    <city>Hluhluwe</city>
+    <storeId>11031</storeId>
+  </store>
+  
+  <store>
+    <name>Hooper lane</name>
+    <city>Durban</city>
+    <storeId>10962</storeId>
+  </store>
+  
+  <store>
+    <name>Hout bay</name>
+    <city>Hout Bay</city>
+    <storeId>10935</storeId>
+  </store>
+  
+  <store>
+    <name>Howick</name>
+    <city>Howick</city>
+    <storeId>11059</storeId>
+  </store>
+  
+  <store>
+    <name>Hulett street</name>
+    <city>Stanger</city>
+    <storeId>10764</storeId>
+  </store>
+  
+  <store>
+    <name>Idube village</name>
+    <city>Durban</city>
+    <storeId>11032</storeId>
+  </store>
+  
+  <store>
+    <name>Idutywa</name>
+    <city>Idutywa</city>
+    <storeId>10655</storeId>
+  </store>
+  
+  <store>
+    <name>Inanda</name>
+    <city>Inanda</city>
+    <storeId>11140</storeId>
+  </store>
+  
+  <store>
+    <name>Isandovale</name>
+    <city>Kempton Park</city>
+    <storeId>10923</storeId>
+  </store>
+  
+  <store>
+    <name>Isipingo rail</name>
+    <city>Isipingo</city>
+    <storeId>10793</storeId>
+  </store>
+  
+  <store>
+    <name>Isipingo shell garage</name>
+    <city>Isipingo</city>
+    <storeId>10789</storeId>
+  </store>
+  
+  <store>
+    <name>Ixopo</name>
+    <city>Ixopo</city>
+    <storeId>10758</storeId>
+  </store>
+  
+  <store>
+    <name>Jabulani mall</name>
+    <city>Soweto</city>
+    <storeId>11058</storeId>
+  </store>
+  
+  <store>
+    <name>Jane furse</name>
+    <city>Jane Furse</city>
+    <storeId>11195</storeId>
+  </store>
+  
+  <store>
+    <name>Jean village</name>
+    <city>Centurion</city>
+    <storeId>11030</storeId>
+  </store>
+  
+  <store>
+    <name>Jefferey&#39;s bay ii</name>
+    <city>Jeffreys Bay</city>
+    <storeId>11145</storeId>
+  </store>
+  
+  <store>
+    <name>Johannesburg cbd c/o joubert &amp; president street</name>
+    <city>Johannesburg</city>
+    <storeId>10696</storeId>
+  </store>
+  
+  <store>
+    <name>Johannesburg cbd hoek street</name>
+    <city>Johannesburg</city>
+    <storeId>10694</storeId>
+  </store>
+  
+  <store>
+    <name>Johannesburg park station</name>
+    <city>Johannesburg</city>
+    <storeId>10692</storeId>
+  </store>
+  
+  <store>
+    <name>Joubert park</name>
+    <city>Johannesburg</city>
+    <storeId>11127</storeId>
+  </store>
+  
+  <store>
+    <name>Jozini</name>
+    <city>Jozini</city>
+    <storeId>11153</storeId>
+  </store>
+  
+  <store>
+    <name>Jubilee mall</name>
+    <city>Hammanskraal</city>
+    <storeId>11277</storeId>
+  </store>
+  
+  <store>
+    <name>Kabega park</name>
+    <city>Port Elizabeth</city>
+    <storeId>10656</storeId>
+  </store>
+  
+  <store>
+    <name>Kabokweni plaza</name>
+    <city>White River</city>
+    <storeId>11272</storeId>
+  </store>
+  
+  <store>
+    <name>Kagiso mall</name>
+    <city>Krugersdorp</city>
+    <storeId>12036</storeId>
+  </store>
+  
+  <store>
+    <name>Kalahari mall</name>
+    <city>Coastal</city>
+    <storeId>160085</storeId>
+  </store>
+  
+  <store>
+    <name>Kasane</name>
+    <city>Gaborone</city>
+    <storeId>10645</storeId>
+  </store>
+  
+  <store>
+    <name>Katatura</name>
+    <city>Windhoek</city>
+    <storeId>11295</storeId>
+  </store>
+  
+  <store>
+    <name>Katatura shoprite centre</name>
+    <city>Windhoek</city>
+    <storeId>11298</storeId>
+  </store>
+  
+  <store>
+    <name>Kathu</name>
+    <city>Kathu</city>
+    <storeId>11083</storeId>
+  </store>
+  
+  <store>
+    <name>Katlehong</name>
+    <city>Katlehong</city>
+    <storeId>10707</storeId>
+  </store>
+  
+  <store>
+    <name>Kempton park</name>
+    <city>Kempton Park</city>
+    <storeId>10686</storeId>
+  </store>
+  
+  <store>
+    <name>Kempton park cbd</name>
+    <city>Kempton Park</city>
+    <storeId>11094</storeId>
+  </store>
+  
+  <store>
+    <name>Kenilworth</name>
+    <city>Johannesburg</city>
+    <storeId>10706</storeId>
+  </store>
+  
+  <store>
+    <name>Kensington b</name>
+    <city>Kensington</city>
+    <storeId>11232</storeId>
+  </store>
+  
+  <store>
+    <name>Key west (krgd 2) - duplicate carnival city</name>
+    <city>Brakpan</city>
+    <storeId>10940</storeId>
+  </store>
+  
+  <store>
+    <name>Khayelitsha</name>
+    <city>Khayelitsha</city>
+    <storeId>11051</storeId>
+  </store>
+  
+  <store>
+    <name>Kimberley c/o george &amp; bulfontein</name>
+    <city>Kimberley</city>
+    <storeId>10801</storeId>
+  </store>
+  
+  <store>
+    <name>Kimberley c/o transvaal &amp; cecil sussman roads</name>
+    <city>Kimberley</city>
+    <storeId>11218</storeId>
+  </store>
+  
+  <store>
+    <name>Kimberley monument heights</name>
+    <city>Kimberley</city>
+    <storeId>11042</storeId>
+  </store>
+  
+  <store>
+    <name>King shaka airport</name>
+    <city>Durban</city>
+    <storeId>11239</storeId>
+  </store>
+  
+  <store>
+    <name>King williams town</name>
+    <city>King Williams Town</city>
+    <storeId>10649</storeId>
+  </store>
+  
+  <store>
+    <name>King williams town - 19 smith street</name>
+    <city>King Williams Town</city>
+    <storeId>150043</storeId>
+  </store>
+  
+  <store>
+    <name>King williams town - corner cathcart &amp; mary streets</name>
+    <city>King Williams Town</city>
+    <storeId>11166</storeId>
+  </store>
+  
+  <store>
+    <name>Klerksdorp i</name>
+    <city>Klerksdorp</city>
+    <storeId>10819</storeId>
+  </store>
+  
+  <store>
+    <name>Klerksdorp ii c/o main reef &amp; latham streets</name>
+    <city>Klerksdorp</city>
+    <storeId>10934</storeId>
+  </store>
+  
+  <store>
+    <name>Klerksdorp iii elandsheuwel</name>
+    <city>Klerksdorp</city>
+    <storeId>11192</storeId>
+  </store>
+  
+  <store>
+    <name>Kloof</name>
+    <city>Kloof</city>
+    <storeId>10776</storeId>
+  </store>
+  
+  <store>
+    <name>Knysna</name>
+    <city>Knysna</city>
+    <storeId>10854</storeId>
+  </store>
+  
+  <store>
+    <name>Kokstad i hope street</name>
+    <city>Kokstad</city>
+    <storeId>10757</storeId>
+  </store>
+  
+  <store>
+    <name>Kokstad ii main street</name>
+    <city>Kokstad</city>
+    <storeId>10896</storeId>
+  </store>
+  
+  <store>
+    <name>Kolonnade shopping centre</name>
+    <city>Pretoria</city>
+    <storeId>10726</storeId>
+  </store>
+  
+  <store>
+    <name>Komatipoort</name>
+    <city>Komatipoort</city>
+    <storeId>11120</storeId>
+  </store>
+  
+  <store>
+    <name>Kraaifontein</name>
+    <city>Kraaifontein</city>
+    <storeId>10899</storeId>
+  </store>
+  
+  <store>
+    <name>Kriel</name>
+    <city>Kriel</city>
+    <storeId>11191</storeId>
+  </store>
+  
+  <store>
+    <name>Kroonstad</name>
+    <city>Kroonstad</city>
+    <storeId>10838</storeId>
+  </store>
+  
+  <store>
+    <name>Krugersdorp</name>
+    <city>Krugersdorp</city>
+    <storeId>10719</storeId>
+  </store>
+  
+  <store>
+    <name>Krugersdorp key west</name>
+    <city>Krugersdorp</city>
+    <storeId>10939</storeId>
+  </store>
+  
+  <store>
+    <name>Kuilsriver</name>
+    <city>Kuilsriver</city>
+    <storeId>10863</storeId>
+  </store>
+  
+  <store>
+    <name>Kuruman i, c/o church &amp; main streets</name>
+    <city>Kuruman</city>
+    <storeId>10800</storeId>
+  </store>
+  
+  <store>
+    <name>Kuruman ii, livingstone street</name>
+    <city>Kuruman</city>
+    <storeId>11096</storeId>
+  </store>
+  
+  <store>
+    <name>Kwaggafontein</name>
+    <city>Kwaggafontein</city>
+    <storeId>10906</storeId>
+  </store>
+  
+  <store>
+    <name>Kwa mashu township centre</name>
+    <city>KwaMashu</city>
+    <storeId>10750</storeId>
+  </store>
+  
+  <store>
+    <name>Kwanobuhle shopping centre</name>
+    <city>Kwanobuhle</city>
+    <storeId>11246</storeId>
+  </store>
+  
+  <store>
+    <name>Kwazekhele new brighton</name>
+    <city>Port Elizabeth</city>
+    <storeId>10647</storeId>
+  </store>
+  
+  <store>
+    <name>Kyalami downs</name>
+    <city>Midrand</city>
+    <storeId>11174</storeId>
+  </store>
+  
+  <store>
+    <name>Ladybrand</name>
+    <city>Ladybrand</city>
+    <storeId>10987</storeId>
+  </store>
+  
+  <store>
+    <name>Ladysmith</name>
+    <city>Ladysmith</city>
+    <storeId>10740</storeId>
+  </store>
+  
+  <store>
+    <name>Ladysmith murchinson mall</name>
+    <city>Ladysmith</city>
+    <storeId>10729</storeId>
+  </store>
+  
+  <store>
+    <name>Lambton</name>
+    <city>Germiston</city>
+    <storeId>11054</storeId>
+  </store>
+  
+  <store>
+    <name>Langebaan</name>
+    <city>Langebaan</city>
+    <storeId>11170</storeId>
+  </store>
+  
+  <store>
+    <name>Langenhoven park</name>
+    <city>Bloemfontein</city>
+    <storeId>160002</storeId>
+  </store>
+  
+  <store>
+    <name>Lebowakgomo</name>
+    <city>Lebowakgomo</city>
+    <storeId>11109</storeId>
+  </store>
+  
+  <store>
+    <name>Lenasia</name>
+    <city>Johannesburg</city>
+    <storeId>10714</storeId>
+  </store>
+  
+  <store>
+    <name>Lenasia the trade route shopping centre</name>
+    <city>Lenasia</city>
+    <storeId>11067</storeId>
+  </store>
+  
+  <store>
+    <name>Lephalale</name>
+    <city>Ellisras</city>
+    <storeId>10809</storeId>
+  </store>
+  
+  <store>
+    <name>Lephalale ii</name>
+    <city>Lephalale</city>
+    <storeId>11269</storeId>
+  </store>
+  
+  <store>
+    <name>Letlhabile</name>
+    <city>Letlhabile</city>
+    <storeId>11133</storeId>
+  </store>
+  
+  <store>
+    <name>Lichtenburg</name>
+    <city>Lichtenburg</city>
+    <storeId>10825</storeId>
+  </store>
+  
+  <store>
+    <name>Lister street</name>
+    <city>Johannesburg</city>
+    <storeId>150045</storeId>
+  </store>
+  
+  <store>
+    <name>Longbeach</name>
+    <city>Cape Town</city>
+    <storeId>10951</storeId>
+  </store>
+  
+  <store>
+    <name>Longmarket street</name>
+    <city>Pietermaritzburg</city>
+    <storeId>11088</storeId>
+  </store>
+  
+  <store>
+    <name>Long street</name>
+    <city>Cape Town</city>
+    <storeId>11018</storeId>
+  </store>
+  
+  <store>
+    <name>Lord charles / waterstone</name>
+    <city>Somerset West</city>
+    <storeId>11167</storeId>
+  </store>
+  
+  <store>
+    <name>Louis trichardt c/o grobler &amp; trichardt streets</name>
+    <city>Louis Trichardt</city>
+    <storeId>10812</storeId>
+  </store>
+  
+  <store>
+    <name>Louis tricharoadt twin city</name>
+    <city>Louis Trichardt</city>
+    <storeId>10815</storeId>
+  </store>
+  
+  <store>
+    <name>Lusikisiki</name>
+    <city>Lusikisiki</city>
+    <storeId>10659</storeId>
+  </store>
+  
+  <store>
+    <name>Lydenburg</name>
+    <city>Lydenburg</city>
+    <storeId>10936</storeId>
+  </store>
+  
+  <store>
+    <name>Lynnwood road</name>
+    <city>Pretoria</city>
+    <storeId>10969</storeId>
+  </store>
+  
+  <store>
+    <name>Lyttelton centurion</name>
+    <city>Centurion</city>
+    <storeId>11181</storeId>
+  </store>
+  
+  <store>
+    <name>Maake</name>
+    <city>Lydenburg</city>
+    <storeId>11155</storeId>
+  </store>
+  
+  <store>
+    <name>Mabopane mall</name>
+    <city>Pretoria</city>
+    <storeId>10823</storeId>
+  </store>
+  
+  <store>
+    <name>Mabopane north</name>
+    <city>Pretoria</city>
+    <storeId>10833</storeId>
+  </store>
+  
+  <store>
+    <name>Maclear</name>
+    <city>Maclear</city>
+    <storeId>11147</storeId>
+  </store>
+  
+  <store>
+    <name>Mafikeng</name>
+    <city>Mafikeng</city>
+    <storeId>10826</storeId>
+  </store>
+  
+  <store>
+    <name>Mafikeng crossing</name>
+    <city>Mafikeng</city>
+    <storeId>11010</storeId>
+  </store>
+  
+  <store>
+    <name>Mahube valley</name>
+    <city>Pretoria</city>
+    <storeId>11150</storeId>
+  </store>
+  
+  <store>
+    <name>Maitland</name>
+    <city>Maitland</city>
+    <storeId>10921</storeId>
+  </store>
+  
+  <store>
+    <name>Malelane</name>
+    <city>Malelane</city>
+    <storeId>10997</storeId>
+  </store>
+  
+  <store>
+    <name>Malmesbury</name>
+    <city>Malmesbury</city>
+    <storeId>10850</storeId>
+  </store>
+  
+  <store>
+    <name>Malvern</name>
+    <city>Johannesburg</city>
+    <storeId>10690</storeId>
+  </store>
+  
+  <store>
+    <name>Mamelodi crossing</name>
+    <city>Pretoria</city>
+    <storeId>10972</storeId>
+  </store>
+  
+  <store>
+    <name>Mandela square</name>
+    <city>Sebokeng</city>
+    <storeId>12037</storeId>
+  </store>
+  
+  <store>
+    <name>Mandini</name>
+    <city>Mandini</city>
+    <storeId>10925</storeId>
+  </store>
+  
+  <store>
+    <name>Mangaung</name>
+    <city>Bloemfontein</city>
+    <storeId>11125</storeId>
+  </store>
+  
+  <store>
+    <name>Manguzi</name>
+    <city>Manguzi</city>
+    <storeId>11242</storeId>
+  </store>
+  
+  <store>
+    <name>Mankweng</name>
+    <city>Mankweng</city>
+    <storeId>11093</storeId>
+  </store>
+  
+  <store>
+    <name>Mansfield road eloffsdal</name>
+    <city>Pretoria</city>
+    <storeId>10723</storeId>
+  </store>
+  
+  <store>
+    <name>Mansfield road, eloffsdal</name>
+    <city>Pretoria</city>
+    <storeId>12056</storeId>
+  </store>
+  
+  <store>
+    <name>Manzini</name>
+    <city>Manzini</city>
+    <storeId>11302</storeId>
+  </store>
+  
+  <store>
+    <name>Manzini c/o ngwane &amp; low streets</name>
+    <city>Manzini</city>
+    <storeId>11305</storeId>
+  </store>
+  
+  <store>
+    <name>Maponya mall</name>
+    <city>Soweto</city>
+    <storeId>11098</storeId>
+  </store>
+  
+  <store>
+    <name>Maputo</name>
+    <city>Maputo</city>
+    <storeId>11288</storeId>
+  </store>
+  
+  <store>
+    <name>Maputo avenida eduardo  mondlane</name>
+    <city>Maputo</city>
+    <storeId>11290</storeId>
+  </store>
+  
+  <store>
+    <name>Maputo avenida eduardo mondlane 2</name>
+    <city>Maputo</city>
+    <storeId>11289</storeId>
+  </store>
+  
+  <store>
+    <name>Marble hall</name>
+    <city>Marble Hall</city>
+    <storeId>10816</storeId>
+  </store>
+  
+  <store>
+    <name>Marburg</name>
+    <city>Port Shepstone</city>
+    <storeId>10785</storeId>
+  </store>
+  
+  <store>
+    <name>Margate</name>
+    <city>Margate</city>
+    <storeId>10744</storeId>
+  </store>
+  
+  <store>
+    <name>Marikana</name>
+    <city>Marikana</city>
+    <storeId>11240</storeId>
+  </store>
+  
+  <store>
+    <name>Market street, east london</name>
+    <city>Eastern Cape</city>
+    <storeId>12049</storeId>
+  </store>
+  
+  <store>
+    <name>Marlboro gardens</name>
+    <city>Johannesburg</city>
+    <storeId>11249</storeId>
+  </store>
+  
+  <store>
+    <name>Maseru cathedral</name>
+    <city>Maseru</city>
+    <storeId>11285</storeId>
+  </store>
+  
+  <store>
+    <name>Maseru kingsway road</name>
+    <city>Maseru</city>
+    <storeId>11284</storeId>
+  </store>
+  
+  <store>
+    <name>Matatiele long street</name>
+    <city>Matatiele</city>
+    <storeId>11210</storeId>
+  </store>
+  
+  <store>
+    <name>Matatiele station &amp; jagger street</name>
+    <city>Matatiele</city>
+    <storeId>10763</storeId>
+  </store>
+  
+  <store>
+    <name>Matola</name>
+    <city>Matola</city>
+    <storeId>11291</storeId>
+  </store>
+  
+  <store>
+    <name>Matsapha</name>
+    <city>Matsapha</city>
+    <storeId>11303</storeId>
+  </store>
+  
+  <store>
+    <name>Maynard mall</name>
+    <city>Wynberg</city>
+    <storeId>10944</storeId>
+  </store>
+  
+  <store>
+    <name>Mbabane</name>
+    <city>Mbabane</city>
+    <storeId>11304</storeId>
+  </store>
+  
+  <store>
+    <name>Mdantsane mall</name>
+    <city>Mdantsane</city>
+    <storeId>11123</storeId>
+  </store>
+  
+  <store>
+    <name>Mdantsane taxi city</name>
+    <city>Mdantsane</city>
+    <storeId>11089</storeId>
+  </store>
+  
+  <store>
+    <name>Meer-en-see</name>
+    <city>Richards Bay</city>
+    <storeId>11197</storeId>
+  </store>
+  
+  <store>
+    <name>Melkbos</name>
+    <city>Melkbos</city>
+    <storeId>10954</storeId>
+  </store>
+  
+  <store>
+    <name>Melmoth</name>
+    <city>Melmoth</city>
+    <storeId>11035</storeId>
+  </store>
+  
+  <store>
+    <name>Melville kingsway</name>
+    <city>Johannesburg</city>
+    <storeId>10697</storeId>
+  </store>
+  
+  <store>
+    <name>Menlyn park shopping centre</name>
+    <city>Pretoria</city>
+    <storeId>11182</storeId>
+  </store>
+  
+  <store>
+    <name>Merebank</name>
+    <city>Durban</city>
+    <storeId>10893</storeId>
+  </store>
+  
+  <store>
+    <name>Meredale</name>
+    <city>Johannesburg</city>
+    <storeId>10973</storeId>
+  </store>
+  
+  <store>
+    <name>Messina</name>
+    <city>Messina</city>
+    <storeId>10811</storeId>
+  </store>
+  
+  <store>
+    <name>Meyersdal</name>
+    <city>Alberton</city>
+    <storeId>11081</storeId>
+  </store>
+  
+  <store>
+    <name>Meyerton</name>
+    <city>Meyerton</city>
+    <storeId>10684</storeId>
+  </store>
+  
+  <store>
+    <name>Mid city</name>
+    <city>Pretoria</city>
+    <storeId>11223</storeId>
+  </store>
+  
+  <store>
+    <name>Middelburg</name>
+    <city>Middelburg</city>
+    <storeId>10677</storeId>
+  </store>
+  
+  <store>
+    <name>Middelburg 3</name>
+    <city>Middelburg</city>
+    <storeId>11211</storeId>
+  </store>
+  
+  <store>
+    <name>Middelburg east</name>
+    <city>Middelburg</city>
+    <storeId>10975</storeId>
+  </store>
+  
+  <store>
+    <name>Midlands mall</name>
+    <city>Pietermaritzburg</city>
+    <storeId>10978</storeId>
+  </store>
+  
+  <store>
+    <name>Midrand</name>
+    <city>Midrand</city>
+    <storeId>11183</storeId>
+  </store>
+  
+  <store>
+    <name>Midrand taxi rank</name>
+    <city>Midrand</city>
+    <storeId>11173</storeId>
+  </store>
+  
+  <store>
+    <name>Milnerton</name>
+    <city>Cape Town</city>
+    <storeId>10885</storeId>
+  </store>
+  
+  <store>
+    <name>Mindalore</name>
+    <city>Krugersdorp</city>
+    <storeId>10722</storeId>
+  </store>
+  
+  <store>
+    <name>Mkhuhlu mall</name>
+    <city>Mkhuhlu</city>
+    <storeId>200053</storeId>
+  </store>
+  
+  <store>
+    <name>Mkuze</name>
+    <city>Mkuze</city>
+    <storeId>11019</storeId>
+  </store>
+  
+  <store>
+    <name>Mmabatho</name>
+    <city>Mafikeng</city>
+    <storeId>10827</storeId>
+  </store>
+  
+  <store>
+    <name>Mobeni grimsby road</name>
+    <city>Mobeni</city>
+    <storeId>10891</storeId>
+  </store>
+  
+  <store>
+    <name>Modimolle nylstroom</name>
+    <city>Modimolle</city>
+    <storeId>11015</storeId>
+  </store>
+  
+  <store>
+    <name>Modjaji</name>
+    <city>Modjaji</city>
+    <storeId>11274</storeId>
+  </store>
+  
+  <store>
+    <name>Mokopane</name>
+    <city>Mokopane</city>
+    <storeId>10805</storeId>
+  </store>
+  
+  <store>
+    <name>Mokopane c/o thabo mbeki &amp; kruger streets</name>
+    <city>Mokopane</city>
+    <storeId>11023</storeId>
+  </store>
+  
+  <store>
+    <name>Molepolole</name>
+    <city>Gaborone</city>
+    <storeId>10644</storeId>
+  </store>
+  
+  <store>
+    <name>Moloto</name>
+    <city>Moloto</city>
+    <storeId>10976</storeId>
+  </store>
+  
+  <store>
+    <name>Montclaire</name>
+    <city>Durban</city>
+    <storeId>10725</storeId>
+  </store>
+  
+  <store>
+    <name>Montecasino</name>
+    <city>Sandton</city>
+    <storeId>10946</storeId>
+  </store>
+  
+  <store>
+    <name>Montrose</name>
+    <city>Harrismith</city>
+    <storeId>10955</storeId>
+  </store>
+  
+  <store>
+    <name>Mookgopong (naboomspruit)</name>
+    <city>Naboomspruit</city>
+    <storeId>10804</storeId>
+  </store>
+  
+  <store>
+    <name>Moorton</name>
+    <city>Chatsworth</city>
+    <storeId>11278</storeId>
+  </store>
+  
+  <store>
+    <name>Moratiwa</name>
+    <city>Moratiwa</city>
+    <storeId>11104</storeId>
+  </store>
+  
+  <store>
+    <name>Moreleta park</name>
+    <city>Pretoria</city>
+    <storeId>11136</storeId>
+  </store>
+  
+  <store>
+    <name>Mosselbay</name>
+    <city>Mossel Bay</city>
+    <storeId>10872</storeId>
+  </store>
+  
+  <store>
+    <name>Mount frere</name>
+    <city>Mount Frere</city>
+    <storeId>10648</storeId>
+  </store>
+  
+  <store>
+    <name>Moutse mall</name>
+    <city>Dennilton</city>
+    <storeId>200050</storeId>
+  </store>
+  
+  <store>
+    <name>Mowbray rondebosch shopping centre</name>
+    <city>Cape Town</city>
+    <storeId>10862</storeId>
+  </store>
+  
+  <store>
+    <name>Mtubatuba john ross highway</name>
+    <city>Mtubatuba</city>
+    <storeId>11087</storeId>
+  </store>
+  
+  <store>
+    <name>Mtubatuba taxi city</name>
+    <city>Mtubatuba</city>
+    <storeId>10787</storeId>
+  </store>
+  
+  <store>
+    <name>Musgrave centre</name>
+    <city>Musgrave</city>
+    <storeId>11267</storeId>
+  </store>
+  
+  <store>
+    <name>N1 city</name>
+    <city>Cape Town</city>
+    <storeId>11117</storeId>
+  </store>
+  
+  <store>
+    <name>N1 city mall</name>
+    <city>Cape Town</city>
+    <storeId>11200</storeId>
+  </store>
+  
+  <store>
+    <name>Namakgale crossing</name>
+    <city>Namakgale</city>
+    <storeId>150046</storeId>
+  </store>
+  
+  <store>
+    <name>Nelspruit orchards mall</name>
+    <city>Nelspruit</city>
+    <storeId>10669</storeId>
+  </store>
+  
+  <store>
+    <name>Nelspruit plaza</name>
+    <city>Nelspruit</city>
+    <storeId>11196</storeId>
+  </store>
+  
+  <store>
+    <name>Nelspruit voortrekker street</name>
+    <city>Nelspruit</city>
+    <storeId>10671</storeId>
+  </store>
+  
+  <store>
+    <name>Newcastle</name>
+    <city>Newcastle</city>
+    <storeId>11317</storeId>
+  </store>
+  
+  <store>
+    <name>Newcastle II</name>
+    <city>Newcastle</city>
+    <storeId>11318</storeId>
+  </store>
+  
+  <store>
+    <name>Newcastle Mall</name>
+    <city>Newcastle</city>
+    <storeId>11432</storeId>
+  </store>
+  
+  <store>
+    <name>New germany</name>
+    <city>New Germany</city>
+    <storeId>10739</storeId>
+  </store>
+  
+  <store>
+    <name>Newlands</name>
+    <city>Cape Town</city>
+    <storeId>10772</storeId>
+  </store>
+  
+  <store>
+    <name>New road</name>
+    <city>Midrand</city>
+    <storeId>11020</storeId>
+  </store>
+  
+  <store>
+    <name>Newton park</name>
+    <city>Port Elizabeth</city>
+    <storeId>10657</storeId>
+  </store>
+  
+  <store>
+    <name>Newtown mall</name>
+    <city>Johannesburg</city>
+    <storeId>11161</storeId>
+  </store>
+  
+  <store>
+    <name>Nhlangano</name>
+    <city>Nhlangano</city>
+    <storeId>11306</storeId>
+  </store>
+  
+  <store>
+    <name>Nigel</name>
+    <city>Nigel</city>
+    <storeId>10717</storeId>
+  </store>
+  
+  <store>
+    <name>Nigel ii c/o rhodes &amp; nigel springs roads</name>
+    <city>Nigel</city>
+    <storeId>11168</storeId>
+  </store>
+  
+  <store>
+    <name>Nkomazi plaza</name>
+    <city>Kamaqhekeza Township</city>
+    <storeId>11159</storeId>
+  </store>
+  
+  <store>
+    <name>Nongoma</name>
+    <city>Nongoma</city>
+    <storeId>11060</storeId>
+  </store>
+  
+  <store>
+    <name>Noordheuwel</name>
+    <city>Krugersdorp</city>
+    <storeId>11071</storeId>
+  </store>
+  
+  <store>
+    <name>Northam</name>
+    <city>Northam</city>
+    <storeId>11066</storeId>
+  </store>
+  
+  <store>
+    <name>North beach - mangrove centre</name>
+    <city>Durban</city>
+    <storeId>11190</storeId>
+  </store>
+  
+  <store>
+    <name>North end (pe cbd)</name>
+    <city>Port Elizabeth</city>
+    <storeId>10912</storeId>
+  </store>
+  
+  <store>
+    <name>Northmead</name>
+    <city>Johannesburg</city>
+    <storeId>10713</storeId>
+  </store>
+  
+  <store>
+    <name>Northway</name>
+    <city>Durban</city>
+    <storeId>10732</storeId>
+  </store>
+  
+  <store>
+    <name>Nqutu</name>
+    <city>Nqutu</city>
+    <storeId>10778</storeId>
+  </store>
+  
+  <store>
+    <name>Oakdale</name>
+    <city>Tygervalley</city>
+    <storeId>10875</storeId>
+  </store>
+  
+  <store>
+    <name>Oakdene</name>
+    <city>Johannesburg</city>
+    <storeId>10933</storeId>
+  </store>
+  
+  <store>
+    <name>Observatory</name>
+    <city>Cape Town</city>
+    <storeId>11208</storeId>
+  </store>
+  
+  <store>
+    <name>Old main road</name>
+    <city>Pinetown</city>
+    <storeId>10965</storeId>
+  </store>
+  
+  <store>
+    <name>Olivenhoutbosch</name>
+    <city>Centurion</city>
+    <storeId>150047</storeId>
+  </store>
+  
+  <store>
+    <name>Ondangwa</name>
+    <city>Ondangwa</city>
+    <storeId>11299</storeId>
+  </store>
+  
+  <store>
+    <name>Ontdekkers park</name>
+    <city>Roodepoort</city>
+    <storeId>10683</storeId>
+  </store>
+  
+  <store>
+    <name>Orange farm</name>
+    <city>Orange Farm</city>
+    <storeId>11029</storeId>
+  </store>
+  
+  <store>
+    <name>Orange grove</name>
+    <city>Orange Grove</city>
+    <storeId>10681</storeId>
+  </store>
+  
+  <store>
+    <name>Orkney</name>
+    <city>Orkney</city>
+    <storeId>10830</storeId>
+  </store>
+  
+  <store>
+    <name>Orlando</name>
+    <city>Soweto</city>
+    <storeId>11160</storeId>
+  </store>
+  
+  <store>
+    <name>Or tambo international airport departures</name>
+    <city>Johannesburg</city>
+    <storeId>10966</storeId>
+  </store>
+  
+  <store>
+    <name>Oshakati</name>
+    <city>Oshakati</city>
+    <storeId>11292</storeId>
+  </store>
+  
+  <store>
+    <name>Oshakati first wall shopping centre</name>
+    <city>Oshakati</city>
+    <storeId>11300</storeId>
+  </store>
+  
+  <store>
+    <name>Oudtshoorn</name>
+    <city>Oudtshoorn</city>
+    <storeId>10882</storeId>
+  </store>
+  
+  <store>
+    <name>Overport</name>
+    <city>Durban</city>
+    <storeId>10734</storeId>
+  </store>
+  
+  <store>
+    <name>Paarl eazy</name>
+    <city>Paarl</city>
+    <storeId>10691</storeId>
+  </store>
+  
+  <store>
+    <name>Paarl main street</name>
+    <city>Paarl</city>
+    <storeId>10853</storeId>
+  </store>
+  
+  <store>
+    <name>Palms</name>
+    <city>Pretoria</city>
+    <storeId>11176</storeId>
+  </store>
+  
+  <store>
+    <name>Palm springs</name>
+    <city>Orange Farm</city>
+    <storeId>12038</storeId>
+  </store>
+  
+  <store>
+    <name>Parade cape town cbd</name>
+    <city>Cape Town</city>
+    <storeId>10857</storeId>
+  </store>
+  
+  <store>
+    <name>Paradise valley</name>
+    <city>Pinetown</city>
+    <storeId>11005</storeId>
+  </store>
+  
+  <store>
+    <name>Park central easy</name>
+    <city>Johannesburg</city>
+    <storeId>10981</storeId>
+  </store>
+  
+  <store>
+    <name>Parklands</name>
+    <city>Cape Town</city>
+    <storeId>11115</storeId>
+  </store>
+  
+  <store>
+    <name>Park station 2</name>
+    <city>Johannesburg</city>
+    <storeId>12076</storeId>
+  </store>
+  
+  <store>
+    <name>Parkstation 2</name>
+    <city>Johannesburg</city>
+    <storeId>11718</storeId>
+  </store>
+  
+  <store>
+    <name>Parow</name>
+    <city>Parow</city>
+    <storeId>10856</storeId>
+  </store>
+  
+  <store>
+    <name>Parow mall</name>
+    <city>Parow</city>
+    <storeId>11141</storeId>
+  </store>
+  
+  <store>
+    <name>Parys</name>
+    <city>Parys</city>
+    <storeId>10842</storeId>
+  </store>
+  
+  <store>
+    <name>Paul kruger</name>
+    <city>Pretoria</city>
+    <storeId>11203</storeId>
+  </store>
+  
+  <store>
+    <name>Pavillion durban</name>
+    <city>Durban</city>
+    <storeId>10919</storeId>
+  </store>
+  
+  <store>
+    <name>Peppergrove mall</name>
+    <city>Grahams Town</city>
+    <storeId>11228</storeId>
+  </store>
+  
+  <store>
+    <name>Phalaborwa</name>
+    <city>Phalaborwa</city>
+    <storeId>10814</storeId>
+  </store>
+  
+  <store>
+    <name>Philip nel park</name>
+    <city>Pretoria</city>
+    <storeId>11233</storeId>
+  </store>
+  
+  <store>
+    <name>Philippi</name>
+    <city>Philippi</city>
+    <storeId>11198</storeId>
+  </store>
+  
+  <store>
+    <name>Phoenix 11</name>
+    <city>Phoenix</city>
+    <storeId>10767</storeId>
+  </store>
+  
+  <store>
+    <name>Phoenix northern drive</name>
+    <city>Phoenix</city>
+    <storeId>11065</storeId>
+  </store>
+  
+  <store>
+    <name>Phoenix republican centre</name>
+    <city>Phoenix</city>
+    <storeId>10753</storeId>
+  </store>
+  
+  <store>
+    <name>Phoenix white house</name>
+    <city>Phoenix</city>
+    <storeId>10788</storeId>
+  </store>
+  
+  <store>
+    <name>Phumalani mall</name>
+    <city>Tembisa</city>
+    <storeId>11156</storeId>
+  </store>
+  
+  <store>
+    <name>Phuthadijaba shopping centre</name>
+    <city>Phuthaditjhaba</city>
+    <storeId>11121</storeId>
+  </store>
+  
+  <store>
+    <name>Phuthaditjhaba bus rank</name>
+    <city>Phuthaditjhaba</city>
+    <storeId>11110</storeId>
+  </store>
+  
+  <store>
+    <name>Pietermaritz street eazy</name>
+    <city>Pietermaritzburg</city>
+    <storeId>10995</storeId>
+  </store>
+  
+  <store>
+    <name>Piet retief</name>
+    <city>Piet Retief</city>
+    <storeId>10672</storeId>
+  </store>
+  
+  <store>
+    <name>Piet retief ii, woodhill shopping centre</name>
+    <city>Piet Retief</city>
+    <storeId>11129</storeId>
+  </store>
+  
+  <store>
+    <name>Piggs peak</name>
+    <city>Hlohho District</city>
+    <storeId>11308</storeId>
+  </store>
+  
+  <store>
+    <name>Pinecrest</name>
+    <city>Pinetown</city>
+    <storeId>11207</storeId>
+  </store>
+  
+  <store>
+    <name>Pine parkade</name>
+    <city>Durban</city>
+    <storeId>10762</storeId>
+  </store>
+  
+  <store>
+    <name>Pinetown easy - pine springs centre</name>
+    <city>Pinetown</city>
+    <storeId>10743</storeId>
+  </store>
+  
+  <store>
+    <name>Pinetown ii - old main road</name>
+    <city>Pinetown</city>
+    <storeId>10766</storeId>
+  </store>
+  
+  <store>
+    <name>Pinetown taxi rank</name>
+    <city>Pinetown</city>
+    <storeId>11283</storeId>
+  </store>
+  
+  <store>
+    <name>Pioneer shopping centre</name>
+    <city>Maseru</city>
+    <storeId>11287</storeId>
+  </store>
+  
+  <store>
+    <name>Plattekloof village</name>
+    <city>Cape Town</city>
+    <storeId>200047</storeId>
+  </store>
+  
+  <store>
+    <name>Plettenberg bay market square</name>
+    <city>Plettenberg Bay</city>
+    <storeId>10963</storeId>
+  </store>
+  
+  <store>
+    <name>Plumstead</name>
+    <city>Cape Town</city>
+    <storeId>10877</storeId>
+  </store>
+  
+  <store>
+    <name>Point road</name>
+    <city>Durban</city>
+    <storeId>10760</storeId>
+  </store>
+  
+  <store>
+    <name>Polokwane c/o rissik &amp; church street</name>
+    <city>Polokwane</city>
+    <storeId>11139</storeId>
+  </store>
+  
+  <store>
+    <name>Polokwane great north</name>
+    <city>Polokwane</city>
+    <storeId>10817</storeId>
+  </store>
+  
+  <store>
+    <name>Polokwane grobler street</name>
+    <city>Polokwane</city>
+    <storeId>10810</storeId>
+  </store>
+  
+  <store>
+    <name>Polokwane market street</name>
+    <city>Polokwane</city>
+    <storeId>10808</storeId>
+  </store>
+  
+  <store>
+    <name>Pongola</name>
+    <city>Pongola</city>
+    <storeId>10733</storeId>
+  </store>
+  
+  <store>
+    <name>Port alfred</name>
+    <city>Port Alfred</city>
+    <storeId>11072</storeId>
+  </store>
+  
+  <store>
+    <name>Port edward</name>
+    <city>Port Edward</city>
+    <storeId>10783</storeId>
+  </store>
+  
+  <store>
+    <name>Port shepstone corner robinson &amp; bazley</name>
+    <city>Port Shepstone</city>
+    <storeId>10775</storeId>
+  </store>
+  
+  <store>
+    <name>Port shepstone oribi plaza</name>
+    <city>Port Shepstone</city>
+    <storeId>10798</storeId>
+  </store>
+  
+  <store>
+    <name>Port st johns</name>
+    <city>Port St Johns</city>
+    <storeId>11064</storeId>
+  </store>
+  
+  <store>
+    <name>Potchefstreetroom c/o mooiriver drive &amp; retief street</name>
+    <city>Potchefstroom</city>
+    <storeId>11000</storeId>
+  </store>
+  
+  <store>
+    <name>Potchefstroom</name>
+    <city>Potchefstroom</city>
+    <storeId>10821</storeId>
+  </store>
+  
+  <store>
+    <name>President square hyper - johannesburg</name>
+    <city>Krugersdorp</city>
+    <storeId>11260</storeId>
+  </store>
+  
+  <store>
+    <name>Pretoria north</name>
+    <city>Pretoria North</city>
+    <storeId>10724</storeId>
+  </store>
+  
+  <store>
+    <name>Pretorius street 1</name>
+    <city>Pretoria</city>
+    <storeId>11185</storeId>
+  </store>
+  
+  <store>
+    <name>Pretorius street 2</name>
+    <city>Pretoria</city>
+    <storeId>10961</storeId>
+  </store>
+  
+  <store>
+    <name>Primrose</name>
+    <city>Germiston</city>
+    <storeId>10679</storeId>
+  </store>
+  
+  <store>
+    <name>Promenade</name>
+    <city>Mitchells Plain</city>
+    <storeId>10980</storeId>
+  </store>
+  
+  <store>
+    <name>Promenade 2</name>
+    <city>Mitchells Plain</city>
+    <storeId>11254</storeId>
+  </store>
+  
+  <store>
+    <name>Queenstown ii - cathcart road</name>
+    <city>Queenstown</city>
+    <storeId>11108</storeId>
+  </store>
+  
+  <store>
+    <name>Raisethorpe</name>
+    <city>Pietermaritzburg</city>
+    <storeId>10730</storeId>
+  </store>
+  
+  <store>
+    <name>Raisethorpe 2</name>
+    <city>Pietermaritzburg</city>
+    <storeId>11148</storeId>
+  </store>
+  
+  <store>
+    <name>Randburg cbd</name>
+    <city>Randburg</city>
+    <storeId>11045</storeId>
+  </store>
+  
+  <store>
+    <name>Randfontein</name>
+    <city>Randfontein</city>
+    <storeId>10715</storeId>
+  </store>
+  
+  <store>
+    <name>Randfontein cbd</name>
+    <city>Randfontein</city>
+    <storeId>11163</storeId>
+  </store>
+  
+  <store>
+    <name>Randpark ridge</name>
+    <city>Roodepoort</city>
+    <storeId>11075</storeId>
+  </store>
+  
+  <store>
+    <name>Reservoir hills</name>
+    <city>Durban</city>
+    <storeId>10771</storeId>
+  </store>
+  
+  <store>
+    <name>Richards bay</name>
+    <city>Richards Bay</city>
+    <storeId>10770</storeId>
+  </store>
+  
+  <store>
+    <name>Richmond</name>
+    <city>Richmond</city>
+    <storeId>11105</storeId>
+  </store>
+  
+  <store>
+    <name>Rifle range road haddon</name>
+    <city>Johannesburg</city>
+    <storeId>10682</storeId>
+  </store>
+  
+  <store>
+    <name>Riversdale</name>
+    <city>Riversdale</city>
+    <storeId>11131</storeId>
+  </store>
+  
+  <store>
+    <name>Robertson</name>
+    <city>Robertson</city>
+    <storeId>10911</storeId>
+  </store>
+  
+  <store>
+    <name>Robin acres</name>
+    <city>Randburg</city>
+    <storeId>11213</storeId>
+  </store>
+  
+  <store>
+    <name>Roodepoort</name>
+    <city>Johannesburg</city>
+    <storeId>10709</storeId>
+  </store>
+  
+  <store>
+    <name>Rooihuiskraal</name>
+    <city>Centurion</city>
+    <storeId>11044</storeId>
+  </store>
+  
+  <store>
+    <name>Rooihuiskraal the reds</name>
+    <city>Centurion</city>
+    <storeId>11068</storeId>
+  </store>
+  
+  <store>
+    <name>Rosebank zone</name>
+    <city>Johannesburg</city>
+    <storeId>11006</storeId>
+  </store>
+  
+  <store>
+    <name>Ruimsig</name>
+    <city>Roodepoort</city>
+    <storeId>10979</storeId>
+  </store>
+  
+  <store>
+    <name>Rustenburg bomman plaza</name>
+    <city>Rustenburg</city>
+    <storeId>10829</storeId>
+  </store>
+  
+  <store>
+    <name>Rustenburg triangle</name>
+    <city>Rustenburg</city>
+    <storeId>200048</storeId>
+  </store>
+  
+  <store>
+    <name>Rustenburg van staden street</name>
+    <city>Rustenburg</city>
+    <storeId>10828</storeId>
+  </store>
+  
+  <store>
+    <name>Rustenburg waterfall park</name>
+    <city>Rustenburg</city>
+    <storeId>10984</storeId>
+  </store>
+  
+  <store>
+    <name>Rylands</name>
+    <city>Athlone</city>
+    <storeId>10861</storeId>
+  </store>
+  
+  <store>
+    <name>Sandown road</name>
+    <city>Parklands</city>
+    <storeId>12039</storeId>
+  </store>
+  
+  <store>
+    <name>Sandton city</name>
+    <city>Sandton</city>
+    <storeId>10704</storeId>
+  </store>
+  
+  <store>
+    <name>Sarnia road</name>
+    <city>Durban</city>
+    <storeId>10745</storeId>
+  </store>
+  
+  <store>
+    <name>Sasolburg</name>
+    <city>Sasolburg</city>
+    <storeId>10840</storeId>
+  </store>
+  
+  <store>
+    <name>Sasolburg c/o eric louw &amp; klasie havenga streets</name>
+    <city>Sasolburg</city>
+    <storeId>11193</storeId>
+  </store>
+  
+  <store>
+    <name>Savannah mall</name>
+    <city>Flora Park</city>
+    <storeId>11238</storeId>
+  </store>
+  
+  <store>
+    <name>Schoemansdal</name>
+    <city>Schoemansdal</city>
+    <storeId>10977</storeId>
+  </store>
+  
+  <store>
+    <name>Scottburgh</name>
+    <city>Scottburgh</city>
+    <storeId>11052</storeId>
+  </store>
+  
+  <store>
+    <name>Scottsville</name>
+    <city>Pietermaritzburg</city>
+    <storeId>10754</storeId>
+  </store>
+  
+  <store>
+    <name>Sea point</name>
+    <city>Cape Town</city>
+    <storeId>10858</storeId>
+  </store>
+  
+  <store>
+    <name>Sebokeng crossing</name>
+    <city>Sebokeng</city>
+    <storeId>11092</storeId>
+  </store>
+  
+  <store>
+    <name>Secunda east</name>
+    <city>Secunda</city>
+    <storeId>10985</storeId>
+  </store>
+  
+  <store>
+    <name>Secunda gallery</name>
+    <city>Secunda</city>
+    <storeId>10675</storeId>
+  </store>
+  
+  <store>
+    <name>Selcourt</name>
+    <city>Springs</city>
+    <storeId>12060</storeId>
+  </store>
+  
+  <store>
+    <name>Senekal</name>
+    <city>Senekal</city>
+    <storeId>11134</storeId>
+  </store>
+  
+  <store>
+    <name>Seshego</name>
+    <city>Seshego</city>
+    <storeId>160086</storeId>
+  </store>
+  
+  <store>
+    <name>Shall cross - the ridge shopping centre</name>
+    <city>Durban</city>
+    <storeId>10894</storeId>
+  </store>
+  
+  <store>
+    <name>Shelley beach</name>
+    <city>Margate</city>
+    <storeId>10774</storeId>
+  </store>
+  
+  <store>
+    <name>Sherwood</name>
+    <city>Durban</city>
+    <storeId>11111</storeId>
+  </store>
+  
+  <store>
+    <name>Silverton</name>
+    <city>Pretoria</city>
+    <storeId>11186</storeId>
+  </store>
+  
+  <store>
+    <name>Smith street</name>
+    <city>Durban</city>
+    <storeId>10959</storeId>
+  </store>
+  
+  <store>
+    <name>Somerset mall</name>
+    <city>Somerset West</city>
+    <storeId>10956</storeId>
+  </store>
+  
+  <store>
+    <name>Somerset west</name>
+    <city>Somerset West</city>
+    <storeId>10852</storeId>
+  </store>
+  
+  <store>
+    <name>Soneike</name>
+    <city>Cape Town</city>
+    <storeId>11070</storeId>
+  </store>
+  
+  <store>
+    <name>Sophiatown</name>
+    <city>Sophiatown</city>
+    <storeId>11273</storeId>
+  </store>
+  
+  <store>
+    <name>Southdowns</name>
+    <city>Irene</city>
+    <storeId>11069</storeId>
+  </store>
+  
+  <store>
+    <name>Southgate mall</name>
+    <city>Johannesburg</city>
+    <storeId>10942</storeId>
+  </store>
+  
+  <store>
+    <name>Southway mall</name>
+    <city>Durban</city>
+    <storeId>10994</storeId>
+  </store>
+  
+  <store>
+    <name>Sparks road</name>
+    <city>Durban</city>
+    <storeId>11107</storeId>
+  </store>
+  
+  <store>
+    <name>Springbok</name>
+    <city>Springbok</city>
+    <storeId>10904</storeId>
+  </store>
+  
+  <store>
+    <name>Springs</name>
+    <city>Springs</city>
+    <storeId>11231</storeId>
+  </store>
+  
+  <store>
+    <name>Springs</name>
+    <city>Springs</city>
+    <storeId>10698</storeId>
+  </store>
+  
+  <store>
+    <name>Springsgate</name>
+    <city>Springs</city>
+    <storeId>11158</storeId>
+  </store>
+  
+  <store>
+    <name>Springs station shopping centre</name>
+    <city>Springs</city>
+    <storeId>11172</storeId>
+  </store>
+  
+  <store>
+    <name>Stamford hill</name>
+    <city>Durban</city>
+    <storeId>11226</storeId>
+  </store>
+  
+  <store>
+    <name>Standerton 1</name>
+    <city>Standerton</city>
+    <storeId>10678</storeId>
+  </store>
+  
+  <store>
+    <name>Standerton cbd</name>
+    <city>Standerton</city>
+    <storeId>11162</storeId>
+  </store>
+  
+  <store>
+    <name>Stanford quarts</name>
+    <city>Port Elizabeth</city>
+    <storeId>11143</storeId>
+  </store>
+  
+  <store>
+    <name>Stanford road</name>
+    <city>Port Elizabeth</city>
+    <storeId>12061</storeId>
+  </store>
+  
+  <store>
+    <name>Stanger c/o cato &amp; king shaka roads</name>
+    <city>Stanger</city>
+    <storeId>10761</storeId>
+  </store>
+  
+  <store>
+    <name>Steelport</name>
+    <city>Steelport</city>
+    <storeId>11258</storeId>
+  </store>
+  
+  <store>
+    <name>Stellenbosch</name>
+    <city>Stellenbosch</city>
+    <storeId>10860</storeId>
+  </store>
+  
+  <store>
+    <name>Stellenbosch arterial</name>
+    <city>Stellenbosch</city>
+    <storeId>11101</storeId>
+  </store>
+  
+  <store>
+    <name>Sterkspruit</name>
+    <city>Sterkspruit</city>
+    <storeId>11022</storeId>
+  </store>
+  
+  <store>
+    <name>St george&#39;s mall</name>
+    <city>Cape Town</city>
+    <storeId>200090</storeId>
+  </store>
+  
+  <store>
+    <name>Stormvoel</name>
+    <city>Pretoria</city>
+    <storeId>11205</storeId>
+  </store>
+  
+  <store>
+    <name>Stormvoel road</name>
+    <city>Pretoria</city>
+    <storeId>12062</storeId>
+  </store>
+  
+  <store>
+    <name>Strand</name>
+    <city>Mitchells Plain</city>
+    <storeId>10846</storeId>
+  </store>
+  
+  <store>
+    <name>Sun coast casino</name>
+    <city>Durban</city>
+    <storeId>10974</storeId>
+  </store>
+  
+  <store>
+    <name>Sunninghill</name>
+    <city>Johannesburg</city>
+    <storeId>11194</storeId>
+  </store>
+  
+  <store>
+    <name>Sunnyside</name>
+    <city>Pretoria</city>
+    <storeId>11187</storeId>
+  </store>
+  
+  <store>
+    <name>Sun village</name>
+    <city>Sun City</city>
+    <storeId>11128</storeId>
+  </store>
+  
+  <store>
+    <name>Sunward park</name>
+    <city>Boksburg</city>
+    <storeId>10890</storeId>
+  </store>
+  
+  <store>
+    <name>Swakopmund</name>
+    <city>Swakopmund</city>
+    <storeId>11296</storeId>
+  </store>
+  
+  <store>
+    <name>Symons centre</name>
+    <city>Pietermaritzburg</city>
+    <storeId>10746</storeId>
+  </store>
+  
+  <store>
+    <name>Taung</name>
+    <city>Taung</city>
+    <storeId>10831</storeId>
+  </store>
+  
+  <store>
+    <name>Taxi city</name>
+    <city>Richards Bay</city>
+    <storeId>150048</storeId>
+  </store>
+  
+  <store>
+    <name>Taxi city eazy</name>
+    <city>Richards Bay</city>
+    <storeId>10983</storeId>
+  </store>
+  
+  <store>
+    <name>Tembisa (engen)</name>
+    <city>Tembisa</city>
+    <storeId>11268</storeId>
+  </store>
+  
+  <store>
+    <name>Thaba nchu</name>
+    <city>Thaba Nchu</city>
+    <storeId>10968</storeId>
+  </store>
+  
+  <store>
+    <name>Thabazimbi</name>
+    <city>Thabazimbi</city>
+    <storeId>10991</storeId>
+  </store>
+  
+  <store>
+    <name>The bridge</name>
+    <city>Port Elizabeth</city>
+    <storeId>11204</storeId>
+  </store>
+  
+  <store>
+    <name>The glen</name>
+    <city>Oakdene</city>
+    <storeId>11264</storeId>
+  </store>
+  
+  <store>
+    <name>The glen shopping centre</name>
+    <city>Oakdene</city>
+    <storeId>12063</storeId>
+  </store>
+  
+  <store>
+    <name>Theku plaza</name>
+    <city>Newcastle</city>
+    <storeId>200049</storeId>
+  </store>
+  
+  <store>
+    <name>Thembi mall</name>
+    <city>Tembisa</city>
+    <storeId>150050</storeId>
+  </store>
+  
+  <store>
+    <name>Thohoyandou 3</name>
+    <city>Thohoyandou</city>
+    <storeId>11257</storeId>
+  </store>
+  
+  <store>
+    <name>Thohoyandou sibasa</name>
+    <city>Thohoyandou</city>
+    <storeId>10806</storeId>
+  </store>
+  
+  <store>
+    <name>Thohoyandou tshanduko street</name>
+    <city>Thohoyandou</city>
+    <storeId>11119</storeId>
+  </store>
+  
+  <store>
+    <name>Three rivers</name>
+    <city>Vereeniging</city>
+    <storeId>10943</storeId>
+  </store>
+  
+  <store>
+    <name>Tlhabane</name>
+    <city>Rustenburg</city>
+    <storeId>11157</storeId>
+  </store>
+  
+  <store>
+    <name>Tokai</name>
+    <city>Tokai</city>
+    <storeId>10867</storeId>
+  </store>
+  
+  <store>
+    <name>Tongaat</name>
+    <city>Tongaat</city>
+    <storeId>10795</storeId>
+  </store>
+  
+  <store>
+    <name>Total petroport n2 east</name>
+    <city>Durban</city>
+    <storeId>11265</storeId>
+  </store>
+  
+  <store>
+    <name>Total petroport n2 west</name>
+    <city>Durban</city>
+    <storeId>11266</storeId>
+  </store>
+  
+  <store>
+    <name>Town centre</name>
+    <city>Mitchells Plain</city>
+    <storeId>10876</storeId>
+  </store>
+  
+  <store>
+    <name>Town centre station easy</name>
+    <city>Mitchells Plain</city>
+    <storeId>10970</storeId>
+  </store>
+  
+  <store>
+    <name>Traduna mall</name>
+    <city>Port Elizabeth</city>
+    <storeId>10897</storeId>
+  </store>
+  
+  <store>
+    <name>Tsolo</name>
+    <city>Tsolo</city>
+    <storeId>11241</storeId>
+  </store>
+  
+  <store>
+    <name>Tygervalley mall</name>
+    <city>Tygervalley</city>
+    <storeId>10952</storeId>
+  </store>
+  
+  <store>
+    <name>Tzaneen</name>
+    <city>Tzaneen</city>
+    <storeId>10813</storeId>
+  </store>
+  
+  <store>
+    <name>Tzaneen joubert</name>
+    <city>Tzaneen</city>
+    <storeId>160084</storeId>
+  </store>
+  
+  <store>
+    <name>Tzaneng mall</name>
+    <city>Tzaneen</city>
+    <storeId>11215</storeId>
+  </store>
+  
+  <store>
+    <name>Uitenhage</name>
+    <city>Uitenhage</city>
+    <storeId>10661</storeId>
+  </store>
+  
+  <store>
+    <name>Uitenhage market street</name>
+    <city>Uitenhage</city>
+    <storeId>11034</storeId>
+  </store>
+  
+  <store>
+    <name>Ulundi</name>
+    <city>Ulundi</city>
+    <storeId>10928</storeId>
+  </store>
+  
+  <store>
+    <name>Umgeni centre</name>
+    <city>Durban</city>
+    <storeId>10792</storeId>
+  </store>
+  
+  <store>
+    <name>Umhlanga rocks</name>
+    <city>Umhlanga Rocks</city>
+    <storeId>10736</storeId>
+  </store>
+  
+  <store>
+    <name>Umlazi</name>
+    <city>Umlazi</city>
+    <storeId>10728</storeId>
+  </store>
+  
+  <store>
+    <name>Umlazi mega city</name>
+    <city>Durban</city>
+    <storeId>11041</storeId>
+  </store>
+  
+  <store>
+    <name>Umlazi (philani value centre)</name>
+    <city>Umlazi</city>
+    <storeId>11122</storeId>
+  </store>
+  
+  <store>
+    <name>Umtata</name>
+    <city>Umtata</city>
+    <storeId>10665</storeId>
+  </store>
+  
+  <store>
+    <name>Umtata cbd</name>
+    <city>Umtata</city>
+    <storeId>10660</storeId>
+  </store>
+  
+  <store>
+    <name>Umzimkulu</name>
+    <city>Umzimkulu</city>
+    <storeId>10782</storeId>
+  </store>
+  
+  <store>
+    <name>Umzinto</name>
+    <city>Umzinto</city>
+    <storeId>10791</storeId>
+  </store>
+  
+  <store>
+    <name>Underberg</name>
+    <city>Underberg</city>
+    <storeId>11275</storeId>
+  </store>
+  
+  <store>
+    <name>Union street</name>
+    <city>East London CBD</city>
+    <storeId>150051</storeId>
+  </store>
+  
+  <store>
+    <name>Union street - eastern cape</name>
+    <city>Eastern Cape</city>
+    <storeId>11276</storeId>
+  </store>
+  
+  <store>
+    <name>Upington</name>
+    <city>Upington</city>
+    <storeId>10802</storeId>
+  </store>
+  
+  <store>
+    <name>Ushaka island -point road</name>
+    <city>Durban</city>
+    <storeId>10781</storeId>
+  </store>
+  
+  <store>
+    <name>Vaal mall</name>
+    <city>Vanderbijlpark</city>
+    <storeId>11040</storeId>
+  </store>
+  
+  <store>
+    <name>Vanderbijlpark</name>
+    <city>Vanderbijlpark</city>
+    <storeId>10716</storeId>
+  </store>
+  
+  <store>
+    <name>Vangate mall</name>
+    <city>Athlone</city>
+    <storeId>11024</storeId>
+  </store>
+  
+  <store>
+    <name>V&amp;a waterfront</name>
+    <city>Cape Town</city>
+    <storeId>10878</storeId>
+  </store>
+  
+  <store>
+    <name>Vereeniging</name>
+    <city>Vereeniging</city>
+    <storeId>10711</storeId>
+  </store>
+  
+  <store>
+    <name>Vereeniging 2</name>
+    <city>Vereeniging</city>
+    <storeId>11013</storeId>
+  </store>
+  
+  <store>
+    <name>Verulam</name>
+    <city>Verulam</city>
+    <storeId>10765</storeId>
+  </store>
+  
+  <store>
+    <name>Vincent park - eastern cape</name>
+    <city>Eastern Cape</city>
+    <storeId>10662</storeId>
+  </store>
+  
+  <store>
+    <name>Vincent park - east london</name>
+    <city>Eastern Cape</city>
+    <storeId>12064</storeId>
+  </store>
+  
+  <store>
+    <name>Volksrust</name>
+    <city>Volksrust</city>
+    <storeId>11319</storeId>
+  </store>
+  
+  <store>
+    <name>Vosloorus</name>
+    <city>Vosloorus</city>
+    <storeId>10988</storeId>
+  </store>
+  
+  <store>
+    <name>Vredenburg</name>
+    <city>Vredenburg</city>
+    <storeId>10849</storeId>
+  </store>
+  
+  <store>
+    <name>Vredendal</name>
+    <city>Vredendal</city>
+    <storeId>10873</storeId>
+  </store>
+  
+  <store>
+    <name>Vryburg</name>
+    <city>Vryburg</city>
+    <storeId>10824</storeId>
+  </store>
+  
+  <store>
+    <name>Vryheid - east street</name>
+    <city>Vryheid</city>
+    <storeId>10797</storeId>
+  </store>
+  
+  <store>
+    <name>Vryheid mark street</name>
+    <city>Vryheid</city>
+    <storeId>11102</storeId>
+  </store>
+  
+  <store>
+    <name>Walker drive</name>
+    <city>Port Elizabeth</city>
+    <storeId>11224</storeId>
+  </store>
+  
+  <store>
+    <name>Walmer</name>
+    <city>Port Elizabeth</city>
+    <storeId>11082</storeId>
+  </store>
+  
+  <store>
+    <name>Walvis bay</name>
+    <city>Walvis Bay</city>
+    <storeId>11294</storeId>
+  </store>
+  
+  <store>
+    <name>Wanderers street</name>
+    <city>Johannesburg</city>
+    <storeId>11112</storeId>
+  </store>
+  
+  <store>
+    <name>Warwick triangle</name>
+    <city>Durban</city>
+    <storeId>11130</storeId>
+  </store>
+  
+  <store>
+    <name>Waterfall</name>
+    <city>Waterfall</city>
+    <storeId>11135</storeId>
+  </store>
+  
+  <store>
+    <name>Waterglen</name>
+    <city>Pretoria</city>
+    <storeId>11188</storeId>
+  </store>
+  
+  <store>
+    <name>Waterkloof ridge</name>
+    <city>Pretoria</city>
+    <storeId>11079</storeId>
+  </store>
+  
+  <store>
+    <name>Welkom</name>
+    <city>Welkom</city>
+    <storeId>10843</storeId>
+  </store>
+  
+  <store>
+    <name>Wellington</name>
+    <city>Wellington</city>
+    <storeId>10907</storeId>
+  </store>
+  
+  <store>
+    <name>Weltevreden park</name>
+    <city>Roodepoort</city>
+    <storeId>10700</storeId>
+  </store>
+  
+  <store>
+    <name>Werner list street, windhoek namibia</name>
+    <city>Windhoek</city>
+    <storeId>11301</storeId>
+  </store>
+  
+  <store>
+    <name>West end</name>
+    <city>Durban</city>
+    <storeId>11084</storeId>
+  </store>
+  
+  <store>
+    <name>Westgate</name>
+    <city>Mitchells Plain</city>
+    <storeId>10866</storeId>
+  </store>
+  
+  <store>
+    <name>Westgate</name>
+    <city>Roodepoort</city>
+    <storeId>11049</storeId>
+  </store>
+  
+  <store>
+    <name>Westonaria</name>
+    <city>Westonaria</city>
+    <storeId>11118</storeId>
+  </store>
+  
+  <store>
+    <name>Westridge</name>
+    <city>Mitchells Plain</city>
+    <storeId>10879</storeId>
+  </store>
+  
+  <store>
+    <name>Westville</name>
+    <city>Westville</city>
+    <storeId>10794</storeId>
+  </store>
+  
+  <store>
+    <name>Westwood</name>
+    <city>Westville</city>
+    <storeId>11144</storeId>
+  </store>
+  
+  <store>
+    <name>Wetton</name>
+    <city>Cape Town</city>
+    <storeId>10932</storeId>
+  </store>
+  
+  <store>
+    <name>White river</name>
+    <city>White River</city>
+    <storeId>10676</storeId>
+  </store>
+  
+  <store>
+    <name>Wierda park</name>
+    <city>Centurion</city>
+    <storeId>11189</storeId>
+  </store>
+  
+  <store>
+    <name>Wilrogate</name>
+    <city>Roodepoort</city>
+    <storeId>10926</storeId>
+  </store>
+  
+  <store>
+    <name>Windhoek</name>
+    <city>Windhoek</city>
+    <storeId>11293</storeId>
+  </store>
+  
+  <store>
+    <name>Winklespruit</name>
+    <city>Winklespruit</city>
+    <storeId>11036</storeId>
+  </store>
+  
+  <store>
+    <name>Witbank c/o president &amp; swartbos avenue</name>
+    <city>Witbank</city>
+    <storeId>10993</storeId>
+  </store>
+  
+  <store>
+    <name>Witbank roger street</name>
+    <city>Witbank</city>
+    <storeId>10667</storeId>
+  </store>
+  
+  <store>
+    <name>Witbank - techno park</name>
+    <city>Witbank</city>
+    <storeId>11151</storeId>
+  </store>
+  
+  <store>
+    <name>Witbank watermeyer street</name>
+    <city>Witbank</city>
+    <storeId>10670</storeId>
+  </store>
+  
+  <store>
+    <name>Wolmaransstad</name>
+    <city>Wolmaransstad</city>
+    <storeId>11003</storeId>
+  </store>
+  
+  <store>
+    <name>Wonderboom junction</name>
+    <city>Pretoria</city>
+    <storeId>11080</storeId>
+  </store>
+  
+  <store>
+    <name>Woodmead</name>
+    <city>Sandton</city>
+    <storeId>10958</storeId>
+  </store>
+  
+  <store>
+    <name>Woodstock</name>
+    <city>Cape Town</city>
+    <storeId>10898</storeId>
+  </store>
+  
+  <store>
+    <name>Worcester</name>
+    <city>Worcester</city>
+    <storeId>10881</storeId>
+  </store>
+  
+  <store>
+    <name>Worcester mall</name>
+    <city>Worcester</city>
+    <storeId>11039</storeId>
+  </store>
+  
+  <store>
+    <name>Wynberg</name>
+    <city>Wynberg</city>
+    <storeId>10871</storeId>
+  </store>
+  
+  <store>
+    <name>Xai xai</name>
+    <city>Xai Xai</city>
+    <storeId>10646</storeId>
+  </store>
+  
+  <store>
+    <name>Yeoville</name>
+    <city>Johannesburg</city>
+    <storeId>11047</storeId>
+  </store>
+  
+  <store>
+    <name>Zambezi junction</name>
+    <city>Pretoria</city>
+    <storeId>11078</storeId>
+  </store>
+  
+  <store>
+    <name>Zeerust</name>
+    <city>Zeerust</city>
+    <storeId>10820</storeId>
+  </store>
+  
+  <store>
+    <name>Zevenwacht mall</name>
+    <city>Kuilsriver</city>
+    <storeId>11124</storeId>
+  </store>
+  
+</stores>

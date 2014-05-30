@@ -26,7 +26,6 @@ public class MyDiningDbOpenHelper extends SQLiteOpenHelper {
 	public static final String DATABASE_PATH = "/data/data/za.co.tbt.mydining/databases/";
 	public static final String DATABASE_NAME = "dining.sqlite";
 	private static final int SCHEMA_VERSION = 2;
-	//private static final String DB_VERSION_KEY = "db_version_pref";
 	private static boolean dbExist;
 	
 	private static SQLiteDatabase dbSqlite;	
@@ -48,13 +47,10 @@ public class MyDiningDbOpenHelper extends SQLiteOpenHelper {
 	
 	@Override
 	public void onCreate(SQLiteDatabase arg0) {
-		// TODO Auto-generated method stub
-
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		// TODO Auto-generated method stub
 		copyDBFromResource("copy");		
 	}
 	
@@ -68,18 +64,9 @@ public class MyDiningDbOpenHelper extends SQLiteOpenHelper {
 			
 			//now copy our new database
 			copyDBFromResource(null);
-			//DBVersionCheckListener dbVersionCheckListener = ((DBVersionCheckListener)context);
-			//dbVersionCheckListener.databaseUpToDate();
-		}/*else{						
-			checkForDBUpdate();
-			//dbExist = false;
-		}*/
+		}
 	}
-	
-	/*public boolean isDBAvailable(){
-		return dbExist;
-	}*/
-	
+		
 	private boolean DBExists(){
 		SQLiteDatabase db = null;
 		
@@ -90,7 +77,6 @@ public class MyDiningDbOpenHelper extends SQLiteOpenHelper {
 			db.setLockingEnabled(true);
 			db.setVersion(SCHEMA_VERSION);					
 		}catch (Exception e){
-		//catch (SQLiteException sqle){
 			Log.e("SQLHelper", "Database not found");
 		}
 		
@@ -100,15 +86,6 @@ public class MyDiningDbOpenHelper extends SQLiteOpenHelper {
 		
 		return db != null ? true : false;
 	}
-	
-	/*public void checkForDBUpdate(){		
-		SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
-		String db_version = sharedPref.getString(DB_VERSION_KEY, "");
-		
-		DBVersionChecker dbVersionChecker = new DBVersionChecker((DBVersionCheckListener)context);
-		dbVersionChecker.execute(db_version);
-		
-	}*/
 	
 	public void downloadDB(){		
 		DBDownloadService dbDownloader = new DBDownloadService((DBDownloadListener)context);
@@ -137,7 +114,6 @@ public class MyDiningDbOpenHelper extends SQLiteOpenHelper {
 		
 		String databasePath = DATABASE_PATH + DATABASE_NAME;
 		try {
-			//closeDataBase();
 			if (path == null || path.equals("copy")){
 				inputStream = context.getAssets().open(DATABASE_NAME);
 			}else{
@@ -163,7 +139,6 @@ public class MyDiningDbOpenHelper extends SQLiteOpenHelper {
 		}
 		
 		if (favourites.size() > 0){
-			//openDataBase();
 			favDataSource.open();
 			favDataSource.insertAllFavourites(favourites);
 		}

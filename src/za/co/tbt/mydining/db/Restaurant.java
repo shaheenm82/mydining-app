@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Restaurant extends DBItem{
+	private String slogan;
 	private String cuisines;
 	private Menu restaurant_menu;
 	private String logo;
@@ -15,6 +16,16 @@ public class Restaurant extends DBItem{
 		setRestaurant_branches(new ArrayList<Branch>());
 	}
 	
+	public String getSlogan() {
+		return slogan;
+	}
+
+
+	public void setSlogan(String slogan) {
+		this.slogan = slogan;
+	}
+
+
 	public String getCuisines() {
 		return cuisines;
 	}

@@ -1,7 +1,7 @@
 package za.co.tbt.mydining;
 
 import za.co.tbt.mydining.db.MyDiningDbOpenHelper;
-import za.co.tbt.mydining.db.NearbyRestaurantDataSource;
+import za.co.tbt.mydining.db.NearbyRestaurantUpdater;
 import za.co.tbt.mydining.location.LocationClientBinder;
 import za.co.tbt.mydining.location.LocationService;
 import za.co.tbt.mydining.location.LocationUpdateListener;
@@ -19,22 +19,17 @@ import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.location.Location;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
-import android.view.View;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 
 public class SplashScreenActivity extends Activity implements DBVersionCheckListener, 
-	DialogInterface.OnClickListener, DBDownloadListener, LocationUpdateListener{
+	DialogInterface.OnClickListener, DBDownloadListener, LocationUpdateListener	{
 	private ProgressDialog checkDBDialog;
-	private TextView textStatus;
 	private MyDiningDbOpenHelper diningHelper;
-	//private LocationService2 locationService;
-	//LocationService locationService;
+	
+	NearbyRestaurantUpdater nearbyRestaurantUpdater;
 	LocationClientBinder clientBinder;
 	boolean mBound = false;
 	
@@ -42,26 +37,19 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
 	boolean location_updated;
 	
 	// Splash screen timer
-    private static int SPLASH_TIME_OUT = 1000;
+    private static int SPLASH_TIME_OUT = 0;
 	private static final String DB_VERSION_KEY = "db_version_pref";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		int time_waited = 0;
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_splash_screen);
+		
+		location_updated = false;
 		
 		checkDBDialog = ProgressDialog.show(this, "", "",true);
 		checkDBDialog.setIndeterminate(true);
 		
-		location_updated = false;
-		textStatus = (TextView) findViewById(R.id.text_sync_status);
-		//create database helper
-		/*SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-		Editor prefEditor = sharedPref.edit();
-			
-		prefEditor.putString("db_version_pref", "0.1.3");
-		prefEditor.commit();*/
 		
 		SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
 		String db_version = sharedPref.getString(DB_VERSION_KEY, "");
@@ -69,30 +57,13 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
 		DBVersionChecker dbVersionChecker = new DBVersionChecker(this);
 		dbVersionChecker.execute(db_version);
 		
-		//diningHelper = new MyDiningDbOpenHelper(this);
-		//diningHelper.createDatabase();
-		//diningHelper.openDataBase();
-		
-//		while (time_waited < 5){
-//    		try {
-//				Thread.sleep(1000);
-//				time_waited ++;
-//			} catch (InterruptedException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}            		
-//    	}
-//		//checkDBDialog.dismiss();
 		Intent intent = new Intent(SplashScreenActivity.this, LocationService.class);
     	bindService(intent, mConnection, BIND_AUTO_CREATE);
-		
-		//enterApplication();
 	}
 
 	
 	@Override
 	protected void onDestroy() {
-		// TODO Auto-generated method stub
 		unbindService(mConnection);
 		super.onDestroy();
 	}
@@ -100,28 +71,22 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
 
 	@Override
 	public void databaseStatusUpdated(String progress) {
-		// TODO Auto-generated method stub
-		/*if ( checkDBDialog == null ){//&& server_version != null
-			checkDBDialog = ProgressDialog.show(this, "", "",true);
-		}
 		//Log.d("ssm", progress);
-		if ( checkDBDialog != null){
-			checkDBDialog.setMessage(progress);
-		}*/
-		textStatus.setText(progress  + "...");
 	}
 
 	@Override
-	public void databaseOutdated(String version) {
-		// TODO Auto-generated method stub
+	public void databaseOutdated(String version, String size) {
+		int db_size;
 		server_version = version;
 		
 		checkDBDialog.dismiss();
 		checkDBDialog = null;
 		
+		db_size = Integer.parseInt(size)/1024;
+		
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		
-		builder.setMessage("A new Database version has been found.  Would you like to download it now?");
+		builder.setMessage("A new Database version has been found (" + db_size + "kB).  Would you like to download it now?");
 		builder.setPositiveButton("Yes", this);
 		builder.setNegativeButton("No", this);
 		builder.show();
@@ -129,23 +94,22 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
 
 	@Override
 	public void databaseUpToDate() {
-		// TODO Auto-generated method stub
 		enterApplication();
 	}
 	
 	@Override
 	public void onClick(DialogInterface dialog, int which) {
-		// TODO Auto-generated method stub
+		checkDBDialog = ProgressDialog.show(this, "", "",true);
+		
 		switch (which){
 		case DialogInterface.BUTTON_POSITIVE:
 			//download database
-			checkDBDialog = ProgressDialog.show(this, "", "",true);
 			DBDownloadService dbDownloader = new DBDownloadService(this);
 			dbDownloader.execute(MyDiningDbOpenHelper.DATABASE_PATH + MyDiningDbOpenHelper.DATABASE_NAME + ".tmp");
-			//diningHelper.downloadDB();
 			break;
 		case DialogInterface.BUTTON_NEGATIVE:
 			//show EntryActivity
+			//Log.d("ssm", "Entering application");
 			enterApplication();
 			break;
 		}
@@ -153,19 +117,12 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
 
 	@Override
 	public void databaseDownloadStatusUpdated(String progress) {
-		// TODO Auto-generated method stub
-		/*if ( checkDBDialog == null ){
-			checkDBDialog = ProgressDialog.show(this, "", "",true);
-		}
-		//Log.d("ssm", progress);
-		checkDBDialog.setMessage(progress);*/
-		textStatus.setText(progress);
 	}
 
 	@Override
 	public void databaseRetrieved(boolean success) {
-		// TODO Auto-generated method stub
 		if (success == true){
+			diningHelper = new MyDiningDbOpenHelper(this);
 			if (diningHelper.updateDBFromResource()){
 				
 			SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
@@ -191,22 +148,12 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
              */
  
             @Override
-            public void run() {
-            	//int time_waited = 0;
-//            	while (!location_updated && time_waited < 5){
-//            		try {
-//						Thread.sleep(1000);
-//						time_waited ++;
-//					} catch (InterruptedException e) {
-//						// TODO Auto-generated catch block
-//						e.printStackTrace();
-//					}            		
-//            	}
-            	
-            	
+            public void run() {            	            	
                 // This method will be executed once the timer is over
                 // Start your app main activity
+            	//Log.d("ssm", "Starting Intent");
             	Intent intent = new Intent(SplashScreenActivity.this, EntryActivity.class);
+            	//Log.d("ssm", "Starting Activity");
         		startActivity(intent);
         		
         		checkDBDialog.dismiss();
@@ -220,10 +167,10 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
 
 	@Override
 	public void locationUpdated(Location location) {
-		// TODO Auto-generated method stub
-		//locationService.stop();
-		
 		location_updated = true;
+		
+		nearbyRestaurantUpdater = new NearbyRestaurantUpdater(this);
+		nearbyRestaurantUpdater.execute(location);
 	}
 	
 	/** Defines callbacks for service binding, passed to bindService() */
@@ -243,5 +190,6 @@ public class SplashScreenActivity extends Activity implements DBVersionCheckList
             mBound = false;
         }
     };
+
 
 }

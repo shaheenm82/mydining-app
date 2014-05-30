@@ -17,7 +17,7 @@ public class RestaurantListAdapter extends ArrayAdapter<Restaurant> {
 	Context context;
 	
 	public RestaurantListAdapter(Context context){
-		super(context, R.layout.list_dbitem);
+		super(context, R.layout.list_restaurant);
 		
 		this.context = context;
 	}
@@ -40,7 +40,7 @@ public class RestaurantListAdapter extends ArrayAdapter<Restaurant> {
 		
 		if (convertView == null){
 			LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			convertView = inflater.inflate(R.layout.list_dbitem, null);
+			convertView = inflater.inflate(R.layout.list_restaurant, null);
 			
 			listViewHolder = new RestaurantListViewHolder(context, convertView);
 			

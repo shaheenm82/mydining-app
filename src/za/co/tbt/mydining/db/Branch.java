@@ -12,7 +12,6 @@ public class Branch extends DBItem {
 	float distance;
 
 	public Branch(String name) {
-		// TODO Auto-generated constructor stub
 		super(name);		
 	}
 

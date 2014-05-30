@@ -10,7 +10,6 @@ public class MenuCategory extends DBItem {
 	List<DBItem> dishes;
 
 	public MenuCategory(String name) {
-		// TODO Auto-generated constructor stub
 		super(name);
 		dishes = new ArrayList<DBItem>();
 	}

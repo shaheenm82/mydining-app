@@ -16,7 +16,6 @@ import android.location.Location;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.InflateException;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,12 +38,10 @@ import com.google.android.gms.maps.model.MarkerOptions;
  * 
  */
 public class BranchMapFragment extends Fragment implements LocationUpdateListener{
-	//private LocationProvider locProvider;
 	private Location location = null;
 	private GoogleMap map = null;
 	private LatLng you = null;
 	
-	//LocationService2 locationService;
 	private boolean map_initialised;
 	private boolean location_available;
 	LocationClientBinder clientBinder;
@@ -57,13 +54,8 @@ public class BranchMapFragment extends Fragment implements LocationUpdateListene
 	
 	@Override
 	public void onAttach(Activity activity) {
-		// TODO Auto-generated method stub
 		super.onAttach(activity);
-		//locProvider = (LocationProvider)activity;	
-		//locationService = LocationService2.getInstance(activity);
-				
-		//locationService.addLocationUpdateListener(this);
-		
+	
 		Intent intent = new Intent(activity, LocationService.class);
 		getActivity().bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
 		
@@ -93,24 +85,11 @@ public class BranchMapFragment extends Fragment implements LocationUpdateListene
 	
 	@Override
 	public void onStart() {
-		// TODO Auto-generated method stub
 		super.onStart();
-		
-		//if (!locationService.servicesConnected()){
-		//	locationService.start();
-		//}
-		
-		//this.location = locationService.getLocation();
-		
-		//if (location != null){
-		//	location_available = true;
-		//}
-		
 	}
 
 	@Override
 	public void onResume() {
-		// TODO Auto-generated method stub
 		super.onResume();
 		
 		// Get a handle to the Map Fragment
@@ -128,17 +107,14 @@ public class BranchMapFragment extends Fragment implements LocationUpdateListene
 	
 	@Override
 	public void onStop() {
-		// TODO Auto-generated method stub
 		map_initialised = false;
 		location_available = false;
-		//locationService.stop();
 		super.onStop();
 	}
 			
 	
 	@Override
 	public void onDestroy() {
-		// TODO Auto-generated method stub
 		getActivity().unbindService(mConnection);
 		super.onDestroy();
 	}
@@ -149,7 +125,6 @@ public class BranchMapFragment extends Fragment implements LocationUpdateListene
 		     BitmapDescriptorFactory.HUE_ROSE);
 		
 		you = LocationUtils.getLatLng(getActivity(), location);
-		//LatLng me = new LatLng(you.latitude +0.1, you.longitude + 0.1);
 		
 		map.moveCamera(CameraUpdateFactory.newLatLngZoom(you,13));
         
@@ -165,7 +140,6 @@ public class BranchMapFragment extends Fragment implements LocationUpdateListene
 
 	@Override
 	public void locationUpdated(Location location) {
-		// TODO Auto-generated method stub
 		location_available = true;
 		
 		this.location = location;			
@@ -210,7 +184,6 @@ public class BranchMapFragment extends Fragment implements LocationUpdateListene
         @Override
         public void onServiceConnected(ComponentName className,
                 IBinder service) {
-        	Log.d("ssm", "onServicesConnected");
             // We've bound to LocalService, cast the IBinder and get LocalService instance
             clientBinder = (LocationClientBinder) service;
             clientBinder.addLocationUpdateListener(BranchMapFragment.this);

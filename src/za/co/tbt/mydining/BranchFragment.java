@@ -63,14 +63,11 @@ public class BranchFragment extends Fragment{
 			setRestaurantBranches(restaurant_branches);
 			notice.setVisibility(View.INVISIBLE);
 		}        
-        //branchAdapter = new BranchListAdapter(getActivity(), restaurant_branches);
-		//branchView.setAdapter(branchAdapter);			
         
         return rootView;
 	}
 
 	public int filterBranch(String filter){
-		//this.filterType = "name";
 		List<Branch> branches;
 		RestaurantDataSource restDataSource;
 		

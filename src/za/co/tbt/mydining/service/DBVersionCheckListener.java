@@ -5,5 +5,5 @@ public interface DBVersionCheckListener {
 	
 	public void databaseUpToDate();
 	
-	public void databaseOutdated(String version);
+	public void databaseOutdated(String version, String size);
 }

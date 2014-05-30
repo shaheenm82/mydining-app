@@ -19,9 +19,8 @@ import android.widget.ListView;
 public class RestaurantFragment extends Fragment implements OnItemClickListener{
 	public static final String RESTAURANT_NAME = "restaurant_name";
 	public static final String LOCATION_SERVICE = "location_service";
-	//private String filterType;
+
 	private String filter;
-	
 	private ListView restView = null;
 	private RestaurantListAdapter listAdapter = null;
 	private RestaurantDataSource restDataSource = null;
@@ -48,14 +47,12 @@ public class RestaurantFragment extends Fragment implements OnItemClickListener{
 	
 	@Override
 	public void onDestroyView() {
-		// TODO Auto-generated method stub
 		super.onDestroyView();
 		
 		restDataSource.close();
 	}
 	
 	public int filterName(String filter){
-		//this.filterType = "name";
 		this.filter = filter + "%";
 		String[] args = {this.filter};
 		
@@ -67,7 +64,6 @@ public class RestaurantFragment extends Fragment implements OnItemClickListener{
 	}
 	
 	public int filterCuisines(String filter){
-		//this.filterType = "cuisine";
 		this.filter = "%" + filter + "%";
 		
 		String[] args = {this.filter};
@@ -85,7 +81,6 @@ public class RestaurantFragment extends Fragment implements OnItemClickListener{
 
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-		// TODO Auto-generated method stub
 		Restaurant restaurant = (Restaurant)restView.getItemAtPosition(position);
 		
 		FavouriteDataSource favDataSource = new FavouriteDataSource(getActivity());

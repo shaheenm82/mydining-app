@@ -12,7 +12,6 @@ public class FavouriteListViewHolder {
 	public TextView favLastText = null;
 	
 	public FavouriteListViewHolder(View row) {
-		// TODO Auto-generated constructor stub
 		favRestaurantText = (TextView) row.findViewById(R.id.text_fav_rest);
 		favSelectedText = (TextView) row.findViewById(R.id.text_fav_selected);
 		favLastText = (TextView) row.findViewById(R.id.text_fav_last);		
@@ -21,7 +20,6 @@ public class FavouriteListViewHolder {
 	public void populateFrom(Favourite favourite){
 		favRestaurantText.setText(favourite.getRestaurant().getName());
 		favSelectedText.setText("Selected " + favourite.getSelected() + " times");
-		Log.d("ssm","viewing Favourites date " + favourite.getSelected_date());
 		
 		favLastText.setText("Last selected : " + favourite.getSelected_date());		
 	}

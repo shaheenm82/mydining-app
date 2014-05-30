@@ -8,7 +8,6 @@ public class BranchProvinceListViewHolder {
 	public TextView branchProvinceText = null;
 	
 	public BranchProvinceListViewHolder(View row) {
-		// TODO Auto-generated constructor stub
 		branchProvinceText = (TextView) row.findViewById(R.id.text_branchProvince);
 	}
 

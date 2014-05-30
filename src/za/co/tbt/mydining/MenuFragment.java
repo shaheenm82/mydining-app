@@ -20,11 +20,9 @@ import android.widget.ExpandableListView;
  * 
  */
 public class MenuFragment extends Fragment {
-	//private ListView restView = null;
 	private RestaurantDataSupplier restDataSupplier = null;
 	private ExpandableListView menuView = null;
 	private MenuListAdapter menuAdapter = null;
-	//private RestaurantDataSource restDataSource = null;
 	private Menu restaurant_menu = null;	
 	
 	private String filter;
@@ -38,7 +36,6 @@ public class MenuFragment extends Fragment {
 	
 	@Override
 	public void onAttach(Activity activity) {
-		// TODO Auto-generated method stub
 		super.onAttach(activity);
 		restDataSupplier = (RestaurantDataSupplier) activity;
 	}
@@ -59,7 +56,6 @@ public class MenuFragment extends Fragment {
 	}
 
 	public int filterMenu(String filter){
-		//this.filterType = "name";
 		RestaurantDataSource restDataSource;
 		
 		this.filter = filter + "%";

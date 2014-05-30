@@ -4,7 +4,6 @@ public class Cuisine extends DBItem{
 	private String description;
 	
 	public Cuisine(String name) {
-		// TODO Auto-generated constructor stub
 		super(name);
 	}
 	

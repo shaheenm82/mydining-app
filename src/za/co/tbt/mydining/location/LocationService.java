@@ -1,6 +1,5 @@
 package za.co.tbt.mydining.location;
 
-import za.co.tbt.mydining.db.NearbyRestaurantUpdater;
 import android.app.Service;
 import android.content.Intent;
 import android.location.Location;
@@ -19,18 +18,12 @@ GooglePlayServicesClient.OnConnectionFailedListener{
 	public LocationService() {
 	}
 
-	//List<LocationUpdateListener> locUpdateListeners;
 	LocationClient location_client;
 	Location location;
 	LocationClientBinder clientBinder;
 	
-	//public LocationService() {
-	//}
-
-	
 	@Override
 	public void onCreate() {
-		// TODO Auto-generated method stub
 		super.onCreate();
 		
 		location_client = new LocationClient(this, this, this);
@@ -38,13 +31,11 @@ GooglePlayServicesClient.OnConnectionFailedListener{
 		location_client.connect();
 
 		clientBinder = new LocationClientBinder();
-		//locUpdateListeners = new ArrayList<LocationUpdateListener>();
 	}
 
 	
 	@Override
 	public void onDestroy() {
-		// TODO Auto-generated method stub
 		location_client.disconnect();
 		super.onDestroy();
 	}
@@ -52,23 +43,8 @@ GooglePlayServicesClient.OnConnectionFailedListener{
 
 	@Override
 	public IBinder onBind(Intent intent) {
-		// TODO Auto-generated method stub
-		//Log.d("ssm", "connecting location client");
-		
 		return clientBinder;
 	}
-
-
-	/*public void addLocationUpdateListener(LocationUpdateListener lulistener) {
-		// TODO Auto-generated method stub
-		locUpdateListeners.add(lulistener);
-		
-		if(location!=null){
-			for (LocationUpdateListener listener : locUpdateListeners) {
-				listener.locationUpdated(location);
-			}			
-		}
-	}*/
 	
 	/**
      * Verify that Google Play services is available before making a request.
@@ -101,31 +77,14 @@ GooglePlayServicesClient.OnConnectionFailedListener{
     
 	@Override
 	public void onConnectionFailed(ConnectionResult result) {
-		// TODO Auto-generated method stub
-		/*for (LocationUpdateListener listener : locUpdateListeners) {
-			listener.locationUpdateFailed();
-		}*/
 	}
 
 	@Override
 	public void onConnected(Bundle connectionHint) {
-		//Log.d("ssm", "onConnected");
 		if (servicesConnected()){
 			
 			location = location_client.getLastLocation();							
 			
-			/*NearbyRestaurantDataSource nearbyDataSource = new NearbyRestaurantDataSource(this);
-			nearbyDataSource.open();
-			nearbyDataSource.updateNearbyDistances(location);*/
-			
-			NearbyRestaurantUpdater nrupdater = new NearbyRestaurantUpdater(this);
-			nrupdater.execute(location);
-			
-			/*for (LocationUpdateListener listener : locUpdateListeners) {
-				listener.locationUpdated(location);
-			}*/
-			
-		//	Log.d("ssm", "setting location");
 			clientBinder.setLocation(location);
 		}
 	}
@@ -133,7 +92,5 @@ GooglePlayServicesClient.OnConnectionFailedListener{
 
 	@Override
 	public void onDisconnected() {
-		// TODO Auto-generated method stub
-		
 	}
 }

@@ -18,7 +18,6 @@ public class MenuItemListViewHolder {
 	public TextView menuCostText = null;
 	
 	public MenuItemListViewHolder(View row) {
-		// TODO Auto-generated constructor stub
 		menuDishText = (TextView) row.findViewById(R.id.text_dish);
 		menuDescriptionText = (TextView) row.findViewById(R.id.text_description);
 		menuPortionText = (TextView) row.findViewById(R.id.text_portion);

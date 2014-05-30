@@ -12,7 +12,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.util.Log;
 
 public class RestaurantDetailsPagerAdapter extends FragmentPagerAdapter {
 	public static final String ARG_TITLE = "title";
@@ -20,21 +19,18 @@ public class RestaurantDetailsPagerAdapter extends FragmentPagerAdapter {
 	
 	public RestaurantDetailsPagerAdapter(FragmentManager fragment, Context context, Restaurant restaurant) {
 		super(fragment);
-		// TODO Auto-generated constructor stub
 		Bundle args;
 		Fragment f; 
 		
 		fragmentItems = new ArrayList<Fragment>();		
 		
 		f = new MenuFragment();
-		//((MenuFragment)f).setRestaurantMenu(restaurant.getRestaurant_menu());
 		args = new Bundle();
 		fragmentItems.add(f);
 		args.putString(ARG_TITLE, context.getString(R.string.title_menus));
 		f.setArguments(args);
 		
 		f = new BranchFragment();
-		//((BranchFragment)f).setRestaurantBranches(restaurant.getRestaurant_branches());
 		args = new Bundle();
 		fragmentItems.add(f);
 		args.putString(ARG_TITLE, context.getString(R.string.title_branches));
@@ -49,19 +45,16 @@ public class RestaurantDetailsPagerAdapter extends FragmentPagerAdapter {
 
 	@Override
 	public Fragment getItem(int index) {
-		// TODO Auto-generated method stub
 		return fragmentItems.get(index);
 	}
 
 	@Override
 	public int getCount() {
-		// TODO Auto-generated method stub
 		return fragmentItems.size();
 	}
 
 	@Override
 	public CharSequence getPageTitle(int position) {
-		// TODO Auto-generated method stub
 		CharSequence title = fragmentItems.get(position).getArguments().getString(ARG_TITLE);
 		
 		return title;

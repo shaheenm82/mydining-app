@@ -2,11 +2,12 @@ package za.co.tbt.mydining;
 
 import za.co.tbt.mydining.adapter.EntryPagerAdapter;
 import za.co.tbt.mydining.db.MyDiningDbOpenHelper;
-import za.co.tbt.mydining.location.LocationService2;
 import android.app.ActionBar;
+import android.app.AlertDialog;
 import android.app.FragmentTransaction;
 import android.app.SearchManager;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -28,9 +29,7 @@ public class EntryActivity extends FragmentActivity implements
 	 * intensive, it may be best to switch to a
 	 * {@link android.support.v4.app.FragmentStatePagerAdapter}.
 	 */
-	//SectionsPagerAdapter mSectionsPagerAdapter;
 	EntryPagerAdapter mEntryPagerAdapter;
-	//LocationService locationService;
 	MyDiningDbOpenHelper diningHelper;
 
 	/**
@@ -43,13 +42,6 @@ public class EntryActivity extends FragmentActivity implements
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_entry);
 
-		//create database helper
-		diningHelper = new MyDiningDbOpenHelper(this);
-		diningHelper.getOpenDatabase();
-		//diningHelper.openDataBase();
-				
-		//locationService = LocationService.getInstance(getApplicationContext());
-		
 		// Set up the action bar.
 		final ActionBar actionBar = getActionBar();
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
@@ -107,31 +99,39 @@ public class EntryActivity extends FragmentActivity implements
 	
 	@Override
 	protected void onStart() {
-		// TODO Auto-generated method stub
-		super.onStart();
-		//if (!locationService.servicesConnected()){
-			//locationService.start();
-		//}
+		super.onStart();		
 	}
 
 	@Override
 	protected void onStop() {
-		// TODO Auto-generated method stub
 		super.onStop();
-		//locationService.stop();
 	}
 
 	@Override
 	protected void onDestroy() {
-		// TODO Auto-generated method stub
 		super.onDestroy();
-		
-		diningHelper.closeDataBase();
 	}
 	
 	@Override
+	public void onBackPressed() {
+		new AlertDialog.Builder(this)
+        .setIcon(android.R.drawable.ic_dialog_alert)
+        .setTitle("Exit Application")
+        .setMessage("Are you sure you want to close this activity?")
+        .setPositiveButton("Yes", new DialogInterface.OnClickListener()
+        {
+        	@Override
+        	public void onClick(DialogInterface dialog, int which) {
+        		finish();    
+        	}
+
+        })
+        .setNegativeButton("No", null)
+        .show();
+	}
+
+	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// TODO Auto-generated method stub
 		switch (item.getItemId()){
 			case R.id.action_settings:
 				openSettings();
@@ -164,7 +164,6 @@ public class EntryActivity extends FragmentActivity implements
 	
 	@Override
 	protected void onNewIntent(Intent intent) {
-		// TODO Auto-generated method stub
 		super.onNewIntent(intent);
 		
 		performSearch(intent);
@@ -206,21 +205,17 @@ public class EntryActivity extends FragmentActivity implements
 
 	@Override
 	public boolean onQueryTextChange(String newText) {
-		// TODO Auto-generated method stub
-		//if (newText.length() == 0){
-			Intent intent = getIntent();
-			intent.setAction(Intent.ACTION_SEARCH);
-			intent.putExtra(SearchManager.QUERY, newText);
+		Intent intent = getIntent();
+		intent.setAction(Intent.ACTION_SEARCH);
+		intent.putExtra(SearchManager.QUERY, newText);
 			
-			performSearch(intent);						
-		//}				
+		performSearch(intent);						
 		
 		return true;
 	}
 
 	@Override
 	public boolean onQueryTextSubmit(String query) {
-		// TODO Auto-generated method stub
 		Intent intent = getIntent();
 		intent.setAction(Intent.ACTION_SEARCH);
 		intent.putExtra(SearchManager.QUERY, query);
@@ -228,5 +223,5 @@ public class EntryActivity extends FragmentActivity implements
 		performSearch(intent);
 		
 		return true;
-	}
+	}	
 }

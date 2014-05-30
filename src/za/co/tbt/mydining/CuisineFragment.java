@@ -17,8 +17,6 @@ import android.widget.ListView;
 
 public class CuisineFragment extends Fragment implements OnItemClickListener{
 	private DBListAdapter listAdapter = null;
-	//private Context context;
-	
 	private ListView cuisineView = null;
 	CuisineDataSource cuisineDataSource = null;
 	
@@ -44,7 +42,6 @@ public class CuisineFragment extends Fragment implements OnItemClickListener{
 	
 	@Override
 	public void onDestroyView() {
-		// TODO Auto-generated method stub
 		super.onDestroyView();
 		cuisineDataSource.close();
 	}
@@ -65,7 +62,6 @@ public class CuisineFragment extends Fragment implements OnItemClickListener{
 
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-		// TODO Auto-generated method stub
 		Cuisine cuisine = (Cuisine)cuisineView.getItemAtPosition(position);
 		
 		EntryActivity entryActivity = ((EntryActivity)getActivity());

@@ -5,7 +5,6 @@ public class DBItem {
 	private String name;
 	
 	public DBItem(String name) {
-		// TODO Auto-generated constructor stub
 		id = 0;
 		this.name = name;
 	}
@@ -25,7 +24,6 @@ public class DBItem {
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return name;
 	}
 }

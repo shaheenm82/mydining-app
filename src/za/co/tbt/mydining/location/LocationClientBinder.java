@@ -16,8 +16,6 @@ public class LocationClientBinder extends Binder {
 	}
 
 	public void addLocationUpdateListener(LocationUpdateListener lulistener) {
-		// TODO Auto-generated method stub
-		//Log.d("ssm", "adding location listener");
 		locUpdateListeners.add(lulistener);
 		
 		if(location!=null){
@@ -36,7 +34,6 @@ public class LocationClientBinder extends Binder {
 				
 		if(location!=null){
 			for (LocationUpdateListener listener : locUpdateListeners) {
-				//Log.d("ssm", "location updated");
 				listener.locationUpdated(location);
 			}			
 		}

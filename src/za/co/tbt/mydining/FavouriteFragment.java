@@ -41,7 +41,6 @@ public class FavouriteFragment extends Fragment implements OnItemClickListener {
 	
 	@Override
 	public void onDestroyView() {
-		// TODO Auto-generated method stub
 		super.onDestroyView();
 		favDataSource.close();
 	}
@@ -52,7 +51,6 @@ public class FavouriteFragment extends Fragment implements OnItemClickListener {
 	
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-		// TODO Auto-generated method stub
 		Restaurant restaurant = ((Favourite)favView.getItemAtPosition(position)).getRestaurant();
 		
 		Intent intent = new Intent(getActivity(), RestaurantDetailActivity.class);

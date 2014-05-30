@@ -19,17 +19,14 @@ public class CuisineDataSource {
 	MyDiningDbOpenHelper dbHelper;
 	
 	public CuisineDataSource(Context context) {
-		// TODO Auto-generated constructor stub
 		dbHelper = new MyDiningDbOpenHelper(context);
 	}
 	
 	public void open() throws SQLException {
-		//dbHelper.openDataBase();
 	    db = dbHelper.getOpenDatabase();
 	}
 
 	public void close() {
-		//dbHelper.close();
 	}
 	
 	public List<DBItem> getAllCuisines() {
@@ -69,7 +66,6 @@ public class CuisineDataSource {
 	private Cuisine getCuisine(Cursor cursor) {
 		Cuisine cuisine = new Cuisine(cursor.getString(1));
 		cuisine.setId(cursor.getLong(0));
-		//cuisine.setName(cursor.getString(1));
 		cuisine.setDescription(cursor.getString(2));
 	    return cuisine;
 	}

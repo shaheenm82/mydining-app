@@ -1,0 +1,986 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if lt IE 7 ]>  <html class="no-js ie6" lang="en"><![endif]-->
+<!--[if IE 7 ]>     <html class="no-js ie7" lang="en"><![endif]-->
+<!--[if IE 8 ]>     <html class="no-js ie8" lang="en"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class=" js flexbox no-touch hashchange history rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+	<title>Menu | KFC South Africa</title>
+	<link rel="shortcut icon" type="image/x-icon" href="http://cdn1.kfc.unomena.net/media/kfc/favicon.ico">
+	<style type="text/css">
+	   @font-face{
+		 font-family:'kfc'; src:url('/fonts/kfcci.eot'); src:url('/fonts/kfcci.eot?#kfc') format('embedded-opentype'),
+		 url('/fonts/kfcci.woff') format('woff'),
+		 url('/fonts/kfcci.ttf') format('truetype'),
+		 url('/fonts/kfcci.svg#kfc') format('svg'); font-weight:normal; font-style:normal;
+	   }
+		 
+	   @font-face {
+        font-family: 'HelveticaInRo';
+        src: url('/fonts/helveticainseratltstdroman-webfont.eot');
+        src: url('/fonts/helveticainseratltstdroman-webfont.eot?#iefix') format('embedded-opentype'),
+             url('/fonts/helveticainseratltstdroman-webfont.woff') format('woff'),
+             url('/fonts/helveticainseratltstdroman-webfont.ttf') format('truetype'),
+             url('/fonts/helveticainseratltstdroman-webfont.svg#helvetica_lt_stdbold') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        }
+	</style>
+	<link rel="stylesheet" href="menu_list_files/style.css">
+    <link rel="stylesheet" href="menu_list_files/console.css">
+    <link rel="stylesheet" href="menu_list_files/social.css">
+    
+    <script src="menu_list_files/ga.js" async="" type="text/javascript"></script><script src="menu_list_files/gtm.js" async=""></script><script type="text/javascript" src="menu_list_files/jquery_003.js"></script>
+    
+    <!-- script type="text/javascript" src="http://cdn1.kfc.unomena.net/static/kfc/includes/jquery.js"></script -->
+    <!-- script type="text/javascript" src="http://cdn1.kfc.unomena.net/static/kfc/includes/jquery.colorbox.js"></script-->
+    <script type="text/javascript" src="menu_list_files/jquery_002.js"></script>
+    <script type="text/javascript" src="menu_list_files/jquery.js"></script>
+	<script type="text/javascript" src="menu_list_files/jquery-ui.js"></script>
+	<script type="text/javascript" src="menu_list_files/modernizr.js"></script>
+	
+	<script type="text/javascript" src="menu_list_files/ckeditor.js"></script>
+	<!--[if IE]>
+	  <xml:namespace ns="urn:schemas-microsoft-com:vml" prefix="v" />
+	  <link rel="stylesheet" type="text/css" href="http://cdn1.kfc.unomena.net/static/kfc/includes/domready.ie.css" />
+	<![endif]-->
+	<!--[if lte IE 7]>
+	  <link rel="stylesheet" type="text/css" href="http://cdn1.kfc.unomena.net/static/kfc/includes/g-png.ie6.css" />
+	  <link rel="stylesheet" type="text/css" href="http://cdn1.kfc.unomena.net/static/kfc/includes/lte-ie7.css" />
+	  <script type="text/javascript" src="http://cdn1.kfc.unomena.net/static/kfc/includes/DD_belatedPNG_0.0.8a-min.js"></script>
+	  <script type="text/javascript">
+	    DD_belatedPNG.fix('.png_bg');
+	  </script>
+	<![endif]-->
+	
+	
+    <!-- script type="text/javascript" src="http://cdn1.kfc.unomena.net/static/kfc/includes/jquery.js"></script-->
+    <script type="text/javascript" src="menu_list_files/jquery_004.js"></script>
+    <script>
+        $(document).ready(function(){
+    	    $('a.popup').colorbox();
+    	    jQuery('a.delete_toggle').click(function() {
+    			jQuery(this).hide();
+    			jQuery('a.delete_confirm').show();
+    		});
+        });
+
+        function bump_up(item_id){
+            jQuery.get('/console/bump/'+item_id+'/up/');
+            document.location = document.location;
+        }
+
+        function bump_down(item_id){
+            jQuery.get('/console/bump/'+item_id+'/down/');
+            document.location = document.location;
+        }
+    </script>
+
+	
+	
+	
+		<script type="text/javascript">
+	       var _gaq = _gaq || [];
+	       _gaq.push(['_setAccount', 'UA-24468404-1']);
+	       _gaq.push(['_setDomainName', 'kfc.co.za']);
+	       _gaq.push(['_setAllowHash', 'false']);
+	       _gaq.push(['_trackPageview']);
+	       
+	       
+	       _gaq.push(['b._setAccount', 'UA-24468404-6']);
+	       _gaq.push(['b._trackPageview']);
+	       
+	       
+	       _gaq.push(['d._setAccount', 'UA-24351724-1']);
+	       _gaq.push(['d._trackPageview']);
+	    </script>
+	
+	
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,.fb_connect_bar_container span,.fb_connect_bar_container a,.fb_connect_bar_container img,.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}.fb_connect_bar a:hover{color:#fff}.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}.fb_connect_bar div a,.fb_connect_bar span,.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style><script src="menu_list_files/getAllAppDefault.esi" type="text/javascript"></script><script src="menu_list_files/checkOAuth.esi" type="text/javascript"></script><link href="menu_list_files/buttons.css" type="text/css" rel="stylesheet"></head>
+
+<body class="">
+    
+    <!-- Google Tag Manager -->
+    <script type="text/javascript">
+        dataLayer = [];
+        dataLayer.push({ 'UAID': 'UA--24468404-1, 'dcsid': 'dcsxxxxxxxxxxxxxxxxxxxxxxxxxxx' });
+    </script>
+    <noscript>
+       <iframe src="//www.googletagmanager.com/ns.html?id=GTM-83S8" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-83S8');
+    </script>
+    <!-- End Google Tag Manager -->
+    
+	<div class="wrap sub ">
+		<header class="head">
+		  <div class="inner"> <a href="http://www.kfc.co.za/" class="logo png_bg home"></a>
+		    <ul class="actions png_bg">
+		      
+			      <li class="sign_up"> <a href="#" class="show_sign_up">Register</a>
+
+
+    <div>
+    <form style="display: none;" id="facebook_connect_reg_form" class="connect-button" name="login" method="post" action="/social/facebook/login/">
+    <div style="display:none"><input name="csrfmiddlewaretoken" value="cff6a55a3843640b46ae7bc191953ae3" type="hidden"></div>
+    
+        <input name="next" value="/mykfc/profile/" type="hidden">
+    
+</form>
+
+
+
+
+     
+        
+
+	<form id="twitter_connect_reg_form" class="connect-button" name="login" method="post" action="/social/twitter/redirect/">
+	  <input value="/registration/success/" name="next" type="hidden">
+	</form>
+	<form id="facebook_connect_reg_form" class="connect-button" name="login" method="post" action="/social/facebook/login/">
+	  <input value="/registration/success/" name="next" type="hidden">
+	</form>
+	<div class="sign_up_pop png_bg">
+	<div class="popupActive"><div class="popupText">Register</div></div>
+	  <form id="frmRegister" class="validate_form" action="/accounts/register/" method="post">
+	    <input value="/registration/success/" name="next" type="hidden">
+	    <div class="registerContainer">
+	      <div class="header"> </div>
+	      <div class="fields">
+	        <input value="/registration/success/" name="next" type="hidden">
+	        <div class="inputHalf">
+	          <input onblur="if (this.value == '') {this.value = 'Username';}" onfocus="if (this.value == 'Username') {this.value = '';}" value="Username" id="id_username" class="required" name="username" maxlength="30" type="text">
+	          
+	        </div>
+	        <div class="inputHalf">
+	          <input onblur="if (this.value == '') {this.value = 'Email';}" onfocus="if (this.value == 'Email') {this.value = '';}" value="Email" id="id_email" class="required" name="email" maxlength="75" type="text">
+	          
+	        </div>
+	        <div class="inputHalf">
+	          <input onblur="if (this.value == '') {this.value = 'Password';}" onfocus="if (this.value == 'Password') {this.value = '';}" value="Password" id="id_password1" class="required" name="password1" type="password">
+	          
+	        </div>
+	        <div class="check">
+	            <input id="id_tos" class="required" name="tos" type="checkbox">
+	            <label id="id_tos"><span>Please read and accept KFC's </span><a href="http://www.kfc.co.za/legal/" class="red">Terms of use</a></label>
+	        </div>
+            <p class="clearfix"></p>
+            <div class="btn">
+            <input src="menu_list_files/register_button.gif" name="submit" value="Register" type="image">
+          </div>
+          <div class="socialText">Register with </div>
+          <div class="socialPics">
+            <img onclick="facebookConnect($('#facebook_connect_reg_form'));" src="menu_list_files/register_facebook.gif">
+            <img onclick="$('#twitter_connect_reg_form').submit();" src="menu_list_files/register_twitter.gif">
+          </div>
+	      </div>
+	    </div>
+	  </form>
+	  <!-- end: #frmRegister -->
+	</div>
+	<!--/sign_up_pop-->
+
+    
+
+
+<script type="text/javascript">
+function bind_registration_form() {
+    $('#frmRegister').ajaxForm(options);
+}
+
+var options = { 
+    success: function(response_text, status_text, xhr, form_elem) {
+        try {
+            var response_json = JSON.parse(response_text);
+            window.location = response_json.redirect_url;
+        } catch(e) {
+            $('div.sign_up_pop').replaceWith(response_text);
+			$("div.sign_up_pop").show();
+            bind_registration_form();
+            $("#frmRegister input[type='submit']").attr("value", "Woops, Please Correct");
+	        // reset styling updates
+            $("div.sign_up_pop").live("mouseleave", (function() {
+        	    $(this).hide();
+        	}));
+		    $('.actions li.sign_up div.why_join_inside ul li:first').css({"border-left":"0"});
+		    $('.actions li.sign_up div.why_join_inside ul li:last').css({"border-right":"0"});
+        }
+    }, 
+    beforeSubmit: function() {
+        $("#frmRegister input[type='submit']").attr("disabled", true);
+        $("#frmRegister input[type='submit']").attr("value", "Registering, Please Wait...");
+    }
+};
+
+$(function() {
+    bind_registration_form();
+});
+</script>
+</div></li>
+		      
+		      
+		          <li class="sign_in"> <a href="#" class="show_sign_in">Login</a>
+
+
+    <div>
+    <form style="display: none;" id="facebook_connect_login_form" class="connect-button" name="login" method="post" action="/social/facebook/login/">
+    <div style="display:none"><input name="csrfmiddlewaretoken" value="cff6a55a3843640b46ae7bc191953ae3" type="hidden"></div>
+    
+        <input name="next" value="/mykfc/activity/" type="hidden">
+    
+</form>
+
+
+
+
+     
+        
+
+	
+	
+    <div class="sign_in_pop png_bg">
+        <div class="popupActive login">
+            <div class="popupText">Login</div>
+        </div>
+        <form id="frmLogin" class="validate_form" action="/accounts/login/" method="post"><div style="display:none"><input name="csrfmiddlewaretoken" value="cff6a55a3843640b46ae7bc191953ae3" type="hidden"></div>
+            <input value="/login/success" name="next" type="hidden">
+            <div class="loginContainer">
+                <div class="header"></div>
+                <div class="fields">
+                    <div class="inputHalf">
+                        <input onblur="if (this.value == '') {this.value = 'Username';}" onfocus="if (this.value == 'Username') {this.value = '';}" value="Username" id="id_username" class="required" name="username" maxlength="30" type="text">
+                    </div>
+                    <div class="inputHalf">
+                        <input onblur="if (this.value == '') {this.value = 'Password';}" onfocus="if (this.value == 'Password') {this.value = '';}" value="Password" id="id_password" class="required" name="password" type="password">
+                    </div>
+                    <div class="check">
+                        <input id="id_tos" class="required" name="tos" type="checkbox">
+                        <label for="id_tos">
+                        Remember Me
+                        <span class=""><a href="http://www.kfc.co.za/accounts/password_reset">Forgot Password?</a></span>
+                    </label></div>
+                    <p class="clearfix"></p>
+                    <div class="btn">
+                        <input name="submit" value="Login" onclick="$('#loginFrm').submit();" type="submit">
+                    </div>
+                    <div class="socialText">Login with </div>
+                    <div class="socialPics">
+                        <img onclick="facebookConnect($('#facebook_connect_reg_form'));" src="menu_list_files/register_facebook.gif">
+                        <img onclick="$('#twitter_connect_reg_form').submit();" src="menu_list_files/register_twitter.gif">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+	
+
+    
+
+
+<script type="text/javascript">
+function bind_login_form() {
+    $('#frmLogin').ajaxForm(login_form_options);
+}
+
+var login_form_options = { 
+    success: function(response_text, status_text, xhr, form_elem) {
+        try {
+            var response_json = JSON.parse(response_text);
+            window.location = response_json.redirect_url;
+        } catch(e) {
+            $('div.sign_in_pop').replaceWith(response_text);
+			$("div.sign_in_pop").show();
+            bind_login_form();
+            $("#frmLogin input[type='submit']").attr("value", "Please Correct");
+	        // reset styling updates
+            $("div.sign_in_pop").live("mouseleave", (function() {
+        	    $(this).hide();
+        	}));
+        }
+    }, 
+    beforeSubmit: function() {
+        $("#frmLogin input[type='submit']").attr("disabled", true);
+        $("#frmLogin input[type='submit']").attr("value", "Please Wait...");
+    }
+};
+
+$(function() {
+    bind_login_form();
+});
+</script>
+</div></li>
+		      
+		      <li>
+		          <p class="socialLinks">
+		              <a href="http://www.facebook.com/KFCSA" onclick="_gaq.push(['_trackEvent', 'Website', 'Navigation', 'Facebook']);" class="facebook" target="_blank"></a>
+		              <a href="http://twitter.com/kfcsa" onclick="_gaq.push(['_trackEvent', 'Website', 'Navigation', 'Twitter']);" class="twitter" target="_blank"></a>
+		              <a href="http://www.youtube.com/user/KFCsouthafrica" onclick="_gaq.push(['_trackEvent', 'Website', 'Navigation', 'YouTube']);" class="youTube" target="_blank"></a>
+		          </p>
+		      </li>
+		      <form id="frmSearch" action="/search/" method="get" class="search png_bg">
+<p class="search_term">
+  <input name="q" id="search_term" value="Search" onfocus="if (this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" type="text">
+</p><p class="pop_search_category png_bg">Search <span>entire website</span></p>
+<input name="section" value="" id="id_section_0" type="hidden">
+<div class="search_filter">
+  <input id="search_category" value="All" readonly="readonly" type="text">
+  <ul>
+    <li><a href="#" onclick="$('#id_section_0').val('');">All</a></li>
+    <li><a href="#" onclick="$('#id_section_0').val('Meal');">Our Menu</a></li>
+    <li><a href="#" onclick="$('#id_section_0').val('Store');">Our Stores</a></li>
+    <li><a href="#" onclick="$('#id_section_0').val('Post');">Our News</a></li>
+  </ul>
+</div>
+<input name="submit" value="" class="btn" onclick="if ((document.getElementById('search_term').value == 'Search') || (document.getElementById('search_term').value == '')) {return false;}" type="submit">
+</form>
+<!--/search-->
+		    </ul>
+		    <!--/actions-->
+		    
+<ul class="nav png_bg">
+  <li>
+    <a href="http://www.kfc.co.za/so-good/" class="mainNav has_menu png_bg">What's So Good</a>
+    <div style="margin-top: -10000px; display: none;" class="mega png_bg soGood">
+    <div class="megaWrap">
+        <ul class="mega_body">
+            <li><a href="http://www.addhope.co.za/" target="_blank"><img src="menu_list_files/nav_addhope.jpg" alt="" width="119" height="112"></a></li>
+            <li><a href="http://www.kfcminicricket.co.za/"><img src="menu_list_files/nav_minicricket.jpg" alt="" width="119" height="112"></a></li>
+            <li><a href="http://www.kfc.co.za/40-years/"><img src="menu_list_files/nav_40Years.jpg" alt="" width="119" height="112"></a></li>
+        </ul>
+    </div>
+   </div>
+  </li>
+  <li><a href="http://www.kfc.co.za/menu/" class="mainNav has_menu png_bg">Our Menu</a>
+<div style="margin-top: -10000px; display: none;" class="mega png_bg ourMenu"> 
+ <div class="megaWrap arrows"><div style="width: 656px;" class="coda-nav" id="coda-nav-1"><ul style="width: 45px;"><li class="tab1"><a class="current png_bg" href="#1"></a></li><li class="tab2"><a class="png_bg" href="#2"></a></li><li class="tab3"><a class="png_bg" href="#3"></a></li></ul></div>
+  <div style="" class="coda-nav-left" id="coda-nav-left-1"><a href="#">Ã‚Â« left</a></div><div style="height: 172px;" class="mega_control coda-slider" id="coda-slider-1">
+    <div class="coda-slider-wrapper">
+     <div style="width: 1968px;" class="panel-container"><div class="panel">
+         <ul class="mega_body">
+             
+                 <li>
+                     <a class="png_bg" href="http://www.kfc.co.za/menu/by/group/on-promotion/">
+                         <img src="menu_list_files/Famous-Bowl_menu_thumbnail.jpg" alt="" width="119" height="65">
+                         <span>On Promotion</span>
+                     </a>
+                     <!-- a class="like liker_200185">0<span class="pop_like png_bg"></span></a -->
+                 </li>
+                 
+                     
+                 
+             
+                 <li>
+                     <a class="png_bg" href="http://www.kfc.co.za/menu/by/group/breakfast/">
+                         <img src="menu_list_files/am_Riser_2011_W_meal_main_image_menu_thumbnail.png" alt="" width="119" height="65">
+                         <span>Breakfast</span>
+                     </a>
+                     <!-- a class="like liker_1436">0<span class="pop_like png_bg"></span></a -->
+                 </li>
+                 
+                     
+                 
+             
+                 <li>
+                     <a class="png_bg" href="http://www.kfc.co.za/menu/by/group/ka-ching-deals/">
+                         <img src="menu_list_files/Ka-Ching%2520Deals_menu_thumbnail.jpg" alt="" width="119" height="65">
+                         <span>Ka-Ching Deals</span>
+                     </a>
+                     <!-- a class="like liker_60">0<span class="pop_like png_bg"></span></a -->
+                 </li>
+                 
+                     
+                 
+             
+                 <li>
+                     <a class="png_bg" href="http://www.kfc.co.za/menu/by/group/streetwise-meals/">
+                         <img src="menu_list_files/streetwise-2_1_menu_thumbnail.png" alt="" width="119" height="65">
+                         <span>Streetwise Meals</span>
+                     </a>
+                     <!-- a class="like liker_1">0<span class="pop_like png_bg"></span></a -->
+                 </li>
+                 
+                     
+         </ul>
+    </div><div class="panel">
+         <ul class="mega_body">
+                     
+                 
+             
+                 <li>
+                     <a class="png_bg" href="http://www.kfc.co.za/menu/by/group/twisters-0/">
+                         <img src="menu_list_files/twister-toasted-sweet-chilli-solo_1_meal_main_image_menu_thu.png" alt="" width="119" height="65">
+                         <span>Twisters</span>
+                     </a>
+                     <!-- a class="like liker_694">0<span class="pop_like png_bg"></span></a -->
+                 </li>
+                 
+                     
+                 
+             
+                 <li>
+                     <a class="png_bg" href="http://www.kfc.co.za/menu/by/group/burgers/">
+                         <img src="menu_list_files/burger-colonel-solo_1_menu_thumbnail.png" alt="" width="119" height="65">
+                         <span>Burgers</span>
+                     </a>
+                     <!-- a class="like liker_37">0<span class="pop_like png_bg"></span></a -->
+                 </li>
+                 
+                     
+                 
+             
+                 <li>
+                     <a class="png_bg" href="http://www.kfc.co.za/menu/by/group/big-eats/">
+                         <img src="menu_list_files/Fully_Loaded_Box_Meal_1_menu_thumbnail.jpg" alt="" width="119" height="65">
+                         <span>Big Eats</span>
+                     </a>
+                     <!-- a class="like liker_200186">0<span class="pop_like png_bg"></span></a -->
+                 </li>
+                 
+                     
+                 
+             
+                 <li>
+                     <a class="png_bg" href="http://www.kfc.co.za/menu/by/group/family-meals/">
+                         <img src="menu_list_files/Family-Box-Meal_lowres_meal_main_image_1_menu_thumbnail.jpg" alt="" width="119" height="65">
+                         <span>Family Meals</span>
+                     </a>
+                     <!-- a class="like liker_6">0<span class="pop_like png_bg"></span></a -->
+                 </li>
+                 
+                     
+         </ul>
+    </div><div class="panel">
+         <ul class="mega_body">
+                     
+                 
+             
+                 <li>
+                     <a class="png_bg" href="http://www.kfc.co.za/menu/by/group/treats/">
+                         <img src="menu_list_files/Chocolate_kreamball_meal_main_image_menu_thumbnail.jpg" alt="" width="119" height="65">
+                         <span>Treats</span>
+                     </a>
+                     <!-- a class="like liker_103">0<span class="pop_like png_bg"></span></a -->
+                 </li>
+                 
+                     
+                 
+             
+                 <li>
+                     <a class="png_bg" href="http://www.kfc.co.za/menu/by/group/kids/">
+                         <img src="menu_list_files/Kids-Grill-Twister-meal-New_2_menu_thumbnail.jpg" alt="" width="119" height="65">
+                         <span>Kids</span>
+                     </a>
+                     <!-- a class="like liker_32">0<span class="pop_like png_bg"></span></a -->
+                 </li>
+                 
+                     
+                 
+             
+                 <li>
+                     <a class="png_bg" href="http://www.kfc.co.za/menu/by/group/add-on/">
+                         <img src="menu_list_files/chicken-5-piece_1_menu_thumbnail.png" alt="" width="119" height="65">
+                         <span>Add On</span>
+                     </a>
+                     <!-- a class="like liker_16">0<span class="pop_like png_bg"></span></a -->
+                 </li>
+                 
+                     
+                 
+             
+                 <li>
+                     <a class="png_bg" href="http://www.kfc.co.za/menu/by/group/drinks/">
+                         <img src="menu_list_files/main_oreo_krusher_1_meal_main_image_1_menu_thumbnail.png" alt="" width="119" height="65">
+                         <span>Drinks</span>
+                     </a>
+                     <!-- a class="like liker_76">0<span class="pop_like png_bg"></span></a -->
+                 </li>
+                 
+                 
+             
+         </ul>
+    </div></div>
+    
+    
+    </div>
+  </div><div style="" class="coda-nav-right" id="coda-nav-right-1"><a href="#">right Ã‚Â»</a></div>
+  <a href="http://www.kfc.co.za/menu/" class="menu_full png_bg">View Our Full Menu</a></div></div>
+<!--/mega-->
+</li>
+  <li><a href="http://www.kfc.co.za/stores/locator/" class="mainNav has_menu png_bg">Our Stores</a>
+<div class="mega png_bg">
+         <div class="megaWrap">
+
+  <ul class="mega_body">
+    
+        <li>
+            <a href="http://www.kfc.co.za/stores/vincent-park-east-london/">
+                <img src="menu_list_files/default_store_listing_menu_thumbnail.png" alt="" width="119" height="65">
+                <span>Vincent park - east london</span>
+            </a>
+        </li>
+    
+        <li>
+            <a href="http://www.kfc.co.za/stores/newcastle-ii/">
+                <img src="menu_list_files/default_store_listing_32_menu_thumbnail.png" alt="" width="119" height="65">
+                <span>Newcastle II</span>
+            </a>
+        </li>
+    
+        <li>
+            <a href="http://www.kfc.co.za/stores/newcastle/">
+                <img src="menu_list_files/default_store_listing_31_menu_thumbnail.png" alt="" width="119" height="65">
+                <span>Newcastle</span>
+            </a>
+        </li>
+    
+        <li>
+            <a href="http://www.kfc.co.za/stores/sasolburg-co-eric-louw-klasie-havenga-streets/">
+                <img src="menu_list_files/default_store_listing_menu_thumbnail.png" alt="" width="119" height="65">
+                <span>Sasolburg c/o eric louw &amp; klasie havenga streets</span>
+            </a>
+        </li>
+    
+        <li>
+            <a href="http://www.kfc.co.za/stores/arcadia/">
+                <img src="menu_list_files/default_store_listing_menu_thumbnail.png" alt="" width="119" height="65">
+                <span>Arcadia</span>
+            </a>
+        </li>
+    
+  </ul>
+  <a href="http://www.kfc.co.za/stores/locator/" class="menu_full png_bg">Find a Store</a> </div>
+</div></li>
+  <li><a href="http://www.kfc.co.za/zone/" class="mainNav">Our News</a></li>
+</ul>
+<!--/nav-->
+
+		  </div>
+		</header>
+		<!--/Head-->
+		
+		
+			<div class="content">
+			    
+			    <div class="left">
+			        
+    
+	    <div class="container">
+	        
+	        <div class="container_top">
+	            <h1>KFC Menu </h1>
+	        </div>
+	        
+	        <div class="container_body bg_png">
+	            <div class="countermat">
+                    <a href="#" onclick="_gaq.push(['_trackEvent', 'Website', 'Menu', 'Countermat']);" class="align_left cboxElement"><img src="menu_list_files/countermat_pop.png" alt="" width="398" height="148"></a>
+                    <a href="http://kfc-fb.unomena.com/countermat/delivery.pdf" target="_blank" onclick="_gaq.push(['_trackEvent', 'Website', 'Menu', 'Delivery']);"><img src="menu_list_files/DeliveryMenu.gif" alt="" width="202" height="148"></a>
+                </div>
+	            <a id="menu" class="clearfix"></a>
+	            <div class="menu">
+	            
+	                <div class="menu_item">
+	                    <a href="http://www.kfc.co.za/menu/by/group/on-promotion/">
+	                        <img src="menu_list_files/Famous-Bowl_meal_promo.jpg" alt="On Promotion" width="178" height="112">
+	                        <span>On Promotion</span>
+	
+	                        <span class="desc">Check out our latest promotions, but hurry these are only while stocks last!</span>
+	                    </a>
+	                    
+	                        <a href="http://www.kfc.co.za/menu/by/group/on-promotion/" class="view png_bg">View</a>
+	                    
+	                    <p class="clearfix"></p>
+	                </div><!--/menu_item-->
+	            
+	                <div class="menu_item">
+	                    <a href="http://www.kfc.co.za/menu/by/group/breakfast/">
+	                        <img src="menu_list_files/am_Riser_2011_W_meal_main_image_meal_promo.png" alt="Breakfast" width="178" height="112">
+	                        <span>Breakfast</span>
+	
+	                        <span class="desc">Start your morning with a delicious breakfast.</span>
+	                    </a>
+	                    
+	                        <a href="http://www.kfc.co.za/menu/by/group/breakfast/" class="view png_bg">View</a>
+	                    
+	                    <p class="clearfix"></p>
+	                </div><!--/menu_item-->
+	            
+	                <div class="menu_item">
+	                    <a href="http://www.kfc.co.za/menu/by/group/ka-ching-deals/">
+	                        <img src="menu_list_files/Ka-Ching%2520Deals_meal_promo.jpg" alt="Ka-Ching Deals" width="178" height="112">
+	                        <span>Ka-Ching Deals</span>
+	
+	                        <span class="desc">Nothing beats the feeling of scoring. KFC's new Ka-Ching deals from as little as R5.</span>
+	                    </a>
+	                    
+	                        <a href="http://www.kfc.co.za/menu/by/group/ka-ching-deals/" class="view png_bg">View</a>
+	                    
+	                    <p class="clearfix"></p>
+	                </div><!--/menu_item-->
+	            
+	                <div class="menu_item">
+	                    <a href="http://www.kfc.co.za/menu/by/group/streetwise-meals/">
+	                        <img src="menu_list_files/streetwise-2_1_meal_promo.png" alt="Streetwise Meals" width="178" height="112">
+	                        <span>Streetwise Meals</span>
+	
+	                        <span class="desc">Just for you, or to feed the whole family. Make the Streetwise choice.</span>
+	                    </a>
+	                    
+	                        <a href="http://www.kfc.co.za/menu/by/group/streetwise-meals/" class="view png_bg">View</a>
+	                    
+	                    <p class="clearfix"></p>
+	                </div><!--/menu_item-->
+	            
+	                <div class="menu_item">
+	                    <a href="http://www.kfc.co.za/menu/by/group/twisters-0/">
+	                        <img src="menu_list_files/twister-toasted-sweet-chilli-solo_1_meal_main_image_meal_pro.png" alt="Twisters" width="178" height="112">
+	                        <span>Twisters</span>
+	
+	                        <span class="desc">Make a meal of it: fresh Twisters served with chips and a drink. Get your favourite here!</span>
+	                    </a>
+	                    
+	                        <a href="http://www.kfc.co.za/menu/by/group/twisters-0/" class="view png_bg">View</a>
+	                    
+	                    <p class="clearfix"></p>
+	                </div><!--/menu_item-->
+	            
+	                <div class="menu_item">
+	                    <a href="http://www.kfc.co.za/menu/by/group/burgers/">
+	                        <img src="menu_list_files/burger-colonel-solo_1_meal_promo.png" alt="Burgers" width="178" height="112">
+	                        <span>Burgers</span>
+	
+	                        <span class="desc">Burger meals and great deals: this is where to get the Colonel's best.</span>
+	                    </a>
+	                    
+	                        <a href="http://www.kfc.co.za/menu/by/group/burgers/" class="view png_bg">View</a>
+	                    
+	                    <p class="clearfix"></p>
+	                </div><!--/menu_item-->
+	            
+	                <div class="menu_item">
+	                    <a href="http://www.kfc.co.za/menu/by/group/big-eats/">
+	                        <img src="menu_list_files/Fully_Loaded_Box_Meal_1_meal_promo.jpg" alt="Big Eats" width="178" height="112">
+	                        <span>Big Eats</span>
+	
+	                        <span class="desc">Big appetites need big meals: this is the best way to handle on your hunger.</span>
+	                    </a>
+	                    
+	                        <a href="http://www.kfc.co.za/menu/by/group/big-eats/" class="view png_bg">View</a>
+	                    
+	                    <p class="clearfix"></p>
+	                </div><!--/menu_item-->
+	            
+	                <div class="menu_item">
+	                    <a href="http://www.kfc.co.za/menu/by/group/family-meals/">
+	                        <img src="menu_list_files/Family-Box-Meal_lowres_meal_main_image_1_meal_promo.jpg" alt="Family Meals" width="178" height="112">
+	                        <span>Family Meals</span>
+	
+	                        <span class="desc">Keep the whole family happy with these great deals.</span>
+	                    </a>
+	                    
+	                        <a href="http://www.kfc.co.za/menu/by/group/family-meals/" class="view png_bg">View</a>
+	                    
+	                    <p class="clearfix"></p>
+	                </div><!--/menu_item-->
+	            
+	                <div class="menu_item">
+	                    <a href="http://www.kfc.co.za/menu/by/group/treats/">
+	                        <img src="menu_list_files/Chocolate_kreamball_meal_main_image_meal_promo.jpg" alt="Treats" width="178" height="112">
+	                        <span>Treats</span>
+	
+	                        <span class="desc">From sweet and smooth to syrupy and sippable, our desserts are delectably delicious.</span>
+	                    </a>
+	                    
+	                        <a href="http://www.kfc.co.za/menu/by/group/treats/" class="view png_bg">View</a>
+	                    
+	                    <p class="clearfix"></p>
+	                </div><!--/menu_item-->
+	            
+	                <div class="menu_item">
+	                    <a href="http://www.kfc.co.za/menu/by/group/kids/">
+	                        <img src="menu_list_files/Kids-Grill-Twister-meal-New_2_meal_promo.jpg" alt="Kids" width="178" height="112">
+	                        <span>Kids</span>
+	
+	                        <span class="desc">Small meals for tiny tummies, Chicky’s got the kids covered.</span>
+	                    </a>
+	                    
+	                        <a href="http://www.kfc.co.za/menu/by/group/kids/" class="view png_bg">View</a>
+	                    
+	                    <p class="clearfix"></p>
+	                </div><!--/menu_item-->
+	            
+	                <div class="menu_item">
+	                    <a href="http://www.kfc.co.za/menu/by/group/add-on/">
+	                        <img src="menu_list_files/chicken-5-piece_1_meal_promo.png" alt="Add On" width="178" height="112">
+	                        <span>Add On</span>
+	
+	                        <span class="desc">Any extras and sides? Get it here: chips, chicken pieces, coleslaw &amp; mash.</span>
+	                    </a>
+	                    
+	                        <a href="http://www.kfc.co.za/menu/by/group/add-on/" class="view png_bg">View</a>
+	                    
+	                    <p class="clearfix"></p>
+	                </div><!--/menu_item-->
+	            
+	                <div class="menu_item">
+	                    <a href="http://www.kfc.co.za/menu/by/group/drinks/">
+	                        <img src="menu_list_files/main_oreo_krusher_1_meal_main_image_1_meal_promo.png" alt="Drinks" width="178" height="112">
+	                        <span>Drinks</span>
+	
+	                        <span class="desc">Quench any thirst with a range of ice-cold drinks, yummy milkshakes and creamy Krushers.</span>
+	                    </a>
+	                    
+	                        <a href="http://www.kfc.co.za/menu/by/group/drinks/" class="view png_bg">View</a>
+	                    
+	                    <p class="clearfix"></p>
+	                </div><!--/menu_item-->
+	            
+	            </div><!--/menu-->
+	        </div><!--/container_body-->
+	        
+	        
+	        
+	    </div><!--/container-->
+	    
+		<div style="display: none;">
+			<div id="countermat">
+				<p><img src="menu_list_files/countermat.png"></p>
+				<p class="countermat_link"><a href="http://kfc-fb.unomena.com/countermat/countermat.pdf" target="_blank"></a></p>
+			</div>
+		</div>
+    
+
+			    </div><!--/Left-->
+			    <div class="right">
+			        
+			            <div class="widget">
+    
+    <div class="widget_body png_bg">
+        <h1>Product Selection</h1>
+        <a href="javascript:%20void(0);" class="handle toggle png_bg"></a>
+        <div class="widget_body_block production_selection">
+            <ul>
+                
+                    <li style="border-top: 0px none;"><a href="http://www.kfc.co.za/menu/by/group/big-eats/">Big Eats</a></li>
+                
+                    <li><a href="http://www.kfc.co.za/menu/by/group/on-promotion/">On Promotion</a></li>
+                
+                    <li><a href="http://www.kfc.co.za/menu/by/group/breakfast/">Breakfast</a></li>
+                
+                    <li><a href="http://www.kfc.co.za/menu/by/group/twisters-0/">Twisters</a></li>
+                
+                    <li><a href="http://www.kfc.co.za/menu/by/group/treats/">Treats</a></li>
+                
+                    <li><a href="http://www.kfc.co.za/menu/by/group/drinks/">Drinks</a></li>
+                
+                    <li><a href="http://www.kfc.co.za/menu/by/group/ka-ching-deals/">Ka-Ching Deals</a></li>
+                
+                    <li><a href="http://www.kfc.co.za/menu/by/group/burgers/">Burgers</a></li>
+                
+                    <li><a href="http://www.kfc.co.za/menu/by/group/kids/">Kids</a></li>
+                
+                    <li style="border-bottom: 0px none;"><a href="http://www.kfc.co.za/menu/by/group/family-meals/">Family Meals</a></li>
+                
+            </ul>
+        </div>
+    </div><!--/widget_body-->
+    
+</div><!--/widget-->
+
+
+    <div class="widget">
+        
+        <div class="widget_body png_bg">
+            <h1>Most Popular Meals</h1>
+            <a href="javascript:%20void(0);" class="handle toggle png_bg"></a>
+            <div class="widget_body_block">
+                
+                    <div style="border-top: 0px none;" class="widget_item">
+    <a href="http://www.kfc.co.za/meal/wicked-zinger-box-meal/"><img src="menu_list_files/Wicked-Zinger-Box-Meal-CAN_gizmo_listing.jpg" alt="Wicked Zinger Box Meal" width="54" height="38"></a>
+    <h2><a href="http://www.kfc.co.za/meal/wicked-zinger-box-meal/">Wicked Zinger Box Meal</a></h2>
+    
+</div>
+
+                
+                    <div class="widget_item">
+    <a href="http://www.kfc.co.za/meal/family-treat-10-piece-with-any-3-sides/"><img src="menu_list_files/Family-Treat-2-with-Large-Chips_gizmo_listing.gif" alt="Family Treat (10-piece, with any 3 sides)" width="54" height="38"></a>
+    <h2><a href="http://www.kfc.co.za/meal/family-treat-10-piece-with-any-3-sides/">Family Treat (10-piece, with any 3 sides)</a></h2>
+    
+</div>
+
+                
+                    <div style="border-bottom: 0px none;" class="widget_item">
+    <a href="http://www.kfc.co.za/meal/streetwise-feast-8-piece/"><img src="menu_list_files/Streetwise-Feast_gizmo_listing.jpg" alt="Streetwise Feast (8-piece)" width="54" height="38"></a>
+    <h2><a href="http://www.kfc.co.za/meal/streetwise-feast-8-piece/">Streetwise Feast (8-piece)</a></h2>
+    
+</div>
+
+                
+            </div>
+        </div><!--/widget_body-->
+        
+    </div><!--/widget-->
+
+
+			        
+			        
+			    </div><!--/Right-->
+			    
+			</div>
+			<!--/Content-->
+		
+		
+		
+		
+		
+		<div class="shareThisPage">
+		    <div class="wrap">
+		        <div class="button shareThis png_bg"></div>
+		        <div st_processed="yes" class="icon st_twitter_large"><span class="stButton" style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;"><span style="background-image: url(&quot;http://w.sharethis.com/images/twitter_32.png&quot;);" class="stLarge"></span><img style="position: absolute; top: -7px; right: -7px; width: 19px; height: 19px; max-width: 19px; max-height: 19px; display: none;" src="menu_list_files/check-big.png"></span></div>
+		        <div st_processed="yes" class="icon st_facebook_large"><span class="stButton" style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;"><span style="background-image: url(&quot;http://w.sharethis.com/images/facebook_32.png&quot;);" class="stLarge"></span><img style="position: absolute; top: -7px; right: -7px; width: 19px; height: 19px; max-width: 19px; max-height: 19px; display: none;" src="menu_list_files/check-big.png"></span></div>
+		        <div st_processed="yes" class="icon st_yahoo_large"></div>
+		        <div st_processed="yes" class="icon st_gbuzz_large"></div>
+		        <div st_processed="yes" class="icon st_email_large"><span class="stButton" style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;"><span style="background-image: url(&quot;http://w.sharethis.com/images/email_32.png&quot;);" class="stLarge"></span><img style="position: absolute; top: -7px; right: -7px; width: 19px; height: 19px; max-width: 19px; max-height: 19px; display: none;" src="menu_list_files/check-big.png"></span></div>
+		        <div st_processed="yes" class="icon st_sharethis_large"><span class="stButton" style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;"><span style="background-image: url(&quot;http://w.sharethis.com/images/sharethis_32.png&quot;);" class="stLarge"></span><img style="position: absolute; top: -7px; right: -7px; width: 19px; height: 19px; max-width: 19px; max-height: 19px; display: none;" src="menu_list_files/check-big.png"></span></div>
+		    </div>
+		</div>
+		
+		<script type="text/javascript">var switchTo5x=true;</script> 
+		<script type="text/javascript" src="menu_list_files/buttons.js"></script> 
+		<script type="text/javascript">stLight.options({publisher:'951487db-f3e5-454e-874a-50d035e694ed'});</script>
+		
+		
+		
+		
+		<footer class="foot foot_home">
+		    <div class="foot_content">
+		        <section class="chips">
+		            <article class="chip_holder">
+		                <div class="chip">
+		                    
+		                    <a href="http://www.kfc.co.za/menu/"><p class="object find"><img src="menu_list_files/footer_menu.png"></p></a>
+		                    
+		                </div>
+		            </article>
+		            <article class="chip_holder">
+		                <div class="chip">
+		                    
+                            <a href="http://www.kfc.co.za/stores/locator/"><p class="object locate"><img src="menu_list_files/footer_locateStore.png"></p></a>
+                            
+		                </div>
+		            </article>
+		            <article class="chip_holder last">
+		                <div class="chip">
+		                    
+                            <a href="http://www.kfc.co.za/contact/"><p class="object speak"><img src="menu_list_files/footer_customerCare.png"></p></a>
+                            
+		                </div>
+		            </article>
+		            <p class="clearfix"></p>
+		        </section>
+		    </div>
+		</footer>
+		
+
+    <div class="sMobileNav">
+        <ul class="nav sMobile">
+            <li><a href="http://www.kfc.co.za/so-good/">What's So Good?</a></li>
+            <li><a href="http://www.kfc.co.za/menu/">Our Menu</a></li>
+            <li><a href="http://www.kfc.co.za/stores/locator/">Our Stores</a></li>
+            <li><a href="http://www.kfc.co.za/zone/">Our News</a></li>
+        </ul>
+    </div>
+	
+	</div>
+	<!--/WRAP-->
+	<div class="clear"></div>
+	<footer class="foot_content sticky">
+	    <nav class="bottom png_bg">
+	        <ul>
+	            <li class="legal">© KFC 2014</li>
+	            <li><a href="http://www.kfc.co.za/legal/">Legal</a></li>
+	            <li><a href="http://www.kfc.co.za/sitemap/">Site Map</a></li>
+	            <li><a href="http://www.kfc.co.za/company_info/">Company Info</a></li>
+                
+	            <li><a href="http://www.kfc.co.za/contact/">Contact</a></li>
+	            <li>
+	                <a target="_blank" href="http://kfc-fb.unomena.com/countermat/nutrition.pdf" onclick="_gaq.push(['_trackEvent', ' nutrition', 'footer', 'pdf']);">Nutritional Info (PDF 2.3MB)</a>
+	            </li>
+	            <li class="last">
+					<a target="_blank" href="http://cdn1.kfc.unomena.net/static/kfc/Allergens.pdf" onclick="_gaq.push(['_trackEvent', 'allergens', 'footer', 'pdf']);">Allergens (PDF 1.96MB)</a>
+				</li>
+	        </ul>
+	    </nav>
+	</footer>
+	
+    <script type="text/javascript" src="menu_list_files/libraries.js"></script><style type="text/css">.noscript{display:none}</style>
+	<script type="text/javascript" src="menu_list_files/scripts.js"></script>
+	<script type="text/javascript" src="menu_list_files/jquery_002.js"></script>
+    
+    
+	<div class=" fb_reset" id="fb-root">
+    <script src="menu_list_files/all.js"></script>
+<div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="menu_list_files/dgdTycPTSRj.js" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" scrolling="no" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0"></iframe><iframe src="menu_list_files/dgdTycPTSRj_002.js" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" scrolling="no" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+<script>
+  // initialize the library with the API key
+  FB.init({ apiKey: '3ed718558a677518c9e186193de2292c', status: true, cookie: true, xfbml: true});
+
+  function facebookConnect(form){
+      function handleResponse(response){
+          form.submit();
+      }
+      FB.login(handleResponse,{perms:'publish_stream'}/*,sms,offline_access,email,read_stream,status_update,etc'}*/);
+  }
+
+</script>
+
+	<!-- Google Analytics Tag -->
+	<script type="text/javascript">
+	    (function() {
+	        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	    })();
+	</script>
+  <!-- End Google Analytics Tag -->
+  <!-- Google Code for Remarketing Tag -->
+  <!--------------------------------------------------
+  Remarketing tags may not be associated with personally identifiable information or
+  placed on pages related to sensitive categories. See more information and instructions
+  on how to setup the tag on: http://google.com/ads/remarketingsetup
+  --------------------------------------------------->
+  
+  <div style="display:none;">
+	  <script type="text/javascript">
+	    /* <![CDATA[ */
+	    var google_conversion_id = 1000796929;
+	    var google_custom_params = window.google_tag_params;
+	    var google_remarketing_only = true;
+	    /* ]]> */
+	  </script>
+	  <script type="text/javascript" src="menu_list_files/conversion.js">
+	  </script><iframe name="google_conversion_frame" title="Google conversion frame" src="menu_list_files/a." marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" width="300" frameborder="0" height="13">&lt;img
+ height="1" width="1" border="0" alt="" 
+src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1000796929/?frame=0&amp;random=1401214637110&amp;cv=7&amp;fst=1401214637110&amp;num=1&amp;fmt=1&amp;guid=ON&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1000&amp;u_aw=1920&amp;u_cd=24&amp;u_his=2&amp;u_tz=120&amp;u_java=true&amp;u_nplug=10&amp;u_nmime=104&amp;frm=0&amp;url=http%3A//www.kfc.co.za/c/menu/&amp;ref=http%3A//www.kfc.co.za/"
+ /&gt;</iframe>
+	  <noscript>
+	    <div style="display:inline;">
+	      <img height="1" width="1" style="border-style:none;" alt=""
+	      src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1000796929/?value=0
+	      &guid=ON&script=0"/>
+	    </div>
+	  </noscript>  
+  </div>
+
+
+<div style="display: none;" id="cboxOverlay"></div><div style="display: none; padding-bottom: 42px; padding-right: 42px;" class="" id="colorbox"><div id="cboxWrapper"><div><div style="float: left;" id="cboxTopLeft"></div><div style="float: left;" id="cboxTopCenter"></div><div style="float: left;" id="cboxTopRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxMiddleLeft"></div><div style="float: left;" id="cboxContent"><div style="width: 0px; height: 0px; overflow: hidden; float: left;" id="cboxLoadedContent"></div><div style="float: left;" id="cboxLoadingOverlay"></div><div style="float: left;" id="cboxLoadingGraphic"></div><div style="float: left;" id="cboxTitle"></div><div style="float: left;" id="cboxCurrent"></div><div style="float: left;" id="cboxNext"></div><div style="float: left;" id="cboxPrevious"></div><div style="float: left;" id="cboxSlideshow"></div><div style="float: left;" id="cboxClose"></div></div><div style="float: left;" id="cboxMiddleRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxBottomLeft"></div><div style="float: left;" id="cboxBottomCenter"></div><div style="float: left;" id="cboxBottomRight"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div><div style="position: absolute; top: -1999px; left: -1988px;" id="stcpDiv">ShareThis Copy and Paste</div><iframe style="display:none;" scrolling="no" src="menu_list_files/getSegment.php" name="stSegmentFrame" id="stSegmentFrame" width="0px" frameborder="0" height="0px"></iframe><div style="visibility: hidden; top: -999px; left: -999px; width: 500px; z-index: 89999999;" class="stwrapper" id="stwrapper"><div class="stCloseNew2"></div><iframe src="menu_list_files/index.html" style="top: 0px; left: 0px;" scrolling="no" name="stLframe" class="stLframe" id="stLframe" allowtransparency="true" width="500px" frameborder="0" height="430px"></iframe></div><div onclick="javascript:stWidget.closeWidget();" id="stOverlay" style="height: 100%; width: 100%; background-color: rgb(0, 0, 0); opacity: 0.6; position: fixed; display: none; left: 0px; top: 0px; z-index: 89999990;"></div></body></html>

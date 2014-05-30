@@ -29,7 +29,6 @@ public class EntryPagerAdapter extends FragmentPagerAdapter {
 	 */
 	public EntryPagerAdapter(FragmentManager fragment, Context context) {
 		super(fragment);		
-		// TODO Auto-generated constructor stub
 		Bundle args;
 		Fragment f; 
 		
@@ -66,7 +65,6 @@ public class EntryPagerAdapter extends FragmentPagerAdapter {
 	 */
 	@Override
 	public Fragment getItem(int arg0) {
-		// TODO Auto-generated method stub
 		return fragmentItems.get(arg0);
 	}
 
@@ -75,24 +73,14 @@ public class EntryPagerAdapter extends FragmentPagerAdapter {
 	 */
 	@Override
 	public int getCount() {
-		// TODO Auto-generated method stub
 		return fragmentItems.size();
 	}
 	
 	@Override
 	public CharSequence getPageTitle(int position) {
-		// TODO Auto-generated method stub
-		//Fragment fragment = getItem(position);
 		CharSequence title = "Tab"+position;
 		
 		title = fragmentItems.get(position).getArguments().getString(ARG_TITLE);
-		/*if (fragment instanceof OutletFragment){
-			title = ((OutletFragment)fragment).getTitle();
-		}else if (fragment instanceof CuisineFragment){
-			title = ((CuisineFragment)fragment).getTitle();
-		}else if (fragment instanceof FavouriteFragment){
-			title = ((FavouriteFragment)fragment).getTitle();
-		}*/
 		return title;
 	}
 

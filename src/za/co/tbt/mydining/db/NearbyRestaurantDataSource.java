@@ -27,18 +27,15 @@ public class NearbyRestaurantDataSource {
 	MyDiningDbOpenHelper dbHelper;
 	
 	public NearbyRestaurantDataSource(Context context) {
-		// TODO Auto-generated constructor stub
 		this.context = context;
 		dbHelper = new MyDiningDbOpenHelper(context);
 	}
 	
 	public void open() throws SQLException {
-		//dbHelper.openDataBase();
-	    db = dbHelper.getOpenDatabase();
+		db = dbHelper.getOpenDatabase();
 	}
 
 	public void close() {
-		//dbHelper.close();
 	}
 	
 	public void updateNearbyDistances(Location location){
@@ -69,7 +66,6 @@ public class NearbyRestaurantDataSource {
 	}
 	
 	public List<Restaurant> findNearbyRestaurants(){
-		long branch_id;
 		List<Restaurant> restaurants;
 		Restaurant restaurant;
 		Branch branch;

@@ -6,7 +6,6 @@ import za.co.tbt.mydining.adapter.RestaurantDetailsPagerAdapter;
 import za.co.tbt.mydining.db.Branch;
 import za.co.tbt.mydining.db.Restaurant;
 import za.co.tbt.mydining.db.RestaurantDataSource;
-import za.co.tbt.mydining.location.LocationService;
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
 import android.app.SearchManager;
@@ -16,12 +15,11 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.SearchView;
-import android.widget.Toast;
 import android.widget.SearchView.OnQueryTextListener;
+import android.widget.Toast;
 
 public class RestaurantDetailActivity extends FragmentActivity implements
 		ActionBar.TabListener, RestaurantDataSupplier, OnQueryTextListener
@@ -44,8 +42,6 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 	 */
 	ViewPager mViewPager;
 
-	//LocationService locationService;
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		String logo;
@@ -54,8 +50,6 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_restaurant_detail);
 
-		//locationService = LocationService.getInstance(getApplicationContext());
-		
 		// Get the message from the intent
 	    Intent intent = getIntent();
 	    String rest_name = intent.getStringExtra(RestaurantFragment.RESTAURANT_NAME);
@@ -65,13 +59,8 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 	    restDataSource = new RestaurantDataSource(this);
     	restDataSource.open();
     	
-    	//Log.d("ssm", "branch_id = " + branch_id);
-    	
 	    if (branch_id > 0 ){
-	    	Log.d("ssm", "rest_name = " + rest_name + " branch_id = " + branch_id);
 	    	restaurant = restDataSource.loadRestaurantDetails(rest_name, branch_id);
-	    	
-	    	Log.d("ssm", "rest name = " + restaurant.getName() + " branch = " + restaurant.getRestaurant_branches().get(0).getName());
 	    }else{
 	    	restaurant = restDataSource.loadRestaurantDetails(rest_name);
 	    }
@@ -119,18 +108,11 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 					.setText(mSectionsPagerAdapter.getPageTitle(i))
 					.setTabListener(this));
 		}
-		
-		//location_client = new LocationClient(this, this, this);		
 	}
 	
 	@Override
 	protected void onStart() {
-		// TODO Auto-generated method stub		
-		//location_client.connect();
 		super.onStart();
-		//if (!locationService.servicesConnected()){
-		//	locationService.start();
-		//}
 	}
 	
 	@Override
@@ -155,15 +137,11 @@ public class RestaurantDetailActivity extends FragmentActivity implements
     
 	@Override
 	protected void onStop() {
-		// TODO Auto-generated method stub
-		//location_client.disconnect();
 		super.onStop();	
-		//locationService.stop();
 	}
 	
 	@Override
 	protected void onDestroy() {
-		// TODO Auto-generated method stub
 		super.onDestroy();
 		restDataSource.close();
 	}
@@ -203,22 +181,18 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 			FragmentTransaction fragmentTransaction) {
 	}
 
-	//@Override
 	@Override
 	public za.co.tbt.mydining.db.Menu requestRestaurantMenu() {
-		// TODO Auto-generated method stub
 		return restaurant.getRestaurant_menu();
 	}
 
 	@Override
 	public List<Branch> requestRestaurantBranches() {
-		// TODO Auto-generated method stub
 		return restaurant.getRestaurant_branches();
 	}	
 
 	@Override
 	public Restaurant requestRestaurantDetails() {
-		// TODO Auto-generated method stub
 		return restaurant;
 	}
 
@@ -248,7 +222,6 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 	
 	@Override
 	public boolean onQueryTextSubmit(String query) {
-		// TODO Auto-generated method stub
 		Intent intent = getIntent();
 		intent.setAction(Intent.ACTION_SEARCH);
 		intent.putExtra(SearchManager.QUERY, query);
@@ -260,18 +233,13 @@ public class RestaurantDetailActivity extends FragmentActivity implements
 
 	@Override
 	public boolean onQueryTextChange(String newText) {
-		// TODO Auto-generated method stub
-		//if (newText.length() == 0){
-			Intent intent = getIntent();
-			intent.setAction(Intent.ACTION_SEARCH);
-			intent.putExtra(SearchManager.QUERY, newText);
-			
-			performSearch(intent);
-			
-			return true;
-		//}else{
-		//	return false;
-		//}
+		Intent intent = getIntent();
+		intent.setAction(Intent.ACTION_SEARCH);
+		intent.putExtra(SearchManager.QUERY, newText);
+		
+		performSearch(intent);
+		
+		return true;
 	}
 	
 	public void openSettings(){

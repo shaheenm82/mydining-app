@@ -301,69 +301,73 @@ containing a value of this type.
         public static final int ic_plusone_tall_off_client=0x7f020025;
         public static final int ic_rest_debonairs=0x7f020026;
         public static final int ic_rest_fishaways=0x7f020027;
-        public static final int ic_rest_mochachos=0x7f020028;
-        public static final int ic_rest_nandos=0x7f020029;
-        public static final int ic_rest_steers=0x7f02002a;
-        public static final int ic_special=0x7f02002b;
-        public static final int ic_vegetarian=0x7f02002c;
-        public static final int splash_320=0x7f02002d;
+        public static final int ic_rest_kfc=0x7f020028;
+        public static final int ic_rest_mochachos=0x7f020029;
+        public static final int ic_rest_nandos=0x7f02002a;
+        public static final int ic_rest_steers=0x7f02002b;
+        public static final int ic_special=0x7f02002c;
+        public static final int ic_vegetarian=0x7f02002d;
+        public static final int splash_320=0x7f02002e;
     }
     public static final class id {
-        public static final int GridLayout1=0x7f060022;
-        public static final int LinearLayout1=0x7f06000f;
-        public static final int LinearLayout_Add=0x7f06002a;
-        public static final int LinearLayout_Desc=0x7f060028;
-        public static final int LinearLayout_Dish=0x7f060013;
+        public static final int GridLayout1=0x7f060023;
+        public static final int LinearLayout1=0x7f060010;
+        public static final int LinearLayout_Add=0x7f06002c;
+        public static final int LinearLayout_Desc=0x7f060029;
+        public static final int LinearLayout_Dish=0x7f060014;
         public static final int RelativeLayout1=0x7f060006;
-        public static final int TableLayout1=0x7f060018;
-        public static final int action_search=0x7f060034;
-        public static final int action_settings=0x7f060035;
-        public static final int action_show_all=0x7f060037;
-        public static final int action_version=0x7f060036;
-        public static final int button_navigation=0x7f06001c;
-        public static final int expandable_branch=0x7f060009;
-        public static final int expandable_menu=0x7f06000e;
+        public static final int TableLayout1=0x7f060019;
+        public static final int action_search=0x7f060037;
+        public static final int action_settings=0x7f060038;
+        public static final int action_show_all=0x7f06003a;
+        public static final int action_version=0x7f060039;
+        public static final int button_navigation=0x7f06001d;
+        public static final int expandable_branch=0x7f06000a;
+        public static final int expandable_menu=0x7f06000f;
         public static final int hybrid=0x7f060004;
-        public static final int image_branch_halaal=0x7f06001e;
-        public static final int image_branch_kosher=0x7f06001f;
-        public static final int image_halaal=0x7f06002e;
-        public static final int image_healthy=0x7f06002d;
-        public static final int image_rest_logo=0x7f060030;
-        public static final int image_special=0x7f060027;
-        public static final int image_vegetarian=0x7f06002c;
-        public static final int list_cuisines=0x7f06000a;
-        public static final int list_favourites=0x7f06000b;
-        public static final int list_nearby_restaurants=0x7f060010;
-        public static final int list_restaurants=0x7f060011;
-        public static final int logo=0x7f060020;
-        public static final int map_branches=0x7f06000c;
+        public static final int image_branch_halaal=0x7f06001f;
+        public static final int image_branch_kosher=0x7f060020;
+        public static final int image_halaal=0x7f060030;
+        public static final int image_healthy=0x7f06002f;
+        public static final int image_rest_logo=0x7f060032;
+        public static final int image_special=0x7f060028;
+        public static final int image_vegetarian=0x7f06002e;
+        public static final int list_cuisines=0x7f06000b;
+        public static final int list_favourites=0x7f06000c;
+        public static final int list_nearby_restaurants=0x7f060011;
+        public static final int list_restaurants=0x7f060012;
+        public static final int logo=0x7f060021;
+        public static final int map_branches=0x7f06000d;
         public static final int none=0x7f060000;
         public static final int normal=0x7f060001;
         public static final int pager=0x7f060005;
         public static final int satellite=0x7f060002;
         public static final int terrain=0x7f060003;
-        public static final int text_additional=0x7f06002b;
+        public static final int text_additional=0x7f06002d;
         public static final int text_app_name=0x7f060007;
-        public static final int text_branch=0x7f060032;
-        public static final int text_branchProvince=0x7f060014;
-        public static final int text_branch_address=0x7f06001b;
-        public static final int text_branch_name=0x7f06001a;
-        public static final int text_branch_suburb=0x7f060019;
-        public static final int text_branch_tel=0x7f06001d;
-        public static final int text_copyright=0x7f060012;
-        public static final int text_cost=0x7f06002f;
-        public static final int text_cost_disclaimer=0x7f06000d;
-        public static final int text_description=0x7f060029;
-        public static final int text_dish=0x7f060026;
-        public static final int text_distance=0x7f060033;
-        public static final int text_fav_last=0x7f060025;
-        public static final int text_fav_rest=0x7f060023;
-        public static final int text_fav_selected=0x7f060024;
-        public static final int text_item=0x7f060021;
-        public static final int text_menuCategory=0x7f060015;
-        public static final int text_menuCategoryAdd=0x7f060017;
-        public static final int text_menuCategoryDesc=0x7f060016;
-        public static final int text_restaurant=0x7f060031;
+        public static final int text_branch=0x7f060034;
+        public static final int text_branchProvince=0x7f060015;
+        public static final int text_branch_address=0x7f06001c;
+        public static final int text_branch_name=0x7f06001b;
+        public static final int text_branch_notification=0x7f060009;
+        public static final int text_branch_suburb=0x7f06001a;
+        public static final int text_branch_tel=0x7f06001e;
+        public static final int text_copyright=0x7f060013;
+        public static final int text_cost=0x7f060031;
+        public static final int text_cost_disclaimer=0x7f06000e;
+        public static final int text_description=0x7f06002a;
+        public static final int text_dish=0x7f060027;
+        public static final int text_distance=0x7f060035;
+        public static final int text_fav_last=0x7f060026;
+        public static final int text_fav_rest=0x7f060024;
+        public static final int text_fav_selected=0x7f060025;
+        public static final int text_item=0x7f060022;
+        public static final int text_menuCategory=0x7f060016;
+        public static final int text_menuCategoryAdd=0x7f060018;
+        public static final int text_menuCategoryDesc=0x7f060017;
+        public static final int text_portion=0x7f06002b;
+        public static final int text_restaurant=0x7f060033;
+        public static final int text_slogan=0x7f060036;
         public static final int text_sync_status=0x7f060008;
     }
     public static final class integer {
@@ -388,6 +392,7 @@ containing a value of this type.
         public static final int list_favourite=0x7f03000f;
         public static final int list_menuitem=0x7f030010;
         public static final int list_nearby=0x7f030011;
+        public static final int list_restaurant=0x7f030012;
     }
     public static final class menu {
         public static final int entry=0x7f0c0000;
@@ -503,31 +508,32 @@ containing a value of this type.
         /**  Location client code resources (prefix with location_client) 
          */
         public static final int location_client_powered_by_google=0x7f07001a;
+        public static final int no_branch_records=0x7f07003b;
         public static final int pref_app_version=0x7f070030;
         public static final int pref_app_version_value=0x7f070031;
         public static final int pref_db_version=0x7f07002f;
         public static final int pref_db_version_value=0x7f070032;
-        public static final int pref_desc_dietary=0x7f070042;
+        public static final int pref_desc_dietary=0x7f070043;
         public static final int pref_header_about=0x7f07002e;
-        public static final int pref_header_dietary=0x7f070041;
+        public static final int pref_header_dietary=0x7f070042;
         /**  Strings related to Settings 
  Example General settings 
          */
-        public static final int pref_header_general=0x7f07003c;
+        public static final int pref_header_general=0x7f07003d;
         public static final int pref_nearby=0x7f070038;
         public static final int pref_nearby_rest=0x7f070039;
         /**  Example settings for Data & Sync 
  Example settings for Notifications 
          */
-        public static final int pref_title_halaal=0x7f07003d;
-        public static final int pref_title_kosher=0x7f07003e;
-        public static final int pref_title_vegan=0x7f070040;
-        public static final int pref_title_vegetarian=0x7f07003f;
+        public static final int pref_title_halaal=0x7f07003e;
+        public static final int pref_title_kosher=0x7f07003f;
+        public static final int pref_title_vegan=0x7f070041;
+        public static final int pref_title_vegetarian=0x7f070040;
         public static final int text_cost_disclaimer=0x7f07002c;
         public static final int text_map=0x7f07002a;
         public static final int title_activity_restaurant_detail=0x7f070028;
         public static final int title_activity_search=0x7f070026;
-        public static final int title_activity_settings=0x7f07003b;
+        public static final int title_activity_settings=0x7f07003c;
         public static final int title_activity_splash=0x7f070034;
         public static final int title_activity_splash_screen=0x7f070033;
         public static final int title_branches=0x7f070024;
