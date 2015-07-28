@@ -1,0 +1,1 @@
+This app is intended for consumers to quickly and easily browse a list of Restaurant menus when they wish to eat out
